@@ -58,7 +58,7 @@ function parseDeclarations(body: string): Array<{ property: string; value: strin
 
   for (const match of body.matchAll(declarationRegex)) {
     const property = match[1]?.trim();
-    const value = match[2]?.trim();
+    const value = match[2]?.trim().replace(/\s*!important\s*$/i, "");
 
     if (!property || !value) {
       continue;
