@@ -1,0 +1,71 @@
+/*
+ * Spotify Light Mode Overrides
+ * Overrides Spotify's Encore design-token custom properties on :root.
+ * !important is required because Spotify sets many tokens via inline JS styles.
+ */
+
+:root,
+html {
+  /* Backgrounds */
+  --background-base:                          #ffffff !important;
+  --background-highlight:                     #f6f6f6 !important;
+  --background-press:                         #e8e8e8 !important;
+  --background-elevated-base:                 #ffffff !important;
+  --background-elevated-highlight:            #f0f0f0 !important;
+  --background-elevated-press:                #e0e0e0 !important;
+  --background-tinted-base:                   rgba(0, 0, 0, 0.05) !important;
+  --background-tinted-highlight:              rgba(0, 0, 0, 0.08) !important;
+  --background-tinted-press:                  rgba(0, 0, 0, 0.12) !important;
+  --background-unsafe-for-small-text-base:    #f0f0f0 !important;
+  --background-unsafe-for-small-text-highlight: #e8e8e8 !important;
+  --background-unsafe-for-small-text-press:   #d8d8d8 !important;
+
+  /* Text */
+  --text-base:          #000000 !important;
+  --text-subdued:       #6a6a6a !important;
+  --text-bright-accent: #1db954 !important;
+  --text-negative:      #e91429 !important;
+  --text-warning:       #9d5a00 !important;
+  --text-positive:      #117a37 !important;
+  --text-announcement:  #0d72ea !important;
+
+  /* Essential (icon / decorative fills) */
+  --essential-base:          #000000 !important;
+  --essential-subdued:       #6a6a6a !important;
+  --essential-bright-accent: #1db954 !important;
+  --essential-negative:      #e91429 !important;
+  --essential-warning:       #c77200 !important;
+  --essential-positive:      #169b45 !important;
+  --essential-announcement:  #0d72ea !important;
+
+  /* Decorative */
+  --decorative-base:    #000000 !important;
+  --decorative-subdued: #c0c0c0 !important;
+
+  /* Force native browser UI (scrollbars, inputs, selection) to light mode */
+  color-scheme: light !important;
+}
+
+/* Top navigation and playback bar */
+.Root__top-bar,
+.Root__now-playing-bar {
+  background-color: var(--background-base) !important;
+}
+
+/* Left navigation sidebar */
+.Root__nav-bar,
+.LeftSidebar,
+[data-testid="left-sidebar"] {
+  background-color: var(--background-elevated-base) !important;
+}
+
+/* Main content area */
+.Root__main-view {
+  background-color: var(--background-base) !important;
+}
+
+/* Right context panel */
+.RightSidebar,
+[data-testid="right-panel"] {
+  background-color: var(--background-elevated-base) !important;
+}

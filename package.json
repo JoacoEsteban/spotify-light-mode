@@ -1,0 +1,24 @@
+{
+  "name": "spotify-light-mode",
+  "version": "0.1.0",
+  "description": "Forces the Spotify web player to use a light color scheme.",
+  "private": true,
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt --browser firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build --browser firefox",
+    "zip": "wxt zip",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@wxt-dev/module-react": "^1.2.2",
+    "typescript": "5.8",
+    "wxt": "^0.20.25"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}
