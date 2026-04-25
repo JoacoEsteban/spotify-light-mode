@@ -2,70 +2,127 @@
  * Spotify Light Mode Overrides
  * Overrides Spotify's Encore design-token custom properties on :root.
  * !important is required because Spotify sets many tokens via inline JS styles.
+ * Values are sourced from the .encore-light-theme block in web-player.86a99def.css.
  */
 
 :root,
 html {
-  /* Backgrounds */
-  --background-base:                          #ffffff !important;
-  --background-highlight:                     #f6f6f6 !important;
-  --background-press:                         #e8e8e8 !important;
-  --background-elevated-base:                 #ffffff !important;
-  --background-elevated-highlight:            #f0f0f0 !important;
-  --background-elevated-press:                #e0e0e0 !important;
-  --background-tinted-base:                   rgba(0, 0, 0, 0.05) !important;
-  --background-tinted-highlight:              rgba(0, 0, 0, 0.08) !important;
-  --background-tinted-press:                  rgba(0, 0, 0, 0.12) !important;
-  --background-unsafe-for-small-text-base:    #f0f0f0 !important;
-  --background-unsafe-for-small-text-highlight: #e8e8e8 !important;
-  --background-unsafe-for-small-text-press:   #d8d8d8 !important;
+    /* Backgrounds */
+    --background-base: #ffffff !important;
+    --background-highlight: #f5f5f5 !important;
+    --background-press: #e2e2e2 !important;
+    --background-elevated-base: #ffffff !important;
+    --background-elevated-highlight: #f5f5f5 !important;
+    --background-elevated-press: #e7e7e7 !important;
+    --background-tinted-base: #00000014 !important;
+    --background-tinted-highlight: #0000001f !important;
+    --background-tinted-press: #00000030 !important;
+    --background-unsafe-for-small-text-base: #f5f5f5 !important;
+    --background-unsafe-for-small-text-highlight: #e2e2e2 !important;
+    --background-unsafe-for-small-text-press: #cccccc !important;
 
-  /* Text */
-  --text-base:          #000000 !important;
-  --text-subdued:       #6a6a6a !important;
-  --text-bright-accent: #1db954 !important;
-  --text-negative:      #e91429 !important;
-  --text-warning:       #9d5a00 !important;
-  --text-positive:      #117a37 !important;
-  --text-announcement:  #0d72ea !important;
+    /* Background variants set by JS inline styles — override to prevent dark bleed-through */
+    --background-base-70: rgba(255, 255, 255, 0.7) !important;
+    --background-base-min-contrast: #ffffff !important;
+    --background-base-high-contrast: #ffffff !important;
 
-  /* Essential (icon / decorative fills) */
-  --essential-base:          #000000 !important;
-  --essential-subdued:       #6a6a6a !important;
-  --essential-bright-accent: #1db954 !important;
-  --essential-negative:      #e91429 !important;
-  --essential-warning:       #c77200 !important;
-  --essential-positive:      #169b45 !important;
-  --essential-announcement:  #0d72ea !important;
+    /* Suppress the dark-mode grain/noise texture used in header gradients */
+    --background-noise: none !important;
 
-  /* Decorative */
-  --decorative-base:    #000000 !important;
-  --decorative-subdued: #c0c0c0 !important;
+    /* Text */
+    --text-base: #000000 !important;
+    --text-subdued: #656565 !important;
+    --text-bright-accent: #107434 !important;
+    --text-negative: #c91123 !important;
+    --text-warning: #955500 !important;
+    --text-positive: #107434 !important;
+    --text-announcement: #0b62c8 !important;
 
-  /* Force native browser UI (scrollbars, inputs, selection) to light mode */
-  color-scheme: light !important;
+    /* Essential (icon / decorative fills) */
+    --essential-base: #000000 !important;
+    --essential-subdued: #818181 !important;
+    --essential-bright-accent: #159542 !important;
+    --essential-negative: #e91429 !important;
+    --essential-warning: #bf6d00 !important;
+    --essential-positive: #159542 !important;
+    --essential-announcement: #0d72ea !important;
+
+    /* Decorative */
+    --decorative-base: #000000 !important;
+    --decorative-subdued: #dedede !important;
+
+    /* Carousel scroll-edge chevron fade — replace #121212 with white */
+    --carousel-start-chevron-gradient: rgba(255, 255, 255, 0.7) !important;
+    --carousel-end-chevron-gradient:   rgba(255, 255, 255, 0.7) !important;
+
+    /* Generic tooltip background (panel device-picker, etc.) — keep dark for contrast */
+    --generic-tooltip-background-color: #333333 !important;
+
+    /* Force native browser UI (scrollbars, inputs, selection) to light mode */
+    color-scheme: light !important;
+}
+
+/* Override the hardcoded dark html/body background that doesn't use a token */
+html,
+body {
+    background-color: #ffffff !important;
 }
 
 /* Top navigation and playback bar */
 .Root__top-bar,
 .Root__now-playing-bar {
-  background-color: var(--background-base) !important;
+    background-color: var(--background-base) !important;
 }
 
 /* Left navigation sidebar */
 .Root__nav-bar,
 .LeftSidebar,
 [data-testid="left-sidebar"] {
-  background-color: var(--background-elevated-base) !important;
+    background-color: var(--background-elevated-base) !important;
 }
 
 /* Main content area */
 .Root__main-view {
-  background-color: var(--background-base) !important;
+    background-color: var(--background-base) !important;
 }
 
 /* Right context panel */
 .RightSidebar,
 [data-testid="right-panel"] {
-  background-color: var(--background-elevated-base) !important;
+    background-color: var(--background-elevated-base) !important;
+}
+
+/* Carousel scroll-edge — at the non-edge position use solid white */
+[data-shelf="carousel"][data-shelf-notatedge="true"] {
+    --carousel-start-chevron-gradient: #ffffff !important;
+}
+
+/* Dialogs and modals — override hardcoded #121212 / #282828 backgrounds */
+[role="dialog"],
+[aria-modal="true"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Tippy.js tooltips — keep dark (standard for light-mode UIs), update to neutral dark */
+.tippy-box,
+.tippy-content,
+.tippy-box[data-theme~="device-picker"] {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Progress / volume sliders in now-playing bar.
+ * Default vars are #ffffff4d / #ffffffb3 / #fff — invisible on a white background. */
+.Root__now-playing-bar {
+    --bg-color: rgba(0, 0, 0, 0.15) !important;
+    --mg-color: rgba(0, 0, 0, 0.3) !important;
+    --fg-color: #000000 !important;
+}
+
+/* Native select elements in dialogs */
+select {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #888888 !important;
 }
