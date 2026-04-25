@@ -1,9 +1,41 @@
 import chroma, { Color } from "chroma-js";
 
 const OKLCH_GAMUT_FIT_STEPS = 24;
+const ACHROMATIC_THRESHOLD = 0.01;
+const EXTREME_LIGHTNESS_THRESHOLD = 0.02;
+const COUNTERPART_LIGHTNESS_MIN = 0.12;
+const COUNTERPART_LIGHTNESS_MAX = 0.95;
+const COUNTERPART_LIGHTNESS_OFFSET = 0.15;
+const COUNTERPART_LIGHTNESS_SCALE = 0.8;
+const COUNTERPART_LIGHTNESS_EXPONENT = 0.65;
 
 function clamp01(value: number): number {
   return Math.min(1, Math.max(0, value));
+}
+
+function mapCounterpartLightness(
+  lightness: number,
+  chromaValue: number,
+): number {
+  if (chromaValue < ACHROMATIC_THRESHOLD) {
+    if (lightness >= 1 - EXTREME_LIGHTNESS_THRESHOLD) {
+      return 0;
+    }
+
+    if (lightness <= EXTREME_LIGHTNESS_THRESHOLD) {
+      return 1;
+    }
+  }
+
+  const curved =
+    COUNTERPART_LIGHTNESS_OFFSET +
+    COUNTERPART_LIGHTNESS_SCALE *
+      Math.pow(1 - lightness, COUNTERPART_LIGHTNESS_EXPONENT);
+
+  return Math.min(
+    COUNTERPART_LIGHTNESS_MAX,
+    Math.max(COUNTERPART_LIGHTNESS_MIN, curved),
+  );
 }
 
 function fitOklchToSrgb(
@@ -47,7 +79,9 @@ function fitOklchToSrgb(
 export function toCounterpart(color: Color): Color {
   const source = chroma(color);
   const [lightness, chromaValue, hue] = source.oklch();
-  const mirroredLightness = clamp01(1 - lightness);
+  const mappedLightness = clamp01(
+    mapCounterpartLightness(lightness, chromaValue),
+  );
 
-  return fitOklchToSrgb(mirroredLightness, chromaValue, hue, source.alpha());
+  return fitOklchToSrgb(mappedLightness, chromaValue, hue, source.alpha());
 }
