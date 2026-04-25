@@ -1,0 +1,3 @@
+[tasks.generate-spotify-light-css]
+description = "Generate light-mode overrides from Spotify snapshot CSS"
+run = "bun scripts/generate-spotify-light-css.ts"
