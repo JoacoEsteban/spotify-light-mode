@@ -5,7 +5,7 @@ import {
   readEnabled,
   readUseSystemPref,
 } from "../../lib/storage";
-import lightModeCss from "../../assets/spotify-light.css?inline";
+import lightModeCss from "../../assets/spotify-light/index.css?inline";
 // import { replaceAll } from "./in-place-color-change";
 
 export default defineContentScript({
