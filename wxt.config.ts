@@ -4,7 +4,7 @@ export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   manifest: {
     name: 'Spotify Light Mode',
-    description: 'Forces the Spotify web player to use a light color scheme.',
+    description: "Bring light mode to Spotify's web player — always on, or only when your OS is in light mode.",
     version: '0.1.0',
     permissions: ['storage'],
   },

@@ -1,7 +1,7 @@
 {
   "name": "spotify-light-mode",
   "version": "0.1.0",
-  "description": "Forces the Spotify web player to use a light color scheme.",
+  "description": "Bring light mode to Spotify's web player — always on, or only when your OS is in light mode.",
   "private": true,
   "scripts": {
     "dev": "wxt",
