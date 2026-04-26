@@ -6,15 +6,9 @@
 
  * Source: snapshots/xpui-routes-show.0ee28e13.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .o6FL7s0UqGgorjVQ:focus-visible>*:not(#spotify-light-mode-specificity-bump) {
   outline: 5px auto #4482e4; /* hardcoded-color: 5px auto #3673d4 → 5px auto #4482e4 */
@@ -101,12 +95,28 @@
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
+.vhwPR0aVdMECUxP0:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
+}
+
+.r6hsSX8YOAUJnk_s:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-base) !important; /* css-var: var(--background-tinted-base) */
+}
+
 .VzAs2IECUToui_AT:not(#spotify-light-mode-specificity-bump) {
   background: #3c84de; /* hardcoded-color: #2e77d0 → #3c84de */
 }
 
 .Htdd9HRV28F07Dwl:not(#spotify-light-mode-specificity-bump) {
   color: #585858; /* hardcoded-color: #b3b3b3 → #585858 */
+}
+
+.Htdd9HRV28F07Dwl.CO0qKKQN5zY3wIAW:not(#spotify-light-mode-specificity-bump), .Htdd9HRV28F07Dwl.CO0qKKQN5zY3wIAW:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-highlight) !important; /* css-var: var(--background-highlight) */
+}
+
+.Htdd9HRV28F07Dwl:focus-within:not(#spotify-light-mode-specificity-bump), .Htdd9HRV28F07Dwl:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
 }
 
 .oxwxzsOGEV55m1C0.i6slVKUUPoxCLObH .DZewiIDAEwsMwtco:not(#spotify-light-mode-specificity-bump) {
@@ -177,6 +187,10 @@
 
 .CBIyjCdxqfUh3mwM:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
+.yOM0eOxcUz4IWalS:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }
 
 ._Q0sLUuhbaAq2ven:not(#spotify-light-mode-specificity-bump) {

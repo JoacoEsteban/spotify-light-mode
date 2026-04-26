@@ -6,15 +6,9 @@
 
  * Source: snapshots/dwp-whats-new-feed.b3d6e7ba.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .hoF2ik8Q0YXXIVXZ:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
@@ -24,8 +18,16 @@
   border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
+.VsYY0YB3c4lmhoDI a:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
+}
+
 .PDxgB3Nps4gKEPlO:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
+.LR7w41pC8ccVc11Q:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }
 
 .LR7w41pC8ccVc11Q:focus-within:not(#spotify-light-mode-specificity-bump), .LR7w41pC8ccVc11Q:hover:not(#spotify-light-mode-specificity-bump) {
@@ -60,6 +62,10 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.ERRo1Br0ZQtJYVhz:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
+}
+
 .ERRo1Br0ZQtJYVhz:focus-within:not(#spotify-light-mode-specificity-bump), .ERRo1Br0ZQtJYVhz:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
@@ -82,6 +88,10 @@
 
 .lib2URAlzM4k2T_a .ckC1howZfkU9dexz>img:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 28px #ffffffcc; /* hardcoded-color: 0 4px 28px #000c → 0 4px 28px #ffffffcc */
+}
+
+.OLMGXVn7Hz4uUy9W:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-base) !important; /* css-var: var(--background-tinted-base) */
 }
 
 .EOwwdaekJMqgaiNu:not(#spotify-light-mode-specificity-bump) {

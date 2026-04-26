@@ -6,15 +6,9 @@
 
  * Source: snapshots/dwp-home-header.0ec3bbd9.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .Q7ciR0kAsukiCprc:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */

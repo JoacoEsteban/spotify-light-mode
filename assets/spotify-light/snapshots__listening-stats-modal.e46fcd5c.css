@@ -6,8 +6,4 @@
 
  * Source: snapshots/listening-stats-modal.e46fcd5c.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */

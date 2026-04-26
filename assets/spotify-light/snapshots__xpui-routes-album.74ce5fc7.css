@@ -6,15 +6,9 @@
 
  * Source: snapshots/xpui-routes-album.74ce5fc7.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .maeq6ts1ds8bvFaI:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
@@ -73,6 +67,10 @@
 
 .CBIyjCdxqfUh3mwM:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
+.yOM0eOxcUz4IWalS:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }
 
 ._Q0sLUuhbaAq2ven:not(#spotify-light-mode-specificity-bump) {

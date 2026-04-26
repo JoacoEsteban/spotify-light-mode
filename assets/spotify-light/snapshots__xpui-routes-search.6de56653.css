@@ -6,15 +6,9 @@
 
  * Source: snapshots/xpui-routes-search.6de56653.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 ._abVu9WuWLYX1B1Q:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px #0003 → 0 2px 4px #ffffff33 */
@@ -34,6 +28,14 @@
 
 .Htdd9HRV28F07Dwl:not(#spotify-light-mode-specificity-bump) {
   color: #585858; /* hardcoded-color: #b3b3b3 → #585858 */
+}
+
+.Htdd9HRV28F07Dwl.CO0qKKQN5zY3wIAW:not(#spotify-light-mode-specificity-bump), .Htdd9HRV28F07Dwl.CO0qKKQN5zY3wIAW:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-highlight) !important; /* css-var: var(--background-highlight) */
+}
+
+.Htdd9HRV28F07Dwl:focus-within:not(#spotify-light-mode-specificity-bump), .Htdd9HRV28F07Dwl:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
 }
 
 .oxwxzsOGEV55m1C0.i6slVKUUPoxCLObH .DZewiIDAEwsMwtco:not(#spotify-light-mode-specificity-bump) {
@@ -115,12 +117,28 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.TguLwQ522LIEgpK_.IxVxBUbV5M5tGaEx:hover:not(#spotify-light-mode-specificity-bump), .TguLwQ522LIEgpK_.IxVxBUbV5M5tGaEx:focus-within:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-highlight) !important; /* css-var: var(--background-highlight) */
+}
+
+.ZG4FAtrLwuUN3MUa:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
+}
+
 .dkoC8fbS6PM4cH4f>img:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 28px #ffffffcc; /* hardcoded-color: 0 4px 28px #000c → 0 4px 28px #ffffffcc */
 }
 
 .WRAJX50Owww6lGws:not(#spotify-light-mode-specificity-bump):before {
   background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
+}
+
+.vpl5upmdcs0z2hFe:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued) !important; /* css-var: var(--text-subdued) */
+}
+
+.TguLwQ522LIEgpK_:hover .iMFNs4rEeocvBfdr a:not(#spotify-light-mode-specificity-bump), .TguLwQ522LIEgpK_:focus-within .iMFNs4rEeocvBfdr a:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
 }
 
 .KQNfz0lEwOIlMk90:not(#spotify-light-mode-specificity-bump) {

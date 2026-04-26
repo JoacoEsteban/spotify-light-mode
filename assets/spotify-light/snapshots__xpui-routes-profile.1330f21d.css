@@ -6,52 +6,9 @@
 
  * Source: snapshots/xpui-routes-profile.1330f21d.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Custom property overrides */
-
-.HD2UP4CLVwoDgWNc:not(#spotify-light-mode-specificity-bump) {
-  --user-edit-surface: #bdbdbd !important; /* custom-property: #282828 → #bdbdbd */
-  --user-edit-text-color: #000000 !important; /* custom-property: #fff → #000000 */
-  --user-edit-label-color: #585858 !important; /* custom-property: #b3b3b3 → #585858 */
-  --user-edit-input-bg: #0000001a !important; /* custom-property: #ffffff1a → #0000001a */
-  --user-edit-input-text: #000000 !important; /* custom-property: #fff → #000000 */
-  --user-edit-input-focus-border: #9d9d9d !important; /* custom-property: #535353 → #9d9d9d */
-  --user-edit-input-focus-bg: #b5b5b5 !important; /* custom-property: #333 → #b5b5b5 */
-  --user-edit-close-color: #000000b3 !important; /* custom-property: #ffffffb3 → #000000b3 */
-  --user-edit-close-hover: #0000001a !important; /* custom-property: #ffffff1a → #0000001a */
-  --user-edit-close-active: #00000033 !important; /* custom-property: #fff3 → #00000033 */
-  --user-edit-disclaimer-color: #000000 !important; /* custom-property: #fff → #000000 */
-}
-
-.bMxLaE1YSjsi4FCy:not(#spotify-light-mode-specificity-bump) {
-  --user-edit-label-color: #cecece8c !important; /* custom-property: #1212128c → #cecece8c */
-  --user-edit-input-bg: #cecece0f !important; /* custom-property: #1212120f → #cecece0f */
-  --user-edit-input-text: #cecece !important; /* custom-property: #121212 → #cecece */
-  --user-edit-input-focus-border: #cecece3d !important; /* custom-property: #1212123d → #cecece3d */
-  --user-edit-input-focus-bg: #cecece1a !important; /* custom-property: #1212121a → #cecece1a */
-  --user-edit-input-disabled: #cecece73 !important; /* custom-property: #12121273 → #cecece73 */
-  --user-edit-close-color: #cecece8c !important; /* custom-property: #1212128c → #cecece8c */
-  --user-edit-close-hover: #cecece14 !important; /* custom-property: #12121214 → #cecece14 */
-  --user-edit-close-active: #cecece1f !important; /* custom-property: #1212121f → #cecece1f */
-  --user-edit-disclaimer-color: #cececeb8 !important; /* custom-property: #121212b8 → #cececeb8 */
-  --user-edit-header-bg: #000000ad !important; /* custom-property: #ffffffad → #000000ad */
-  --user-edit-header-border: #cecece14 !important; /* custom-property: #12121214 → #cecece14 */
-}
-
-.wyvT4oELyOMR_tRe:not(#spotify-light-mode-specificity-bump) {
-  --text-base: #000000 !important; /* custom-property: #fff → #000000 */
-}
-
-
-
-/* Hardcoded color overrides */
 
 .lYseXRxxWTgyOq7A:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
@@ -71,12 +28,52 @@
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
 
+.HD2UP4CLVwoDgWNc:not(#spotify-light-mode-specificity-bump) {
+  --user-edit-surface: #bdbdbd !important; /* custom-property: #282828 → #bdbdbd */
+  --user-edit-text-color: #000000 !important; /* custom-property: #fff → #000000 */
+  --user-edit-label-color: #585858 !important; /* custom-property: #b3b3b3 → #585858 */
+  --user-edit-input-bg: #0000001a !important; /* custom-property: #ffffff1a → #0000001a */
+  --user-edit-input-text: #000000 !important; /* custom-property: #fff → #000000 */
+  --user-edit-input-focus-border: #9d9d9d !important; /* custom-property: #535353 → #9d9d9d */
+  --user-edit-input-focus-bg: #b5b5b5 !important; /* custom-property: #333 → #b5b5b5 */
+  --user-edit-close-color: #000000b3 !important; /* custom-property: #ffffffb3 → #000000b3 */
+  --user-edit-close-hover: #0000001a !important; /* custom-property: #ffffff1a → #0000001a */
+  --user-edit-close-active: #00000033 !important; /* custom-property: #fff3 → #00000033 */
+  --user-edit-disclaimer-color: #000000 !important; /* custom-property: #fff → #000000 */
+  color: var(--user-edit-text-color) !important; /* css-var: var(--user-edit-text-color) */
+  background-color: var(--user-edit-surface) !important; /* css-var: var(--user-edit-surface) */
+}
+
+.bMxLaE1YSjsi4FCy:not(#spotify-light-mode-specificity-bump) {
+  --user-edit-label-color: #cecece8c !important; /* custom-property: #1212128c → #cecece8c */
+  --user-edit-input-bg: #cecece0f !important; /* custom-property: #1212120f → #cecece0f */
+  --user-edit-input-text: #cecece !important; /* custom-property: #121212 → #cecece */
+  --user-edit-input-focus-border: #cecece3d !important; /* custom-property: #1212123d → #cecece3d */
+  --user-edit-input-focus-bg: #cecece1a !important; /* custom-property: #1212121a → #cecece1a */
+  --user-edit-input-disabled: #cecece73 !important; /* custom-property: #12121273 → #cecece73 */
+  --user-edit-close-color: #cecece8c !important; /* custom-property: #1212128c → #cecece8c */
+  --user-edit-close-hover: #cecece14 !important; /* custom-property: #12121214 → #cecece14 */
+  --user-edit-close-active: #cecece1f !important; /* custom-property: #1212121f → #cecece1f */
+  --user-edit-disclaimer-color: #cececeb8 !important; /* custom-property: #121212b8 → #cececeb8 */
+  --user-edit-header-bg: #000000ad !important; /* custom-property: #ffffffad → #000000ad */
+  --user-edit-header-border: #cecece14 !important; /* custom-property: #12121214 → #cecece14 */
+}
+
 .eAPQd2BgECg12s0Y:not(#spotify-light-mode-specificity-bump) {
   background-color: #cecece29; /* hardcoded-color: #12121229 → #cecece29 */
 }
 
 .A9H888iP1cWxJ5iJ:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-close-color) !important; /* css-var: var(--user-edit-close-color) */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
+.A9H888iP1cWxJ5iJ:hover:not(#spotify-light-mode-specificity-bump), .A9H888iP1cWxJ5iJ:focus:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--user-edit-close-hover) !important; /* css-var: var(--user-edit-close-hover) */
+}
+
+.A9H888iP1cWxJ5iJ:active:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--user-edit-close-active) !important; /* css-var: var(--user-edit-close-active) */
 }
 
 .DIunlL8VoXABQrlJ:not(#spotify-light-mode-specificity-bump) {
@@ -91,8 +88,29 @@
   border: 1px solid #ffffff00; /* hardcoded-color: 1px solid #0000 → 1px solid #ffffff00 */
 }
 
+.pgnut7NOEz4y64Rk:focus:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--user-edit-input-focus-bg) !important; /* css-var: var(--user-edit-input-focus-bg) */
+}
+
+.ist1If87rhwprEsr:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-label-color) !important; /* css-var: var(--user-edit-label-color) */
+}
+
 .ogELcfX4aHEmv581:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-input-text) !important; /* css-var: var(--user-edit-input-text) */
   border: 1px solid #ffffff00; /* hardcoded-color: 1px solid #0000 → 1px solid #ffffff00 */
+}
+
+.ogELcfX4aHEmv581:disabled:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-input-disabled) !important; /* css-var: var(--user-edit-input-disabled) */
+}
+
+.xLBtDV5uKE7YWVS7:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-label-color) !important; /* css-var: var(--user-edit-label-color) */
+}
+
+.OvNSzNF_VUctuXwg:not(#spotify-light-mode-specificity-bump) {
+  color: var(--user-edit-disclaimer-color) !important; /* css-var: var(--user-edit-disclaimer-color) */
 }
 
 .HoP2yw2uN4cejJkE:not(#spotify-light-mode-specificity-bump) {
@@ -102,6 +120,10 @@
 
 .KlJ9FH4wXuAPgg8c:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
+.wyvT4oELyOMR_tRe:not(#spotify-light-mode-specificity-bump) {
+  --text-base: #000000 !important; /* custom-property: #fff → #000000 */
 }
 
 .zWRnZYYcfIY26EMe .ZMfpArkqkJ0wOzi_:not(#spotify-light-mode-specificity-bump) {

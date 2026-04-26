@@ -6,25 +6,9 @@
 
  * Source: snapshots/dwp-video-player.e7563948.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Custom property overrides */
-
-.kPLEzaZADEAjWLC2:not(#spotify-light-mode-specificity-bump) {
-  --bg-color: #0000004d !important; /* custom-property: #ffffff4d → #0000004d */
-  --mg-color: #000000b3 !important; /* custom-property: #ffffffb3 → #000000b3 */
-  --fg-color: #000000 !important; /* custom-property: #fff → #000000 */
-}
-
-
-
-/* Hardcoded color overrides */
 
 video:not(#spotify-light-mode-specificity-bump)::cue {
   color: #000000; /* hardcoded-color: #fff → #000000 */
@@ -55,9 +39,31 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
   outline: 5px auto #4482e4; /* hardcoded-color: 5px auto #3673d4 → 5px auto #4482e4 */
 }
 
+.kPLEzaZADEAjWLC2:not(#spotify-light-mode-specificity-bump) {
+  --bg-color: #0000004d !important; /* custom-property: #ffffff4d → #0000004d */
+  --mg-color: #000000b3 !important; /* custom-property: #ffffffb3 → #000000b3 */
+  --fg-color: #000000 !important; /* custom-property: #fff → #000000 */
+}
+
+.ikE27Bu2baQl9eex:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--bg-color) !important; /* css-var: var(--bg-color) */
+}
+
+.u8BnskTQM8Dtq9DG:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--mg-color) !important; /* css-var: var(--mg-color) */
+}
+
+.dbkoNhkHaGoGEWoY:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--fg-color) !important; /* css-var: var(--fg-color) */
+}
+
 .RxlwJ6tCp4g6AAAH:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--fg-color,#000000); /* hardcoded-color: var(--fg-color,#fff) → var(--fg-color,#000000) */
   box-shadow: 0 2px 4px #ffffff80; /* hardcoded-color: 0 2px 4px #00000080 → 0 2px 4px #ffffff80 */
+}
+
+.ihE8PJvbefgJmRhO:focus-within .dbkoNhkHaGoGEWoY:not(#spotify-light-mode-specificity-bump), .ihE8PJvbefgJmRhO .BHmy3gDonuwYeA9I .dbkoNhkHaGoGEWoY:not(#spotify-light-mode-specificity-bump), .ihE8PJvbefgJmRhO .kPLEzaZADEAjWLC2:hover .dbkoNhkHaGoGEWoY:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--is-active-fg-color) !important; /* css-var: var(--is-active-fg-color) */
 }
 
 .sdNokjAmAKE50hr8:not(#spotify-light-mode-specificity-bump) {
@@ -93,6 +99,10 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 
 .cTNcyeMr3oTYKs74:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
+.ke_VP4xHdoJFnTJT:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }
 
 .vWpX3zxZPE3SF299:not(#spotify-light-mode-specificity-bump) {

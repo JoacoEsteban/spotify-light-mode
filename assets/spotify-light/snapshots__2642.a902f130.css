@@ -6,28 +6,13 @@
 
  * Source: snapshots/2642.a902f130.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
 
-/* Custom property overrides */
-
-.CDyHWsKVsLAC4HFx .uwh85sg6FQGiXW5B:not(#spotify-light-mode-specificity-bump) {
-  --carousel-start-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
-  --carousel-end-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
+.Ie8mJhekF8sdLktM:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-base) !important; /* css-var: var(--background-tinted-base) */
 }
-
-.CDyHWsKVsLAC4HFx .uwh85sg6FQGiXW5B [data-shelf=carousel][data-shelf-notatedge=true]:not(#spotify-light-mode-specificity-bump) {
-  --carousel-start-chevron-gradient: #cecece !important; /* custom-property: #121212 → #cecece */
-}
-
-
-
-/* Hardcoded color overrides */
 
 .Ie8mJhekF8sdLktM:hover:not(#spotify-light-mode-specificity-bump), .Ie8mJhekF8sdLktM:focus-within:not(#spotify-light-mode-specificity-bump), .Ie8mJhekF8sdLktM[data-context-menu-open=true]:not(#spotify-light-mode-specificity-bump) {
   background: #00000033; /* hardcoded-color: #fff3 → #00000033 */
@@ -68,6 +53,10 @@
 
 .Qzg_tZEtCIeb3_kf:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(#ffffff00 2.09%,#ffffff1a 16.28%,#ffffff66 36.5%,#ffffff99 53.25%); /* hardcoded-color: linear-gradient(#0000 2.09%,#0000001a 16.28%,#0006 36.5%,#0009 53.25%) → linear-gradient(#ffffff00 2.09%,#ffffff1a 16.28%,#ffffff66 36.5%,#ffffff99 53.25%) */
+}
+
+.JoGWpig38pszZzLf:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-color) !important; /* css-var: var(--background-color) */
 }
 
 .G6TFpStlzBUtt1yi:not(#spotify-light-mode-specificity-bump) {
@@ -132,6 +121,14 @@
   box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px #0006 → 0 4px 60px #ffffff66 */
 }
 
+.PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_subtitle__bkQ5C:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
+}
+
+.PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_pretitle__-lsnK:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
+}
+
 .PromotionDefaultPoster-module_cardLink__mT-31.PromotionDefaultPoster-module_withBackgroundGradient__a8nsM:not(#spotify-light-mode-specificity-bump):after {
   background: linear-gradient(#ffffff00 0%,#ffffff99 58.67%); /* hardcoded-color: linear-gradient(#0000 0%,#0009 58.67%) → linear-gradient(#ffffff00 0%,#ffffff99 58.67%) */
 }
@@ -142,6 +139,10 @@
 
 .PromotionDefaultPoster-module_videoLayoutCard__3vfoC:not(#spotify-light-mode-specificity-bump):after {
   background: linear-gradient(#ffffff00 45.15%,#ffffff03 48.44%,#ffffff05 51.74%,#ffffff0d 56.12%,#ffffff17 59.78%,#ffffff24 63.44%,#ffffff33 67.09%,#ffffff45 70.75%,#ffffff54 74.41%,#ffffff66 78.06%,#ffffff75 81.72%,#ffffff82 85.37%,#ffffff8c 89.03%,#ffffff94 92.69%,#ffffff96 96.34%,#ffffff99 100%); /* hardcoded-color: linear-gradient(#0000 45.15%,#00000003 48.44%,#00000005 51.74%,#0000000d 56.12%,#00000017 59.78%,#00000024 63.44%,#0003 67.09%,#00000045 70.75%,#00000054 74.41%,#0006 78.06%,#00000075 81.72%,#00000082 85.37%,#0000008c 89.03%,#00000094 92.69%,#00000096 96.34%,#0009 100%) → linear-gradient(#ffffff00 45.15%,#ffffff03 48.44%,#ffffff05 51.74%,#ffffff0d 56.12%,#ffffff17 59.78%,#ffffff24 63.44%,#ffffff33 67.09%,#ffffff45 70.75%,#ffffff54 74.41%,#ffffff66 78.06%,#ffffff75 81.72%,#ffffff82 85.37%,#ffffff8c 89.03%,#ffffff94 92.69%,#ffffff96 96.34%,#ffffff99 100%) */
+}
+
+.PromotionDefaultPoster-module_videoLayoutCard__3vfoC .PromotionDefaultPoster-module_condensed-tertiary-icons__5XK1v button:not([aria-checked=true]):not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
 }
 
 .uJT7C8StdDMdgcva:has(.b4Uk0mIkUpcGx3VG):not(#spotify-light-mode-specificity-bump):after {
@@ -156,12 +157,25 @@
   background-image: linear-gradient(#ffffff00,#ffffff); /* hardcoded-color: linear-gradient(#0000,#000) → linear-gradient(#ffffff00,#ffffff) */
 }
 
+.CDyHWsKVsLAC4HFx .uwh85sg6FQGiXW5B:not(#spotify-light-mode-specificity-bump) {
+  --carousel-start-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
+  --carousel-end-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
+}
+
+.CDyHWsKVsLAC4HFx .uwh85sg6FQGiXW5B [data-shelf=carousel][data-shelf-notatedge=true]:not(#spotify-light-mode-specificity-bump) {
+  --carousel-start-chevron-gradient: #cecece !important; /* custom-property: #121212 → #cecece */
+}
+
 .fusH1kCDAoUo64nT:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
 .LzwNeFKvHM0NLMQw:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
+.s5lo4bdBeAwKUGAn .GU2R9CorO8_njlvQ:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued) !important; /* css-var: var(--text-subdued) */
 }
 
 .cMVlwrCtMVIX1viy:not(#spotify-light-mode-specificity-bump) {
@@ -200,6 +214,10 @@
   background: linear-gradient(#ffffffa8 75%,#ffffffe6 100%); /* hardcoded-color: linear-gradient(#000000a8 75%,#000000e6 100%) → linear-gradient(#ffffffa8 75%,#ffffffe6 100%) */
 }
 
+.J7hT2SYDUZQZLcll:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base) !important; /* css-var: var(--text-base) */
+}
+
 .wxZPNNc9PZwWr4jB:not(#spotify-light-mode-specificity-bump) {
   background: #8ec889; /* hardcoded-color: #003d00 → #8ec889 */
 }
@@ -218,4 +236,8 @@
 
 .JnVVrC7g3uUf7fwx:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(180deg,var(--onboarding-card-color-light)0%,#00000000 100%); /* hardcoded-color: linear-gradient(180deg,var(--onboarding-card-color-light)0%,#fff0 100%) → linear-gradient(180deg,var(--onboarding-card-color-light)0%,#00000000 100%) */
+}
+
+.HQaMa1_r2AoBiJAH:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued) !important; /* css-var: var(--text-subdued) */
 }

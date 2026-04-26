@@ -6,15 +6,9 @@
 
  * Source: snapshots/dwp-watch-feed-view-container.c7fc0b7b.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .R_fsTzCcwk0pa29C:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: linear-gradient(90deg,#ffffff00 0%,#ffffff 25% 75%,#ffffff00 100%); /* hardcoded-color: linear-gradient(90deg,#0000 0%,#000 25% 75%,#0000 100%) → linear-gradient(90deg,#ffffff00 0%,#ffffff 25% 75%,#ffffff00 100%) */
@@ -27,6 +21,10 @@
 
 .yXN52o27ZsCRQpNt:not(#spotify-light-mode-specificity-bump):after {
   box-shadow: 0 4px min(3vw,3vh,60px) #ffffff80; /* hardcoded-color: 0 4px min(3vw,3vh,60px) #00000080 → 0 4px min(3vw,3vh,60px) #ffffff80 */
+}
+
+.z2b7iCbNiT8MNtAy:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-color) !important; /* css-var: var(--background-color) */
 }
 
 .z2b7iCbNiT8MNtAy._BfN0amQUZkQ8XdV:not(#spotify-light-mode-specificity-bump) {

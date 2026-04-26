@@ -6,15 +6,13 @@
 
  * Source: snapshots/dwp-home-chips-row.fb404ad3.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
 
-/* Custom property overrides */
+.Q7ciR0kAsukiCprc:not(#spotify-light-mode-specificity-bump) {
+  background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
+}
 
 .zaI595ToPEZTIuae .dqY3Tbw0iFQKYoz5:not(#spotify-light-mode-specificity-bump) {
   --carousel-start-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
@@ -25,12 +23,12 @@
   --carousel-start-chevron-gradient: #cecece !important; /* custom-property: #121212 → #cecece */
 }
 
+.V1jTTFVJyRQMkXjj:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--essential-subdued) !important; /* css-var: var(--essential-subdued) */
+}
 
-
-/* Hardcoded color overrides */
-
-.Q7ciR0kAsukiCprc:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
+.kRkvH3JcI5sYgH6J:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }
 
 .kRkvH3JcI5sYgH6J.fzMaM8folMIckYG2:not(#spotify-light-mode-specificity-bump):after {

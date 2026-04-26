@@ -6,15 +6,9 @@
 
  * Source: snapshots/concerts-on-tour-playlist-card.67e45c98.css
 
- * Pass 1: map custom properties with literal color values through lib/chroma.ts::toCounterpart().
-
- * Pass 2: map hardcoded color literals inside normal declarations while preserving each rule selector.
-
  */
 
 
-
-/* Hardcoded color overrides */
 
 .spUdqNklCwNLjES1:not(#spotify-light-mode-specificity-bump) {
   background: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
