@@ -23,7 +23,7 @@
 }
 
 .VCPgr3ThFqEkbXSK .o78onbRrOL0X0j_g:not(#spotify-light-mode-specificity-bump) {
-  background-color: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
+  background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
 }
 
 .VCPgr3ThFqEkbXSK .nAyfJqL44sEgHheg:not(#spotify-light-mode-specificity-bump) {
@@ -36,7 +36,7 @@
 }
 
 .MuWeoxhosNYCs5E6:not(#spotify-light-mode-specificity-bump) {
-  color: #585858; /* hardcoded-color: #b3b3b3 → #585858 */
+  color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
 .H7KAcVLvUy8Jo9v3:not(#spotify-light-mode-specificity-bump) {
@@ -68,7 +68,7 @@
 }
 
 .KmN1Y8bq8eC6k8TX:not(#spotify-light-mode-specificity-bump) {
-  background: #94aefd; /* hardcoded-color: #202f72 → #94aefd */
+  background: #c9d8ff; /* hardcoded-color: #202f72 → #c9d8ff */
 }
 
 .mY4Zu2cmkisEMdc2:not(#spotify-light-mode-specificity-bump) {
@@ -119,11 +119,11 @@
 }
 
 .Oy9aO87dDlgDS8lf:hover .gujKEfaZCcsENUBD:not(#spotify-light-mode-specificity-bump) {
-  fill: #00481f; /* hardcoded-color: #a1ecb2 → #00481f */
+  fill: #206c3a; /* hardcoded-color: #a1ecb2 → #206c3a */
 }
 
 .Oy9aO87dDlgDS8lf:hover .cwoKLAkR_rAsTRWM:not(#spotify-light-mode-specificity-bump) {
-  fill: #113820; /* hardcoded-color: #c6f1d2 → #113820 */
+  fill: #32583f; /* hardcoded-color: #c6f1d2 → #32583f */
 }
 
 .Oy9aO87dDlgDS8lf:active:not(#spotify-light-mode-specificity-bump) {
@@ -139,7 +139,7 @@
 }
 
 .NJh1B8rnlSUlK7sY:not(#spotify-light-mode-specificity-bump) {
-  background-color: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
+  background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
   box-shadow: 0 16px 24px #ffffff4d,0 6px 8px #ffffff33; /* hardcoded-color: 0 16px 24px #0000004d,0 6px 8px #0003 → 0 16px 24px #ffffff4d,0 6px 8px #ffffff33 */
 }
 
@@ -176,7 +176,7 @@
 }
 
 .f_Q0q2fN0YmaU6zR .os-scrollbar-vertical:active .os-scrollbar-handle[data-group-by]:not(#spotify-light-mode-specificity-bump):after {
-  --generic-tooltip-background-color: #bdbdbd !important; /* custom-property: #282828 → #bdbdbd */
+  --generic-tooltip-background-color: #e4e4e4 !important; /* custom-property: #282828 → #e4e4e4 */
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: var(--generic-tooltip-background-color) !important; /* css-var: var(--generic-tooltip-background-color) */
   box-shadow: 0 16px 24px #ffffff4d,0 6px 8px #ffffff33; /* hardcoded-color: 0 16px 24px #0000004d,0 6px 8px #0003 → 0 16px 24px #ffffff4d,0 6px 8px #ffffff33 */

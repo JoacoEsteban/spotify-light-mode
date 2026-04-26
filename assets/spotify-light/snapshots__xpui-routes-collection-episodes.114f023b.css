@@ -19,7 +19,7 @@
 }
 
 .cMVlwrCtMVIX1viy:not(#spotify-light-mode-specificity-bump) {
-  background: #5aab91; /* hardcoded-color: #056952 → #5aab91 */
+  background: #80d2b7; /* hardcoded-color: #056952 → #80d2b7 */
 }
 
 .fusH1kCDAoUo64nT:not(#spotify-light-mode-specificity-bump) {
@@ -32,5 +32,5 @@
 
 .QzD3hi3PgLo9JvvA:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
-  background-color: #3c84de; /* hardcoded-color: #2e77d0 → #3c84de */
+  background-color: #69aaff; /* hardcoded-color: #2e77d0 → #69aaff */
 }

@@ -11,7 +11,7 @@
 
 
 .dF0nNv60L70DYyvz:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(90deg,#d44eb8,#509bf5); /* hardcoded-color: linear-gradient(90deg,#af2896,#509bf5) → linear-gradient(90deg,#d44eb8,#509bf5) */
+  background-image: linear-gradient(90deg,#fe76df,#509bf5); /* hardcoded-color: linear-gradient(90deg,#af2896,#509bf5) → linear-gradient(90deg,#fe76df,#509bf5) */
 }
 
 .raWEAvnMVtk0yOSu:not(#spotify-light-mode-specificity-bump) {
@@ -53,7 +53,7 @@
 }
 
 .Pmbe_Euf4R4fGarW.ihE8PJvbefgJmRhO:has(:focus-visible):not(#spotify-light-mode-specificity-bump) {
-  outline: 5px auto #4482e4; /* hardcoded-color: 5px auto #3673d4 → 5px auto #4482e4 */
+  outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
 
 .kPLEzaZADEAjWLC2:not(#spotify-light-mode-specificity-bump) {
@@ -88,7 +88,7 @@
 }
 
 .NpMDoKe9llc2erCZ>.f6jYIQ_DFwRILHk0:not(#spotify-light-mode-specificity-bump) {
-  background-color: #b5b5b5; /* hardcoded-color: #333 → #b5b5b5 */
+  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
 }
 
 .loAqLFdDWLAeAqGQ:not(#spotify-light-mode-specificity-bump) {
@@ -120,12 +120,12 @@
 }
 
 .GnHdPHWskR8WElkE:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-highlight,#bbbbbb); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#bbbbbb) */
+  background-color: var(--background-elevated-highlight,#e2e2e2); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#e2e2e2) */
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
 .EpfIE3glwAOGcNT6:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-highlight,#bbbbbb); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#bbbbbb) */
+  background-color: var(--background-elevated-highlight,#e2e2e2); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#e2e2e2) */
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
@@ -148,7 +148,7 @@
 }
 
 .S3CcnZiEctctKk1g .tippy-content:not(#spotify-light-mode-specificity-bump) {
-  background-color: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
+  background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
   box-shadow: 0 4px 12px 4px #ffffff80; /* hardcoded-color: 0 4px 12px 4px #00000080 → 0 4px 12px 4px #ffffff80 */
 }
 

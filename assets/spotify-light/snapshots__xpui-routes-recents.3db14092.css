@@ -15,7 +15,7 @@
 }
 
 .xdOLnzb0iIJWBBEq a:link:not(#spotify-light-mode-specificity-bump), .xdOLnzb0iIJWBBEq a:visited:not(#spotify-light-mode-specificity-bump), .u7jRrXmhTd0UcKCG a:link:not(#spotify-light-mode-specificity-bump), .u7jRrXmhTd0UcKCG a:visited:not(#spotify-light-mode-specificity-bump) {
-  color: var(--extracted-text-subdued,#585858); /* hardcoded-color: var(--extracted-text-subdued,#b3b3b3) → var(--extracted-text-subdued,#585858) */
+  color: var(--extracted-text-subdued,#7a7a7a); /* hardcoded-color: var(--extracted-text-subdued,#b3b3b3) → var(--extracted-text-subdued,#7a7a7a) */
 }
 
 .xdOLnzb0iIJWBBEq a:hover:not(#spotify-light-mode-specificity-bump), .xdOLnzb0iIJWBBEq a:focus:not(#spotify-light-mode-specificity-bump), .xdOLnzb0iIJWBBEq a:active:not(#spotify-light-mode-specificity-bump), .u7jRrXmhTd0UcKCG a:hover:not(#spotify-light-mode-specificity-bump), .u7jRrXmhTd0UcKCG a:focus:not(#spotify-light-mode-specificity-bump), .u7jRrXmhTd0UcKCG a:active:not(#spotify-light-mode-specificity-bump) {

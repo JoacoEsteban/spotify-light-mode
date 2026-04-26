@@ -36,7 +36,7 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 }
 
 .Pmbe_Euf4R4fGarW.ihE8PJvbefgJmRhO:has(:focus-visible):not(#spotify-light-mode-specificity-bump) {
-  outline: 5px auto #4482e4; /* hardcoded-color: 5px auto #3673d4 → 5px auto #4482e4 */
+  outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
 
 .kPLEzaZADEAjWLC2:not(#spotify-light-mode-specificity-bump) {
@@ -79,12 +79,12 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 }
 
 .GnHdPHWskR8WElkE:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-highlight,#bbbbbb); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#bbbbbb) */
+  background-color: var(--background-elevated-highlight,#e2e2e2); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#e2e2e2) */
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
 .EpfIE3glwAOGcNT6:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-highlight,#bbbbbb); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#bbbbbb) */
+  background-color: var(--background-elevated-highlight,#e2e2e2); /* hardcoded-color: var(--background-elevated-highlight,#2a2a2a) → var(--background-elevated-highlight,#e2e2e2) */
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
