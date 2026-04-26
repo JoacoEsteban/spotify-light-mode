@@ -55,7 +55,10 @@ export default function App(): JSX.Element | null {
     <main className="popup">
       <header className="popup__header">
         <div className="popup__top-row">
-          <span className="popup__eyebrow">Spotify</span>
+          <div className="popup__brand">
+            <img src="/icon-32.png" className="popup__icon" alt="" />
+            <span className="popup__eyebrow">Spotify</span>
+          </div>
           <div className="popup__status">
             <div
               className={`popup__status-dot${enabled ? " popup__status-dot--on" : ""}`}

@@ -88,6 +88,19 @@ body::after {
   margin-bottom: 3px;
 }
 
+.popup__brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.popup__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
 .popup__eyebrow {
   font-size: 9px;
   font-weight: 600;
