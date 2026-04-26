@@ -30,6 +30,10 @@ export function createInlineStyleObserver(): InlineStyleObserver {
   const touchedElements = new Set<HTMLElement>();
   let observer: MutationObserver | null = null;
 
+  let trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+  const touchedDeclarations = new Set<CSSStyleDeclaration>();
+  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null = null;
+
   function trackOriginalInlineStyle(
     element: HTMLElement,
     property: InlineStyleProperty,
@@ -140,6 +144,85 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     }
   }
 
+  function processRuleDeclaration(style: CSSStyleDeclaration): void {
+    for (const property of Array.from(style)) {
+      const value = style.getPropertyValue(property).trim();
+      if (value.length === 0) continue;
+
+      let mappedValue: string;
+      if (property.startsWith("--")) {
+        if (!hasColorToken(value) || !chroma.valid(value)) continue;
+        mappedValue = formatMappedColor(value);
+      } else {
+        if (!hasColorToken(value)) continue;
+        mappedValue = mapColorsInValue(value);
+      }
+
+      if (mappedValue === value) continue;
+
+      const tracked = trackedSheetStyles.get(style) ?? new Map();
+      if (!tracked.has(property)) {
+        tracked.set(property, {
+          value,
+          priority: style.getPropertyPriority(property),
+        });
+        trackedSheetStyles.set(style, tracked);
+        touchedDeclarations.add(style);
+      }
+
+      style.setProperty(property, mappedValue, "important");
+    }
+  }
+
+  function processRule(rule: CSSRule): void {
+    if (rule instanceof CSSStyleRule) {
+      processRuleDeclaration(rule.style);
+    } else if ("cssRules" in rule) {
+      for (const child of Array.from((rule as CSSMediaRule).cssRules)) {
+        processRule(child);
+      }
+    }
+  }
+
+  function isStyledSheet(sheet: CSSStyleSheet): boolean {
+    return (
+      sheet.ownerNode instanceof HTMLStyleElement &&
+      sheet.ownerNode.hasAttribute("data-styled")
+    );
+  }
+
+  function processStyledSheet(sheet: CSSStyleSheet): void {
+    try {
+      for (const rule of Array.from(sheet.cssRules)) {
+        processRule(rule);
+      }
+    } catch {
+      // SecurityError for cross-origin sheets
+    }
+  }
+
+  function patchInsertRule(): void {
+    const proto = CSSStyleSheet.prototype;
+    originalInsertRule = proto.insertRule;
+    proto.insertRule = function (rule: string, index?: number): number {
+      const insertedIndex = originalInsertRule!.call(this, rule, index);
+      if (isStyledSheet(this)) {
+        const insertedRule = this.cssRules[insertedIndex];
+        if (insertedRule != null) {
+          processRule(insertedRule);
+        }
+      }
+      return insertedIndex;
+    };
+  }
+
+  function unpatchInsertRule(): void {
+    if (originalInsertRule != null) {
+      CSSStyleSheet.prototype.insertRule = originalInsertRule;
+      originalInsertRule = null;
+    }
+  }
+
   function restoreProperty(
     element: HTMLElement,
     property: string,
@@ -175,11 +258,35 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     trackedInlineStyles = new WeakMap<HTMLElement, TrackedElementStyles>();
   }
 
+  function restoreSheetOverrides(): void {
+    for (const style of touchedDeclarations) {
+      const tracked = trackedSheetStyles.get(style);
+      if (tracked == null) continue;
+      for (const [property, original] of tracked) {
+        if (original.value.length === 0) {
+          style.removeProperty(property);
+        } else {
+          style.setProperty(property, original.value, original.priority);
+        }
+      }
+    }
+
+    touchedDeclarations.clear();
+    trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+  }
+
   function start(): void {
     if (observer != null) {
       return;
     }
 
+    for (const sheet of Array.from(document.styleSheets)) {
+      if (isStyledSheet(sheet)) {
+        processStyledSheet(sheet);
+      }
+    }
+
+    patchInsertRule();
     processTree(document.documentElement);
 
     observer = new MutationObserver((mutations) => {
@@ -193,6 +300,14 @@ export function createInlineStyleObserver(): InlineStyleObserver {
         }
 
         for (const node of mutation.addedNodes) {
+          if (
+            node instanceof HTMLStyleElement &&
+            node.hasAttribute("data-styled") &&
+            node.sheet != null
+          ) {
+            processStyledSheet(node.sheet);
+          }
+
           if (node instanceof HTMLElement) {
             processTree(node);
           }
@@ -211,6 +326,8 @@ export function createInlineStyleObserver(): InlineStyleObserver {
   function stop(): void {
     observer?.disconnect();
     observer = null;
+    unpatchInsertRule();
+    restoreSheetOverrides();
     restoreInlineOverrides();
   }
 
