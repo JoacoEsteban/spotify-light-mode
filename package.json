@@ -9,12 +9,16 @@
     "build": "wxt build",
     "build:firefox": "wxt build --browser firefox",
     "zip": "wxt zip",
-    "postinstall": "wxt prepare"
+    "postinstall": "wxt prepare",
+    "screenshot": "bun scripts/screenshot.ts",
+    "screenshot:fast": "bun scripts/screenshot.ts --skip-build",
+    "screenshot:login": "bun scripts/screenshot.ts --login"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@wxt-dev/module-react": "^1.2.2",
+    "puppeteer-core": "^24.42.0",
     "typescript": "5.8",
     "wxt": "^0.20.25"
   },
