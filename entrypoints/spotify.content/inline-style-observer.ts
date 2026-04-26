@@ -1,4 +1,10 @@
-import { hasColorToken, mapColorsInValue } from "../../lib/style-color-mapping";
+import chroma from "chroma-js";
+
+import {
+  formatMappedColor,
+  hasColorToken,
+  mapColorsInValue,
+} from "../../lib/style-color-mapping";
 
 type TrackedInlineStyle = {
   value: string;
@@ -8,7 +14,10 @@ type TrackedInlineStyle = {
 type TrackedElementStyles = {
   backgroundImage?: TrackedInlineStyle;
   backgroundColor?: TrackedInlineStyle;
+  customProperties?: Map<string, TrackedInlineStyle>;
 };
+
+type InlineStyleProperty = "background-image" | "background-color";
 
 export type InlineStyleObserver = {
   start: () => void;
@@ -23,7 +32,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
 
   function trackOriginalInlineStyle(
     element: HTMLElement,
-    property: "background-image" | "background-color",
+    property: InlineStyleProperty,
   ): void {
     const tracked = trackedInlineStyles.get(element) ?? {};
 
@@ -45,9 +54,28 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     touchedElements.add(element);
   }
 
+  function trackOriginalCustomProperty(
+    element: HTMLElement,
+    property: string,
+  ): void {
+    const tracked = trackedInlineStyles.get(element) ?? {};
+    const customProperties = tracked.customProperties ?? new Map();
+
+    if (!customProperties.has(property)) {
+      customProperties.set(property, {
+        value: element.style.getPropertyValue(property),
+        priority: element.style.getPropertyPriority(property),
+      });
+    }
+
+    tracked.customProperties = customProperties;
+    trackedInlineStyles.set(element, tracked);
+    touchedElements.add(element);
+  }
+
   function maybeOverrideInlineStyle(
     element: HTMLElement,
-    property: "background-image" | "background-color",
+    property: InlineStyleProperty,
   ): void {
     const originalValue = element.style.getPropertyValue(property).trim();
     if (originalValue.length === 0 || !hasColorToken(originalValue)) {
@@ -67,9 +95,39 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     });
   }
 
+  function maybeOverrideInlineCustomProperties(element: HTMLElement): void {
+    for (const property of Array.from(element.style)) {
+      if (!property.startsWith("--")) {
+        continue;
+      }
+
+      const originalValue = element.style.getPropertyValue(property).trim();
+      if (
+        originalValue.length === 0 ||
+        !hasColorToken(originalValue) ||
+        !chroma.valid(originalValue)
+      ) {
+        continue;
+      }
+
+      const mappedValue = formatMappedColor(originalValue);
+      if (mappedValue === originalValue) {
+        continue;
+      }
+
+      trackOriginalCustomProperty(element, property);
+      selfMutatingElements.add(element);
+      element.style.setProperty(property, mappedValue, "important");
+      queueMicrotask(() => {
+        selfMutatingElements.delete(element);
+      });
+    }
+  }
+
   function processElement(element: HTMLElement): void {
     maybeOverrideInlineStyle(element, "background-image");
     maybeOverrideInlineStyle(element, "background-color");
+    maybeOverrideInlineCustomProperties(element);
   }
 
   function processTree(root: ParentNode): void {
@@ -84,7 +142,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
 
   function restoreProperty(
     element: HTMLElement,
-    property: "background-image" | "background-color",
+    property: string,
     tracked: TrackedInlineStyle,
   ): void {
     if (tracked.value.length === 0) {
@@ -104,6 +162,12 @@ export function createInlineStyleObserver(): InlineStyleObserver {
 
       if (tracked?.backgroundColor != null) {
         restoreProperty(element, "background-color", tracked.backgroundColor);
+      }
+
+      if (tracked?.customProperties != null) {
+        for (const [property, value] of tracked.customProperties) {
+          restoreProperty(element, property, value);
+        }
       }
     }
 
