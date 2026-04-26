@@ -1,0 +1,43 @@
+Spotify's web player is stuck in the dark. Spotify Light Mode fixes that.
+
+This extension rewrites the color scheme on open.spotify.com in real time, giving you a clean, bright interface without any configuration. No accounts, no cloud sync, no data collection — just light mode, applied the moment the page loads.
+
+
+WHY INSTALL IT
+
+Spotify has never shipped a light mode for its web player. If you spend your workday in a browser with a light interface and want Spotify to match, or if you simply prefer light themes, this extension is the only way to get there.
+
+Most Spotify users access it through the browser at some point — to share links, manage playlists, or listen from a machine where the desktop app isn't installed. Spotify Light Mode makes sure that experience feels at home next to the rest of your browser.
+
+
+HOW IT WORKS
+
+Spotify Light Mode intercepts the color tokens Spotify injects at runtime and replaces them with a curated light palette. It runs at document start, before the page finishes painting, so you never see a dark flash on load. It also watches for dynamic style changes as you navigate, so the theme stays consistent across every page in the player.
+
+Two controls in the popup give you full flexibility:
+
+→ Enable extension — turns light mode on or off globally. The change takes effect immediately, no page reload needed.
+
+→ Use system preference — when enabled, light mode only activates when your OS is set to a light color scheme. If you switch your system to dark mode, Spotify goes back to its default dark theme automatically. This is the right setting if you switch between light and dark throughout the day and want Spotify to follow along.
+
+
+FEATURES
+
+• Light theme for the complete Spotify web player
+• Instant toggle — no page reload, no delay
+• System preference sync — follows your OS light/dark setting automatically
+• Runs at document start — zero dark flash on load
+• Watches for dynamic style updates so the theme holds as you navigate
+• No external requests, no analytics, no tracking
+
+
+PERMISSIONS
+
+Storage — the only permission this extension requests. It is used exclusively to remember your on/off preference and system preference setting between sessions.
+
+The extension has no access to your Spotify account, your listening history, your credentials, or any other personal data. It only touches the visual presentation of the page.
+
+
+COMPATIBILITY
+
+Works on open.spotify.com in Chrome and Chromium-based browsers. Does not affect the Spotify desktop app or mobile apps.
