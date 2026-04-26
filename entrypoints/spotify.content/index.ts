@@ -6,7 +6,7 @@ import {
   readUseSystemPref,
 } from "../../lib/storage";
 import lightModeCss from "../../assets/spotify-light/index.css?inline";
-// import { replaceAll } from "./in-place-color-change";
+import { createInlineStyleObserver } from "./inline-style-observer";
 
 export default defineContentScript({
   matches: ["https://open.spotify.com/*"],
@@ -21,6 +21,7 @@ export default defineContentScript({
     let currentEnabled: boolean = enabledItem.fallback;
     let currentUseSystemPref: boolean = useSystemPrefItem.fallback;
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const inlineStyleObserver = createInlineStyleObserver();
 
     function shouldApply(): boolean {
       if (!currentEnabled) return false;
@@ -34,6 +35,12 @@ export default defineContentScript({
         document.head.appendChild(styleEl);
       } else if (!active && document.head.contains(styleEl)) {
         document.head.removeChild(styleEl);
+      }
+
+      if (active) {
+        inlineStyleObserver.start();
+      } else {
+        inlineStyleObserver.stop();
       }
     }
 
@@ -61,6 +68,7 @@ export default defineContentScript({
     darkQuery.addEventListener("change", onSchemeChange);
     ctx.onInvalidated(() => {
       darkQuery.removeEventListener("change", onSchemeChange);
+      inlineStyleObserver.stop();
     });
   },
 });
