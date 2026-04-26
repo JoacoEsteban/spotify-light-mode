@@ -22,6 +22,7 @@ type Declaration = {
 type Block = {
   selector: string;
   declarations: Declaration[];
+  layers: string[];
 };
 
 type SourceStylesheet = {
@@ -45,7 +46,6 @@ const staticRules: StaticRuleMap = {
   },
 };
 
-const blockRegex = /([^{}]+)\{([^{}]*)\}/g;
 const colorTokenRegex =
   /#[0-9a-f]{3,8}\b|rgba?\([^)]*\)|hsla?\([^)]*\)/gi;
 const PRESERVED_COLORFUL_CHROMA_MIN = 0.12;
@@ -221,18 +221,87 @@ function isIgnorableSelector(selector: string): boolean {
   return selectorParts.every((part) => /^(from|to|\d+(?:\.\d+)?%)$/i.test(part));
 }
 
-function parseCustomPropertyBlocks(sourceCss: string): Block[] {
-  const blocks: Block[] = [];
+function findMatchingBrace(input: string, openBraceIndex: number): number {
+  let depth = 0;
+  let quote: '"' | "'" | null = null;
 
-  for (const match of sourceCss.matchAll(blockRegex)) {
-    const selector = match[1]?.trim();
-    const body = match[2] ?? "";
+  for (let index = openBraceIndex; index < input.length; index += 1) {
+    const char = input[index];
+    const previous = index > 0 ? input[index - 1] : "";
 
-    if (!selector || isIgnorableSelector(selector)) {
+    if (quote) {
+      if (char === quote && previous !== "\\") {
+        quote = null;
+      }
       continue;
     }
 
-    const declarations = parseDeclarations(body)
+    if (char === '"' || char === "'") {
+      quote = char;
+      continue;
+    }
+
+    if (char === "{") {
+      depth += 1;
+      continue;
+    }
+
+    if (char === "}") {
+      depth -= 1;
+      if (depth === 0) {
+        return index;
+      }
+    }
+  }
+
+  return -1;
+}
+
+function collectBlocks(
+  sourceCss: string,
+  collectDeclarations: (body: string) => Declaration[],
+): Block[] {
+  const blocks: Block[] = [];
+
+  function walk(input: string, layers: string[]): void {
+    let cursor = 0;
+
+    while (cursor < input.length) {
+      const openBraceIndex = input.indexOf("{", cursor);
+      if (openBraceIndex === -1) {
+        return;
+      }
+
+      const header = input.slice(cursor, openBraceIndex).trim();
+      const closeBraceIndex = findMatchingBrace(input, openBraceIndex);
+      if (closeBraceIndex === -1) {
+        return;
+      }
+
+      const body = input.slice(openBraceIndex + 1, closeBraceIndex);
+
+      if (header.startsWith("@layer")) {
+        walk(body, [...layers, header]);
+      } else if (header.startsWith("@")) {
+        walk(body, layers);
+      } else if (!isIgnorableSelector(header)) {
+        const declarations = collectDeclarations(body);
+        if (declarations.length > 0) {
+          blocks.push({ selector: header, declarations, layers });
+        }
+      }
+
+      cursor = closeBraceIndex + 1;
+    }
+  }
+
+  walk(sourceCss, []);
+  return blocks;
+}
+
+function parseCustomPropertyBlocks(sourceCss: string): Block[] {
+  return collectBlocks(sourceCss, (body) =>
+    parseDeclarations(body)
       .filter(
         ({ property, value }) =>
           property.startsWith("--") && hasColorToken(value) && chroma.valid(value),
@@ -244,30 +313,13 @@ function parseCustomPropertyBlocks(sourceCss: string): Block[] {
         important,
         kind: "custom-property" as const,
       }))
-      .filter(({ original, mapped }) => original !== mapped);
-
-    if (declarations.length === 0) {
-      continue;
-    }
-
-    blocks.push({ selector, declarations });
-  }
-
-  return blocks;
+      .filter(({ original, mapped }) => original !== mapped),
+  );
 }
 
 function parseHardcodedColorBlocks(sourceCss: string): Block[] {
-  const blocks: Block[] = [];
-
-  for (const match of sourceCss.matchAll(blockRegex)) {
-    const selector = match[1]?.trim();
-    const body = match[2] ?? "";
-
-    if (!selector || isIgnorableSelector(selector)) {
-      continue;
-    }
-
-    const declarations = parseDeclarations(body)
+  return collectBlocks(sourceCss, (body) =>
+    parseDeclarations(body)
       .filter(({ property, value }) => !property.startsWith("--") && hasColorToken(value))
       .map(({ property, value, important }) => ({
         property,
@@ -276,16 +328,8 @@ function parseHardcodedColorBlocks(sourceCss: string): Block[] {
         important,
         kind: "hardcoded-color" as const,
       }))
-      .filter(({ original, mapped }) => original !== mapped);
-
-    if (declarations.length === 0) {
-      continue;
-    }
-
-    blocks.push({ selector, declarations });
-  }
-
-  return blocks;
+      .filter(({ original, mapped }) => original !== mapped),
+  );
 }
 
 function increaseSelectorSpecificity(selector: string): string {
@@ -312,7 +356,14 @@ function increaseSelectorSpecificity(selector: string): string {
     .join(", ");
 }
 
-function renderBlock({ selector, declarations }: Block): string {
+function indentBlock(input: string, prefix = "  "): string {
+  return input
+    .split("\n")
+    .map((line) => `${prefix}${line}`)
+    .join("\n");
+}
+
+function renderBlock({ selector, declarations, layers }: Block): string {
   const renderedDeclarations = declarations
     .map(({ property, original, mapped, important, kind }) => {
       const needsImportant = kind === "custom-property" || important;
@@ -321,7 +372,13 @@ function renderBlock({ selector, declarations }: Block): string {
     })
     .join("\n");
 
-  return `${increaseSelectorSpecificity(selector)} {\n${renderedDeclarations}\n}`;
+  let rendered = `${increaseSelectorSpecificity(selector)} {\n${renderedDeclarations}\n}`;
+
+  for (const layer of [...layers].reverse()) {
+    rendered = `${layer} {\n${indentBlock(rendered)}\n}`;
+  }
+
+  return rendered;
 }
 
 function renderStylesheet(
