@@ -97,8 +97,9 @@ body::after {
 .popup__icon {
   width: 22px;
   height: 22px;
-  border-radius: 5px;
+  border-radius: 100%;
   flex-shrink: 0;
+  border: 1.5px solid rgba(28, 25, 23, 0.3);
 }
 
 .popup__eyebrow {
