@@ -60,10 +60,6 @@
   background-color: #000000 !important; /* hardcoded-color: #fff → #000000 */
 }
 
-.uetzV9MBf1soVlLG {
-  color: #008035 !important; /* hardcoded-color: #1db954 → #008035 */
-}
-
 .yAqWz24y2vgpEYX8 {
   background-color: #ffffff66 !important; /* hardcoded-color: #0006 → #ffffff66 */
 }
@@ -159,7 +155,6 @@
 }
 
 .JYVEhg3IlgIjMIYz {
-  background: radial-gradient(82.95% 283.44% at 50% -160.29%,#006a2a4d 0%,var(--gradient-color-bottom)100%) !important; /* hardcoded-color: radial-gradient(82.95% 283.44% at 50% -160.29%,#1ed7604d 0%,var(--gradient-color-bottom)100%) → radial-gradient(82.95% 283.44% at 50% -160.29%,#006a2a4d 0%,var(--gradient-color-bottom)100%) */
   background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
@@ -181,14 +176,6 @@
 
 input:hover:not([disabled],:active)~.hzLQN8eYDPYyn1km {
   background-color: #585858 !important; /* hardcoded-color: #b3b3b3 → #585858 */
-}
-
-input:checked:hover:not([disabled],:active)~.hzLQN8eYDPYyn1km {
-  background-color: #006a2a !important; /* hardcoded-color: #1ed760 → #006a2a */
-}
-
-input:checked~.hzLQN8eYDPYyn1km {
-  background-color: #008035 !important; /* hardcoded-color: #1db954 → #008035 */
 }
 
 input:checked~.hzLQN8eYDPYyn1km .t3q6uAPe7y0rAqRK {

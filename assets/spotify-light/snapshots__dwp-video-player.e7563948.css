@@ -20,7 +20,6 @@
   --bg-color: #0000004d !important; /* custom-property: #ffffff4d → #0000004d */
   --mg-color: #000000b3 !important; /* custom-property: #ffffffb3 → #000000b3 */
   --fg-color: #000000 !important; /* custom-property: #fff → #000000 */
-  --is-active-fg-color: #008035 !important; /* custom-property: #1db954 → #008035 */
 }
 
 
@@ -94,10 +93,6 @@ video::cue {
 
 .cTNcyeMr3oTYKs74 {
   background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
-}
-
-.m_Ay3H7bZWcEwA8z button>svg {
-  color: #008035 !important; /* hardcoded-color: #1db954 → #008035 */
 }
 
 .vWpX3zxZPE3SF299 {
