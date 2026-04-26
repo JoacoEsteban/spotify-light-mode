@@ -5,7 +5,7 @@ import {
   readEnabled,
   readUseSystemPref,
 } from "../../lib/storage";
-import lightModeCss from "../../assets/spotify-light/index.css?inline";
+import lightModeCss from "../../assets/spotify-light/index";
 import { createInlineStyleObserver } from "./inline-style-observer";
 
 export default defineContentScript({
