@@ -5,3 +5,7 @@ run = "bun scripts/generate-spotify-light-css.ts"
 [tasks.process-icons]
 description = "Resize icon to all extension sizes with rounded corners (usage: mise run process-icons <icon> <radius-ratio>)"
 run = "fish scripts/process-icons.fish {{arg(name='icon')}} {{arg(name='radius-ratio')}}"
+
+[tasks.screenshot]
+description = "Take store screenshots for the current version of the extension"
+run = "bun scripts/screenshot.ts"
