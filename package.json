@@ -9,6 +9,7 @@
     "build": "wxt build",
     "build:firefox": "wxt build --browser firefox",
     "zip": "wxt zip",
+    "zip:firefox": "wxt zip --browser firefox",
     "postinstall": "wxt prepare",
     "screenshot": "bun scripts/screenshot.ts",
     "screenshot:fast": "bun scripts/screenshot.ts --skip-build",
