@@ -17,5 +17,5 @@
 /* Hardcoded color overrides */
 
 .Q7ciR0kAsukiCprc {
-  background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) !important; /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
+  background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
 }

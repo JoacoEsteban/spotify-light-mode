@@ -15,6 +15,7 @@ type Declaration = {
   property: string;
   original: string;
   mapped: string;
+  important: boolean;
   kind: "custom-property" | "hardcoded-color";
 };
 
@@ -150,7 +151,9 @@ function splitTopLevel(input: string, delimiter: string): string[] {
   return parts;
 }
 
-function splitDeclaration(declaration: string): { property: string; value: string } | null {
+function splitDeclaration(
+  declaration: string,
+): { property: string; value: string; important: boolean } | null {
   let quote: '"' | "'" | null = null;
   let parenDepth = 0;
 
@@ -182,21 +185,27 @@ function splitDeclaration(declaration: string): { property: string; value: strin
 
     if (char === ":" && parenDepth === 0) {
       const property = declaration.slice(0, index).trim();
-      const value = declaration.slice(index + 1).trim().replace(/\s*!important\s*$/i, "");
+      const rawValue = declaration.slice(index + 1).trim();
+      const important = /\s*!important\s*$/i.test(rawValue);
+      const value = rawValue.replace(/\s*!important\s*$/i, "");
       if (!property || !value) {
         return null;
       }
-      return { property, value };
+      return { property, value, important };
     }
   }
 
   return null;
 }
 
-function parseDeclarations(body: string): Array<{ property: string; value: string }> {
+function parseDeclarations(body: string): Array<{ property: string; value: string; important: boolean }> {
   return splitTopLevel(body, ";")
     .map((declaration) => splitDeclaration(declaration))
-    .filter((declaration): declaration is { property: string; value: string } => declaration !== null);
+    .filter(
+      (
+        declaration,
+      ): declaration is { property: string; value: string; important: boolean } => declaration !== null,
+    );
 }
 
 function isIgnorableSelector(selector: string): boolean {
@@ -228,10 +237,11 @@ function parseCustomPropertyBlocks(sourceCss: string): Block[] {
         ({ property, value }) =>
           property.startsWith("--") && hasColorToken(value) && chroma.valid(value),
       )
-      .map(({ property, value }) => ({
+      .map(({ property, value, important }) => ({
         property,
         original: value,
         mapped: formatColor(value),
+        important,
         kind: "custom-property" as const,
       }))
       .filter(({ original, mapped }) => original !== mapped);
@@ -259,10 +269,11 @@ function parseHardcodedColorBlocks(sourceCss: string): Block[] {
 
     const declarations = parseDeclarations(body)
       .filter(({ property, value }) => !property.startsWith("--") && hasColorToken(value))
-      .map(({ property, value }) => ({
+      .map(({ property, value, important }) => ({
         property,
         original: value,
         mapped: mapColorsInValue(value),
+        important,
         kind: "hardcoded-color" as const,
       }))
       .filter(({ original, mapped }) => original !== mapped);
@@ -279,10 +290,10 @@ function parseHardcodedColorBlocks(sourceCss: string): Block[] {
 
 function renderBlock({ selector, declarations }: Block): string {
   const renderedDeclarations = declarations
-    .map(
-      ({ property, original, mapped, kind }) =>
-        `  ${property}: ${mapped} !important; /* ${kind}: ${original} → ${mapped} */`,
-    )
+    .map(({ property, original, mapped, important, kind }) => {
+      const importantSuffix = important ? " !important" : "";
+      return `  ${property}: ${mapped}${importantSuffix}; /* ${kind}: ${original} → ${mapped} */`;
+    })
     .join("\n");
 
   return `${selector} {\n${renderedDeclarations}\n}`;

@@ -17,21 +17,21 @@
 /* Hardcoded color overrides */
 
 .bdEKlGbJ05Q575ju {
-  color: #000000 !important; /* hardcoded-color: #fff → #000000 */
+  color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
 .Mi5Lsie_F8LCdABV {
-  background-color: #e72838 !important; /* hardcoded-color: #e22134 → #e72838 */
+  background-color: #e72838; /* hardcoded-color: #e22134 → #e72838 */
 }
 
 .p3n_LRqt61QiLrtf {
-  background-color: #3c84de !important; /* hardcoded-color: #2e77d0 → #3c84de */
+  background-color: #3c84de; /* hardcoded-color: #2e77d0 → #3c84de */
 }
 
 .rI1FEN2cNhALp9cr {
-  background-color: #ffffffcc !important; /* hardcoded-color: #000c → #ffffffcc */
+  background-color: #ffffffcc; /* hardcoded-color: #000c → #ffffffcc */
 }
 
 .KsjViFgAsfowBLpJ a:active,.KsjViFgAsfowBLpJ a:hover,.KsjViFgAsfowBLpJ a:link,.KsjViFgAsfowBLpJ a:visited {
-  border-bottom: 1px solid #000000 !important; /* hardcoded-color: 1px solid #fff → 1px solid #000000 */
+  border-bottom: 1px solid #000000; /* hardcoded-color: 1px solid #fff → 1px solid #000000 */
 }
