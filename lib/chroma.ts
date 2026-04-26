@@ -130,7 +130,8 @@ export function toBorderCounterpart(color: Color): Color {
       Math.max(
         BORDER_NEUTRAL_LIGHTNESS_MIN,
         BORDER_NEUTRAL_LIGHTNESS_OFFSET +
-          BORDER_NEUTRAL_LIGHTNESS_SCALE * Math.pow(1 - normalizedLightness, 0.8),
+          BORDER_NEUTRAL_LIGHTNESS_SCALE *
+            Math.pow(1 - normalizedLightness, 0.8),
       ),
     ),
   );
@@ -143,12 +144,7 @@ export function toOverlayCounterpart(color: Color): Color {
   const [lightness, chromaValue, hue] = source.oklch();
 
   if (chromaValue < ACHROMATIC_THRESHOLD) {
-    return chroma.oklch(
-      OVERLAY_NEUTRAL_LIGHTNESS,
-      0,
-      0,
-      source.alpha(),
-    );
+    return chroma.oklch(OVERLAY_NEUTRAL_LIGHTNESS, 0, 0, source.alpha());
   }
 
   return fitOklchToSrgb(

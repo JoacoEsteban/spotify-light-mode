@@ -30,9 +30,13 @@ export function createInlineStyleObserver(): InlineStyleObserver {
   const touchedElements = new Set<HTMLElement>();
   let observer: MutationObserver | null = null;
 
-  let trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+  let trackedSheetStyles = new WeakMap<
+    CSSStyleDeclaration,
+    Map<string, TrackedInlineStyle>
+  >();
   const touchedDeclarations = new Set<CSSStyleDeclaration>();
-  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null = null;
+  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null =
+    null;
 
   function trackOriginalInlineStyle(
     element: HTMLElement,
@@ -272,7 +276,10 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     }
 
     touchedDeclarations.clear();
-    trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+    trackedSheetStyles = new WeakMap<
+      CSSStyleDeclaration,
+      Map<string, TrackedInlineStyle>
+    >();
   }
 
   function start(): void {
@@ -293,7 +300,10 @@ export function createInlineStyleObserver(): InlineStyleObserver {
       for (const mutation of mutations) {
         if (mutation.type === "attributes") {
           const target = mutation.target;
-          if (target instanceof HTMLElement && !selfMutatingElements.has(target)) {
+          if (
+            target instanceof HTMLElement &&
+            !selfMutatingElements.has(target)
+          ) {
             processElement(target);
           }
           continue;

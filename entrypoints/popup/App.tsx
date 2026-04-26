@@ -1,27 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   enabledItem,
   useSystemPrefItem,
   readEnabled,
   readUseSystemPref,
-} from '../../lib/storage';
+} from "../../lib/storage";
 
 function syncTheme(enabled: boolean, useSystemPref: boolean): void {
   const { classList } = document.documentElement;
   if (!enabled) {
-    classList.add('dark');
-    classList.remove('use-system-pref');
+    classList.add("dark");
+    classList.remove("use-system-pref");
   } else if (useSystemPref) {
-    classList.remove('dark');
-    classList.add('use-system-pref');
+    classList.remove("dark");
+    classList.add("use-system-pref");
   } else {
-    classList.remove('dark', 'use-system-pref');
+    classList.remove("dark", "use-system-pref");
   }
 }
 
 export default function App(): JSX.Element | null {
   const [enabled, setEnabled] = useState<boolean>(enabledItem.fallback);
-  const [useSystemPref, setUseSystemPref] = useState<boolean>(useSystemPrefItem.fallback);
+  const [useSystemPref, setUseSystemPref] = useState<boolean>(
+    useSystemPrefItem.fallback,
+  );
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -55,8 +57,10 @@ export default function App(): JSX.Element | null {
         <div className="popup__top-row">
           <span className="popup__eyebrow">Spotify</span>
           <div className="popup__status">
-            <div className={`popup__status-dot${enabled ? ' popup__status-dot--on' : ''}`} />
-            <span>{enabled ? 'Active' : 'Off'}</span>
+            <div
+              className={`popup__status-dot${enabled ? " popup__status-dot--on" : ""}`}
+            />
+            <span>{enabled ? "Active" : "Off"}</span>
           </div>
         </div>
         <h1 className="popup__title">
@@ -78,9 +82,13 @@ export default function App(): JSX.Element | null {
           />
         </label>
 
-        <label className={`toggle-row${!enabled ? ' toggle-row--disabled' : ''}`}>
+        <label
+          className={`toggle-row${!enabled ? " toggle-row--disabled" : ""}`}
+        >
           <span className="toggle-row__label">
-            <span className="toggle-row__label-text">Use system preference</span>
+            <span className="toggle-row__label-text">
+              Use system preference
+            </span>
             <small>Only apply in light OS mode</small>
           </span>
           <input

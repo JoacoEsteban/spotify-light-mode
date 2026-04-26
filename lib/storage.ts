@@ -1,13 +1,16 @@
-import { z } from 'zod';
-import { storage } from 'wxt/utils/storage';
+import { z } from "zod";
+import { storage } from "wxt/utils/storage";
 
-export const enabledItem = storage.defineItem<boolean>('local:enabled', {
+export const enabledItem = storage.defineItem<boolean>("local:enabled", {
   fallback: true,
 });
 
-export const useSystemPrefItem = storage.defineItem<boolean>('local:useSystemPref', {
-  fallback: false,
-});
+export const useSystemPrefItem = storage.defineItem<boolean>(
+  "local:useSystemPref",
+  {
+    fallback: false,
+  },
+);
 
 const BooleanSchema = z.boolean();
 

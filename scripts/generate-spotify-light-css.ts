@@ -1,10 +1,4 @@
-import {
-  mkdir,
-  readdir,
-  readFile,
-  rm,
-  writeFile,
-} from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import chroma from "chroma-js";
@@ -49,7 +43,6 @@ const staticRules: StaticRuleMap = {
     filter: "invert(1) contrast(1.1)",
   },
 };
-
 
 function splitTopLevel(input: string, delimiter: string): string[] {
   const parts: string[] = [];
@@ -150,13 +143,19 @@ function splitDeclaration(
   return null;
 }
 
-function parseDeclarations(body: string): Array<{ property: string; value: string; important: boolean }> {
+function parseDeclarations(
+  body: string,
+): Array<{ property: string; value: string; important: boolean }> {
   return splitTopLevel(body, ";")
     .map((declaration) => splitDeclaration(declaration))
     .filter(
       (
         declaration,
-      ): declaration is { property: string; value: string; important: boolean } => declaration !== null,
+      ): declaration is {
+        property: string;
+        value: string;
+        important: boolean;
+      } => declaration !== null,
     );
 }
 
@@ -165,12 +164,17 @@ function isIgnorableSelector(selector: string): boolean {
     return true;
   }
 
-  const selectorParts = selector.split(",").map((part) => part.trim()).filter(Boolean);
+  const selectorParts = selector
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
   if (selectorParts.length === 0) {
     return true;
   }
 
-  return selectorParts.every((part) => /^(from|to|\d+(?:\.\d+)?%)$/i.test(part));
+  return selectorParts.every((part) =>
+    /^(from|to|\d+(?:\.\d+)?%)$/i.test(part),
+  );
 }
 
 function findMatchingBrace(input: string, openBraceIndex: number): number {
@@ -256,7 +260,9 @@ function parseCustomPropertyBlocks(sourceCss: string): Block[] {
     parseDeclarations(body)
       .filter(
         ({ property, value }) =>
-          property.startsWith("--") && hasColorToken(value) && chroma.valid(value),
+          property.startsWith("--") &&
+          hasColorToken(value) &&
+          chroma.valid(value),
       )
       .map(({ property, value, important }) => ({
         property,
@@ -272,7 +278,10 @@ function parseCustomPropertyBlocks(sourceCss: string): Block[] {
 function parseHardcodedColorBlocks(sourceCss: string): Block[] {
   return collectBlocks(sourceCss, (body) =>
     parseDeclarations(body)
-      .filter(({ property, value }) => !property.startsWith("--") && hasColorToken(value))
+      .filter(
+        ({ property, value }) =>
+          !property.startsWith("--") && hasColorToken(value),
+      )
       .map(({ property, value, important }) => ({
         property,
         original: value,
@@ -386,7 +395,10 @@ function renderStaticRules(rules: StaticRuleMap): string {
       .map(([property, value]) => `  ${property}: ${value} !important;`)
       .join("\n");
 
-    sections.push("", `${increaseSelectorSpecificity(selector)} {\n${declarations}\n}`);
+    sections.push(
+      "",
+      `${increaseSelectorSpecificity(selector)} {\n${declarations}\n}`,
+    );
   }
 
   return `${sections.join("\n")}
@@ -395,7 +407,9 @@ function renderStaticRules(rules: StaticRuleMap): string {
 
 function renderIndex(stylesheets: SourceStylesheet[]): string {
   const imports = [
-    ...stylesheets.map(({ outputFileName }) => `@import "./${outputFileName}";`),
+    ...stylesheets.map(
+      ({ outputFileName }) => `@import "./${outputFileName}";`,
+    ),
     `@import "./${staticRulesOutputFileName}";`,
   ].join("\n");
 
@@ -452,13 +466,18 @@ function printReport(title: string, blocks: Block[]): void {
     (sum, block) => sum + block.declarations.length,
     0,
   );
-  console.log(`\n${title}: ${declarationCount} declarations across ${blocks.length} selectors.`);
+  console.log(
+    `\n${title}: ${declarationCount} declarations across ${blocks.length} selectors.`,
+  );
 }
 
 async function main(): Promise<void> {
   const cssFiles = await findCssFiles(snapshotsDir);
   const stylesheets: SourceStylesheet[] = cssFiles.map((absolutePath) => {
-    const relativePath = relative(resolve(__dirname, ".."), absolutePath).replaceAll("\\", "/");
+    const relativePath = relative(
+      resolve(__dirname, ".."),
+      absolutePath,
+    ).replaceAll("\\", "/");
     return {
       absolutePath,
       relativePath,
@@ -494,10 +513,16 @@ async function main(): Promise<void> {
     }
   }
 
-  await writeFile(staticRulesOutputPath, renderStaticRules(staticRules), "utf8");
+  await writeFile(
+    staticRulesOutputPath,
+    renderStaticRules(staticRules),
+    "utf8",
+  );
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
 
-  console.log(`\nWrote ${stylesheets.length} generated stylesheets to ${outputDir}`);
+  console.log(
+    `\nWrote ${stylesheets.length} generated stylesheets to ${outputDir}`,
+  );
   console.log(`Wrote static rules: ${staticRulesOutputPath}`);
   console.log(`Wrote index: ${outputIndexPath}`);
 }

@@ -1,20 +1,20 @@
 :root {
-  --bg: #F7F3EE;
-  --green: #1DB954;
+  --bg: #f7f3ee;
+  --green: #1db954;
   --green-muted: rgba(29, 185, 84, 0.14);
-  --text: #1C1917;
-  --text-muted: #78736C;
+  --text: #1c1917;
+  --text-muted: #78736c;
   --border: rgba(28, 25, 23, 0.09);
   --row-hover: rgba(28, 25, 23, 0.05);
-  --toggle-off: #CEC9C2;
+  --toggle-off: #cec9c2;
   --toggle-thumb: #fff;
 }
 
 html.dark {
   --bg: #121212;
   --green-muted: rgba(29, 185, 84, 0.18);
-  --text: #FFFFFF;
-  --text-muted: #A7A7A7;
+  --text: #ffffff;
+  --text-muted: #a7a7a7;
   --border: rgba(255, 255, 255, 0.1);
   --row-hover: rgba(255, 255, 255, 0.07);
   --toggle-off: #535353;
@@ -24,8 +24,8 @@ html.dark {
   html.use-system-pref {
     --bg: #121212;
     --green-muted: rgba(29, 185, 84, 0.18);
-    --text: #FFFFFF;
-    --text-muted: #A7A7A7;
+    --text: #ffffff;
+    --text-muted: #a7a7a7;
     --border: rgba(255, 255, 255, 0.1);
     --row-hover: rgba(255, 255, 255, 0.07);
     --toggle-off: #535353;
@@ -41,15 +41,17 @@ html.dark {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body::after {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
@@ -109,7 +111,9 @@ body::after {
   height: 6px;
   border-radius: 50%;
   background: var(--toggle-off);
-  transition: background 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease;
   flex-shrink: 0;
 }
 
@@ -120,12 +124,17 @@ body::after {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 3px var(--green-muted); }
-  50%       { box-shadow: 0 0 0 5px rgba(29, 185, 84, 0.07); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px var(--green-muted);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(29, 185, 84, 0.07);
+  }
 }
 
 .popup__title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-style: italic;
   font-weight: 600;
   font-size: 30px;
@@ -154,7 +163,9 @@ body::after {
   padding: 10px 10px;
   border-radius: 9px;
   cursor: pointer;
-  transition: background 0.12s ease, opacity 0.2s ease;
+  transition:
+    background 0.12s ease,
+    opacity 0.2s ease;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -205,7 +216,7 @@ body::after {
 }
 
 .toggle::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -214,7 +225,9 @@ body::after {
   top: 2px;
   left: 2px;
   transition: transform 0.24s cubic-bezier(0.34, 1.5, 0.64, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.22),
+    0 0 0 0.5px rgba(0, 0, 0, 0.06);
 }
 
 .toggle:checked {
