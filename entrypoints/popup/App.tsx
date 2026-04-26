@@ -6,6 +6,19 @@ import {
   readUseSystemPref,
 } from '../../lib/storage';
 
+function syncTheme(enabled: boolean, useSystemPref: boolean): void {
+  const { classList } = document.documentElement;
+  if (!enabled) {
+    classList.add('dark');
+    classList.remove('use-system-pref');
+  } else if (useSystemPref) {
+    classList.remove('dark');
+    classList.add('use-system-pref');
+  } else {
+    classList.remove('dark', 'use-system-pref');
+  }
+}
+
 export default function App(): JSX.Element | null {
   const [enabled, setEnabled] = useState<boolean>(enabledItem.fallback);
   const [useSystemPref, setUseSystemPref] = useState<boolean>(useSystemPrefItem.fallback);
@@ -15,9 +28,14 @@ export default function App(): JSX.Element | null {
     void Promise.all([readEnabled(), readUseSystemPref()]).then(([en, sys]) => {
       setEnabled(en);
       setUseSystemPref(sys);
+      syncTheme(en, sys);
       setLoading(false);
     });
   }, []);
+
+  useEffect(() => {
+    if (!loading) syncTheme(enabled, useSystemPref);
+  }, [enabled, useSystemPref, loading]);
 
   async function handleEnabledChange(value: boolean): Promise<void> {
     setEnabled(value);
@@ -33,33 +51,48 @@ export default function App(): JSX.Element | null {
 
   return (
     <main className="popup">
-      <h1 className="popup__title">Spotify Light Mode</h1>
+      <header className="popup__header">
+        <div className="popup__top-row">
+          <span className="popup__eyebrow">Spotify</span>
+          <div className="popup__status">
+            <div className={`popup__status-dot${enabled ? ' popup__status-dot--on' : ''}`} />
+            <span>{enabled ? 'Active' : 'Off'}</span>
+          </div>
+        </div>
+        <h1 className="popup__title">
+          <span className="popup__title-accent">Light</span> Mode
+        </h1>
+      </header>
 
-      <label className="toggle-row">
-        <span className="toggle-row__label">Enable extension</span>
-        <input
-          type="checkbox"
-          className="toggle"
-          role="switch"
-          checked={enabled}
-          onChange={(e) => void handleEnabledChange(e.target.checked)}
-        />
-      </label>
+      <div className="controls">
+        <label className="toggle-row">
+          <span className="toggle-row__label">
+            <span className="toggle-row__label-text">Enable extension</span>
+          </span>
+          <input
+            type="checkbox"
+            className="toggle"
+            role="switch"
+            checked={enabled}
+            onChange={(e) => void handleEnabledChange(e.target.checked)}
+          />
+        </label>
 
-      <label className={`toggle-row${!enabled ? ' toggle-row--disabled' : ''}`}>
-        <span className="toggle-row__label">
-          Use system preference
-          <small>Only apply in light OS mode</small>
-        </span>
-        <input
-          type="checkbox"
-          className="toggle"
-          role="switch"
-          checked={useSystemPref}
-          disabled={!enabled}
-          onChange={(e) => void handleSysPrefChange(e.target.checked)}
-        />
-      </label>
+        <label className={`toggle-row${!enabled ? ' toggle-row--disabled' : ''}`}>
+          <span className="toggle-row__label">
+            <span className="toggle-row__label-text">Use system preference</span>
+            <small>Only apply in light OS mode</small>
+          </span>
+          <input
+            type="checkbox"
+            className="toggle"
+            role="switch"
+            checked={useSystemPref}
+            disabled={!enabled}
+            onChange={(e) => void handleSysPrefChange(e.target.checked)}
+          />
+        </label>
+      </div>
     </main>
   );
 }
