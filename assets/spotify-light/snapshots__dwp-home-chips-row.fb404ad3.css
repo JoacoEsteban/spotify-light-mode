@@ -16,48 +16,48 @@
 
 /* Custom property overrides */
 
-.zaI595ToPEZTIuae .dqY3Tbw0iFQKYoz5 {
-  --carousel-start-chevron-gradient: #cececeb3; /* custom-property: #121212b3 → #cececeb3 */
-  --carousel-end-chevron-gradient: #cececeb3; /* custom-property: #121212b3 → #cececeb3 */
+.zaI595ToPEZTIuae .dqY3Tbw0iFQKYoz5:not(#spotify-light-mode-specificity-bump) {
+  --carousel-start-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
+  --carousel-end-chevron-gradient: #cececeb3 !important; /* custom-property: #121212b3 → #cececeb3 */
 }
 
-.zaI595ToPEZTIuae .dqY3Tbw0iFQKYoz5 [data-shelf=carousel][data-shelf-notatedge=true] {
-  --carousel-start-chevron-gradient: #cecece; /* custom-property: #121212 → #cecece */
+.zaI595ToPEZTIuae .dqY3Tbw0iFQKYoz5 [data-shelf=carousel][data-shelf-notatedge=true]:not(#spotify-light-mode-specificity-bump) {
+  --carousel-start-chevron-gradient: #cecece !important; /* custom-property: #121212 → #cecece */
 }
 
 
 
 /* Hardcoded color overrides */
 
-.Q7ciR0kAsukiCprc {
+.Q7ciR0kAsukiCprc:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
 }
 
-.kRkvH3JcI5sYgH6J.fzMaM8folMIckYG2:after {
+.kRkvH3JcI5sYgH6J.fzMaM8folMIckYG2:not(#spotify-light-mode-specificity-bump):after {
   background-color: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
 
-.K4nb1LqSEIVNLlSg {
+.K4nb1LqSEIVNLlSg:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(to right,transparent,transparent 22px,var(--background-tinted-base,#ffffff14)48px,var(--background-tinted-base,#ffffff14)100%); /* hardcoded-color: linear-gradient(to right,transparent,transparent 22px,var(--background-tinted-base,#00000014)48px,var(--background-tinted-base,#00000014)100%) → linear-gradient(to right,transparent,transparent 22px,var(--background-tinted-base,#ffffff14)48px,var(--background-tinted-base,#ffffff14)100%) */
 }
 
-.K4nb1LqSEIVNLlSg:hover,.K4nb1LqSEIVNLlSg:focus,.K4nb1LqSEIVNLlSg:focus-visible,.K4nb1LqSEIVNLlSg:active {
+.K4nb1LqSEIVNLlSg:hover:not(#spotify-light-mode-specificity-bump), .K4nb1LqSEIVNLlSg:focus:not(#spotify-light-mode-specificity-bump), .K4nb1LqSEIVNLlSg:focus-visible:not(#spotify-light-mode-specificity-bump), .K4nb1LqSEIVNLlSg:active:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(to right,transparent 0,transparent 22px,var(--background-tinted-highlight,#ffffff1f)48px,var(--background-tinted-highlight,#ffffff1f)100%); /* hardcoded-color: linear-gradient(to right,transparent 0,transparent 22px,var(--background-tinted-highlight,#0000001f)48px,var(--background-tinted-highlight,#0000001f)100%) → linear-gradient(to right,transparent 0,transparent 22px,var(--background-tinted-highlight,#ffffff1f)48px,var(--background-tinted-highlight,#ffffff1f)100%) */
   background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.Y4wZrHCWDI43Nmq7 {
+.Y4wZrHCWDI43Nmq7:not(#spotify-light-mode-specificity-bump) {
   background: #00000033; /* hardcoded-color: #fff3 → #00000033 */
 }
 
-.o1r5SJBtXbM5tVr9 {
+.o1r5SJBtXbM5tVr9:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff; /* hardcoded-color: #000 → #ffffff */
 }
 
-[dir=rtl] .K4nb1LqSEIVNLlSg {
+[dir=rtl] .K4nb1LqSEIVNLlSg:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(to left,transparent,transparent 22px,var(--background-tinted-base,#ffffff14)48px,var(--background-tinted-base,#ffffff14)100%); /* hardcoded-color: linear-gradient(to left,transparent,transparent 22px,var(--background-tinted-base,#00000014)48px,var(--background-tinted-base,#00000014)100%) → linear-gradient(to left,transparent,transparent 22px,var(--background-tinted-base,#ffffff14)48px,var(--background-tinted-base,#ffffff14)100%) */
 }
 
-[dir=rtl] .K4nb1LqSEIVNLlSg:hover,[dir=rtl] .K4nb1LqSEIVNLlSg:focus,[dir=rtl] .K4nb1LqSEIVNLlSg:focus-visible,[dir=rtl] .K4nb1LqSEIVNLlSg:active {
+[dir=rtl] .K4nb1LqSEIVNLlSg:hover:not(#spotify-light-mode-specificity-bump), [dir=rtl] .K4nb1LqSEIVNLlSg:focus:not(#spotify-light-mode-specificity-bump), [dir=rtl] .K4nb1LqSEIVNLlSg:focus-visible:not(#spotify-light-mode-specificity-bump), [dir=rtl] .K4nb1LqSEIVNLlSg:active:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(to left,transparent 0,transparent 22px,var(--background-tinted-highlight,#ffffff1f)48px,var(--background-tinted-highlight,#ffffff1f)100%); /* hardcoded-color: linear-gradient(to left,transparent 0,transparent 22px,var(--background-tinted-highlight,#0000001f)48px,var(--background-tinted-highlight,#0000001f)100%) → linear-gradient(to left,transparent 0,transparent 22px,var(--background-tinted-highlight,#ffffff1f)48px,var(--background-tinted-highlight,#ffffff1f)100%) */
 }

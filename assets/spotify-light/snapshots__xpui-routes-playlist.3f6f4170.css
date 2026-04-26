@@ -16,182 +16,182 @@
 
 /* Hardcoded color overrides */
 
-.sponsor-container .sponsor-text {
+.sponsor-container .sponsor-text:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.iWVdKqonjP0bx_gM {
+.iWVdKqonjP0bx_gM:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.iWVdKqonjP0bx_gM::placeholder {
+.iWVdKqonjP0bx_gM:not(#spotify-light-mode-specificity-bump)::placeholder {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
-.vfoE9Qrxbc_DF6tY {
+.vfoE9Qrxbc_DF6tY:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
-.cGKILwU2lR4MwaHZ {
+.cGKILwU2lR4MwaHZ:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.fusH1kCDAoUo64nT {
+.fusH1kCDAoUo64nT:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.LzwNeFKvHM0NLMQw {
+.LzwNeFKvHM0NLMQw:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.RD3ze5s5sQ4S4Tyb {
+.RD3ze5s5sQ4S4Tyb:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.U_XVBH6k_eEuO1JC {
+.U_XVBH6k_eEuO1JC:not(#spotify-light-mode-specificity-bump) {
   color: #585858; /* hardcoded-color: #b3b3b3 → #585858 */
 }
 
-.UilDF1WxcwNuDX3p {
+.UilDF1WxcwNuDX3p:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.WX8YaUbSAkU5l7KZ {
+.WX8YaUbSAkU5l7KZ:not(#spotify-light-mode-specificity-bump) {
   border-top: 1px solid #0000001a; /* hardcoded-color: 1px solid #ffffff1a → 1px solid #0000001a */
 }
 
-.WX8YaUbSAkU5l7KZ .cED_a6sr110_0W7Q {
+.WX8YaUbSAkU5l7KZ .cED_a6sr110_0W7Q:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.G7IL6gYFcaIqim1o {
+.G7IL6gYFcaIqim1o:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.M8rXyTyUZtEIuYXG {
+.M8rXyTyUZtEIuYXG:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.CBIyjCdxqfUh3mwM {
+.CBIyjCdxqfUh3mwM:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-._Q0sLUuhbaAq2ven {
+._Q0sLUuhbaAq2ven:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #7760ff; /* hardcoded-color: #7358ff → #7760ff */
   background-image: linear-gradient(#ffffff40,#ffffff00); /* hardcoded-color: linear-gradient(#00000040,#0000) → linear-gradient(#ffffff40,#ffffff00) */
 }
 
-.BNx3QcaYvbcqrF3j {
+.BNx3QcaYvbcqrF3j:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px #0006 → 0 4px 60px #ffffff66 */
 }
 
-.kzxZPyCdnN8h7aBQ {
+.kzxZPyCdnN8h7aBQ:not(#spotify-light-mode-specificity-bump) {
   color: #585858; /* hardcoded-color: #b3b3b3 → #585858 */
   background-color: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
 }
 
-.PbS3SlkOM_MlBkQn {
+.PbS3SlkOM_MlBkQn:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.TomJn4rGJSs__ahq:hover {
+.TomJn4rGJSs__ahq:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.TomJn4rGJSs__ahq:active {
+.TomJn4rGJSs__ahq:active:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }
 
-.yAqWz24y2vgpEYX8 {
+.yAqWz24y2vgpEYX8:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff66; /* hardcoded-color: #0006 → #ffffff66 */
 }
 
-.sfLu0r7jENIiad_T {
+.sfLu0r7jENIiad_T:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-._T7uRnjjiFsTbbl1 {
+._T7uRnjjiFsTbbl1:not(#spotify-light-mode-specificity-bump) {
   color: #383100; /* hardcoded-color: #fce54f → #383100 */
 }
 
-.D1qMUaB4Ic_f0Qsv:hover {
+.D1qMUaB4Ic_f0Qsv:hover:not(#spotify-light-mode-specificity-bump) {
   background: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
 }
 
-.I8JA19lO2osOeLQQ {
+.I8JA19lO2osOeLQQ:not(#spotify-light-mode-specificity-bump) {
   background-color: #c4c4c4; /* hardcoded-color: #1f1f1f → #c4c4c4 */
 }
 
-.jofPSG4y24c_bUKm {
+.jofPSG4y24c_bUKm:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
-.gZpBV8YHzlIf2w_r {
+.gZpBV8YHzlIf2w_r:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.wskqaMF_9vIdCfEN {
+.wskqaMF_9vIdCfEN:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
-.HoP2yw2uN4cejJkE {
+.HoP2yw2uN4cejJkE:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
 }
 
-.KlJ9FH4wXuAPgg8c {
+.KlJ9FH4wXuAPgg8c:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
 
-.VrJRSgVn03wj8ypj {
+.VrJRSgVn03wj8ypj:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued,#000000b3); /* hardcoded-color: var(--text-subdued,#ffffffb3) → var(--text-subdued,#000000b3) */
 }
 
-.bGjkxQ5dFpQ7pCSx {
+.bGjkxQ5dFpQ7pCSx:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.bGjkxQ5dFpQ7pCSx:focus-visible {
+.bGjkxQ5dFpQ7pCSx:focus-visible:not(#spotify-light-mode-specificity-bump) {
   outline: 2px solid #000000; /* hardcoded-color: 2px solid #fff → 2px solid #000000 */
 }
 
-.FtD9piA3r34ocP0H:after {
+.FtD9piA3r34ocP0H:not(#spotify-light-mode-specificity-bump):after {
   background-color: #3c84de; /* hardcoded-color: #2e77d0 → #3c84de */
 }
 
-.PDxgB3Nps4gKEPlO {
+.PDxgB3Nps4gKEPlO:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.f0DRpgeIxygEki9e {
+.f0DRpgeIxygEki9e:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.f0DRpgeIxygEki9e:active {
+.f0DRpgeIxygEki9e:active:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }
 
-.txO_EUmQ8O4v3U7N:hover a,.txO_EUmQ8O4v3U7N:focus-within a {
+.txO_EUmQ8O4v3U7N:hover a:not(#spotify-light-mode-specificity-bump), .txO_EUmQ8O4v3U7N:focus-within a:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base,#000000); /* hardcoded-color: var(--text-base,#fff) → var(--text-base,#000000) */
 }
 
-.xuYtvYS0cxPwL3qv {
+.xuYtvYS0cxPwL3qv:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.xuYtvYS0cxPwL3qv:after {
+.xuYtvYS0cxPwL3qv:not(#spotify-light-mode-specificity-bump):after {
   background-image: linear-gradient(90deg,#ffffff00,#0000001a,#ffffff00); /* hardcoded-color: linear-gradient(90deg,#0000,#ffffff1a,#0000) → linear-gradient(90deg,#ffffff00,#0000001a,#ffffff00) */
 }
 
-.QPnvCwKXgR8eKevw a {
+.QPnvCwKXgR8eKevw a:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued,#585858); /* hardcoded-color: var(--text-subdued,#b3b3b3) → var(--text-subdued,#585858) */
 }
 
-.QPnvCwKXgR8eKevw a:hover,.QPnvCwKXgR8eKevw a:focus-visible {
+.QPnvCwKXgR8eKevw a:hover:not(#spotify-light-mode-specificity-bump), .QPnvCwKXgR8eKevw a:focus-visible:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base,#000000); /* hardcoded-color: var(--text-base,#fff) → var(--text-base,#000000) */
 }

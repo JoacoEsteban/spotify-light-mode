@@ -288,15 +288,40 @@ function parseHardcodedColorBlocks(sourceCss: string): Block[] {
   return blocks;
 }
 
+function increaseSelectorSpecificity(selector: string): string {
+  const selectorParts = splitTopLevel(selector, ",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  return selectorParts
+    .map((part) => {
+      const specificityBump = ":not(#spotify-light-mode-specificity-bump)";
+      const trailingPseudoElementRegex =
+        /(::[a-z-]+(?:\([^)]*\))?|:(?:before|after|first-line|first-letter))(?![\w-])/i;
+      const pseudoElementMatch = trailingPseudoElementRegex.exec(part);
+
+      if (!pseudoElementMatch) {
+        return `${part}${specificityBump}`;
+      }
+
+      const pseudoElementIndex = pseudoElementMatch.index;
+      const beforePseudoElement = part.slice(0, pseudoElementIndex);
+      const pseudoElement = part.slice(pseudoElementIndex);
+      return `${beforePseudoElement}${specificityBump}${pseudoElement}`;
+    })
+    .join(", ");
+}
+
 function renderBlock({ selector, declarations }: Block): string {
   const renderedDeclarations = declarations
     .map(({ property, original, mapped, important, kind }) => {
-      const importantSuffix = important ? " !important" : "";
+      const needsImportant = kind === "custom-property" || important;
+      const importantSuffix = needsImportant ? " !important" : "";
       return `  ${property}: ${mapped}${importantSuffix}; /* ${kind}: ${original} → ${mapped} */`;
     })
     .join("\n");
 
-  return `${selector} {\n${renderedDeclarations}\n}`;
+  return `${increaseSelectorSpecificity(selector)} {\n${renderedDeclarations}\n}`;
 }
 
 function renderStylesheet(
@@ -352,7 +377,7 @@ function renderStaticRules(rules: StaticRuleMap): string {
       .map(([property, value]) => `  ${property}: ${value} !important;`)
       .join("\n");
 
-    sections.push("", `${selector} {\n${declarations}\n}`);
+    sections.push("", `${increaseSelectorSpecificity(selector)} {\n${declarations}\n}`);
   }
 
   return `${sections.join("\n")}

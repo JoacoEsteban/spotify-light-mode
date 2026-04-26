@@ -16,6 +16,6 @@
 
 /* Hardcoded color overrides */
 
-.Q7ciR0kAsukiCprc {
+.Q7ciR0kAsukiCprc:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%,var(--background-base)100%),var(--background-noise) → linear-gradient(#ffffff99 0%,var(--background-base)100%),var(--background-noise) */
 }

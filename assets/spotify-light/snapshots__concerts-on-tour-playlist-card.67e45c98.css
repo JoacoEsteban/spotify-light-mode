@@ -16,10 +16,10 @@
 
 /* Hardcoded color overrides */
 
-.spUdqNklCwNLjES1 {
+.spUdqNklCwNLjES1:not(#spotify-light-mode-specificity-bump) {
   background: #bdbdbd; /* hardcoded-color: #282828 → #bdbdbd */
 }
 
-.cMxKx4tFuJkiRiJg {
+.cMxKx4tFuJkiRiJg:not(#spotify-light-mode-specificity-bump) {
   background: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
