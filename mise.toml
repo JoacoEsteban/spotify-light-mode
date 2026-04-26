@@ -9,3 +9,7 @@ run = "fish scripts/process-icons.fish {{arg(name='icon')}} {{arg(name='radius-r
 [tasks.screenshot]
 description = "Take store screenshots for the current version of the extension"
 run = "bun scripts/screenshot.ts"
+
+[tasks.bundle]
+description = "Bundle all targets"
+run = "bun zip && bun run zip:firefox"
