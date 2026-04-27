@@ -13,21 +13,29 @@ import _10 from "./snapshots__dwp-watch-feed-view-container.c7fc0b7b.css?inline"
 import _11 from "./snapshots__dwp-whats-new-feed.b3d6e7ba.css?inline";
 import _12 from "./snapshots__home-subfeed.2e0bea19.css?inline";
 import _13 from "./snapshots__listening-stats-modal.e46fcd5c.css?inline";
-import _14 from "./snapshots__styles__ltr.css?inline";
-import _15 from "./snapshots__web-player.86a99def.css?inline";
-import _16 from "./snapshots__xpui-root-dialogs.25458546.css?inline";
-import _17 from "./snapshots__xpui-routes-album.74ce5fc7.css?inline";
-import _18 from "./snapshots__xpui-routes-collection-concert-gallery.fad80708.css?inline";
-import _19 from "./snapshots__xpui-routes-collection-episodes.114f023b.css?inline";
-import _20 from "./snapshots__xpui-routes-concert.aa05c892.css?inline";
-import _21 from "./snapshots__xpui-routes-playlist.3f6f4170.css?inline";
-import _22 from "./snapshots__xpui-routes-profile.1330f21d.css?inline";
-import _23 from "./snapshots__xpui-routes-recents.3db14092.css?inline";
-import _24 from "./snapshots__xpui-routes-search.6de56653.css?inline";
-import _25 from "./snapshots__xpui-routes-show.0ee28e13.css?inline";
-import _26 from "./snapshots__xpui-routes-venues.29e06c15.css?inline";
-import _27 from "./snapshots__xpui-routes-web-settings.44b2d540.css?inline";
-import _28 from "./snapshots__xpui-routes-your-library-x.ea3af739.css?inline";
+import _14 from "./snapshots__mobile-web-player.51b7fff4.css?inline";
+import _15 from "./snapshots__mwp-artist-page.146b1a80.css?inline";
+import _16 from "./snapshots__mwp-browse-page.9700b182.css?inline";
+import _17 from "./snapshots__mwp-download-page.fea5eead.css?inline";
+import _18 from "./snapshots__mwp-home-page.bdab2d6b.css?inline";
+import _19 from "./snapshots__mwp-search-landing.db3dd006.css?inline";
+import _20 from "./snapshots__mwp-search-results.3276a754.css?inline";
+import _21 from "./snapshots__mwp-user-profile.7357e289.css?inline";
+import _22 from "./snapshots__styles__ltr.css?inline";
+import _23 from "./snapshots__web-player.86a99def.css?inline";
+import _24 from "./snapshots__xpui-root-dialogs.25458546.css?inline";
+import _25 from "./snapshots__xpui-routes-album.74ce5fc7.css?inline";
+import _26 from "./snapshots__xpui-routes-collection-concert-gallery.fad80708.css?inline";
+import _27 from "./snapshots__xpui-routes-collection-episodes.114f023b.css?inline";
+import _28 from "./snapshots__xpui-routes-concert.aa05c892.css?inline";
+import _29 from "./snapshots__xpui-routes-playlist.3f6f4170.css?inline";
+import _30 from "./snapshots__xpui-routes-profile.1330f21d.css?inline";
+import _31 from "./snapshots__xpui-routes-recents.3db14092.css?inline";
+import _32 from "./snapshots__xpui-routes-search.6de56653.css?inline";
+import _33 from "./snapshots__xpui-routes-show.0ee28e13.css?inline";
+import _34 from "./snapshots__xpui-routes-venues.29e06c15.css?inline";
+import _35 from "./snapshots__xpui-routes-web-settings.44b2d540.css?inline";
+import _36 from "./snapshots__xpui-routes-your-library-x.ea3af739.css?inline";
 import _staticRules from "./static-rules.css?inline";
 
 const _colorScheme = `:root,
@@ -37,4 +45,4 @@ html {
 }
 `;
 
-export default [_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _staticRules, _colorScheme].join("\n");
+export default [_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _staticRules, _colorScheme].join("\n");
