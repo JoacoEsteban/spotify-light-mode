@@ -1,5 +1,12 @@
 # Spotify Light Mode
 
+[![Spotify Light Mode Logo](./public/icon-128.png)](https://chrome.google.com/webstore/detail/spotify-light-mode/lengbgflhbbajjfklllkaiookcpkkdbl?utm_source=github_readme)
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/lengbgflhbbajjfklllkaiookcpkkdbl)](https://chromewebstore.google.com/detail/spotify-light-mode/lengbgflhbbajjfklllkaiookcpkkdbl?utm_source=github_readme)
+[![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/lengbgflhbbajjfklllkaiookcpkkdbl)](https://chromewebstore.google.com/detail/spotify-light-mode/lengbgflhbbajjfklllkaiookcpkkdbl?utm_source=github_readme)
+[![Chrome Web Store Rating Count](https://img.shields.io/chrome-web-store/rating-count/lengbgflhbbajjfklllkaiookcpkkdbl)](https://chromewebstore.google.com/detail/spotify-light-mode/lengbgflhbbajjfklllkaiookcpkkdbl?utm_source=github_readme)
+
 A browser extension that brings light mode to Spotify's web player — always on, or only when your OS is in light mode.
 
 Spotify has never shipped a light mode for its web player. This extension intercepts the color tokens Spotify injects at runtime and replaces them with a curated light palette, before the page finishes painting so there's no dark flash on load.
