@@ -12,6 +12,13 @@ export const useSystemPrefItem = storage.defineItem<boolean>(
   },
 );
 
+export const rateWidgetDismissedItem = storage.defineItem<boolean>(
+  "local:rateWidgetDismissed",
+  {
+    fallback: false,
+  },
+);
+
 const BooleanSchema = z.boolean();
 
 export async function readEnabled(): Promise<boolean> {
@@ -20,4 +27,8 @@ export async function readEnabled(): Promise<boolean> {
 
 export async function readUseSystemPref(): Promise<boolean> {
   return BooleanSchema.parse(await useSystemPrefItem.getValue());
+}
+
+export async function readRateWidgetDismissed(): Promise<boolean> {
+  return BooleanSchema.parse(await rateWidgetDismissedItem.getValue());
 }

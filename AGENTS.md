@@ -30,6 +30,8 @@ A browser extension (Manifest V3, Chrome + Firefox) that forces the Spotify web 
 ├── tsconfig.json                         Extends .wxt/tsconfig.json, adds strict flags
 ├── package.json                          Scripts + pinned deps
 ├── .gitignore                            node_modules/, .output/, .wxt/, *.zip
+├── plans/
+│   └── add-popup-rate-widget.md          Plan documents for future changes
 ├── lib/
 │   └── storage.ts                        Storage keys + Zod-validated read helpers
 ├── assets/

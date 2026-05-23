@@ -6,6 +6,8 @@
   --text-muted: #78736c;
   --border: rgba(28, 25, 23, 0.09);
   --row-hover: rgba(28, 25, 23, 0.05);
+  --star-bg: rgba(29, 185, 84, 0.1);
+  --star-hover: rgba(29, 185, 84, 0.18);
   --toggle-off: #cec9c2;
   --toggle-thumb: #fff;
 }
@@ -17,6 +19,8 @@ html.dark {
   --text-muted: #a7a7a7;
   --border: rgba(255, 255, 255, 0.1);
   --row-hover: rgba(255, 255, 255, 0.07);
+  --star-bg: rgba(29, 185, 84, 0.15);
+  --star-hover: rgba(29, 185, 84, 0.24);
   --toggle-off: #535353;
 }
 
@@ -28,6 +32,8 @@ html.dark {
     --text-muted: #a7a7a7;
     --border: rgba(255, 255, 255, 0.1);
     --row-hover: rgba(255, 255, 255, 0.07);
+    --star-bg: rgba(29, 185, 84, 0.15);
+    --star-hover: rgba(29, 185, 84, 0.24);
     --toggle-off: #535353;
   }
 }
@@ -259,4 +265,103 @@ body::after {
 .toggle:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 2px;
+}
+
+/* ── Rate widget ── */
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+
+.rate__prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 32px;
+}
+
+.rate__copy {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.rate__stars {
+  display: grid;
+  grid-template-columns: repeat(5, 28px);
+  gap: 3px;
+}
+
+.rate__star {
+  width: 28px;
+  height: 28px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--star-bg);
+  color: var(--green);
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.14s ease,
+    border-color 0.14s ease,
+    color 0.14s ease 0.08s,
+    opacity 0.14s ease 0.08s,
+    transform 0.14s ease;
+}
+
+.rate__star:hover {
+  background: var(--star-hover);
+  border-color: var(--green-muted);
+  transform: translateY(-1px);
+}
+
+.rate__star:hover ~ .rate__star,
+.rate__star:focus-visible ~ .rate__star {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 0.42;
+  transition-delay: 0s;
+}
+
+.rate__star:active {
+  transform: translateY(0);
+}
+
+.rate__star:focus-visible,
+.rate__link:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.rate__link {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.14s ease;
+}
+
+.rate__link:hover {
+  color: var(--text);
 }
