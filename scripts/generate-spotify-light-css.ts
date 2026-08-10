@@ -536,7 +536,7 @@ function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
     }
 
     if (arg === "--help" || arg === "-h") {
-      createLogger().info(
+      createLogger().plain(
         [
           "Usage: bun scripts/generate-spotify-light-css.ts <snapshot-version> [--verbose]",
           "       bun scripts/generate-spotify-light-css.ts --version web-player.c1348e22 [--snapshots-dir snapshots] [--verbose]",
@@ -640,9 +640,11 @@ export async function generateSpotifyLightCss({
   );
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
 
-  logger.info(`Generated ${stylesheets.length} light-mode stylesheets in ${outputDir}`);
-  logger.verboseInfo(`Wrote static rules: ${staticRulesOutputPath}`);
-  logger.verboseInfo(`Wrote index: ${outputIndexPath}`);
+  logger.success(`Generated ${stylesheets.length} light-mode stylesheets.`);
+  logger.info(`Snapshot: ${snapshotVersion}`);
+  logger.info(`Output directory: ${outputDir}`);
+  logger.verboseInfo(`Static rules: ${staticRulesOutputPath}`);
+  logger.verboseInfo(`Index: ${outputIndexPath}`);
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";

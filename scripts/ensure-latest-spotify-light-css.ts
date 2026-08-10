@@ -82,7 +82,7 @@ function parseOptions(args: string[]): Options {
     }
 
     if (arg === "--help" || arg === "-h") {
-      createLogger().info(
+      createLogger().plain(
         [
           "Usage: bun scripts/ensure-latest-spotify-light-css.ts [--refresh] [--force] [--verbose]",
           "       bun scripts/ensure-latest-spotify-light-css.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
@@ -152,28 +152,30 @@ async function generatedAssetsExistForVersion(
 async function main(): Promise<void> {
   const options = parseOptions(argv.slice(2));
   const logger = createLogger(options.verbose);
+
+  logger.info("Checking latest Spotify web player snapshot...");
   const latest = await fetchLatestSpotifyWebPlayerInfo(options.pageUrl);
   const generated = await generatedAssetsExistForVersion(
     latest.snapshotVersion,
     defaultAssetsDir,
   );
 
-  logger.info(`Latest snapshot version: ${latest.snapshotVersion}`);
+  logger.info(`Latest snapshot: ${latest.snapshotVersion}`);
   logger.verboseInfo(
     `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}`,
   );
 
   if (generated && !options.force) {
-    logger.info("Generated assets already exist.");
-    logger.verboseInfo(`Assets dir: ${defaultAssetsDir}`);
+    logger.success("Generated assets already match the latest snapshot.");
     logger.info("No refresh needed.");
+    logger.verboseInfo(`Assets directory: ${defaultAssetsDir}`);
     return;
   }
 
   if (generated && options.force) {
-    logger.info("Generated assets already exist; forcing refresh.");
+    logger.warn("Generated assets exist; refreshing because --force was set.");
   } else {
-    logger.info("Generated assets missing; refreshing.");
+    logger.info("Generated assets are missing; refreshing now.");
   }
 
   const result = await refreshSpotifyCssSnapshot({
@@ -185,8 +187,9 @@ async function main(): Promise<void> {
     webPlayerInfo: latest,
   });
 
-  logger.info(`Generated assets in ${defaultAssetsDir}`);
-  logger.verboseInfo(`Snapshot dir: ${result.snapshotDir}`);
+  logger.success("Generated light-mode assets refreshed.");
+  logger.info(`Assets directory: ${defaultAssetsDir}`);
+  logger.verboseInfo(`Snapshot directory: ${result.snapshotDir}`);
 }
 
 try {

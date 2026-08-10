@@ -66,7 +66,7 @@ async function dismissCookieBanner(page: Page): Promise<void> {
 
 async function main(): Promise<void> {
   if (args.includes("--help") || args.includes("-h")) {
-    logger.info(
+    logger.plain(
       [
         "Usage: bun scripts/screenshot.ts [--skip-build] [--login] [--verbose]",
         "",
@@ -85,21 +85,23 @@ async function main(): Promise<void> {
     const pages = await browser.pages();
     const page = pages[0] ?? (await browser.newPage());
     await page.goto("https://open.spotify.com/login", { waitUntil: "networkidle2" });
-    logger.info("Log in to Spotify, then press Enter here to save and exit.");
+    logger.info("Waiting for Spotify login in Chromium. Press Enter here after login.");
     await new Promise<void>((r) => process.stdin.once("data", () => r()));
     await browser.close();
-    logger.info("Session saved. Run `bun run screenshot:fast` to capture.");
+    logger.success("Session saved. Run `bun run screenshot:fast` to capture.");
     return;
   }
 
   if (!skipBuild) {
-    logger.info("Building extension...");
+    logger.info("Building extension before capture...");
     execSync("bun run build", { cwd: ROOT, stdio: logger.verbose ? "inherit" : "pipe" });
+    logger.success("Extension build complete.");
   }
 
   const browser = await launch();
   const pages = await browser.pages();
   const page = pages[0] ?? (await browser.newPage());
+  logger.info(`Capturing ${SHOTS.length} Spotify pages...`);
 
   for (const { name, url, waitMs = 2000 } of SHOTS) {
     logger.verboseInfo(`Capturing ${name}...`);
@@ -112,7 +114,7 @@ async function main(): Promise<void> {
   }
 
   await browser.close();
-  logger.info(`Done. Screenshots saved to ${OUT_DIR}`);
+  logger.success(`Screenshots saved to ${OUT_DIR}`);
 }
 
 main().catch((e: unknown) => {

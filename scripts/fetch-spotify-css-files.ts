@@ -210,7 +210,7 @@ function parseOptions(args: string[]): Options {
     }
 
     if (arg === "--help" || arg === "-h") {
-      createLogger().info(
+      createLogger().plain(
         [
           "Usage: bun scripts/fetch-spotify-css-files.ts [--refresh] [--generate] [--json] [--verbose] [--target all|desktop|mobile]",
           "       bun scripts/fetch-spotify-css-files.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
@@ -228,7 +228,7 @@ function parseOptions(args: string[]): Options {
   }
 
   if (json && generate) {
-    throw new Error("--json cannot be combined with --generate because the generator writes logs.");
+    throw new Error("--json cannot be combined with --generate because generated CSS writes human logs.");
   }
 
   return {
@@ -469,10 +469,11 @@ function printResult(result: RefreshSpotifyCssSnapshotResult, logger: Logger): v
   const cssHitCount = result.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
   const cssMissCount = result.storedCssAssets.length - cssHitCount;
 
-  logger.info(`Snapshot version: ${result.snapshotVersion}`);
-  logger.info(`Snapshot dir: ${result.snapshotDir}`);
-  logger.info(`Stored CSS files: ${result.storedCssAssets.length} (${cssHitCount} hit, ${cssMissCount} fetched)`);
-  logger.info(`Generated overrides: ${result.generated ? "yes" : "no"}`);
+  logger.success("Spotify CSS snapshot ready.");
+  logger.info(`Snapshot: ${result.snapshotVersion}`);
+  logger.info(`Directory: ${result.snapshotDir}`);
+  logger.info(`CSS files: ${result.storedCssAssets.length} total, ${cssHitCount} cached, ${cssMissCount} fetched`);
+  logger.info(`Generated light-mode overrides: ${result.generated ? "yes" : "no"}`);
 
   if (!logger.verbose) {
     return;

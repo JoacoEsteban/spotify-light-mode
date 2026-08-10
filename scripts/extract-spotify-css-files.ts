@@ -1,8 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { argv, exit, stderr, stdout } from "node:process";
+import { argv, exit, stdout } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import * as ts from "typescript";
+import { createLogger } from "./logger";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(scriptDir, "..");
@@ -40,7 +41,7 @@ function parseOptions(args: string[]): Options {
     }
 
     if (arg === "--help" || arg === "-h") {
-      stdout.write(
+      createLogger().plain(
         [
           "Usage: bun scripts/extract-spotify-css-files.ts [--json] [web-player.js]",
           "",
@@ -288,7 +289,7 @@ if (import.meta.url === entrypointPath) {
     await main();
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    stderr.write(`${message}\n`);
+    createLogger().error(message);
     exit(1);
   }
 }
