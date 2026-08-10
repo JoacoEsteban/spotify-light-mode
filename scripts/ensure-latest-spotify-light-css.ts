@@ -7,6 +7,11 @@ import {
   fetchLatestSpotifyWebPlayerInfo,
   refreshSpotifyCssSnapshot,
 } from "./fetch-spotify-css-files";
+import {
+  buildSourceCssManifest,
+  readGeneratedSourceManifest,
+} from "./core/source-css-manifest";
+import { generateSpotifyLightCss } from "./generate-spotify-light-css";
 import { createLogger } from "./logger";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
@@ -87,9 +92,10 @@ function parseOptions(args: string[]): Options {
           "Usage: bun scripts/ensure-latest-spotify-light-css.ts [--refresh] [--force] [--verbose]",
           "       bun scripts/ensure-latest-spotify-light-css.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
           "",
-          "Fetches the latest Spotify desktop and mobile player versions. If generated",
-          "light-mode assets already target that combined version, exits without regenerating.",
-          "Otherwise stores CSS snapshots for the version and regenerates assets/spotify-light/.",
+          "Fetches the latest Spotify desktop and mobile player versions.",
+          "If generated light-mode assets already target that combined version, exits.",
+          "If only Spotify artifact hashes changed, compares source CSS content and skips generation.",
+          "Use --force after generator logic changes.",
           "--verbose prints per-target versions and generator details.",
         ].join("\n"),
       );
@@ -159,7 +165,13 @@ async function main(): Promise<void> {
     latest.snapshotVersion,
     defaultAssetsDir,
   );
-
+  const previousSourceManifest = await readGeneratedSourceManifest(defaultAssetsDir);
+  const previousGenerated = previousSourceManifest
+    ? await generatedAssetsExistForVersion(
+        previousSourceManifest.snapshotVersion,
+        defaultAssetsDir,
+      )
+    : false;
   logger.info(`Latest snapshot: ${latest.snapshotVersion}`);
   logger.verboseInfo(
     `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}`,
@@ -174,17 +186,54 @@ async function main(): Promise<void> {
 
   if (generated && options.force) {
     logger.warn("Generated assets exist; refreshing because --force was set.");
+    logger.info("Refreshing because --force was set.");
   } else {
-    logger.info("Generated assets are missing; refreshing now.");
+    logger.info("Generated assets are missing or use an older snapshot; refreshing now.");
   }
 
   const result = await refreshSpotifyCssSnapshot({
     cacheDir: options.cacheDir,
     snapshotsRootDir: options.snapshotsRootDir,
     refresh: options.refresh,
-    generate: true,
+    generate: false,
     verbose: options.verbose,
     webPlayerInfo: latest,
+  });
+
+  const latestSourceManifest = await buildSourceCssManifest(
+    latest.snapshotVersion,
+    options.snapshotsRootDir,
+  );
+
+  if (
+    previousSourceManifest &&
+    previousGenerated &&
+    previousSourceManifest.sourceFingerprint === latestSourceManifest.sourceFingerprint &&
+    !options.force
+  ) {
+    logger.success("Source CSS content is unchanged; generation skipped.");
+    logger.info("Use --force after generator logic changes.");
+    logger.verboseInfo(`Generated snapshot: ${previousSourceManifest.snapshotVersion}`);
+    logger.verboseInfo(`Latest snapshot: ${latest.snapshotVersion}`);
+    logger.verboseInfo(`Assets directory: ${defaultAssetsDir}`);
+    logger.verboseInfo(`Snapshot directory: ${result.snapshotDir}`);
+    return;
+  }
+
+  if (options.force) {
+    logger.info("Generating because --force was set.");
+  } else if (!previousSourceManifest) {
+    logger.verboseInfo("No source CSS manifest found; generating now.");
+  } else if (!previousGenerated) {
+    logger.verboseInfo("Source CSS manifest points to missing generated assets; generating now.");
+  } else {
+    logger.info("Source CSS content changed; generating now.");
+  }
+
+  await generateSpotifyLightCss({
+    snapshotVersion: latest.snapshotVersion,
+    snapshotsRootDir: options.snapshotsRootDir,
+    verbose: options.verbose,
   });
 
   logger.success("Generated light-mode assets refreshed.");

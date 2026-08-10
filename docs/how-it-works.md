@@ -55,6 +55,10 @@ snapshots/spotify-player.web-player.91c889e0__mobile-web-player.435c86e5/mobile/
 The combined version includes the desktop bundle hash and the mobile bundle hash.
 As a result, either bundle can cause a refresh.
 
+The ensure script also compares source CSS content.
+If only artifact hashes changed, it keeps the current generated CSS.
+Use `--force` after generator logic changes.
+
 The script also caches JavaScript bundles under `.cache/spotify-web-player/<target>/`.
 The cache prevents repeated downloads during local development.
 Use `--refresh` to fetch the JavaScript bundles again.
@@ -85,14 +89,17 @@ The generator writes the output under this directory:
 assets/spotify-light/<combined-version>/
 ```
 
-It also writes two shared files:
+It also writes three shared files:
 
 ```text
 assets/spotify-light/static-rules.css
+assets/spotify-light/source-manifest.json
 assets/spotify-light/index.ts
 ```
 
-`static-rules.css` contains hand-written rules that do not come from Spotify CSS tokens.
+`static-rules.css` contains rules that do not come from color mapping.
+`source-manifest.json` records SHA-256 hashes for the source CSS files.
+The ensure script uses this manifest to skip generation when CSS content is unchanged.
 `index.ts` imports every generated CSS file with Vite `?inline` imports.
 As a result, WXT bundles the CSS as strings in the content script.
 

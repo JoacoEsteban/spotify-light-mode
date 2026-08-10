@@ -52,7 +52,8 @@ bun run ensure:spotify-light-css
 ```
 
 This command checks the desktop and mobile Spotify bundles.
-It refreshes generated CSS only when the combined snapshot changes.
+It refreshes generated CSS only when source CSS content changes.
+If only Spotify artifact hashes change, it keeps the current generated CSS.
 
 ## How it works
 

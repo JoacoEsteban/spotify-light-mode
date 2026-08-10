@@ -1,8 +1,14 @@
 import { mkdir, readdir, readFile, rmdir, unlink, writeFile } from "node:fs/promises";
-import { dirname, extname, join, relative, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 import { argv, exit } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import chroma from "chroma-js";
+import {
+  buildSourceCssManifestFromFiles,
+  findCssFiles,
+  sourceManifestOutputFileName,
+  writeGeneratedSourceManifest,
+} from "./core/source-css-manifest";
 
 import {
   formatMappedColor,
@@ -87,7 +93,9 @@ const defaultSnapshotsRootDir = resolve(projectRoot, "snapshots");
 const outputDir = resolve(projectRoot, "assets/spotify-light");
 const outputIndexPath = resolve(outputDir, "index.ts");
 const staticRulesOutputFileName = "static-rules.css";
+
 const staticRulesOutputPath = resolve(outputDir, staticRulesOutputFileName);
+const sourceManifestOutputPath = resolve(outputDir, sourceManifestOutputFileName);
 
 function splitTopLevel(input: string, delimiter: string): string[] {
   const parts: string[] = [];
@@ -488,25 +496,6 @@ export default [${parts}, _staticRules, _colorScheme].join("\\n");
 `;
 }
 
-
-async function findCssFiles(dir: string): Promise<string[]> {
-  const entries = await readdir(dir, { withFileTypes: true });
-  const files = await Promise.all(
-    entries.map(async (entry) => {
-      const entryPath = join(dir, entry.name);
-      if (entry.isDirectory()) {
-        return findCssFiles(entryPath);
-      }
-      if (entry.isFile() && extname(entry.name) === ".css") {
-        return [entryPath];
-      }
-      return [];
-    }),
-  );
-
-  return files.flat().sort((a, b) => a.localeCompare(b));
-}
-
 async function pruneEmptyDirectories(dir: string, logger: Logger): Promise<boolean> {
   const entries = await readdir(dir, { withFileTypes: true });
   let isEmpty = true;
@@ -639,13 +628,18 @@ export async function generateSpotifyLightCss({
   const expectedOutputFileNames = new Set([
     ...stylesheets.map((s) => s.outputFileName),
     staticRulesOutputFileName,
+    sourceManifestOutputFileName,
     "index.ts",
   ]);
 
   const existingOutputFiles = [
     ...(await findCssFiles(outputDir)),
     ...(await readdir(outputDir, { withFileTypes: true }))
-      .filter((e) => e.isFile() && e.name.endsWith(".ts"))
+      .filter(
+        (e) =>
+          e.isFile() &&
+          (e.name.endsWith(".ts") || e.name === sourceManifestOutputFileName),
+      )
       .map((e) => resolve(outputDir, e.name)),
   ];
   for (const existingFile of existingOutputFiles) {
@@ -657,7 +651,11 @@ export async function generateSpotifyLightCss({
   }
   await pruneEmptyDirectories(outputDir, logger);
 
-
+  const sourceManifest = await buildSourceCssManifestFromFiles(
+    snapshotVersion,
+    snapshotsDir,
+    cssFiles,
+  );
   const staticRuleBlocks: Block[] = [];
 
   for (const stylesheet of stylesheets) {
@@ -691,12 +689,14 @@ export async function generateSpotifyLightCss({
     "utf8",
   );
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
+  await writeGeneratedSourceManifest(sourceManifest, outputDir);
 
   logger.success(`Generated ${stylesheets.length} light-mode stylesheets.`);
   logger.info(`Snapshot: ${snapshotVersion}`);
   logger.info(`Output directory: ${outputDir}`);
   logger.verboseInfo(`Static rules: ${staticRulesOutputPath}`);
   logger.verboseInfo(`Index: ${outputIndexPath}`);
+  logger.verboseInfo(`Source manifest: ${sourceManifestOutputPath}`);
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
