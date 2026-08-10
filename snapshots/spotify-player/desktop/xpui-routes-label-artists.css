@@ -1,0 +1,9 @@
+.YrFrmOByrmnYeMGIpZ0i {
+  padding: 16px;
+}
+.KL0cY_zAyEcwCw04s9Dz {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4px;
+  margin-block-start: 16px;
+  display: grid;
+}
