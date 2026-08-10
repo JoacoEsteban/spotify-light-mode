@@ -7,7 +7,12 @@ import {
   fetchLatestSpotifyWebPlayerInfo,
   refreshSpotifyCssSnapshot,
 } from "./fetch-spotify-css-files";
-import { buildSourceCssManifest, readGeneratedSourceManifest } from "./core/source-css-manifest";
+import {
+  buildSourceCssManifest,
+  readGeneratedSourceManifest,
+  writeGeneratedSourceManifest,
+  type SourceCssManifest,
+} from "./core/source-css-manifest";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
 import { createLogger } from "./logger";
 
@@ -91,7 +96,7 @@ function parseOptions(args: string[]): Options {
           "",
           "Fetches the latest Spotify desktop and mobile player versions.",
           "If generated light-mode assets already target that combined version, exits.",
-          "If only Spotify artifact hashes changed, compares source CSS content and skips generation.",
+          "If only Spotify artifact hashes changed, compares formatted source CSS content and skips generation.",
           "Use --force after generator logic changes.",
           "--verbose prints per-target versions and generator details.",
         ].join("\n"),
@@ -129,12 +134,22 @@ async function containsCssFile(dir: string): Promise<boolean> {
   return false;
 }
 
-async function generatedAssetsExistForVersion(
-  snapshotVersion: string,
+async function fileExists(path: string): Promise<boolean> {
+  try {
+    await readFile(path, "utf8");
+    return true;
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return false;
+    }
+    throw error;
+  }
+}
+
+async function generatedAssetsExistForManifest(
+  manifest: SourceCssManifest,
   assetsDir: string,
 ): Promise<boolean> {
-  const importPrefix = `./${snapshotVersion}/`;
-
   let indexText: string;
   try {
     indexText = await readFile(resolve(assetsDir, "index.ts"), "utf8");
@@ -145,11 +160,23 @@ async function generatedAssetsExistForVersion(
     throw error;
   }
 
-  if (!indexText.includes(importPrefix)) {
+  if (!(await fileExists(resolve(assetsDir, "static-rules.css")))) {
     return false;
   }
 
-  return await containsCssFile(resolve(assetsDir, snapshotVersion));
+  for (const files of Object.values(manifest.targets)) {
+    for (const file of files) {
+      if (!indexText.includes(`"./${file.relativePath}?inline"`)) {
+        return false;
+      }
+
+      if (!(await fileExists(resolve(assetsDir, file.relativePath)))) {
+        return false;
+      }
+    }
+  }
+
+  return true;
 }
 
 async function main(): Promise<void> {
@@ -158,11 +185,12 @@ async function main(): Promise<void> {
 
   logger.info("Checking latest Spotify web player snapshot...");
   const latest = await fetchLatestSpotifyWebPlayerInfo(options.pageUrl);
-  const generated = await generatedAssetsExistForVersion(latest.snapshotVersion, defaultAssetsDir);
   const previousSourceManifest = await readGeneratedSourceManifest(defaultAssetsDir);
   const previousGenerated = previousSourceManifest
-    ? await generatedAssetsExistForVersion(previousSourceManifest.snapshotVersion, defaultAssetsDir)
+    ? await generatedAssetsExistForManifest(previousSourceManifest, defaultAssetsDir)
     : false;
+  const generated =
+    previousGenerated && previousSourceManifest?.snapshotVersion === latest.snapshotVersion;
   logger.info(`Latest snapshot: ${latest.snapshotVersion}`);
   logger.verboseInfo(
     `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}`,
@@ -203,6 +231,7 @@ async function main(): Promise<void> {
     !options.force
   ) {
     logger.success("Source CSS content is unchanged; generation skipped.");
+    await writeGeneratedSourceManifest(latestSourceManifest, defaultAssetsDir);
     logger.info("Use --force after generator logic changes.");
     logger.verboseInfo(`Generated snapshot: ${previousSourceManifest.snapshotVersion}`);
     logger.verboseInfo(`Latest snapshot: ${latest.snapshotVersion}`);

@@ -7,6 +7,7 @@ import {
   buildSourceCssManifestFromFiles,
   findCssFiles,
   sourceManifestOutputFileName,
+  sourceSnapshotDirName,
   writeGeneratedSourceManifest,
 } from "./core/source-css-manifest";
 
@@ -551,10 +552,10 @@ function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
       createLogger().plain(
         [
           "Usage: bun scripts/generate-spotify-light-css.ts <snapshot-version> [--verbose]",
-          "       bun scripts/generate-spotify-light-css.ts --version web-player.c1348e22 [--snapshots-dir snapshots] [--verbose]",
+          "       bun scripts/generate-spotify-light-css.ts --version spotify-player.web-player.c1348e22 [--snapshots-dir snapshots] [--verbose]",
           "",
-          "Generates light-mode overrides from <snapshots-dir>/<snapshot-version>/.",
-          "A snapshot version is required.",
+          "Generates light-mode overrides from <snapshots-dir>/spotify-player/.",
+          "A snapshot version is required for source-manifest metadata.",
           "--verbose prints per-selector color mappings and stale-file cleanup.",
         ].join("\n"),
       );
@@ -581,7 +582,7 @@ export async function generateSpotifyLightCss({
   verbose = false,
 }: GenerateSpotifyLightCssOptions): Promise<void> {
   const logger = createLogger(verbose);
-  const snapshotsDir = resolve(snapshotsRootDir, snapshotVersion);
+  const snapshotsDir = resolve(snapshotsRootDir, sourceSnapshotDirName);
   const cssFiles = await findCssFiles(snapshotsDir);
   if (cssFiles.length === 0) {
     throw new Error(`No CSS files found in ${snapshotsDir}`);
@@ -593,7 +594,7 @@ export async function generateSpotifyLightCss({
     return {
       absolutePath,
       relativePath,
-      outputFileName: `${snapshotVersion}/${snapshotRelativePath}`,
+      outputFileName: snapshotRelativePath,
     };
   });
 

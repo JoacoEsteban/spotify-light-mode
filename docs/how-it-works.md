@@ -42,21 +42,26 @@ Then it resolves each file name against the Webpack public path.
 The fetch script stores the files under this directory:
 
 ```text
-snapshots/<combined-version>/<target>/
+snapshots/spotify-player/<target>/
 ```
 
 For example:
 
 ```text
-snapshots/spotify-player.web-player.91c889e0__mobile-web-player.435c86e5/desktop/web-player.9addd7cc.css
-snapshots/spotify-player.web-player.91c889e0__mobile-web-player.435c86e5/mobile/mobile-web-player.95a293f3.css
+snapshots/spotify-player/desktop/web-player.css
+snapshots/spotify-player/mobile/mobile-web-player.css
 ```
 
-The combined version includes the desktop bundle hash and the mobile bundle hash.
-As a result, either bundle can cause a refresh.
+The fetch script removes the artifact hash from each CSS file name.
+It formats the minified CSS with Prettier before it writes the file.
+Then the manifest hashes the formatted CSS.
 
-The ensure script also compares source CSS content.
-If only artifact hashes changed, it keeps the current generated CSS.
+The combined version includes the desktop bundle hash and the mobile bundle hash.
+This version stays in `source-manifest.json` as metadata.
+It does not appear in the source CSS path.
+
+The ensure script also compares formatted source CSS content.
+If only Spotify artifact hashes changed, it keeps the current generated CSS.
 Use `--force` after generator logic changes.
 
 The script also caches JavaScript bundles under `.cache/spotify-web-player/<target>/`.
@@ -77,16 +82,16 @@ The refresh command can also run the generator:
 bun run refresh:spotify-light-css
 ```
 
-`scripts/generate-spotify-light-css.ts` reads all CSS files in the selected snapshot directory.
+`scripts/generate-spotify-light-css.ts` reads all CSS files in `snapshots/spotify-player/`.
 It reads the `desktop/` and `mobile/` subdirectories.
 It finds CSS declarations that contain colors.
 It maps dark colors to light counterparts with `lib/style-color-mapping.ts`.
 Colorful accent colors are preserved when they have acceptable contrast on white.
 
-The generator writes the output under this directory:
+The generator writes stable output files under this directory:
 
 ```text
-assets/spotify-light/<combined-version>/
+assets/spotify-light/<target>/
 ```
 
 It also writes three shared files:
@@ -98,15 +103,14 @@ assets/spotify-light/index.ts
 ```
 
 `static-rules.css` contains rules that do not come from color mapping.
-`source-manifest.json` records SHA-256 hashes for the source CSS files.
-The ensure script uses this manifest to skip generation when CSS content is unchanged.
+`source-manifest.json` records SHA-256 hashes for the formatted source CSS files.
+The ensure script uses this manifest to skip generation when formatted CSS content is unchanged.
 `index.ts` imports every generated CSS file with Vite `?inline` imports.
 As a result, WXT bundles the CSS as strings in the content script.
 
 The generated index exports one string.
 This string contains all generated CSS, the static rules, and a `color-scheme: light` rule.
 The `color-scheme` rule makes native browser UI use light controls.
-
 
 ## Runtime behavior
 
@@ -122,17 +126,19 @@ At startup, the content script reads two values from extension storage:
 
 The runtime decision is:
 
-| State | Result |
-|---|---|
-| `enabled=false` | Light mode is off. |
-| `enabled=true`, `useSystemPref=false` | Light mode is on. |
-| `enabled=true`, `useSystemPref=true`, OS light mode | Light mode is on. |
-| `enabled=true`, `useSystemPref=true`, OS dark mode | Light mode is off. |
+| State                                               | Result             |
+| --------------------------------------------------- | ------------------ |
+| `enabled=false`                                     | Light mode is off. |
+| `enabled=true`, `useSystemPref=false`               | Light mode is on.  |
+| `enabled=true`, `useSystemPref=true`, OS light mode | Light mode is on.  |
+| `enabled=true`, `useSystemPref=true`, OS dark mode  | Light mode is off. |
 
 When light mode is on, the script appends this element to `document.head`:
 
 ```html
-<style id="spotify-light-mode-overrides">...</style>
+<style id="spotify-light-mode-overrides">
+  ...
+</style>
 ```
 
 When light mode is off, the script removes that element.

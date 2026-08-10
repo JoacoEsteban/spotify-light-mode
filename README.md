@@ -54,6 +54,8 @@ bun run ensure:spotify-light-css
 This command checks the desktop and mobile Spotify bundles.
 It refreshes generated CSS only when source CSS content changes.
 If only Spotify artifact hashes change, it keeps the current generated CSS.
+It stores formatted source CSS under stable file names in `snapshots/spotify-player/`.
+It writes generated CSS under stable file names in `assets/spotify-light/`.
 
 ## How it works
 
@@ -61,14 +63,14 @@ See [How the extension works](docs/how-it-works.md) for the asset flow, generate
 
 ## Tech stack
 
-| | |
-|---|---|
-| [WXT](https://wxt.dev) | Extension framework — manifest generation, entrypoint discovery, HMR |
-| [Bun](https://bun.sh) | Package manager and dev runner |
-| React | Popup UI |
-| TypeScript | Strict mode |
-| [Zod](https://zod.dev) | Runtime validation on storage reads |
-| [chroma-js](https://gka.github.io/chroma.js/) | Color manipulation for dynamic palette overrides |
+|                                               |                                                                      |
+| --------------------------------------------- | -------------------------------------------------------------------- |
+| [WXT](https://wxt.dev)                        | Extension framework — manifest generation, entrypoint discovery, HMR |
+| [Bun](https://bun.sh)                         | Package manager and dev runner                                       |
+| React                                         | Popup UI                                                             |
+| TypeScript                                    | Strict mode                                                          |
+| [Zod](https://zod.dev)                        | Runtime validation on storage reads                                  |
+| [chroma-js](https://gka.github.io/chroma.js/) | Color manipulation for dynamic palette overrides                     |
 
 ## Permissions
 

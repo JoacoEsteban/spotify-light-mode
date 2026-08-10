@@ -1,8 +1,10 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
 import { basename, dirname, resolve } from "node:path";
 import { argv, exit, stdout } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { format as formatWithPrettier } from "prettier";
 
+import { sourceSnapshotDirName } from "./core/source-css-manifest";
 import {
   extractSpotifyCssFilesFromSource,
   type SpotifyCssAsset,
@@ -78,6 +80,7 @@ export type StoredCssAsset = SpotifyCssAsset & {
   targetName: SpotifyPlayerTargetName;
   path: string;
   cacheStatus: "hit" | "miss";
+  sourceFileName: string;
 };
 
 export type SpotifyPlayerAssetInfo = {
@@ -220,9 +223,9 @@ function parseOptions(args: string[]): Options {
           "Usage: bun scripts/fetch-spotify-css-files.ts [--refresh] [--generate] [--json] [--verbose] [--target all|desktop|mobile]",
           "       bun scripts/fetch-spotify-css-files.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
           "",
-          "Fetches Spotify's desktop and mobile HTML, caches current player JS bundles,",
-          "stores linked and chunk CSS files under snapshots/<combined-version>/<target>/,",
-          "then optionally runs scripts/generate-spotify-light-css.ts for that combined version.",
+          "stores linked and chunk CSS files under snapshots/spotify-player/<target>/",
+          "with stable, Prettier-formatted file names,",
+          "then optionally runs scripts/generate-spotify-light-css.ts for the latest combined version.",
           "--verbose prints per-target cache paths and every stored CSS file.",
         ].join("\n"),
       );
@@ -267,6 +270,32 @@ async function fetchText(url: string, userAgent: string): Promise<string> {
 
 function escapeRegExp(input: string): string {
   return input.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function stableCssFileName(fileName: string): string {
+  return fileName.replace(/\.[a-f0-9]{8,}(?=\.css$)/, "");
+}
+
+async function readTextFileIfExists(path: string): Promise<string | null> {
+  try {
+    return await readFile(path, "utf8");
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return null;
+    }
+    throw error;
+  }
+}
+
+async function formatCssForStorage(sourceCss: string, sourceUrl: string): Promise<string> {
+  try {
+    return await formatWithPrettier(sourceCss, {
+      parser: "css",
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Could not format CSS from ${sourceUrl}: ${message}`);
+  }
 }
 
 function findPlayerAssetUrls(
@@ -351,21 +380,81 @@ function dedupeCssAssets(assets: SpotifyCssAsset[]): SpotifyCssAsset[] {
   return deduped;
 }
 
+async function pruneStaleCssFiles(
+  targetSnapshotDir: string,
+  expectedFileNames: ReadonlySet<string>,
+  logger: Logger,
+): Promise<void> {
+  let entries;
+  try {
+    entries = await readdir(targetSnapshotDir, { withFileTypes: true });
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return;
+    }
+    throw error;
+  }
+
+  await Promise.all(
+    entries.map(async (entry) => {
+      if (!entry.isFile() || !entry.name.endsWith(".css") || expectedFileNames.has(entry.name)) {
+        return;
+      }
+
+      await unlink(resolve(targetSnapshotDir, entry.name));
+      logger.verboseInfo(
+        `Deleted stale source CSS file: ${resolve(targetSnapshotDir, entry.name)}`,
+      );
+    }),
+  );
+}
+
 async function storeCssAssets(
   targetName: SpotifyPlayerTargetName,
+  targetUserAgent: string,
   assets: SpotifyCssAsset[],
   snapshotDir: string,
   refresh: boolean,
+  logger: Logger,
 ): Promise<StoredCssAsset[]> {
+  const stableFileNamesByUrl = new Map<string, string>();
+  const sourceUrlsByStableFileName = new Map<string, string>();
+
+  for (const asset of assets) {
+    const fileName = stableCssFileName(asset.fileName);
+    const previousUrl = sourceUrlsByStableFileName.get(fileName);
+    if (previousUrl && previousUrl !== asset.url) {
+      throw new Error(
+        `Stable CSS file name collision for ${targetName}/${fileName}: ${previousUrl} and ${asset.url}`,
+      );
+    }
+    sourceUrlsByStableFileName.set(fileName, asset.url);
+    stableFileNamesByUrl.set(asset.url, fileName);
+  }
+
+  await pruneStaleCssFiles(snapshotDir, new Set(stableFileNamesByUrl.values()), logger);
+
   const stored = await Promise.all(
     assets.map(async (asset) => {
-      const storedAsset = await readStoredTextAsset(asset.url, snapshotDir, refresh);
+      const fileName = stableFileNamesByUrl.get(asset.url)!;
+      const path = resolve(snapshotDir, fileName);
+      const sourceCss = await fetchText(asset.url, targetUserAgent);
+      const text = await formatCssForStorage(sourceCss, asset.url);
+      const existingText = refresh ? null : await readTextFileIfExists(path);
+      const cacheStatus: StoredCssAsset["cacheStatus"] = existingText === text ? "hit" : "miss";
+
+      if (cacheStatus === "miss") {
+        await mkdir(snapshotDir, { recursive: true });
+        await writeFile(path, text, "utf8");
+      }
+
       return {
-        fileName: asset.fileName,
+        fileName,
+        sourceFileName: asset.fileName,
         url: asset.url,
         targetName,
-        path: storedAsset.path,
-        cacheStatus: storedAsset.cacheStatus,
+        path,
+        cacheStatus,
       };
     }),
   );
@@ -419,9 +508,15 @@ export async function refreshSpotifyCssSnapshot({
   webPlayerInfo,
 }: RefreshSpotifyCssSnapshotOptions = {}): Promise<RefreshSpotifyCssSnapshotResult> {
   const latest = webPlayerInfo ?? (await fetchLatestSpotifyWebPlayerInfo(pageUrl, targetNames));
-  const snapshotDir = resolve(snapshotsRootDir, latest.snapshotVersion);
+  const snapshotDir = resolve(snapshotsRootDir, sourceSnapshotDirName);
+  const logger = createLogger(verbose);
   const targetResults = await Promise.all(
     latest.targets.map(async (targetInfo) => {
+      const target = playerTargetsByName.get(targetInfo.targetName);
+      if (!target) {
+        throw new Error(`Unknown target: ${targetInfo.targetName}`);
+      }
+
       const targetCacheDir = resolve(cacheDir, targetInfo.targetName);
       const targetSnapshotDir = resolve(snapshotDir, targetInfo.targetName);
       const script = await readStoredTextAsset(targetInfo.scriptUrl, targetCacheDir, refresh);
@@ -439,9 +534,11 @@ export async function refreshSpotifyCssSnapshot({
       ]);
       const storedCssAssets = await storeCssAssets(
         targetInfo.targetName,
+        target.userAgent,
         allCssAssets,
         targetSnapshotDir,
         refresh,
+        logger,
       );
 
       return {
@@ -513,7 +610,10 @@ function printResult(result: RefreshSpotifyCssSnapshotResult, logger: Logger): v
   logger.verboseInfo("CSS files:");
   logger.verboseInfo(
     result.storedCssAssets
-      .map(({ targetName, fileName, url, path }) => `${targetName}\t${fileName}\t${url}\t${path}`)
+      .map(
+        ({ targetName, fileName, sourceFileName, url, path }) =>
+          `${targetName}\t${fileName}\t${sourceFileName}\t${url}\t${path}`,
+      )
       .join("\n"),
   );
 }

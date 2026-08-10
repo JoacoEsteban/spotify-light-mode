@@ -9,6 +9,7 @@ const projectRoot = resolve(__dirname, "../..");
 const defaultSnapshotsRootDir = resolve(projectRoot, "snapshots");
 
 export const sourceManifestOutputFileName = "source-manifest.json";
+export const sourceSnapshotDirName = "spotify-player";
 
 const SourceCssFileFingerprintSchema = z.object({
   fileName: z.string(),
@@ -45,26 +46,20 @@ function sourceTargetName(relativePath: string): string {
 }
 
 function compareSourceEntries(a: SourceCssFingerprintEntry, b: SourceCssFingerprintEntry): number {
-  return (
-    a.targetName.localeCompare(b.targetName) ||
-    a.sha256.localeCompare(b.sha256) ||
-    a.byteLength - b.byteLength ||
-    a.relativePath.localeCompare(b.relativePath)
-  );
+  return a.targetName.localeCompare(b.targetName) || a.relativePath.localeCompare(b.relativePath);
 }
 
 function sourceFingerprint(entries: readonly SourceCssFingerprintEntry[]): string {
   const canonicalEntries = entries
-    .map(({ targetName, sha256, byteLength }) => ({
+    .map(({ targetName, relativePath, sha256, byteLength }) => ({
       targetName,
+      relativePath,
       sha256,
       byteLength,
     }))
     .sort(
       (a, b) =>
-        a.targetName.localeCompare(b.targetName) ||
-        a.sha256.localeCompare(b.sha256) ||
-        a.byteLength - b.byteLength,
+        a.targetName.localeCompare(b.targetName) || a.relativePath.localeCompare(b.relativePath),
     );
 
   return `sha256:${sha256(JSON.stringify(canonicalEntries))}`;
@@ -126,7 +121,7 @@ export async function buildSourceCssManifest(
   snapshotVersion: string,
   snapshotsRootDir = defaultSnapshotsRootDir,
 ): Promise<SourceCssManifest> {
-  const snapshotsDir = resolve(snapshotsRootDir, snapshotVersion);
+  const snapshotsDir = resolve(snapshotsRootDir, sourceSnapshotDirName);
   const cssFiles = await findCssFiles(snapshotsDir);
   if (cssFiles.length === 0) {
     throw new Error(`No CSS files found in ${snapshotsDir}`);
