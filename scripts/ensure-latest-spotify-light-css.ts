@@ -96,7 +96,7 @@ async function generatedAssetsExistForVersion(
   snapshotVersion: string,
   assetsDir: string,
 ): Promise<boolean> {
-  const importPrefix = `snapshots__${snapshotVersion}__`;
+  const importPrefix = `./${snapshotVersion}/`;
 
   let indexText: string;
   try {
@@ -112,13 +112,17 @@ async function generatedAssetsExistForVersion(
     return false;
   }
 
-  const entries = await readdir(assetsDir, { withFileTypes: true });
-  return entries.some(
-    (entry) =>
-      entry.isFile() &&
-      entry.name.startsWith(importPrefix) &&
-      entry.name.endsWith(".css"),
-  );
+  let entries;
+  try {
+    entries = await readdir(resolve(assetsDir, snapshotVersion), { withFileTypes: true });
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return false;
+    }
+    throw error;
+  }
+
+  return entries.some((entry) => entry.isFile() && entry.name.endsWith(".css"));
 }
 
 async function main(): Promise<void> {

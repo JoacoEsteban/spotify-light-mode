@@ -437,9 +437,6 @@ export default [${parts}, _staticRules, _colorScheme].join("\\n");
 `;
 }
 
-function sanitizeOutputFileName(relativePath: string): string {
-  return relativePath.replaceAll(/[\\/]/g, "__");
-}
 
 async function findCssFiles(dir: string): Promise<string[]> {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -542,11 +539,12 @@ export async function generateSpotifyLightCss({
   }
 
   const stylesheets: SourceStylesheet[] = cssFiles.map((absolutePath) => {
+    const snapshotRelativePath = relative(snapshotsDir, absolutePath).replaceAll("\\", "/");
     const relativePath = relative(projectRoot, absolutePath).replaceAll("\\", "/");
     return {
       absolutePath,
       relativePath,
-      outputFileName: sanitizeOutputFileName(relativePath),
+      outputFileName: `${snapshotVersion}/${snapshotRelativePath}`,
     };
   });
 
@@ -577,7 +575,9 @@ export async function generateSpotifyLightCss({
     const blocks = parseColorBlocks(sourceCss);
     const css = renderStylesheet(stylesheet.relativePath, blocks);
 
-    await writeFile(resolve(outputDir, stylesheet.outputFileName), css, "utf8");
+    const outputPath = resolve(outputDir, stylesheet.outputFileName);
+    await mkdir(dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, css, "utf8");
 
     const declarationCount = blocks.reduce(
       (n, b) => n + b.declarations.length,
