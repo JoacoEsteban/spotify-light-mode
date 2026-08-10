@@ -10,18 +10,10 @@ import {
   writeGeneratedSourceManifest,
 } from "./core/source-css-manifest";
 
-import {
-  formatMappedColor,
-  hasColorToken,
-  mapColorsInValue,
-} from "../lib/style-color-mapping";
+import { formatMappedColor, hasColorToken, mapColorsInValue } from "../lib/style-color-mapping";
 import { createLogger, type Logger } from "./logger";
 
-type DeclarationKind =
-  | "custom-property"
-  | "hardcoded-color"
-  | "css-var"
-  | "derived-static-rule";
+type DeclarationKind = "custom-property" | "hardcoded-color" | "css-var" | "derived-static-rule";
 
 type Declaration = {
   property: string;
@@ -197,18 +189,12 @@ function splitDeclaration(declaration: string): ParsedDeclaration | null {
 function parseDeclarations(body: string): ParsedDeclaration[] {
   return splitTopLevel(body, ";")
     .map((declaration) => splitDeclaration(declaration))
-    .filter(
-      (declaration): declaration is ParsedDeclaration => declaration !== null,
-    );
+    .filter((declaration): declaration is ParsedDeclaration => declaration !== null);
 }
 
-function hasDeclaration(
-  declarations: ParsedDeclaration[],
-  matcher: DeclarationMatcher,
-): boolean {
+function hasDeclaration(declarations: ParsedDeclaration[], matcher: DeclarationMatcher): boolean {
   return declarations.some(
-    ({ property, value }) =>
-      property === matcher.property && value === matcher.value,
+    ({ property, value }) => property === matcher.property && value === matcher.value,
   );
 }
 
@@ -225,9 +211,7 @@ function isIgnorableSelector(selector: string): boolean {
     return true;
   }
 
-  return selectorParts.every((part) =>
-    /^(from|to|\d+(?:\.\d+)?%)$/i.test(part),
-  );
+  return selectorParts.every((part) => /^(from|to|\d+(?:\.\d+)?%)$/i.test(part));
 }
 
 function findMatchingBrace(input: string, openBraceIndex: number): number {
@@ -359,9 +343,7 @@ function parseColorBlocks(sourceCss: string): Block[] {
   });
 }
 
-function deriveStaticRuleDeclarations(
-  declarations: ParsedDeclaration[],
-): Declaration[] {
+function deriveStaticRuleDeclarations(declarations: ParsedDeclaration[]): Declaration[] {
   return staticRuleDerivations.flatMap((derivation) => {
     if (!hasDeclaration(declarations, derivation.match)) {
       return [];
@@ -378,9 +360,7 @@ function deriveStaticRuleDeclarations(
 }
 
 function parseStaticRuleBlocks(sourceCss: string): Block[] {
-  return collectBlocks(sourceCss, (body) =>
-    deriveStaticRuleDeclarations(parseDeclarations(body)),
-  );
+  return collectBlocks(sourceCss, (body) => deriveStaticRuleDeclarations(parseDeclarations(body)));
 }
 
 function increaseSelectorSpecificity(selector: string): string {
@@ -417,8 +397,7 @@ function indentBlock(input: string, prefix = "  "): string {
 function renderBlock({ selector, declarations, layers }: Block): string {
   const renderedDeclarations = declarations
     .map(({ property, original, mapped, important, kind }) => {
-      const needsImportant =
-        kind === "custom-property" || kind === "css-var" || important;
+      const needsImportant = kind === "custom-property" || kind === "css-var" || important;
       const importantSuffix = needsImportant ? " !important" : "";
       const comment =
         kind === "css-var"
@@ -474,8 +453,7 @@ function renderStaticRules(blocks: Block[]): string {
 function renderIndex(stylesheets: SourceStylesheet[]): string {
   const imports = [
     ...stylesheets.map(
-      ({ outputFileName }, i) =>
-        `import _${i} from "./${outputFileName}?inline";`,
+      ({ outputFileName }, i) => `import _${i} from "./${outputFileName}?inline";`,
     ),
     `import _staticRules from "./${staticRulesOutputFileName}?inline";`,
   ].join("\n");
@@ -518,7 +496,6 @@ async function pruneEmptyDirectories(dir: string, logger: Logger): Promise<boole
   return isEmpty;
 }
 
-
 function printReport(title: string, blocks: Block[], logger: Logger): void {
   logger.verboseInfo();
   logger.verboseInfo(`=== ${title} ===`);
@@ -531,10 +508,7 @@ function printReport(title: string, blocks: Block[], logger: Logger): void {
     }
   }
 
-  const declarationCount = blocks.reduce(
-    (sum, block) => sum + block.declarations.length,
-    0,
-  );
+  const declarationCount = blocks.reduce((sum, block) => sum + block.declarations.length, 0);
   logger.verboseInfo();
   logger.verboseInfo(
     `${title}: ${declarationCount} declarations across ${blocks.length} selectors.`,
@@ -636,9 +610,7 @@ export async function generateSpotifyLightCss({
     ...(await findCssFiles(outputDir)),
     ...(await readdir(outputDir, { withFileTypes: true }))
       .filter(
-        (e) =>
-          e.isFile() &&
-          (e.name.endsWith(".ts") || e.name === sourceManifestOutputFileName),
+        (e) => e.isFile() && (e.name.endsWith(".ts") || e.name === sourceManifestOutputFileName),
       )
       .map((e) => resolve(outputDir, e.name)),
   ];
@@ -668,10 +640,7 @@ export async function generateSpotifyLightCss({
     await mkdir(dirname(outputPath), { recursive: true });
     await writeFile(outputPath, css, "utf8");
 
-    const declarationCount = blocks.reduce(
-      (n, b) => n + b.declarations.length,
-      0,
-    );
+    const declarationCount = blocks.reduce((n, b) => n + b.declarations.length, 0);
     logger.verboseInfo();
     logger.verboseInfo(`=== ${stylesheet.relativePath} ===`);
     logger.verboseInfo(
@@ -683,11 +652,7 @@ export async function generateSpotifyLightCss({
     }
   }
 
-  await writeFile(
-    staticRulesOutputPath,
-    renderStaticRules(staticRuleBlocks),
-    "utf8",
-  );
+  await writeFile(staticRulesOutputPath, renderStaticRules(staticRuleBlocks), "utf8");
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
   await writeGeneratedSourceManifest(sourceManifest, outputDir);
 

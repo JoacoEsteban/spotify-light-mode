@@ -17,9 +17,7 @@ const SourceCssFileFingerprintSchema = z.object({
   byteLength: z.number(),
 });
 
-export type SourceCssFileFingerprint = z.infer<
-  typeof SourceCssFileFingerprintSchema
->;
+export type SourceCssFileFingerprint = z.infer<typeof SourceCssFileFingerprintSchema>;
 
 const SourceCssManifestSchema = z.object({
   snapshotVersion: z.string(),
@@ -46,10 +44,7 @@ function sourceTargetName(relativePath: string): string {
   return relativePath.slice(0, separatorIndex);
 }
 
-function compareSourceEntries(
-  a: SourceCssFingerprintEntry,
-  b: SourceCssFingerprintEntry,
-): number {
+function compareSourceEntries(a: SourceCssFingerprintEntry, b: SourceCssFingerprintEntry): number {
   return (
     a.targetName.localeCompare(b.targetName) ||
     a.sha256.localeCompare(b.sha256) ||
@@ -65,10 +60,11 @@ function sourceFingerprint(entries: readonly SourceCssFingerprintEntry[]): strin
       sha256,
       byteLength,
     }))
-    .sort((a, b) =>
-      a.targetName.localeCompare(b.targetName) ||
-      a.sha256.localeCompare(b.sha256) ||
-      a.byteLength - b.byteLength,
+    .sort(
+      (a, b) =>
+        a.targetName.localeCompare(b.targetName) ||
+        a.sha256.localeCompare(b.sha256) ||
+        a.byteLength - b.byteLength,
     );
 
   return `sha256:${sha256(JSON.stringify(canonicalEntries))}`;
@@ -136,11 +132,7 @@ export async function buildSourceCssManifest(
     throw new Error(`No CSS files found in ${snapshotsDir}`);
   }
 
-  return await buildSourceCssManifestFromFiles(
-    snapshotVersion,
-    snapshotsDir,
-    cssFiles,
-  );
+  return await buildSourceCssManifestFromFiles(snapshotVersion, snapshotsDir, cssFiles);
 }
 
 export async function readGeneratedSourceManifest(
@@ -159,9 +151,7 @@ export async function readGeneratedSourceManifest(
 
   const manifest = SourceCssManifestSchema.safeParse(JSON.parse(text));
   if (!manifest.success) {
-    throw new Error(
-      `Invalid source CSS manifest: ${path}\n${manifest.error.message}`,
-    );
+    throw new Error(`Invalid source CSS manifest: ${path}\n${manifest.error.message}`);
   }
 
   return manifest.data;

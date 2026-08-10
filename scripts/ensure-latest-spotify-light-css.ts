@@ -7,10 +7,7 @@ import {
   fetchLatestSpotifyWebPlayerInfo,
   refreshSpotifyCssSnapshot,
 } from "./fetch-spotify-css-files";
-import {
-  buildSourceCssManifest,
-  readGeneratedSourceManifest,
-} from "./core/source-css-manifest";
+import { buildSourceCssManifest, readGeneratedSourceManifest } from "./core/source-css-manifest";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
 import { createLogger } from "./logger";
 
@@ -161,16 +158,10 @@ async function main(): Promise<void> {
 
   logger.info("Checking latest Spotify web player snapshot...");
   const latest = await fetchLatestSpotifyWebPlayerInfo(options.pageUrl);
-  const generated = await generatedAssetsExistForVersion(
-    latest.snapshotVersion,
-    defaultAssetsDir,
-  );
+  const generated = await generatedAssetsExistForVersion(latest.snapshotVersion, defaultAssetsDir);
   const previousSourceManifest = await readGeneratedSourceManifest(defaultAssetsDir);
   const previousGenerated = previousSourceManifest
-    ? await generatedAssetsExistForVersion(
-        previousSourceManifest.snapshotVersion,
-        defaultAssetsDir,
-      )
+    ? await generatedAssetsExistForVersion(previousSourceManifest.snapshotVersion, defaultAssetsDir)
     : false;
   logger.info(`Latest snapshot: ${latest.snapshotVersion}`);
   logger.verboseInfo(

@@ -3,7 +3,10 @@ import { basename, dirname, resolve } from "node:path";
 import { argv, exit, stdout } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { extractSpotifyCssFilesFromSource, type SpotifyCssAsset } from "./extract-spotify-css-files";
+import {
+  extractSpotifyCssFilesFromSource,
+  type SpotifyCssAsset,
+} from "./extract-spotify-css-files";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
 import { createLogger, type Logger } from "./logger";
 
@@ -125,7 +128,9 @@ function parseTargetName(value: string): SpotifyPlayerTargetName {
   throw new Error(`Unknown target: ${value}. Expected desktop, mobile, or all.`);
 }
 
-function normalizeTargetNames(targetNames: readonly SpotifyPlayerTargetName[]): SpotifyPlayerTargetName[] {
+function normalizeTargetNames(
+  targetNames: readonly SpotifyPlayerTargetName[],
+): SpotifyPlayerTargetName[] {
   const selected = new Set(targetNames);
   return defaultTargetNames.filter((name) => selected.has(name));
 }
@@ -228,7 +233,9 @@ function parseOptions(args: string[]): Options {
   }
 
   if (json && generate) {
-    throw new Error("--json cannot be combined with --generate because generated CSS writes human logs.");
+    throw new Error(
+      "--json cannot be combined with --generate because generated CSS writes human logs.",
+    );
   }
 
   return {
@@ -280,7 +287,9 @@ function findPlayerAssetUrls(
   const stylesheetMatch = html.match(stylesheetPattern);
 
   if (!scriptMatch?.[0]) {
-    throw new Error(`Could not find a ${target.name} ${target.bundleName} JS bundle URL in Spotify HTML.`);
+    throw new Error(
+      `Could not find a ${target.name} ${target.bundleName} JS bundle URL in Spotify HTML.`,
+    );
   }
 
   return {
@@ -466,13 +475,17 @@ export async function refreshSpotifyCssSnapshot({
 }
 
 function printResult(result: RefreshSpotifyCssSnapshotResult, logger: Logger): void {
-  const cssHitCount = result.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
+  const cssHitCount = result.storedCssAssets.filter(
+    ({ cacheStatus }) => cacheStatus === "hit",
+  ).length;
   const cssMissCount = result.storedCssAssets.length - cssHitCount;
 
   logger.success("Spotify CSS snapshot ready.");
   logger.info(`Snapshot: ${result.snapshotVersion}`);
   logger.info(`Directory: ${result.snapshotDir}`);
-  logger.info(`CSS files: ${result.storedCssAssets.length} total, ${cssHitCount} cached, ${cssMissCount} fetched`);
+  logger.info(
+    `CSS files: ${result.storedCssAssets.length} total, ${cssHitCount} cached, ${cssMissCount} fetched`,
+  );
   logger.info(`Generated light-mode overrides: ${result.generated ? "yes" : "no"}`);
 
   if (!logger.verbose) {
@@ -481,7 +494,9 @@ function printResult(result: RefreshSpotifyCssSnapshotResult, logger: Logger): v
 
   logger.verboseInfo(`Spotify HTML: ${result.pageUrl}`);
   for (const target of result.targets) {
-    const targetCssHitCount = target.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
+    const targetCssHitCount = target.storedCssAssets.filter(
+      ({ cacheStatus }) => cacheStatus === "hit",
+    ).length;
     const targetCssMissCount = target.storedCssAssets.length - targetCssHitCount;
     logger.verboseInfo();
     logger.verboseInfo(`${target.targetName} target:`);

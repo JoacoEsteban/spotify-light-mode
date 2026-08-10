@@ -189,10 +189,7 @@ function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
     }
 
     const argumentExpression = unwrapExpression(node.argumentExpression);
-    if (
-      ts.isIdentifier(argumentExpression) &&
-      argumentExpression.text === chunkIdParameterName
-    ) {
+    if (ts.isIdentifier(argumentExpression) && argumentExpression.text === chunkIdParameterName) {
       const expression = unwrapExpression(node.expression);
       if (ts.isObjectLiteralExpression(expression)) {
         const map = readStringObjectLiteral(expression);
@@ -209,7 +206,11 @@ function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
   return maps;
 }
 
-function buildCssAssets(nameMap: ChunkMap, hashMap: ChunkMap, publicPath: string): SpotifyCssAsset[] {
+function buildCssAssets(
+  nameMap: ChunkMap,
+  hashMap: ChunkMap,
+  publicPath: string,
+): SpotifyCssAsset[] {
   const namesByChunkId = new Map(nameMap);
   const seen = new Set<string>();
   const cssAssets: SpotifyCssAsset[] = [];
