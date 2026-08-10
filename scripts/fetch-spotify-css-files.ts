@@ -147,7 +147,7 @@ async function main(): Promise<void> {
   const html = await fetchText(options.pageUrl);
   const { scriptUrl, stylesheetUrl } = findWebPlayerAssetUrls(html);
   const script = await readCachedAsset(scriptUrl, options.cacheDir, options.refresh);
-  const cssFiles = extractSpotifyCssFilesFromSource(script.text, script.path);
+  const cssAssets = extractSpotifyCssFilesFromSource(script.text, script.path);
 
   if (options.json) {
     stdout.write(
@@ -158,7 +158,7 @@ async function main(): Promise<void> {
           scriptUrl,
           cachePath: script.path,
           cacheStatus: script.cacheStatus,
-          cssFiles,
+          cssAssets,
         },
         null,
         2,
@@ -173,8 +173,8 @@ async function main(): Promise<void> {
   }
   stdout.write(`Web player script: ${script.fileName}\n`);
   stdout.write(`Cache ${script.cacheStatus}: ${script.path}\n`);
-  stdout.write(`\nCSS files (${cssFiles.length}):\n`);
-  stdout.write(`${cssFiles.join("\n")}\n`);
+  stdout.write(`\nCSS files (${cssAssets.length}):\n`);
+  stdout.write(`${cssAssets.map(({ fileName, url }) => `${fileName}\t${url}`).join("\n")}\n`);
 }
 
 try {

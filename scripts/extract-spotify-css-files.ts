@@ -14,6 +14,16 @@ const cssFunctionNames: Record<string, true> = {
 
 type ChunkMap = Array<[chunkId: string, value: string]>;
 
+export type SpotifyCssAsset = {
+  fileName: string;
+  url: string;
+};
+
+type MiniCssDeclaration = {
+  arrowFunction: ts.ArrowFunction;
+  runtimeName: string;
+};
+
 type Options = {
   inputPath: string;
   json: boolean;
@@ -105,8 +115,8 @@ function readStringObjectLiteral(objectLiteral: ts.ObjectLiteralExpression): Chu
   return entries;
 }
 
-function findMiniCssArrowFunction(sourceFile: ts.SourceFile): ts.ArrowFunction | null {
-  let result: ts.ArrowFunction | null = null;
+function findMiniCssDeclaration(sourceFile: ts.SourceFile): MiniCssDeclaration | null {
+  let result: MiniCssDeclaration | null = null;
 
   function visit(node: ts.Node): void {
     if (result !== null) {
@@ -117,11 +127,15 @@ function findMiniCssArrowFunction(sourceFile: ts.SourceFile): ts.ArrowFunction |
       ts.isBinaryExpression(node) &&
       node.operatorToken.kind === ts.SyntaxKind.EqualsToken &&
       ts.isPropertyAccessExpression(node.left) &&
+      ts.isIdentifier(node.left.expression) &&
       cssFunctionNames[node.left.name.text] === true
     ) {
       const right = unwrapExpression(node.right);
       if (ts.isArrowFunction(right)) {
-        result = right;
+        result = {
+          arrowFunction: right,
+          runtimeName: node.left.expression.text,
+        };
         return;
       }
     }
@@ -131,6 +145,31 @@ function findMiniCssArrowFunction(sourceFile: ts.SourceFile): ts.ArrowFunction |
 
   visit(sourceFile);
   return result;
+}
+
+function findWebpackPublicPath(sourceFile: ts.SourceFile, runtimeName: string): string | null {
+  let publicPath: string | null = null;
+
+  function visit(node: ts.Node): void {
+    if (
+      ts.isBinaryExpression(node) &&
+      node.operatorToken.kind === ts.SyntaxKind.EqualsToken &&
+      ts.isPropertyAccessExpression(node.left) &&
+      ts.isIdentifier(node.left.expression) &&
+      node.left.expression.text === runtimeName &&
+      node.left.name.text === "p"
+    ) {
+      const value = stringLiteralText(node.right);
+      if (value !== null) {
+        publicPath = value;
+      }
+    }
+
+    ts.forEachChild(node, visit);
+  }
+
+  visit(sourceFile);
+  return publicPath;
 }
 
 function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
@@ -169,28 +208,31 @@ function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
   return maps;
 }
 
-function buildCssFileNames(nameMap: ChunkMap, hashMap: ChunkMap): string[] {
+function buildCssAssets(nameMap: ChunkMap, hashMap: ChunkMap, publicPath: string): SpotifyCssAsset[] {
   const namesByChunkId = new Map(nameMap);
   const seen = new Set<string>();
-  const cssFiles: string[] = [];
+  const cssAssets: SpotifyCssAsset[] = [];
 
   for (const [chunkId, hash] of hashMap) {
     const baseName = namesByChunkId.get(chunkId) ?? chunkId;
-    const cssFile = `${baseName}.${hash}.css`;
+    const fileName = `${baseName}.${hash}.css`;
 
-    if (!seen.has(cssFile)) {
-      seen.add(cssFile);
-      cssFiles.push(cssFile);
+    if (!seen.has(fileName)) {
+      seen.add(fileName);
+      cssAssets.push({
+        fileName,
+        url: new URL(fileName, publicPath).href,
+      });
     }
   }
 
-  return cssFiles;
+  return cssAssets;
 }
 
 export function extractSpotifyCssFilesFromSource(
   sourceText: string,
   sourcePath = "web-player.js",
-): string[] {
+): SpotifyCssAsset[] {
   const sourceFile = ts.createSourceFile(
     sourcePath,
     sourceText,
@@ -199,32 +241,45 @@ export function extractSpotifyCssFilesFromSource(
     ts.ScriptKind.JS,
   );
 
-  const miniCssFunction = findMiniCssArrowFunction(sourceFile);
-  if (miniCssFunction === null) {
+  const miniCssDeclaration = findMiniCssDeclaration(sourceFile);
+  if (miniCssDeclaration === null) {
     throw new Error("Could not find the miniCssF assignment in the input bundle.");
   }
 
-  const maps = collectChunkMaps(miniCssFunction);
+  const publicPath = findWebpackPublicPath(sourceFile, miniCssDeclaration.runtimeName);
+  if (publicPath === null) {
+    throw new Error(
+      `Could not find the Webpack public path assignment for ${miniCssDeclaration.runtimeName}.p.`,
+    );
+  }
+
+  const maps = collectChunkMaps(miniCssDeclaration.arrowFunction);
   if (maps.length < 2) {
     throw new Error(`Expected at least 2 object maps in miniCssF; found ${maps.length}.`);
   }
 
   const [nameMap, hashMap] = maps;
-  return buildCssFileNames(nameMap!, hashMap!);
+  return buildCssAssets(nameMap!, hashMap!, publicPath);
 }
 
-export async function extractSpotifyCssFilesFromFile(inputPath: string): Promise<string[]> {
+export async function extractSpotifyCssFilesFromFile(
+  inputPath: string,
+): Promise<SpotifyCssAsset[]> {
   const sourceText = await readFile(inputPath, "utf8");
-  const cssFiles = extractSpotifyCssFilesFromSource(sourceText, inputPath);
+  const cssAssets = extractSpotifyCssFilesFromSource(sourceText, inputPath);
 
-  return cssFiles;
+  return cssAssets;
 }
 
 async function main(): Promise<void> {
   const { inputPath, json } = parseOptions(argv.slice(2));
-  const cssFiles = await extractSpotifyCssFilesFromFile(inputPath);
+  const cssAssets = await extractSpotifyCssFilesFromFile(inputPath);
 
-  stdout.write(json ? `${JSON.stringify(cssFiles, null, 2)}\n` : `${cssFiles.join("\n")}\n`);
+  stdout.write(
+    json
+      ? `${JSON.stringify(cssAssets, null, 2)}\n`
+      : `${cssAssets.map(({ fileName, url }) => `${fileName}\t${url}`).join("\n")}\n`,
+  );
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
