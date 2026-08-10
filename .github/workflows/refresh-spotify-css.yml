@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: refresh-spotify-css
@@ -58,3 +59,11 @@ jobs:
           git tag "v$version"
           git push origin "HEAD:${GITHUB_REF_NAME}"
           git push origin "v$version"
+
+      - name: Trigger publish workflow
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          gh workflow run publish.yml --ref "v$version"
