@@ -1,6 +1,6 @@
 import { mkdir, readdir, readFile, rmdir, unlink, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve } from "node:path";
-import { argv, exit, stderr } from "node:process";
+import { argv, exit } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import chroma from "chroma-js";
 
@@ -9,6 +9,7 @@ import {
   hasColorToken,
   mapColorsInValue,
 } from "../lib/style-color-mapping";
+import { createLogger, type Logger } from "./logger";
 
 type Declaration = {
   property: string;
@@ -35,6 +36,7 @@ type StaticRuleMap = Record<string, Record<string, string>>;
 export type GenerateSpotifyLightCssOptions = {
   snapshotVersion: string;
   snapshotsRootDir?: string;
+  verbose?: boolean;
 };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -456,17 +458,17 @@ async function findCssFiles(dir: string): Promise<string[]> {
   return files.flat().sort((a, b) => a.localeCompare(b));
 }
 
-async function pruneEmptyDirectories(dir: string): Promise<boolean> {
+async function pruneEmptyDirectories(dir: string, logger: Logger): Promise<boolean> {
   const entries = await readdir(dir, { withFileTypes: true });
   let isEmpty = true;
 
   for (const entry of entries) {
     const entryPath = join(dir, entry.name);
     if (entry.isDirectory()) {
-      const childIsEmpty = await pruneEmptyDirectories(entryPath);
+      const childIsEmpty = await pruneEmptyDirectories(entryPath, logger);
       if (childIsEmpty) {
         await rmdir(entryPath);
-        console.log(`Deleted stale output directory: ${relative(outputDir, entryPath)}`);
+        logger.verboseInfo(`Deleted stale output directory: ${relative(outputDir, entryPath)}`);
       } else {
         isEmpty = false;
       }
@@ -479,13 +481,15 @@ async function pruneEmptyDirectories(dir: string): Promise<boolean> {
 }
 
 
-function printReport(title: string, blocks: Block[]): void {
-  console.log(`\n=== ${title} ===`);
+function printReport(title: string, blocks: Block[], logger: Logger): void {
+  logger.verboseInfo();
+  logger.verboseInfo(`=== ${title} ===`);
 
   for (const { selector, declarations } of blocks) {
-    console.log(`\n${selector}`);
+    logger.verboseInfo();
+    logger.verboseInfo(selector);
     for (const { property, original, mapped } of declarations) {
-      console.log(`${property} = ${original} -> ${mapped}`);
+      logger.verboseInfo(`${property} = ${original} -> ${mapped}`);
     }
   }
 
@@ -493,16 +497,23 @@ function printReport(title: string, blocks: Block[]): void {
     (sum, block) => sum + block.declarations.length,
     0,
   );
-  console.log(
-    `\n${title}: ${declarationCount} declarations across ${blocks.length} selectors.`,
+  logger.verboseInfo();
+  logger.verboseInfo(
+    `${title}: ${declarationCount} declarations across ${blocks.length} selectors.`,
   );
 }
 
 function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
   let snapshotVersion: string | undefined;
   let snapshotsRootDir = defaultSnapshotsRootDir;
+  let verbose = false;
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index]!;
+
+    if (arg === "--verbose" || arg === "-v") {
+      verbose = true;
+      continue;
+    }
 
     if (arg === "--version") {
       const value = args[index + 1];
@@ -525,13 +536,14 @@ function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
     }
 
     if (arg === "--help" || arg === "-h") {
-      console.log(
+      createLogger().info(
         [
-          "Usage: bun scripts/generate-spotify-light-css.ts <snapshot-version>",
-          "       bun scripts/generate-spotify-light-css.ts --version web-player.c1348e22 [--snapshots-dir snapshots]",
+          "Usage: bun scripts/generate-spotify-light-css.ts <snapshot-version> [--verbose]",
+          "       bun scripts/generate-spotify-light-css.ts --version web-player.c1348e22 [--snapshots-dir snapshots] [--verbose]",
           "",
           "Generates light-mode overrides from <snapshots-dir>/<snapshot-version>/.",
           "A snapshot version is required.",
+          "--verbose prints per-selector color mappings and stale-file cleanup.",
         ].join("\n"),
       );
       exit(0);
@@ -548,13 +560,15 @@ function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
     throw new Error("Snapshot version is required.");
   }
 
-  return { snapshotVersion, snapshotsRootDir };
+  return { snapshotVersion, snapshotsRootDir, verbose };
 }
 
 export async function generateSpotifyLightCss({
   snapshotVersion,
   snapshotsRootDir = defaultSnapshotsRootDir,
+  verbose = false,
 }: GenerateSpotifyLightCssOptions): Promise<void> {
+  const logger = createLogger(verbose);
   const snapshotsDir = resolve(snapshotsRootDir, snapshotVersion);
   const cssFiles = await findCssFiles(snapshotsDir);
   if (cssFiles.length === 0) {
@@ -589,10 +603,10 @@ export async function generateSpotifyLightCss({
     const name = existingFile.slice(outputDir.length + 1);
     if (!expectedOutputFileNames.has(name)) {
       await unlink(existingFile);
-      console.log(`Deleted stale output file: ${name}`);
+      logger.verboseInfo(`Deleted stale output file: ${name}`);
     }
   }
-  await pruneEmptyDirectories(outputDir);
+  await pruneEmptyDirectories(outputDir, logger);
 
 
   for (const stylesheet of stylesheets) {
@@ -608,13 +622,14 @@ export async function generateSpotifyLightCss({
       (n, b) => n + b.declarations.length,
       0,
     );
-    console.log(`\n=== ${stylesheet.relativePath} ===`);
-    console.log(
+    logger.verboseInfo();
+    logger.verboseInfo(`=== ${stylesheet.relativePath} ===`);
+    logger.verboseInfo(
       `Generated ${stylesheet.outputFileName} with ${blocks.length} selectors and ${declarationCount} declarations.`,
     );
 
     if (blocks.length > 0) {
-      printReport("Color overrides", blocks);
+      printReport("Color overrides", blocks, logger);
     }
   }
 
@@ -625,11 +640,9 @@ export async function generateSpotifyLightCss({
   );
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
 
-  console.log(
-    `\nWrote ${stylesheets.length} generated stylesheets to ${outputDir}`,
-  );
-  console.log(`Wrote static rules: ${staticRulesOutputPath}`);
-  console.log(`Wrote index: ${outputIndexPath}`);
+  logger.info(`Generated ${stylesheets.length} light-mode stylesheets in ${outputDir}`);
+  logger.verboseInfo(`Wrote static rules: ${staticRulesOutputPath}`);
+  logger.verboseInfo(`Wrote index: ${outputIndexPath}`);
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
@@ -638,7 +651,7 @@ if (import.meta.url === entrypointPath) {
     await generateSpotifyLightCss(parseOptions(argv.slice(2)));
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    stderr.write(`${message}\n`);
+    createLogger().error(message);
     exit(1);
   }
 }

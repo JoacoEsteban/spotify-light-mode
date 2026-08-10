@@ -1,10 +1,11 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, resolve } from "node:path";
-import { argv, exit, stderr, stdout } from "node:process";
+import { argv, exit, stdout } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { extractSpotifyCssFilesFromSource, type SpotifyCssAsset } from "./extract-spotify-css-files";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
+import { createLogger, type Logger } from "./logger";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(scriptDir, "..");
@@ -58,6 +59,7 @@ type Options = {
   refresh: boolean;
   generate: boolean;
   json: boolean;
+  verbose: boolean;
   targetNames: SpotifyPlayerTargetName[];
 };
 
@@ -95,6 +97,7 @@ export type RefreshSpotifyCssSnapshotOptions = {
   snapshotsRootDir?: string;
   refresh?: boolean;
   generate?: boolean;
+  verbose?: boolean;
   targetNames?: SpotifyPlayerTargetName[];
   webPlayerInfo?: SpotifyWebPlayerInfo;
 };
@@ -134,6 +137,7 @@ function parseOptions(args: string[]): Options {
   let refresh = false;
   let generate = false;
   let json = false;
+  let verbose = false;
   const targetNames = new Set<SpotifyPlayerTargetName>();
 
   for (let index = 0; index < args.length; index += 1) {
@@ -151,6 +155,11 @@ function parseOptions(args: string[]): Options {
 
     if (arg === "--json") {
       json = true;
+      continue;
+    }
+
+    if (arg === "--verbose" || arg === "-v") {
+      verbose = true;
       continue;
     }
 
@@ -201,15 +210,16 @@ function parseOptions(args: string[]): Options {
     }
 
     if (arg === "--help" || arg === "-h") {
-      stdout.write(
+      createLogger().info(
         [
-          "Usage: bun scripts/fetch-spotify-css-files.ts [--refresh] [--generate] [--json] [--target all|desktop|mobile]",
+          "Usage: bun scripts/fetch-spotify-css-files.ts [--refresh] [--generate] [--json] [--verbose] [--target all|desktop|mobile]",
           "       bun scripts/fetch-spotify-css-files.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
           "",
           "Fetches Spotify's desktop and mobile HTML, caches current player JS bundles,",
           "stores linked and chunk CSS files under snapshots/<combined-version>/<target>/,",
           "then optionally runs scripts/generate-spotify-light-css.ts for that combined version.",
-        ].join("\n") + "\n",
+          "--verbose prints per-target cache paths and every stored CSS file.",
+        ].join("\n"),
       );
       exit(0);
     }
@@ -228,6 +238,7 @@ function parseOptions(args: string[]): Options {
     refresh,
     generate,
     json,
+    verbose,
     targetNames: normalizeTargetNames(targetNames.size > 0 ? [...targetNames] : defaultTargetNames),
   };
 }
@@ -394,6 +405,7 @@ export async function refreshSpotifyCssSnapshot({
   snapshotsRootDir = defaultSnapshotsRootDir,
   refresh = false,
   generate = false,
+  verbose = false,
   targetNames = defaultTargetNames,
   webPlayerInfo,
 }: RefreshSpotifyCssSnapshotOptions = {}): Promise<RefreshSpotifyCssSnapshotResult> {
@@ -439,6 +451,7 @@ export async function refreshSpotifyCssSnapshot({
     await generateSpotifyLightCss({
       snapshotVersion: latest.snapshotVersion,
       snapshotsRootDir,
+      verbose,
     });
   }
 
@@ -452,33 +465,40 @@ export async function refreshSpotifyCssSnapshot({
   };
 }
 
-function printResult(result: RefreshSpotifyCssSnapshotResult): void {
+function printResult(result: RefreshSpotifyCssSnapshotResult, logger: Logger): void {
   const cssHitCount = result.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
   const cssMissCount = result.storedCssAssets.length - cssHitCount;
 
-  stdout.write(`Spotify HTML: ${result.pageUrl}\n`);
-  stdout.write(`Snapshot version: ${result.snapshotVersion}\n`);
-  stdout.write(`Snapshot dir: ${result.snapshotDir}\n`);
+  logger.info(`Snapshot version: ${result.snapshotVersion}`);
+  logger.info(`Snapshot dir: ${result.snapshotDir}`);
+  logger.info(`Stored CSS files: ${result.storedCssAssets.length} (${cssHitCount} hit, ${cssMissCount} fetched)`);
+  logger.info(`Generated overrides: ${result.generated ? "yes" : "no"}`);
+
+  if (!logger.verbose) {
+    return;
+  }
+
+  logger.verboseInfo(`Spotify HTML: ${result.pageUrl}`);
   for (const target of result.targets) {
     const targetCssHitCount = target.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
     const targetCssMissCount = target.storedCssAssets.length - targetCssHitCount;
-    stdout.write(`\n${target.targetName} target:\n`);
+    logger.verboseInfo();
+    logger.verboseInfo(`${target.targetName} target:`);
     if (target.stylesheetUrl) {
-      stdout.write(`Player stylesheet: ${basename(new URL(target.stylesheetUrl).pathname)}\n`);
+      logger.verboseInfo(`Player stylesheet: ${basename(new URL(target.stylesheetUrl).pathname)}`);
     }
-    stdout.write(`Player script: ${basename(new URL(target.scriptUrl).pathname)}\n`);
-    stdout.write(`Script cache ${target.scriptCacheStatus}: ${target.scriptCachePath}\n`);
-    stdout.write(
-      `Stored CSS files: ${target.storedCssAssets.length} (${targetCssHitCount} hit, ${targetCssMissCount} fetched)\n`,
+    logger.verboseInfo(`Player script: ${basename(new URL(target.scriptUrl).pathname)}`);
+    logger.verboseInfo(`Script cache ${target.scriptCacheStatus}: ${target.scriptCachePath}`);
+    logger.verboseInfo(
+      `Stored CSS files: ${target.storedCssAssets.length} (${targetCssHitCount} hit, ${targetCssMissCount} fetched)`,
     );
   }
-  stdout.write(`\nStored CSS files: ${result.storedCssAssets.length} (${cssHitCount} hit, ${cssMissCount} fetched)\n`);
-  stdout.write(`Generated overrides: ${result.generated ? "yes" : "no"}\n`);
-  stdout.write(`\nCSS files:\n`);
-  stdout.write(
-    `${result.storedCssAssets
+  logger.verboseInfo();
+  logger.verboseInfo("CSS files:");
+  logger.verboseInfo(
+    result.storedCssAssets
       .map(({ targetName, fileName, url, path }) => `${targetName}\t${fileName}\t${url}\t${path}`)
-      .join("\n")}\n`,
+      .join("\n"),
   );
 }
 
@@ -491,7 +511,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  printResult(result);
+  printResult(result, createLogger(options.verbose));
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
@@ -500,7 +520,7 @@ if (import.meta.url === entrypointPath) {
     await main();
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    stderr.write(`${message}\n`);
+    createLogger().error(message);
     exit(1);
   }
 }

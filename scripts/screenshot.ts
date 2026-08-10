@@ -3,6 +3,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { mkdir } from "node:fs/promises";
 import { execSync } from "node:child_process";
+import { createLogger } from "./logger";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -30,8 +31,10 @@ const SHOTS: Array<{ name: string; url: string; waitMs?: number }> = [
   },
 ];
 
-const skipBuild = process.argv.includes("--skip-build");
-const loginMode = process.argv.includes("--login");
+const args = process.argv.slice(2);
+const skipBuild = args.includes("--skip-build");
+const loginMode = args.includes("--login");
+const logger = createLogger(args.includes("--verbose") || args.includes("-v"));
 
 function launch() {
   return puppeteer.launch({
@@ -62,6 +65,18 @@ async function dismissCookieBanner(page: Page): Promise<void> {
 }
 
 async function main(): Promise<void> {
+  if (args.includes("--help") || args.includes("-h")) {
+    logger.info(
+      [
+        "Usage: bun scripts/screenshot.ts [--skip-build] [--login] [--verbose]",
+        "",
+        "Captures Spotify screenshots with the built extension loaded.",
+        "--verbose prints each captured route and exposes build output.",
+      ].join("\n"),
+    );
+    return;
+  }
+
   await mkdir(OUT_DIR, { recursive: true });
   await mkdir(PROFILE_DIR, { recursive: true });
 
@@ -70,16 +85,16 @@ async function main(): Promise<void> {
     const pages = await browser.pages();
     const page = pages[0] ?? (await browser.newPage());
     await page.goto("https://open.spotify.com/login", { waitUntil: "networkidle2" });
-    console.log("Log in to Spotify, then press Enter here to save and exit.");
+    logger.info("Log in to Spotify, then press Enter here to save and exit.");
     await new Promise<void>((r) => process.stdin.once("data", () => r()));
     await browser.close();
-    console.log("Session saved. Run `bun run screenshot:fast` to capture.");
+    logger.info("Session saved. Run `bun run screenshot:fast` to capture.");
     return;
   }
 
   if (!skipBuild) {
-    console.log("Building extension...");
-    execSync("bun run build", { cwd: ROOT, stdio: "inherit" });
+    logger.info("Building extension...");
+    execSync("bun run build", { cwd: ROOT, stdio: logger.verbose ? "inherit" : "pipe" });
   }
 
   const browser = await launch();
@@ -87,20 +102,21 @@ async function main(): Promise<void> {
   const page = pages[0] ?? (await browser.newPage());
 
   for (const { name, url, waitMs = 2000 } of SHOTS) {
-    console.log(`  capturing ${name}...`);
+    logger.verboseInfo(`Capturing ${name}...`);
     await page.goto(url, { waitUntil: "networkidle2", timeout: 30_000 });
     await new Promise((r) => setTimeout(r, waitMs));
     await dismissCookieBanner(page);
     const outPath = resolve(OUT_DIR, `${name}.jpg`);
     await page.screenshot({ path: outPath, type: "jpeg", quality: 95 });
-    console.log(`  → ${outPath}`);
+    logger.verboseInfo(`Wrote ${outPath}`);
   }
 
   await browser.close();
-  console.log(`\nDone. Screenshots saved to ${OUT_DIR}`);
+  logger.info(`Done. Screenshots saved to ${OUT_DIR}`);
 }
 
 main().catch((e: unknown) => {
-  console.error(e);
+  const message = e instanceof Error ? e.message : String(e);
+  logger.error(message);
   process.exit(1);
 });

@@ -1,12 +1,13 @@
 import { readdir, readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { argv, exit, stderr, stdout } from "node:process";
+import { argv, exit } from "node:process";
 import { fileURLToPath } from "node:url";
 
 import {
   fetchLatestSpotifyWebPlayerInfo,
   refreshSpotifyCssSnapshot,
 } from "./fetch-spotify-css-files";
+import { createLogger } from "./logger";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(scriptDir, "..");
@@ -21,6 +22,7 @@ type Options = {
   snapshotsRootDir: string;
   refresh: boolean;
   force: boolean;
+  verbose: boolean;
 };
 
 function parseOptions(args: string[]): Options {
@@ -29,6 +31,7 @@ function parseOptions(args: string[]): Options {
   let snapshotsRootDir = defaultSnapshotsRootDir;
   let refresh = false;
   let force = false;
+  let verbose = false;
 
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index]!;
@@ -40,6 +43,11 @@ function parseOptions(args: string[]): Options {
 
     if (arg === "--force") {
       force = true;
+      continue;
+    }
+
+    if (arg === "--verbose" || arg === "-v") {
+      verbose = true;
       continue;
     }
 
@@ -74,15 +82,16 @@ function parseOptions(args: string[]): Options {
     }
 
     if (arg === "--help" || arg === "-h") {
-      stdout.write(
+      createLogger().info(
         [
-          "Usage: bun scripts/ensure-latest-spotify-light-css.ts [--refresh] [--force]",
+          "Usage: bun scripts/ensure-latest-spotify-light-css.ts [--refresh] [--force] [--verbose]",
           "       bun scripts/ensure-latest-spotify-light-css.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
           "",
           "Fetches the latest Spotify desktop and mobile player versions. If generated",
           "light-mode assets already target that combined version, exits without regenerating.",
           "Otherwise stores CSS snapshots for the version and regenerates assets/spotify-light/.",
-        ].join("\n") + "\n",
+          "--verbose prints per-target versions and generator details.",
+        ].join("\n"),
       );
       exit(0);
     }
@@ -90,7 +99,7 @@ function parseOptions(args: string[]): Options {
     throw new Error(`Unexpected argument: ${arg}`);
   }
 
-  return { pageUrl, cacheDir, snapshotsRootDir, refresh, force };
+  return { pageUrl, cacheDir, snapshotsRootDir, refresh, force, verbose };
 }
 
 async function containsCssFile(dir: string): Promise<boolean> {
@@ -142,27 +151,29 @@ async function generatedAssetsExistForVersion(
 
 async function main(): Promise<void> {
   const options = parseOptions(argv.slice(2));
+  const logger = createLogger(options.verbose);
   const latest = await fetchLatestSpotifyWebPlayerInfo(options.pageUrl);
   const generated = await generatedAssetsExistForVersion(
     latest.snapshotVersion,
     defaultAssetsDir,
   );
 
-  stdout.write(`Latest snapshot version: ${latest.snapshotVersion}\n`);
-  stdout.write(
-    `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}\n`,
+  logger.info(`Latest snapshot version: ${latest.snapshotVersion}`);
+  logger.verboseInfo(
+    `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}`,
   );
 
   if (generated && !options.force) {
-    stdout.write(`Generated assets already exist in ${defaultAssetsDir}\n`);
-    stdout.write("No refresh needed.\n");
+    logger.info("Generated assets already exist.");
+    logger.verboseInfo(`Assets dir: ${defaultAssetsDir}`);
+    logger.info("No refresh needed.");
     return;
   }
 
   if (generated && options.force) {
-    stdout.write("Generated assets already exist; forcing refresh.\n");
+    logger.info("Generated assets already exist; forcing refresh.");
   } else {
-    stdout.write("Generated assets missing; refreshing.\n");
+    logger.info("Generated assets missing; refreshing.");
   }
 
   const result = await refreshSpotifyCssSnapshot({
@@ -170,17 +181,18 @@ async function main(): Promise<void> {
     snapshotsRootDir: options.snapshotsRootDir,
     refresh: options.refresh,
     generate: true,
+    verbose: options.verbose,
     webPlayerInfo: latest,
   });
 
-  stdout.write(`Generated assets in ${defaultAssetsDir}\n`);
-  stdout.write(`Snapshot dir: ${result.snapshotDir}\n`);
+  logger.info(`Generated assets in ${defaultAssetsDir}`);
+  logger.verboseInfo(`Snapshot dir: ${result.snapshotDir}`);
 }
 
 try {
   await main();
 } catch (error) {
   const message = error instanceof Error ? error.message : String(error);
-  stderr.write(`${message}\n`);
+  createLogger().error(message);
   exit(1);
 }
