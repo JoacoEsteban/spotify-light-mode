@@ -1,6 +1,10 @@
 [tasks.generate-spotify-light-css]
-description = "Generate light-mode overrides from Spotify snapshot CSS"
-run = "bun scripts/generate-spotify-light-css.ts"
+description = "Generate light-mode overrides from a versioned Spotify snapshot CSS directory"
+run = "bun scripts/generate-spotify-light-css.ts {{arg(name='snapshot-version')}}"
+
+[tasks.ensure-spotify-light-css]
+description = "Fetch latest Spotify CSS and regenerate light-mode overrides when needed"
+run = "bun scripts/ensure-latest-spotify-light-css.ts"
 
 [tasks.process-icons]
 description = "Resize icon to all extension sizes with rounded corners (usage: mise run process-icons <icon> <radius-ratio>)"
