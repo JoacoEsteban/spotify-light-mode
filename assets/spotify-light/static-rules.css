@@ -6,6 +6,22 @@
 
 /* Static overrides */
 
-.DTD2wBL5oiABNB41:not(#spotify-light-mode-specificity-bump), .ldCmP3kZajc6aBTg:not(#spotify-light-mode-specificity-bump) {
-  filter: invert(1) contrast(1.1) !important;
+.WzemnSSNd3FXS1icBUyJ:not(#spotify-light-mode-specificity-bump) {
+  filter: invert(1) contrast(1.1) !important; /* derived-static-rule: placeholder-image-background → invert(1) contrast(1.1) */
+}
+
+.Xid3sQ4h022zrQYXLgOq:not(#spotify-light-mode-specificity-bump) {
+  filter: invert(1) contrast(1.1) !important; /* derived-static-rule: placeholder-image-background → invert(1) contrast(1.1) */
+}
+
+.edTN0LW2xwBpdp3xhmgn:not(#spotify-light-mode-specificity-bump) {
+  filter: invert(1) contrast(1.1) !important; /* derived-static-rule: placeholder-image-background → invert(1) contrast(1.1) */
+}
+
+.Un2pkUTUe8Ev7aK5YBuy:not(#spotify-light-mode-specificity-bump) {
+  filter: invert(1) contrast(1.1) !important; /* derived-static-rule: placeholder-image-background → invert(1) contrast(1.1) */
+}
+
+.pAC0qbxvgDSfloWr14Hu:not(#spotify-light-mode-specificity-bump) {
+  filter: invert(1) contrast(1.1) !important; /* derived-static-rule: placeholder-image-background → invert(1) contrast(1.1) */
 }
