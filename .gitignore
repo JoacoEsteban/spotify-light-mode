@@ -6,3 +6,4 @@ node_modules/
 snapshots/**
 !snapshots/**.css
 .chrome-profile
+web-player.js
