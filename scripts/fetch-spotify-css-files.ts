@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, resolve } from "node:path";
 import { argv, exit, stderr, stdout } from "node:process";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { extractSpotifyCssFilesFromSource, type SpotifyCssAsset } from "./extract-spotify-css-files";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
@@ -34,9 +34,34 @@ type StoredTextAsset = {
   cacheStatus: "hit" | "miss";
 };
 
-type StoredCssAsset = SpotifyCssAsset & {
+export type StoredCssAsset = SpotifyCssAsset & {
   path: string;
   cacheStatus: "hit" | "miss";
+};
+
+export type SpotifyWebPlayerInfo = {
+  pageUrl: string;
+  snapshotVersion: string;
+  scriptUrl: string;
+  stylesheetUrl: string | null;
+};
+
+export type RefreshSpotifyCssSnapshotOptions = {
+  pageUrl?: string;
+  cacheDir?: string;
+  snapshotsRootDir?: string;
+  refresh?: boolean;
+  generate?: boolean;
+  webPlayerInfo?: SpotifyWebPlayerInfo;
+};
+
+export type RefreshSpotifyCssSnapshotResult = SpotifyWebPlayerInfo & {
+  snapshotDir: string;
+  scriptCachePath: string;
+  scriptCacheStatus: "hit" | "miss";
+  cssAssets: SpotifyCssAsset[];
+  storedCssAssets: StoredCssAsset[];
+  generated: boolean;
 };
 
 function parseOptions(args: string[]): Options {
@@ -221,20 +246,38 @@ async function storeCssAssets(
   return stored;
 }
 
-async function main(): Promise<void> {
-  const options = parseOptions(argv.slice(2));
-  const html = await fetchText(options.pageUrl);
+export async function fetchLatestSpotifyWebPlayerInfo(
+  pageUrl = defaultPageUrl,
+): Promise<SpotifyWebPlayerInfo> {
+  const html = await fetchText(pageUrl);
   const { scriptUrl, stylesheetUrl } = findWebPlayerAssetUrls(html);
-  const snapshotVersion = webPlayerVersionFromScriptUrl(scriptUrl);
-  const snapshotDir = resolve(options.snapshotsRootDir, snapshotVersion);
-  const script = await readStoredTextAsset(scriptUrl, options.cacheDir, options.refresh);
+
+  return {
+    pageUrl,
+    snapshotVersion: webPlayerVersionFromScriptUrl(scriptUrl),
+    scriptUrl,
+    stylesheetUrl,
+  };
+}
+
+export async function refreshSpotifyCssSnapshot({
+  pageUrl = defaultPageUrl,
+  cacheDir = defaultCacheDir,
+  snapshotsRootDir = defaultSnapshotsRootDir,
+  refresh = false,
+  generate = false,
+  webPlayerInfo,
+}: RefreshSpotifyCssSnapshotOptions = {}): Promise<RefreshSpotifyCssSnapshotResult> {
+  const latest = webPlayerInfo ?? (await fetchLatestSpotifyWebPlayerInfo(pageUrl));
+  const snapshotDir = resolve(snapshotsRootDir, latest.snapshotVersion);
+  const script = await readStoredTextAsset(latest.scriptUrl, cacheDir, refresh);
   const cssAssets = extractSpotifyCssFilesFromSource(script.text, script.path);
   const allCssAssets = dedupeCssAssets([
-    ...(stylesheetUrl
+    ...(latest.stylesheetUrl
       ? [
           {
-            fileName: basename(new URL(stylesheetUrl).pathname),
-            url: stylesheetUrl,
+            fileName: basename(new URL(latest.stylesheetUrl).pathname),
+            url: latest.stylesheetUrl,
           },
         ]
       : []),
@@ -243,63 +286,68 @@ async function main(): Promise<void> {
   const storedCssAssets = await storeCssAssets(
     allCssAssets,
     snapshotDir,
-    options.refresh,
+    refresh,
   );
 
-  if (options.generate) {
+  if (generate) {
     await generateSpotifyLightCss({
-      snapshotVersion,
-      snapshotsRootDir: options.snapshotsRootDir,
+      snapshotVersion: latest.snapshotVersion,
+      snapshotsRootDir,
     });
   }
 
-  if (options.json) {
-    stdout.write(
-      `${JSON.stringify(
-        {
-          pageUrl: options.pageUrl,
-          snapshotVersion,
-          snapshotDir,
-          stylesheetUrl,
-          scriptUrl,
-          scriptCachePath: script.path,
-          scriptCacheStatus: script.cacheStatus,
-          cssAssets: allCssAssets,
-          storedCssAssets,
-          generated: options.generate,
-        },
-        null,
-        2,
-      )}\n`,
-    );
-    return;
-  }
+  return {
+    ...latest,
+    snapshotDir,
+    scriptCachePath: script.path,
+    scriptCacheStatus: script.cacheStatus,
+    cssAssets: allCssAssets,
+    storedCssAssets,
+    generated: generate,
+  };
+}
 
-  const cssHitCount = storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
-  const cssMissCount = storedCssAssets.length - cssHitCount;
+function printResult(result: RefreshSpotifyCssSnapshotResult): void {
+  const cssHitCount = result.storedCssAssets.filter(({ cacheStatus }) => cacheStatus === "hit").length;
+  const cssMissCount = result.storedCssAssets.length - cssHitCount;
 
-  stdout.write(`Spotify HTML: ${options.pageUrl}\n`);
-  stdout.write(`Snapshot version: ${snapshotVersion}\n`);
-  stdout.write(`Snapshot dir: ${snapshotDir}\n`);
-  if (stylesheetUrl) {
-    stdout.write(`Web player stylesheet: ${basename(new URL(stylesheetUrl).pathname)}\n`);
+  stdout.write(`Spotify HTML: ${result.pageUrl}\n`);
+  stdout.write(`Snapshot version: ${result.snapshotVersion}\n`);
+  stdout.write(`Snapshot dir: ${result.snapshotDir}\n`);
+  if (result.stylesheetUrl) {
+    stdout.write(`Web player stylesheet: ${basename(new URL(result.stylesheetUrl).pathname)}\n`);
   }
-  stdout.write(`Web player script: ${script.fileName}\n`);
-  stdout.write(`Script cache ${script.cacheStatus}: ${script.path}\n`);
-  stdout.write(`Stored CSS files: ${storedCssAssets.length} (${cssHitCount} hit, ${cssMissCount} fetched)\n`);
-  stdout.write(`Generated overrides: ${options.generate ? "yes" : "no"}\n`);
+  stdout.write(`Web player script: ${basename(new URL(result.scriptUrl).pathname)}\n`);
+  stdout.write(`Script cache ${result.scriptCacheStatus}: ${result.scriptCachePath}\n`);
+  stdout.write(`Stored CSS files: ${result.storedCssAssets.length} (${cssHitCount} hit, ${cssMissCount} fetched)\n`);
+  stdout.write(`Generated overrides: ${result.generated ? "yes" : "no"}\n`);
   stdout.write(`\nCSS files:\n`);
   stdout.write(
-    `${storedCssAssets
+    `${result.storedCssAssets
       .map(({ fileName, url, path }) => `${fileName}\t${url}\t${path}`)
       .join("\n")}\n`,
   );
 }
 
-try {
-  await main();
-} catch (error) {
-  const message = error instanceof Error ? error.message : String(error);
-  stderr.write(`${message}\n`);
-  exit(1);
+async function main(): Promise<void> {
+  const options = parseOptions(argv.slice(2));
+  const result = await refreshSpotifyCssSnapshot(options);
+
+  if (options.json) {
+    stdout.write(`${JSON.stringify(result, null, 2)}\n`);
+    return;
+  }
+
+  printResult(result);
+}
+
+const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
+if (import.meta.url === entrypointPath) {
+  try {
+    await main();
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    stderr.write(`${message}\n`);
+    exit(1);
+  }
 }
