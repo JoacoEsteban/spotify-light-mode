@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { argv, exit, stderr, stdout } from "node:process";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import * as ts from "typescript";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
@@ -41,18 +41,13 @@ function parseOptions(args: string[]): Options {
     }
 
     if (inputPath !== defaultInputPath) {
-      fail(`Unexpected extra argument: ${arg}`);
+      throw new Error(`Unexpected extra argument: ${arg}`);
     }
 
     inputPath = resolve(projectRoot, arg);
   }
 
   return { inputPath, json };
-}
-
-function fail(message: string): never {
-  stderr.write(`${message}\n`);
-  exit(1);
 }
 
 function unwrapExpression(expression: ts.Expression): ts.Expression {
@@ -82,6 +77,7 @@ function propertyNameText(name: ts.PropertyName): string | null {
 
 function stringLiteralText(expression: ts.Expression): string | null {
   const unwrapped = unwrapExpression(expression);
+
   if (ts.isStringLiteral(unwrapped) || ts.isNoSubstitutionTemplateLiteral(unwrapped)) {
     return unwrapped.text;
   }
@@ -140,7 +136,7 @@ function findMiniCssArrowFunction(sourceFile: ts.SourceFile): ts.ArrowFunction |
 function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
   const [parameter] = arrowFunction.parameters;
   if (!parameter || !ts.isIdentifier(parameter.name)) {
-    fail("miniCssF declaration does not use a single identifier parameter.");
+    throw new Error("miniCssF declaration does not use a single identifier parameter.");
   }
 
   const chunkIdParameterName = parameter.name.text;
@@ -191,11 +187,12 @@ function buildCssFileNames(nameMap: ChunkMap, hashMap: ChunkMap): string[] {
   return cssFiles;
 }
 
-async function main(): Promise<void> {
-  const { inputPath, json } = parseOptions(argv.slice(2));
-  const sourceText = await readFile(inputPath, "utf8");
+export function extractSpotifyCssFilesFromSource(
+  sourceText: string,
+  sourcePath = "web-player.js",
+): string[] {
   const sourceFile = ts.createSourceFile(
-    inputPath,
+    sourcePath,
     sourceText,
     ts.ScriptTarget.Latest,
     true,
@@ -204,18 +201,39 @@ async function main(): Promise<void> {
 
   const miniCssFunction = findMiniCssArrowFunction(sourceFile);
   if (miniCssFunction === null) {
-    fail("Could not find the miniCssF assignment in the input bundle.");
+    throw new Error("Could not find the miniCssF assignment in the input bundle.");
   }
 
   const maps = collectChunkMaps(miniCssFunction);
   if (maps.length < 2) {
-    fail(`Expected at least 2 object maps in miniCssF; found ${maps.length}.`);
+    throw new Error(`Expected at least 2 object maps in miniCssF; found ${maps.length}.`);
   }
 
   const [nameMap, hashMap] = maps;
-  const cssFiles = buildCssFileNames(nameMap!, hashMap!);
+  return buildCssFileNames(nameMap!, hashMap!);
+}
+
+export async function extractSpotifyCssFilesFromFile(inputPath: string): Promise<string[]> {
+  const sourceText = await readFile(inputPath, "utf8");
+  const cssFiles = extractSpotifyCssFilesFromSource(sourceText, inputPath);
+
+  return cssFiles;
+}
+
+async function main(): Promise<void> {
+  const { inputPath, json } = parseOptions(argv.slice(2));
+  const cssFiles = await extractSpotifyCssFilesFromFile(inputPath);
 
   stdout.write(json ? `${JSON.stringify(cssFiles, null, 2)}\n` : `${cssFiles.join("\n")}\n`);
 }
 
-await main();
+const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
+if (import.meta.url === entrypointPath) {
+  try {
+    await main();
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    stderr.write(`${message}\n`);
+    exit(1);
+  }
+}

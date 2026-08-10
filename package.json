@@ -14,7 +14,8 @@
     "screenshot": "bun scripts/screenshot.ts",
     "screenshot:fast": "bun scripts/screenshot.ts --skip-build",
     "screenshot:login": "bun scripts/screenshot.ts --login",
-    "extract:spotify-css": "bun scripts/extract-spotify-css-files.ts"
+    "extract:spotify-css": "bun scripts/extract-spotify-css-files.ts",
+    "fetch:spotify-css": "bun scripts/fetch-spotify-css-files.ts"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",

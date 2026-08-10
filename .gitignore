@@ -3,6 +3,7 @@ node_modules/
 .wxt/
 *.zip
 .DS_Store
+.cache/
 snapshots/**
 !snapshots/**.css
 .chrome-profile
