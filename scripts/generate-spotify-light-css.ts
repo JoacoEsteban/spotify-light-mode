@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rmdir, unlink, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve } from "node:path";
 import { argv, exit, stderr } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -456,6 +456,29 @@ async function findCssFiles(dir: string): Promise<string[]> {
   return files.flat().sort((a, b) => a.localeCompare(b));
 }
 
+async function pruneEmptyDirectories(dir: string): Promise<boolean> {
+  const entries = await readdir(dir, { withFileTypes: true });
+  let isEmpty = true;
+
+  for (const entry of entries) {
+    const entryPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const childIsEmpty = await pruneEmptyDirectories(entryPath);
+      if (childIsEmpty) {
+        await rmdir(entryPath);
+        console.log(`Deleted stale output directory: ${relative(outputDir, entryPath)}`);
+      } else {
+        isEmpty = false;
+      }
+    } else {
+      isEmpty = false;
+    }
+  }
+
+  return isEmpty;
+}
+
+
 function printReport(title: string, blocks: Block[]): void {
   console.log(`\n=== ${title} ===`);
 
@@ -569,6 +592,8 @@ export async function generateSpotifyLightCss({
       console.log(`Deleted stale output file: ${name}`);
     }
   }
+  await pruneEmptyDirectories(outputDir);
+
 
   for (const stylesheet of stylesheets) {
     const sourceCss = await readFile(stylesheet.absolutePath, "utf8");

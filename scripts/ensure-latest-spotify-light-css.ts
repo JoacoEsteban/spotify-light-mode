@@ -79,9 +79,9 @@ function parseOptions(args: string[]): Options {
           "Usage: bun scripts/ensure-latest-spotify-light-css.ts [--refresh] [--force]",
           "       bun scripts/ensure-latest-spotify-light-css.ts [--url https://open.spotify.com/] [--cache-dir .cache/spotify-web-player] [--snapshots-dir snapshots]",
           "",
-          "Fetches the latest Spotify web-player version. If generated light-mode assets",
-          "already target that version, exits without regenerating. Otherwise stores CSS",
-          "snapshots for the version and regenerates assets/spotify-light/.",
+          "Fetches the latest Spotify desktop and mobile player versions. If generated",
+          "light-mode assets already target that combined version, exits without regenerating.",
+          "Otherwise stores CSS snapshots for the version and regenerates assets/spotify-light/.",
         ].join("\n") + "\n",
       );
       exit(0);
@@ -92,6 +92,31 @@ function parseOptions(args: string[]): Options {
 
   return { pageUrl, cacheDir, snapshotsRootDir, refresh, force };
 }
+
+async function containsCssFile(dir: string): Promise<boolean> {
+  let entries;
+  try {
+    entries = await readdir(dir, { withFileTypes: true });
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return false;
+    }
+    throw error;
+  }
+
+  for (const entry of entries) {
+    if (entry.isFile() && entry.name.endsWith(".css")) {
+      return true;
+    }
+
+    if (entry.isDirectory() && (await containsCssFile(resolve(dir, entry.name)))) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 async function generatedAssetsExistForVersion(
   snapshotVersion: string,
   assetsDir: string,
@@ -112,17 +137,7 @@ async function generatedAssetsExistForVersion(
     return false;
   }
 
-  let entries;
-  try {
-    entries = await readdir(resolve(assetsDir, snapshotVersion), { withFileTypes: true });
-  } catch (error) {
-    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      return false;
-    }
-    throw error;
-  }
-
-  return entries.some((entry) => entry.isFile() && entry.name.endsWith(".css"));
+  return await containsCssFile(resolve(assetsDir, snapshotVersion));
 }
 
 async function main(): Promise<void> {
@@ -134,6 +149,9 @@ async function main(): Promise<void> {
   );
 
   stdout.write(`Latest snapshot version: ${latest.snapshotVersion}\n`);
+  stdout.write(
+    `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}\n`,
+  );
 
   if (generated && !options.force) {
     stdout.write(`Generated assets already exist in ${defaultAssetsDir}\n`);
