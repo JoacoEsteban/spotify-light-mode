@@ -43,6 +43,10 @@ bun run zip          # Zip for distribution
 
 Load unpacked in Chrome: `chrome://extensions` → "Load unpacked" → select `.output/chrome-mv3-dev/`
 
+## How it works
+
+See [How the extension works](docs/how-it-works.md) for the asset fetching, style generation, and runtime flow.
+
 ## Tech stack
 
 | | |
