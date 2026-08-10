@@ -43,9 +43,20 @@ bun run zip          # Zip for distribution
 
 Load unpacked in Chrome: `chrome://extensions` → "Load unpacked" → select `.output/chrome-mv3-dev/`
 
+## Spotify CSS snapshots
+
+Use this command to check the latest Spotify CSS assets:
+
+```sh
+bun run ensure:spotify-light-css
+```
+
+This command checks the desktop and mobile Spotify bundles.
+It refreshes generated CSS only when the combined snapshot changes.
+
 ## How it works
 
-See [How the extension works](docs/how-it-works.md) for the asset fetching, style generation, and runtime flow.
+See [How the extension works](docs/how-it-works.md) for the asset flow, generated CSS, and runtime behavior.
 
 ## Tech stack
 

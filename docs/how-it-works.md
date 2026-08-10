@@ -23,13 +23,13 @@ bun run ensure:spotify-light-css
 ```
 
 This command runs `scripts/ensure-latest-spotify-light-css.ts`.
-It fetches `https://open.spotify.com/` and reads the current web-player asset URLs from the HTML.
-The desktop user agent in `scripts/fetch-spotify-css-files.ts` makes Spotify return the desktop web player.
+It fetches `https://open.spotify.com/` with desktop and mobile user agents.
+Spotify returns different player bundles for those user agents.
 
-The script finds these assets:
+The script finds these assets for each target:
 
-- The main `web-player.<hash>.js` bundle.
-- The main `web-player.<hash>.css` stylesheet, when Spotify includes it in the HTML.
+- The main player JavaScript bundle.
+- The main player CSS stylesheet, when Spotify includes it in the HTML.
 - The lazy CSS chunk files that the JavaScript bundle declares through Webpack.
 
 The JavaScript bundle is large, so the extractor does not use broad text parsing.
@@ -42,26 +42,29 @@ Then it resolves each file name against the Webpack public path.
 The fetch script stores the files under this directory:
 
 ```text
-snapshots/<web-player-version>/
+snapshots/<combined-version>/<target>/
 ```
 
 For example:
 
 ```text
-snapshots/web-player.91c889e0/web-player.9addd7cc.css
-snapshots/web-player.91c889e0/xpui-routes-album.87c040d8.css
+snapshots/spotify-player.web-player.91c889e0__mobile-web-player.435c86e5/desktop/web-player.9addd7cc.css
+snapshots/spotify-player.web-player.91c889e0__mobile-web-player.435c86e5/mobile/mobile-web-player.95a293f3.css
 ```
 
-The script also caches the JavaScript bundle under `.cache/spotify-web-player/`.
+The combined version includes the desktop bundle hash and the mobile bundle hash.
+As a result, either bundle can cause a refresh.
+
+The script also caches JavaScript bundles under `.cache/spotify-web-player/<target>/`.
 The cache prevents repeated downloads during local development.
-Use `--refresh` to fetch the JavaScript bundle again.
+Use `--refresh` to fetch the JavaScript bundles again.
 
 ## Style generation
 
 The main command is:
 
 ```sh
-bun run generate:spotify-light-css -- web-player.91c889e0
+bun run generate:spotify-light-css -- --version spotify-player.web-player.91c889e0__mobile-web-player.435c86e5
 ```
 
 The refresh command can also run the generator:
@@ -71,6 +74,7 @@ bun run refresh:spotify-light-css
 ```
 
 `scripts/generate-spotify-light-css.ts` reads all CSS files in the selected snapshot directory.
+It reads the `desktop/` and `mobile/` subdirectories.
 It finds CSS declarations that contain colors.
 It maps dark colors to light counterparts with `lib/style-color-mapping.ts`.
 Colorful accent colors are preserved when they have acceptable contrast on white.
@@ -78,7 +82,7 @@ Colorful accent colors are preserved when they have acceptable contrast on white
 The generator writes the output under this directory:
 
 ```text
-assets/spotify-light/<web-player-version>/
+assets/spotify-light/<combined-version>/
 ```
 
 It also writes two shared files:
@@ -95,6 +99,7 @@ As a result, WXT bundles the CSS as strings in the content script.
 The generated index exports one string.
 This string contains all generated CSS, the static rules, and a `color-scheme: light` rule.
 The `color-scheme` rule makes native browser UI use light controls.
+
 
 ## Runtime behavior
 
