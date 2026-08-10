@@ -5,6 +5,8 @@ node_modules/
 .DS_Store
 .cache/
 snapshots/**
-!snapshots/**.css
+!snapshots/**/
+!snapshots/*.css
+!snapshots/**/*.css
 .chrome-profile
 web-player.js

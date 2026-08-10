@@ -15,7 +15,9 @@
     "screenshot:fast": "bun scripts/screenshot.ts --skip-build",
     "screenshot:login": "bun scripts/screenshot.ts --login",
     "extract:spotify-css": "bun scripts/extract-spotify-css-files.ts",
-    "fetch:spotify-css": "bun scripts/fetch-spotify-css-files.ts"
+    "fetch:spotify-css": "bun scripts/fetch-spotify-css-files.ts",
+    "generate:spotify-light-css": "bun scripts/generate-spotify-light-css.ts",
+    "refresh:spotify-light-css": "bun scripts/fetch-spotify-css-files.ts --generate"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",

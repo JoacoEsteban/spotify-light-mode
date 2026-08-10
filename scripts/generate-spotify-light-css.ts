@@ -1,13 +1,7 @@
-import {
-  mkdir,
-  readdir,
-  readFile,
-  rm,
-  unlink,
-  writeFile,
-} from "node:fs/promises";
+import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { argv, exit, stderr } from "node:process";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import chroma from "chroma-js";
 
 import {
@@ -38,9 +32,15 @@ type SourceStylesheet = {
 
 type StaticRuleMap = Record<string, Record<string, string>>;
 
+export type GenerateSpotifyLightCssOptions = {
+  snapshotVersion: string;
+  snapshotsRootDir?: string;
+};
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const snapshotsDir = resolve(__dirname, "../snapshots");
-const outputDir = resolve(__dirname, "../assets/spotify-light");
+const projectRoot = resolve(__dirname, "..");
+const defaultSnapshotsRootDir = resolve(projectRoot, "snapshots");
+const outputDir = resolve(projectRoot, "assets/spotify-light");
 const outputIndexPath = resolve(outputDir, "index.ts");
 const staticRulesOutputFileName = "static-rules.css";
 const staticRulesOutputPath = resolve(outputDir, staticRulesOutputFileName);
@@ -478,13 +478,71 @@ function printReport(title: string, blocks: Block[]): void {
   );
 }
 
-async function main(): Promise<void> {
+function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
+  let snapshotVersion: string | undefined;
+  let snapshotsRootDir = defaultSnapshotsRootDir;
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index]!;
+
+    if (arg === "--version") {
+      const value = args[index + 1];
+      if (!value) {
+        throw new Error("--version requires a web-player version.");
+      }
+      snapshotVersion = value;
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--snapshots-dir") {
+      const value = args[index + 1];
+      if (!value) {
+        throw new Error("--snapshots-dir requires a directory path.");
+      }
+      snapshotsRootDir = resolve(projectRoot, value);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--help" || arg === "-h") {
+      console.log(
+        [
+          "Usage: bun scripts/generate-spotify-light-css.ts <snapshot-version>",
+          "       bun scripts/generate-spotify-light-css.ts --version web-player.c1348e22 [--snapshots-dir snapshots]",
+          "",
+          "Generates light-mode overrides from <snapshots-dir>/<snapshot-version>/.",
+          "A snapshot version is required.",
+        ].join("\n"),
+      );
+      exit(0);
+    }
+
+    if (snapshotVersion !== undefined) {
+      throw new Error(`Unexpected extra argument: ${arg}`);
+    }
+
+    snapshotVersion = arg;
+  }
+
+  if (snapshotVersion === undefined) {
+    throw new Error("Snapshot version is required.");
+  }
+
+  return { snapshotVersion, snapshotsRootDir };
+}
+
+export async function generateSpotifyLightCss({
+  snapshotVersion,
+  snapshotsRootDir = defaultSnapshotsRootDir,
+}: GenerateSpotifyLightCssOptions): Promise<void> {
+  const snapshotsDir = resolve(snapshotsRootDir, snapshotVersion);
   const cssFiles = await findCssFiles(snapshotsDir);
+  if (cssFiles.length === 0) {
+    throw new Error(`No CSS files found in ${snapshotsDir}`);
+  }
+
   const stylesheets: SourceStylesheet[] = cssFiles.map((absolutePath) => {
-    const relativePath = relative(
-      resolve(__dirname, ".."),
-      absolutePath,
-    ).replaceAll("\\", "/");
+    const relativePath = relative(projectRoot, absolutePath).replaceAll("\\", "/");
     return {
       absolutePath,
       relativePath,
@@ -549,4 +607,13 @@ async function main(): Promise<void> {
   console.log(`Wrote index: ${outputIndexPath}`);
 }
 
-await main();
+const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";
+if (import.meta.url === entrypointPath) {
+  try {
+    await generateSpotifyLightCss(parseOptions(argv.slice(2)));
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    stderr.write(`${message}\n`);
+    exit(1);
+  }
+}
