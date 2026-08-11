@@ -5,8 +5,12 @@ import {
   readEnabled,
   readUseSystemPref,
 } from "../../lib/storage";
-import lightModeCss from "../../assets/spotify-light/index";
+import {
+  baseLightModeCss,
+  lightModeStylesheetOverrides,
+} from "../../assets/spotify-light/index";
 import { createInlineStyleObserver } from "./inline-style-observer";
+import { StylesheetOverrideMount } from "./stylesheet-override-mount";
 
 export default defineContentScript({
   matches: ["https://open.spotify.com/*"],
@@ -14,10 +18,10 @@ export default defineContentScript({
   cssInjectionMode: "manual",
 
   async main(ctx) {
-    const styleEl = document.createElement("style");
-    styleEl.id = "spotify-light-mode-overrides";
-    styleEl.textContent = lightModeCss;
-
+    const stylesheetOverrideMount = new StylesheetOverrideMount({
+      baseCss: baseLightModeCss,
+      overrides: lightModeStylesheetOverrides,
+    });
     let currentEnabled: boolean = enabledItem.fallback;
     let currentUseSystemPref: boolean = useSystemPrefItem.fallback;
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -31,11 +35,7 @@ export default defineContentScript({
 
     function sync(): void {
       const active = shouldApply();
-      if (active && !document.head.contains(styleEl)) {
-        document.head.appendChild(styleEl);
-      } else if (!active && document.head.contains(styleEl)) {
-        document.head.removeChild(styleEl);
-      }
+      stylesheetOverrideMount.setActive(active);
 
       if (active) {
         inlineStyleObserver.start();
@@ -69,6 +69,7 @@ export default defineContentScript({
     ctx.onInvalidated(() => {
       darkQuery.removeEventListener("change", onSchemeChange);
       inlineStyleObserver.stop();
+      stylesheetOverrideMount.disconnect();
     });
   },
 });
