@@ -15,23 +15,54 @@ type TrackedElementStyles = {
 
 type InlineStyleProperty = "background-image" | "background-color";
 
-export type InlineStyleObserver = {
-  start: () => void;
-  stop: () => void;
-};
+export class InlineStyleObserver {
+  private readonly selfMutatingElements = new WeakSet<HTMLElement>();
+  private trackedInlineStyles = new WeakMap<HTMLElement, TrackedElementStyles>();
+  private readonly touchedElements = new Set<HTMLElement>();
 
-export function createInlineStyleObserver(): InlineStyleObserver {
-  const selfMutatingElements = new WeakSet<HTMLElement>();
-  let trackedInlineStyles = new WeakMap<HTMLElement, TrackedElementStyles>();
-  const touchedElements = new Set<HTMLElement>();
-  let observer: MutationObserver | null = null;
+  private trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+  private readonly touchedDeclarations = new Set<CSSStyleDeclaration>();
+  private originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null = null;
 
-  let trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
-  const touchedDeclarations = new Set<CSSStyleDeclaration>();
-  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null = null;
+  private readonly pendingElements = new Set<HTMLElement>();
+  private readonly pendingTrees = new Set<HTMLElement>();
+  private readonly pendingRules = new Set<CSSRule>();
+  private readonly pendingStyledSheets = new Set<CSSStyleSheet>();
+  private readonly observer = new MutationObserver((mutations) => this.handleMutations(mutations));
 
-  function trackOriginalInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
-    const tracked = trackedInlineStyles.get(element) ?? {};
+  private active = false;
+  private observing = false;
+  private processingFrameId: number | null = null;
+
+  start(): void {
+    if (this.active) {
+      return;
+    }
+
+    this.active = true;
+
+    for (const sheet of Array.from(document.styleSheets)) {
+      if (this.isStyledSheet(sheet)) {
+        this.processStyledSheet(sheet);
+      }
+    }
+
+    this.patchInsertRule();
+    this.processTree(document.documentElement);
+    this.startObserving();
+  }
+
+  stop(): void {
+    this.active = false;
+    this.cancelScheduledProcessing();
+    this.stopObserving();
+    this.unpatchInsertRule();
+    this.restoreSheetOverrides();
+    this.restoreInlineOverrides();
+  }
+
+  private trackOriginalInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
+    const tracked = this.trackedInlineStyles.get(element) ?? {};
 
     if (property === "background-image" && tracked.backgroundImage == null) {
       tracked.backgroundImage = {
@@ -47,12 +78,12 @@ export function createInlineStyleObserver(): InlineStyleObserver {
       };
     }
 
-    trackedInlineStyles.set(element, tracked);
-    touchedElements.add(element);
+    this.trackedInlineStyles.set(element, tracked);
+    this.touchedElements.add(element);
   }
 
-  function trackOriginalCustomProperty(element: HTMLElement, property: string): void {
-    const tracked = trackedInlineStyles.get(element) ?? {};
+  private trackOriginalCustomProperty(element: HTMLElement, property: string): void {
+    const tracked = this.trackedInlineStyles.get(element) ?? {};
     const customProperties = tracked.customProperties ?? new Map();
 
     if (!customProperties.has(property)) {
@@ -63,11 +94,11 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     }
 
     tracked.customProperties = customProperties;
-    trackedInlineStyles.set(element, tracked);
-    touchedElements.add(element);
+    this.trackedInlineStyles.set(element, tracked);
+    this.touchedElements.add(element);
   }
 
-  function maybeOverrideInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
+  private maybeOverrideInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
     const originalValue = element.style.getPropertyValue(property).trim();
     if (originalValue.length === 0 || !hasColorToken(originalValue)) {
       return;
@@ -78,15 +109,15 @@ export function createInlineStyleObserver(): InlineStyleObserver {
       return;
     }
 
-    trackOriginalInlineStyle(element, property);
-    selfMutatingElements.add(element);
+    this.trackOriginalInlineStyle(element, property);
+    this.selfMutatingElements.add(element);
     element.style.setProperty(property, mappedValue, "important");
     queueMicrotask(() => {
-      selfMutatingElements.delete(element);
+      this.selfMutatingElements.delete(element);
     });
   }
 
-  function maybeOverrideInlineCustomProperties(element: HTMLElement): void {
+  private maybeOverrideInlineCustomProperties(element: HTMLElement): void {
     for (const property of Array.from(element.style)) {
       if (!property.startsWith("--")) {
         continue;
@@ -106,32 +137,32 @@ export function createInlineStyleObserver(): InlineStyleObserver {
         continue;
       }
 
-      trackOriginalCustomProperty(element, property);
-      selfMutatingElements.add(element);
+      this.trackOriginalCustomProperty(element, property);
+      this.selfMutatingElements.add(element);
       element.style.setProperty(property, mappedValue, "important");
       queueMicrotask(() => {
-        selfMutatingElements.delete(element);
+        this.selfMutatingElements.delete(element);
       });
     }
   }
 
-  function processElement(element: HTMLElement): void {
-    maybeOverrideInlineStyle(element, "background-image");
-    maybeOverrideInlineStyle(element, "background-color");
-    maybeOverrideInlineCustomProperties(element);
+  private processElement(element: HTMLElement): void {
+    this.maybeOverrideInlineStyle(element, "background-image");
+    this.maybeOverrideInlineStyle(element, "background-color");
+    this.maybeOverrideInlineCustomProperties(element);
   }
 
-  function processTree(root: ParentNode): void {
+  private processTree(root: ParentNode): void {
     if (root instanceof HTMLElement) {
-      processElement(root);
+      this.processElement(root);
     }
 
     for (const element of root.querySelectorAll<HTMLElement>("[style]")) {
-      processElement(element);
+      this.processElement(element);
     }
   }
 
-  function processRuleDeclaration(style: CSSStyleDeclaration): void {
+  private processRuleDeclaration(style: CSSStyleDeclaration): void {
     for (const property of Array.from(style)) {
       const value = style.getPropertyValue(property).trim();
       if (value.length === 0) continue;
@@ -147,69 +178,193 @@ export function createInlineStyleObserver(): InlineStyleObserver {
 
       if (mappedValue === value) continue;
 
-      const tracked = trackedSheetStyles.get(style) ?? new Map();
+      const tracked = this.trackedSheetStyles.get(style) ?? new Map();
       if (!tracked.has(property)) {
         tracked.set(property, {
           value,
           priority: style.getPropertyPriority(property),
         });
-        trackedSheetStyles.set(style, tracked);
-        touchedDeclarations.add(style);
+        this.trackedSheetStyles.set(style, tracked);
+        this.touchedDeclarations.add(style);
       }
 
       style.setProperty(property, mappedValue, "important");
     }
   }
 
-  function processRule(rule: CSSRule): void {
+  private processRule(rule: CSSRule): void {
     if (rule instanceof CSSStyleRule) {
-      processRuleDeclaration(rule.style);
+      this.processRuleDeclaration(rule.style);
     } else if ("cssRules" in rule) {
       for (const child of Array.from((rule as CSSMediaRule).cssRules)) {
-        processRule(child);
+        this.processRule(child);
       }
     }
   }
 
-  function isStyledSheet(sheet: CSSStyleSheet): boolean {
+  private isStyledSheet(sheet: CSSStyleSheet): boolean {
     return (
       sheet.ownerNode instanceof HTMLStyleElement && sheet.ownerNode.hasAttribute("data-styled")
     );
   }
 
-  function processStyledSheet(sheet: CSSStyleSheet): void {
+  private processStyledSheet(sheet: CSSStyleSheet): void {
     try {
       for (const rule of Array.from(sheet.cssRules)) {
-        processRule(rule);
+        this.processRule(rule);
       }
     } catch {
       // SecurityError for cross-origin sheets
     }
   }
 
-  function patchInsertRule(): void {
+  private hasPendingTreeAncestor(element: HTMLElement): boolean {
+    for (const root of this.pendingTrees) {
+      if (root === element || root.contains(element)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  private enqueueElement(element: HTMLElement): void {
+    if (this.hasPendingTreeAncestor(element)) return;
+
+    this.pendingElements.add(element);
+    this.scheduleProcessing();
+  }
+
+  private enqueueTree(root: HTMLElement): void {
+    if (this.hasPendingTreeAncestor(root)) return;
+
+    for (const pendingRoot of Array.from(this.pendingTrees)) {
+      if (root.contains(pendingRoot)) {
+        this.pendingTrees.delete(pendingRoot);
+      }
+    }
+
+    for (const pendingElement of Array.from(this.pendingElements)) {
+      if (root.contains(pendingElement)) {
+        this.pendingElements.delete(pendingElement);
+      }
+    }
+
+    this.pendingTrees.add(root);
+    this.scheduleProcessing();
+  }
+
+  private enqueueStyledSheet(sheet: CSSStyleSheet): void {
+    this.pendingStyledSheets.add(sheet);
+
+    for (const rule of Array.from(this.pendingRules)) {
+      if (rule.parentStyleSheet === sheet) {
+        this.pendingRules.delete(rule);
+      }
+    }
+
+    this.scheduleProcessing();
+  }
+
+  private enqueueRule(rule: CSSRule): void {
+    const parentStyleSheet = rule.parentStyleSheet;
+    if (parentStyleSheet !== null && this.pendingStyledSheets.has(parentStyleSheet)) return;
+
+    this.pendingRules.add(rule);
+    this.scheduleProcessing();
+  }
+
+  private handleMutations(mutations: MutationRecord[]): void {
+    if (!this.active) return;
+
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes") {
+        const target = mutation.target;
+        if (target instanceof HTMLElement && !this.selfMutatingElements.has(target)) {
+          this.enqueueElement(target);
+        }
+        continue;
+      }
+
+      for (const node of mutation.addedNodes) {
+        if (
+          node instanceof HTMLStyleElement &&
+          node.hasAttribute("data-styled") &&
+          node.sheet !== null
+        ) {
+          this.enqueueStyledSheet(node.sheet);
+        }
+
+        if (node instanceof HTMLElement) {
+          this.enqueueTree(node);
+        }
+      }
+    }
+  }
+
+  private flushPendingWork(): void {
+    if (!this.active) return;
+
+    const styledSheets = Array.from(this.pendingStyledSheets);
+    const rules = Array.from(this.pendingRules);
+    const trees = Array.from(this.pendingTrees);
+    const elements = Array.from(this.pendingElements);
+
+    this.pendingStyledSheets.clear();
+    this.pendingRules.clear();
+    this.pendingTrees.clear();
+    this.pendingElements.clear();
+
+    this.stopObserving();
+    try {
+      for (const sheet of styledSheets) {
+        this.processStyledSheet(sheet);
+      }
+
+      for (const rule of rules) {
+        this.processRule(rule);
+      }
+
+      for (const root of trees) {
+        this.processTree(root);
+      }
+
+      for (const element of elements) {
+        this.processElement(element);
+      }
+    } finally {
+      if (this.active) {
+        this.startObserving();
+      }
+    }
+  }
+
+  private patchInsertRule(): void {
     const proto = CSSStyleSheet.prototype;
-    originalInsertRule = proto.insertRule;
-    proto.insertRule = function (rule: string, index?: number): number {
-      const insertedIndex = originalInsertRule!.call(this, rule, index);
-      if (isStyledSheet(this)) {
+    this.originalInsertRule = proto.insertRule;
+    const originalInsertRule = this.originalInsertRule;
+    const inlineStyleObserver = this;
+
+    proto.insertRule = function (this: CSSStyleSheet, rule: string, index?: number): number {
+      const insertedIndex = originalInsertRule.call(this, rule, index);
+      if (inlineStyleObserver.isStyledSheet(this)) {
         const insertedRule = this.cssRules[insertedIndex];
         if (insertedRule != null) {
-          processRule(insertedRule);
+          inlineStyleObserver.enqueueRule(insertedRule);
         }
       }
       return insertedIndex;
     };
   }
 
-  function unpatchInsertRule(): void {
-    if (originalInsertRule != null) {
-      CSSStyleSheet.prototype.insertRule = originalInsertRule;
-      originalInsertRule = null;
+  private unpatchInsertRule(): void {
+    if (this.originalInsertRule != null) {
+      CSSStyleSheet.prototype.insertRule = this.originalInsertRule;
+      this.originalInsertRule = null;
     }
   }
 
-  function restoreProperty(
+  private restoreProperty(
     element: HTMLElement,
     property: string,
     tracked: TrackedInlineStyle,
@@ -222,31 +377,31 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     element.style.setProperty(property, tracked.value, tracked.priority);
   }
 
-  function restoreInlineOverrides(): void {
-    for (const element of touchedElements) {
-      const tracked = trackedInlineStyles.get(element);
+  private restoreInlineOverrides(): void {
+    for (const element of this.touchedElements) {
+      const tracked = this.trackedInlineStyles.get(element);
       if (tracked?.backgroundImage != null) {
-        restoreProperty(element, "background-image", tracked.backgroundImage);
+        this.restoreProperty(element, "background-image", tracked.backgroundImage);
       }
 
       if (tracked?.backgroundColor != null) {
-        restoreProperty(element, "background-color", tracked.backgroundColor);
+        this.restoreProperty(element, "background-color", tracked.backgroundColor);
       }
 
       if (tracked?.customProperties != null) {
         for (const [property, value] of tracked.customProperties) {
-          restoreProperty(element, property, value);
+          this.restoreProperty(element, property, value);
         }
       }
     }
 
-    touchedElements.clear();
-    trackedInlineStyles = new WeakMap<HTMLElement, TrackedElementStyles>();
+    this.touchedElements.clear();
+    this.trackedInlineStyles = new WeakMap<HTMLElement, TrackedElementStyles>();
   }
 
-  function restoreSheetOverrides(): void {
-    for (const style of touchedDeclarations) {
-      const tracked = trackedSheetStyles.get(style);
+  private restoreSheetOverrides(): void {
+    for (const style of this.touchedDeclarations) {
+      const tracked = this.trackedSheetStyles.get(style);
       if (tracked == null) continue;
       for (const [property, original] of tracked) {
         if (original.value.length === 0) {
@@ -257,68 +412,47 @@ export function createInlineStyleObserver(): InlineStyleObserver {
       }
     }
 
-    touchedDeclarations.clear();
-    trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
+    this.touchedDeclarations.clear();
+    this.trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
   }
 
-  function start(): void {
-    if (observer != null) {
-      return;
-    }
+  private startObserving(): void {
+    if (this.observing) return;
 
-    for (const sheet of Array.from(document.styleSheets)) {
-      if (isStyledSheet(sheet)) {
-        processStyledSheet(sheet);
-      }
-    }
-
-    patchInsertRule();
-    processTree(document.documentElement);
-
-    observer = new MutationObserver((mutations) => {
-      for (const mutation of mutations) {
-        if (mutation.type === "attributes") {
-          const target = mutation.target;
-          if (target instanceof HTMLElement && !selfMutatingElements.has(target)) {
-            processElement(target);
-          }
-          continue;
-        }
-
-        for (const node of mutation.addedNodes) {
-          if (
-            node instanceof HTMLStyleElement &&
-            node.hasAttribute("data-styled") &&
-            node.sheet != null
-          ) {
-            processStyledSheet(node.sheet);
-          }
-
-          if (node instanceof HTMLElement) {
-            processTree(node);
-          }
-        }
-      }
-    });
-
-    observer.observe(document.documentElement, {
+    this.observer.observe(document.documentElement, {
       subtree: true,
       childList: true,
       attributes: true,
       attributeFilter: ["style"],
     });
+    this.observing = true;
   }
 
-  function stop(): void {
-    observer?.disconnect();
-    observer = null;
-    unpatchInsertRule();
-    restoreSheetOverrides();
-    restoreInlineOverrides();
+  private stopObserving(): void {
+    if (!this.observing) return;
+
+    this.observer.disconnect();
+    this.observing = false;
   }
 
-  return {
-    start,
-    stop,
-  };
+  private cancelScheduledProcessing(): void {
+    if (this.processingFrameId !== null) {
+      cancelAnimationFrame(this.processingFrameId);
+      this.processingFrameId = null;
+    }
+
+    this.pendingStyledSheets.clear();
+    this.pendingRules.clear();
+    this.pendingTrees.clear();
+    this.pendingElements.clear();
+  }
+
+  private scheduleProcessing(): void {
+    if (!this.active || this.processingFrameId !== null) return;
+
+    this.processingFrameId = requestAnimationFrame(() => {
+      this.processingFrameId = null;
+      this.flushPendingWork();
+    });
+  }
 }

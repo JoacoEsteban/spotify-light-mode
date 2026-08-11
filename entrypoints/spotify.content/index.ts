@@ -1,7 +1,7 @@
 import { defineContentScript } from "wxt/utils/define-content-script";
 import { enabledItem, useSystemPrefItem, readEnabled, readUseSystemPref } from "../../lib/storage";
 import { baseLightModeCss, lightModeStylesheetOverrides } from "../../assets/spotify-light/index";
-import { createInlineStyleObserver } from "./inline-style-observer";
+import { InlineStyleObserver } from "./inline-style-observer";
 import { StylesheetOverrideMount } from "./stylesheet-override-mount";
 
 export default defineContentScript({
@@ -17,7 +17,7 @@ export default defineContentScript({
     let currentEnabled: boolean = enabledItem.fallback;
     let currentUseSystemPref: boolean = useSystemPrefItem.fallback;
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const inlineStyleObserver = createInlineStyleObserver();
+    const inlineStyleObserver = new InlineStyleObserver();
 
     function shouldApply(): boolean {
       if (!currentEnabled) return false;
