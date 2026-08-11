@@ -399,8 +399,7 @@ function indentBlock(input: string, prefix = "  "): string {
 function renderBlock({ selector, declarations, layers }: Block): string {
   const renderedDeclarations = declarations
     .map(({ property, original, mapped, important, kind }) => {
-      const needsImportant = kind === "custom-property" || kind === "css-var" || important;
-      const importantSuffix = needsImportant ? " !important" : "";
+      const importantSuffix = important ? " !important" : "";
       const comment =
         kind === "css-var"
           ? `/* ${kind}: ${original} */`
