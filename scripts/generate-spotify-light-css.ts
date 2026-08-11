@@ -2,6 +2,7 @@ import { mkdir, readdir, readFile, rmdir, unlink, writeFile } from "node:fs/prom
 import { dirname, join, relative, resolve } from "node:path";
 import { argv, exit } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { match, P } from "ts-pattern";
 import chroma from "chroma-js";
 import {
   buildOutputCssManifestFromFiles,
@@ -200,8 +201,10 @@ function parseDeclarations(body: string): ParsedDeclaration[] {
 }
 
 function hasDeclaration(declarations: ParsedDeclaration[], matcher: DeclarationMatcher): boolean {
-  return declarations.some(
-    ({ property, value }) => property === matcher.property && value === matcher.value,
+  return declarations.some((declaration) =>
+    match(declaration)
+      .with({ property: matcher.property, value: matcher.value }, () => true)
+      .otherwise(() => false),
   );
 }
 
@@ -300,19 +303,24 @@ function collectBlocks(
 }
 
 function isColorProperty(property: string): boolean {
-  return (
-    property === "color" ||
-    property === "fill" ||
-    property === "stroke" ||
-    property.endsWith("-color")
-  );
+  return match(property)
+    .with(P.union("color", "fill", "stroke"), () => true)
+    .with(
+      P.when((value) => value.endsWith("-color")),
+      () => true,
+    )
+    .otherwise(() => false);
 }
 
 function parseColorBlocks(sourceCss: string): Block[] {
   return collectBlocks(sourceCss, (body) => {
     const declarations: Declaration[] = [];
     for (const { property, value, important } of parseDeclarations(body)) {
-      if (value === "transparent") {
+      if (
+        match(value)
+          .with("transparent", () => true)
+          .otherwise(() => false)
+      ) {
         declarations.push({
           property,
           original: value,
@@ -416,10 +424,9 @@ function renderBlock({ selector, declarations, layers }: Block): string {
   const renderedDeclarations = declarations
     .map(({ property, original, mapped, important, kind }) => {
       const importantSuffix = important ? " !important" : "";
-      const comment =
-        kind === "css-var" || kind === "transparent-color"
-          ? `/* ${kind}: ${original} */`
-          : `/* ${kind}: ${original} → ${mapped} */`;
+      const comment = match(kind)
+        .with(P.union("css-var", "transparent-color"), () => `/* ${kind}: ${original} */`)
+        .otherwise(() => `/* ${kind}: ${original} → ${mapped} */`);
       return `  ${property}: ${mapped}${importantSuffix}; ${comment}`;
     })
     .join("\n");
