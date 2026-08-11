@@ -3,6 +3,11 @@ import chroma from "chroma-js";
 import { toCounterpart } from "./chroma";
 
 const colorTokenRegex = /#[0-9a-f]{3,8}\b|rgba?\([^)]*\)|hsla?\([^)]*\)/gi;
+const namedColorTokens = new Set(["black", "white"]);
+const namedColorTokenRegex = new RegExp(
+  `(^|[^A-Za-z0-9_-])(${[...namedColorTokens].join("|")})(?=$|[^A-Za-z0-9_-])`,
+  "gi",
+);
 const PRESERVED_COLORFUL_CHROMA_MIN = 0.12;
 const PRESERVED_COLORFUL_CONTRAST_ON_WHITE_MIN = 1.5;
 const PRESERVED_COLORFUL_CONTRAST_ON_WHITE_MAX = 3;
@@ -38,18 +43,33 @@ export function formatMappedColor(input: string): string {
   return mapped.hex("auto").toLowerCase();
 }
 
+function hasNamedColorToken(value: string): boolean {
+  namedColorTokenRegex.lastIndex = 0;
+  return namedColorTokenRegex.test(value);
+}
+
+function mapNamedColorsInValue(value: string): string {
+  namedColorTokenRegex.lastIndex = 0;
+  return value.replace(
+    namedColorTokenRegex,
+    (_, prefix: string, token: string) => `${prefix}${formatMappedColor(token.toLowerCase())}`,
+  );
+}
+
 export function hasColorToken(value: string): boolean {
   colorTokenRegex.lastIndex = 0;
-  return colorTokenRegex.test(value);
+  return colorTokenRegex.test(value) || hasNamedColorToken(value);
 }
 
 export function mapColorsInValue(value: string): string {
   colorTokenRegex.lastIndex = 0;
-  return value.replace(colorTokenRegex, (token) => {
+  const mapped = value.replace(colorTokenRegex, (token) => {
     if (!chroma.valid(token)) {
       return token;
     }
 
     return formatMappedColor(token);
   });
+
+  return mapNamedColorsInValue(mapped);
 }

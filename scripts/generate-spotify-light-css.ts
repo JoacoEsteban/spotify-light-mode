@@ -324,8 +324,8 @@ function parseColorBlocks(sourceCss: string): Block[] {
       }
 
       if (property.startsWith("--")) {
-        if (hasColorToken(value) && chroma.valid(value)) {
-          const mapped = formatMappedColor(value);
+        if (hasColorToken(value)) {
+          const mapped = chroma.valid(value) ? formatMappedColor(value) : mapColorsInValue(value);
           if (mapped !== value) {
             declarations.push({
               property,
