@@ -24,6 +24,7 @@
 
 .zi4MHPMs29oEOMCDZ1On:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+  border: none; /* forwarded-reset: none */
 }
 
 .Bf1Ill3T0dw5cLe9V362:not(#spotify-light-mode-specificity-bump) {

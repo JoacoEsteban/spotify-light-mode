@@ -38,6 +38,10 @@
   color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
 }
 
+.CdLgf74xeMvj57exhXUU:focus:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
 .GKaEZI9sAblaNFW2h79V:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }

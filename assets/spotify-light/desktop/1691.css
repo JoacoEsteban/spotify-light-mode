@@ -46,7 +46,7 @@
 }
 
 .fSBZ2FIfW5jgSbEaiWSD:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .YXHy2pPXAKIhTXQg8nSs > .iFrQtHX6CURbDCPByQmu:not(#spotify-light-mode-specificity-bump) {
@@ -70,7 +70,7 @@
 }
 
 .QMUBpelUWxrLYdUFCYK5:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .iPu21XQCPo7votywjt4P:not(#spotify-light-mode-specificity-bump) {
@@ -104,5 +104,6 @@
 }
 
 .KU5AILuFa19m00vFrPMf:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
+  border: none; /* forwarded-reset: none */
 }

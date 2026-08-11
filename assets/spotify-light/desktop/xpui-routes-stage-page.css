@@ -7,3 +7,9 @@
  * Source: snapshots/spotify-player/desktop/xpui-routes-stage-page.css
 
  */
+
+
+
+.a1jrwye1p5MDrjF8vROB #xfp500iFo3isgenKSIwR:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}

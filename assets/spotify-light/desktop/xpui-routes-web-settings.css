@@ -10,8 +10,16 @@
 
 
 
+.dPdFwroo6kzNWWlbg19F a:not(#spotify-light-mode-specificity-bump), .dPdFwroo6kzNWWlbg19F button:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
 .dPdFwroo6kzNWWlbg19F:focus-within:not(#spotify-light-mode-specificity-bump) {
   outline: 1px dotted #e9e9e9; /* hardcoded-color: 1px dotted #212121 → 1px dotted #e9e9e9 */
+}
+
+.no-focus-outline .dPdFwroo6kzNWWlbg19F:focus-within:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
 }
 
 .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-mode-specificity-bump) {
@@ -91,12 +99,13 @@ select:disabled:hover:not(#spotify-light-mode-specificity-bump) {
 
 .i2wKPcAykptKYaQ2a6IV:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .z5UiCCJ0Dl016Vux6bSg:focus:not(#spotify-light-mode-specificity-bump) {
   background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
   border: 1px solid #c3c3c3; /* hardcoded-color: 1px solid #535353 → 1px solid #c3c3c3 */
+  outline: none; /* forwarded-reset: none */
 }
 
 .jx0qmvOt1qngChNQ8o7N:not(#spotify-light-mode-specificity-bump) {

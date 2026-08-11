@@ -14,6 +14,10 @@
   background: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
 }
 
+.E4_aBXpIKQmUJ3CpR1et:hover:not(#spotify-light-mode-specificity-bump), .E4_aBXpIKQmUJ3CpR1et a:hover:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
 .gTZuk2nO8Ysk0PHZIXBC:not(#spotify-light-mode-specificity-bump) {
   background: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
 }

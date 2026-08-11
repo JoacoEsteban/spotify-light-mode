@@ -10,6 +10,10 @@
 
 
 
+.LKmgD5etGfGRkdZn6FTx:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}
+
 .LKmgD5etGfGRkdZn6FTx:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
 }

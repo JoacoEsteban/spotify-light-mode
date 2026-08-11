@@ -24,6 +24,7 @@
 
 .zi4MHPMs29oEOMCDZ1On:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+  border: none; /* forwarded-reset: none */
 }
 
 .Bf1Ill3T0dw5cLe9V362:not(#spotify-light-mode-specificity-bump) {
@@ -40,6 +41,7 @@
 
 .smIAZ4o6L6XoBNhUGdqA:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  border: none; /* forwarded-reset: none */
 }
 
 .TouBJVN9rAuYNDD4MEiw:not(#spotify-light-mode-specificity-bump) {

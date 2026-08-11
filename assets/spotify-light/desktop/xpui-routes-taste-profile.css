@@ -12,6 +12,7 @@
 
 .uhcgmXCrUy3P2wev0oE8:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
+  border: none; /* forwarded-reset: none */
 }
 
 .uhcgmXCrUy3P2wev0oE8:not(#spotify-light-mode-specificity-bump)::placeholder {
@@ -36,6 +37,8 @@
 
 .Rh24nPJbUIWaroDikyW3:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
+  border: none; /* forwarded-reset: none */
+  outline: none; /* forwarded-reset: none */
 }
 
 .oBnhRaUv9spDJoqxNJMB:not(#spotify-light-mode-specificity-bump) {

@@ -12,6 +12,7 @@
 
 .aEhb8vmbsVDRFizPTpdA:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  border: none; /* forwarded-reset: none */
 }
 
 .aEhb8vmbsVDRFizPTpdA:hover:not(#spotify-light-mode-specificity-bump) {

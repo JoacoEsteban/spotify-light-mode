@@ -22,6 +22,10 @@
   --rdp-selected-color: #000000; /* custom-property: #fff → #000000 */
 }
 
+.rdp-button_reset:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
 .rdp-button:focus-visible:not([disabled]):not(#spotify-light-mode-specificity-bump) {
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
@@ -31,7 +35,8 @@
 }
 
 .rdp-dropdown:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
+  border: none; /* forwarded-reset: none */
 }
 
 .rdp-dropdown:focus-visible:not([disabled]) + .rdp-caption_label:not(#spotify-light-mode-specificity-bump) {
@@ -78,11 +83,16 @@
 }
 
 .vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
-  border-color: transparent; /* transparent-color: transparent */
+  border-color: transparent; /* forwarded-reset: transparent */
+}
+
+.nHJ_Abf72WxtqNTpR0kW:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
 }
 
 .nHJ_Abf72WxtqNTpR0kW:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
+  border: none; /* forwarded-reset: none */
 }
 
 .hmDplE1cMKXzEN85MaT9:not(#spotify-light-mode-specificity-bump) {
@@ -231,8 +241,13 @@
   background: linear-gradient(transparent 0%, #ffffff99 100%); /* hardcoded-color: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 100%) → linear-gradient(transparent 0%, #ffffff99 100%) */
 }
 
+.xZpSGMDAtNEJQ2V2CGQl:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}
+
 .xZpSGMDAtNEJQ2V2CGQl:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
+  border: none; /* forwarded-reset: none */
 }
 
 .LSUT0SOkrt4xomEYupo9:not(#spotify-light-mode-specificity-bump) {

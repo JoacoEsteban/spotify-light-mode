@@ -21,7 +21,7 @@
 
 ._BZdu8EQu8mVMt02IF9U:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .EPaM5xfBVGqBixFj3NQo:not(#spotify-light-mode-specificity-bump) {
@@ -41,8 +41,8 @@
   --user-edit-close-hover: #0000001a; /* custom-property: rgba(255, 255, 255, 0.1) → #0000001a */
   --user-edit-close-active: #00000033; /* custom-property: rgba(255, 255, 255, 0.2) → #00000033 */
   --user-edit-disclaimer-color: #000000; /* custom-property: #fff → #000000 */
-  --user-edit-header-bg: transparent; /* transparent-color: transparent */
-  --user-edit-header-border: transparent; /* transparent-color: transparent */
+  --user-edit-header-bg: transparent; /* forwarded-reset: transparent */
+  --user-edit-header-border: transparent; /* forwarded-reset: transparent */
   color: var(--user-edit-text-color); /* css-var: var(--user-edit-text-color) */
   background-color: var(--user-edit-surface); /* css-var: var(--user-edit-surface) */
 }
@@ -71,7 +71,7 @@
 
 .wi8R_MBOs3av_CKIprZ3:not(#spotify-light-mode-specificity-bump) {
   color: var(--user-edit-close-color); /* css-var: var(--user-edit-close-color) */
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .wi8R_MBOs3av_CKIprZ3:hover:not(#spotify-light-mode-specificity-bump), .wi8R_MBOs3av_CKIprZ3:focus:not(#spotify-light-mode-specificity-bump) {
@@ -92,6 +92,7 @@
 
 .fMzEUxACYZjZSRzfkOZ1:focus:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--user-edit-input-focus-bg); /* css-var: var(--user-edit-input-focus-bg) */
+  outline: none; /* forwarded-reset: none */
 }
 
 .i4qqqd9RSKm19o81qaZZ:not(#spotify-light-mode-specificity-bump) {
@@ -117,6 +118,7 @@
 .TA9CeGsJ_G9M7He0TKpg:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
+  border: none; /* forwarded-reset: none */
 }
 
 .zNUCMdlRvoLHHn63m1kn:not(#spotify-light-mode-specificity-bump) {

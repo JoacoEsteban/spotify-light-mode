@@ -58,7 +58,7 @@
 }
 
 .mQIiKpn2vfkyvdg9oSTK.tv1m9bgc077XNHMAj581:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
 }
 
 .lsMP4l5Xv6LT6XBO7RzW:not(#spotify-light-mode-specificity-bump) {
@@ -90,6 +90,10 @@
 
 .DhiqUSHA4cWf8tUfKEcW:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffffe6; /* hardcoded-color: rgba(0, 0, 0, 0.9) → #ffffffe6 */
+}
+
+.Y94EO84nILjmZf749T0z:focus:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
 }
 
 .eKg7xvzvI2JVNe8q9TPV .c8Ek65Al9HBEpPOstENd:not(#spotify-light-mode-specificity-bump) {

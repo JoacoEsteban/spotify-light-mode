@@ -17,7 +17,8 @@
 }
 
 .VWEr9pQb4l9V37dXJFsI:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* transparent-color: transparent */
+  background-color: transparent; /* forwarded-reset: transparent */
+  border: none; /* forwarded-reset: none */
 }
 
 .LfSMCbB9S2gtuLE3tiDG:not(#spotify-light-mode-specificity-bump) {
