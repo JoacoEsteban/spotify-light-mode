@@ -5,6 +5,7 @@ import { formatMappedColor, hasColorToken, mapColorsInValue } from "../../lib/st
 type TrackedInlineStyle = {
   value: string;
   priority: string;
+  mappedValue: string;
 };
 
 type TrackedElementStyles = {
@@ -61,57 +62,120 @@ export class InlineStyleObserver {
     this.restoreInlineOverrides();
   }
 
-  private trackOriginalInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
+  private trackOriginalInlineStyle(
+    element: HTMLElement,
+    property: InlineStyleProperty,
+    mappedValue: string,
+  ): void {
     const tracked = this.trackedInlineStyles.get(element) ?? {};
+    const original = {
+      value: element.style.getPropertyValue(property),
+      priority: element.style.getPropertyPriority(property),
+      mappedValue,
+    };
 
-    if (property === "background-image" && tracked.backgroundImage == null) {
-      tracked.backgroundImage = {
-        value: element.style.getPropertyValue(property),
-        priority: element.style.getPropertyPriority(property),
-      };
-    }
-
-    if (property === "background-color" && tracked.backgroundColor == null) {
-      tracked.backgroundColor = {
-        value: element.style.getPropertyValue(property),
-        priority: element.style.getPropertyPriority(property),
-      };
+    if (property === "background-image") {
+      tracked.backgroundImage = original;
+    } else {
+      tracked.backgroundColor = original;
     }
 
     this.trackedInlineStyles.set(element, tracked);
     this.touchedElements.add(element);
   }
 
-  private trackOriginalCustomProperty(element: HTMLElement, property: string): void {
+  private trackOriginalCustomProperty(
+    element: HTMLElement,
+    property: string,
+    mappedValue: string,
+  ): void {
     const tracked = this.trackedInlineStyles.get(element) ?? {};
     const customProperties = tracked.customProperties ?? new Map();
 
-    if (!customProperties.has(property)) {
-      customProperties.set(property, {
-        value: element.style.getPropertyValue(property),
-        priority: element.style.getPropertyPriority(property),
-      });
-    }
+    customProperties.set(property, {
+      value: element.style.getPropertyValue(property),
+      priority: element.style.getPropertyPriority(property),
+      mappedValue,
+    });
 
     tracked.customProperties = customProperties;
     this.trackedInlineStyles.set(element, tracked);
     this.touchedElements.add(element);
   }
 
+  private cleanupTrackedElement(element: HTMLElement, tracked: TrackedElementStyles): void {
+    if (
+      tracked.backgroundImage == null &&
+      tracked.backgroundColor == null &&
+      (tracked.customProperties == null || tracked.customProperties.size === 0)
+    ) {
+      this.trackedInlineStyles.delete(element);
+      this.touchedElements.delete(element);
+    }
+  }
+
+  private untrackInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
+    const tracked = this.trackedInlineStyles.get(element);
+    if (tracked == null) return;
+
+    if (property === "background-image") {
+      delete tracked.backgroundImage;
+    } else {
+      delete tracked.backgroundColor;
+    }
+
+    this.cleanupTrackedElement(element, tracked);
+  }
+
+  private untrackCustomProperty(element: HTMLElement, property: string): void {
+    const tracked = this.trackedInlineStyles.get(element);
+    if (tracked?.customProperties == null) return;
+
+    tracked.customProperties.delete(property);
+    if (tracked.customProperties.size === 0) {
+      delete tracked.customProperties;
+    }
+
+    this.cleanupTrackedElement(element, tracked);
+  }
+
   private maybeOverrideInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
-    const originalValue = element.style.getPropertyValue(property).trim();
-    if (originalValue.length === 0 || !hasColorToken(originalValue)) {
+    const currentValue = element.style.getPropertyValue(property).trim();
+    const tracked = this.trackedInlineStyles.get(element);
+    const trackedProperty =
+      property === "background-image" ? tracked?.backgroundImage : tracked?.backgroundColor;
+
+    if (
+      trackedProperty?.mappedValue === currentValue &&
+      element.style.getPropertyPriority(property) === "important"
+    ) {
       return;
     }
 
-    const mappedValue = mapColorsInValue(originalValue);
-    if (mappedValue === originalValue) {
+    if (currentValue.length === 0 || !hasColorToken(currentValue)) {
+      this.untrackInlineStyle(element, property);
       return;
     }
 
-    this.trackOriginalInlineStyle(element, property);
+    const mappedValue = mapColorsInValue(currentValue);
+    if (mappedValue === currentValue) {
+      this.untrackInlineStyle(element, property);
+      return;
+    }
+
+    this.trackOriginalInlineStyle(element, property, mappedValue);
     this.selfMutatingElements.add(element);
     element.style.setProperty(property, mappedValue, "important");
+
+    const updatedTracked = this.trackedInlineStyles.get(element);
+    const updatedTrackedProperty =
+      property === "background-image"
+        ? updatedTracked?.backgroundImage
+        : updatedTracked?.backgroundColor;
+    if (updatedTrackedProperty != null) {
+      updatedTrackedProperty.mappedValue = element.style.getPropertyValue(property).trim();
+    }
+
     queueMicrotask(() => {
       this.selfMutatingElements.delete(element);
     });
@@ -123,23 +187,44 @@ export class InlineStyleObserver {
         continue;
       }
 
-      const originalValue = element.style.getPropertyValue(property).trim();
+      const currentValue = element.style.getPropertyValue(property).trim();
+      const trackedProperty = this.trackedInlineStyles
+        .get(element)
+        ?.customProperties?.get(property);
+
       if (
-        originalValue.length === 0 ||
-        !hasColorToken(originalValue) ||
-        !chroma.valid(originalValue)
+        trackedProperty?.mappedValue === currentValue &&
+        element.style.getPropertyPriority(property) === "important"
       ) {
         continue;
       }
 
-      const mappedValue = formatMappedColor(originalValue);
-      if (mappedValue === originalValue) {
+      if (
+        currentValue.length === 0 ||
+        !hasColorToken(currentValue) ||
+        !chroma.valid(currentValue)
+      ) {
+        this.untrackCustomProperty(element, property);
         continue;
       }
 
-      this.trackOriginalCustomProperty(element, property);
+      const mappedValue = formatMappedColor(currentValue);
+      if (mappedValue === currentValue) {
+        this.untrackCustomProperty(element, property);
+        continue;
+      }
+
+      this.trackOriginalCustomProperty(element, property, mappedValue);
       this.selfMutatingElements.add(element);
       element.style.setProperty(property, mappedValue, "important");
+
+      const updatedTrackedProperty = this.trackedInlineStyles
+        .get(element)
+        ?.customProperties?.get(property);
+      if (updatedTrackedProperty != null) {
+        updatedTrackedProperty.mappedValue = element.style.getPropertyValue(property).trim();
+      }
+
       queueMicrotask(() => {
         this.selfMutatingElements.delete(element);
       });
@@ -162,33 +247,76 @@ export class InlineStyleObserver {
     }
   }
 
+  private trackRuleDeclaration(
+    style: CSSStyleDeclaration,
+    property: string,
+    mappedValue: string,
+  ): TrackedInlineStyle {
+    const tracked = this.trackedSheetStyles.get(style) ?? new Map();
+    const original = {
+      value: style.getPropertyValue(property),
+      priority: style.getPropertyPriority(property),
+      mappedValue,
+    };
+
+    tracked.set(property, original);
+    this.trackedSheetStyles.set(style, tracked);
+    this.touchedDeclarations.add(style);
+
+    return original;
+  }
+
+  private untrackRuleDeclaration(style: CSSStyleDeclaration, property: string): void {
+    const tracked = this.trackedSheetStyles.get(style);
+    if (tracked == null) return;
+
+    tracked.delete(property);
+    if (tracked.size === 0) {
+      this.trackedSheetStyles.delete(style);
+      this.touchedDeclarations.delete(style);
+    }
+  }
+
   private processRuleDeclaration(style: CSSStyleDeclaration): void {
     for (const property of Array.from(style)) {
-      const value = style.getPropertyValue(property).trim();
-      if (value.length === 0) continue;
+      const currentValue = style.getPropertyValue(property).trim();
+      const trackedProperty = this.trackedSheetStyles.get(style)?.get(property);
+
+      if (
+        trackedProperty?.mappedValue === currentValue &&
+        style.getPropertyPriority(property) === "important"
+      ) {
+        continue;
+      }
+
+      if (currentValue.length === 0) {
+        this.untrackRuleDeclaration(style, property);
+        continue;
+      }
 
       let mappedValue: string;
       if (property.startsWith("--")) {
-        if (!hasColorToken(value) || !chroma.valid(value)) continue;
-        mappedValue = formatMappedColor(value);
+        if (!hasColorToken(currentValue) || !chroma.valid(currentValue)) {
+          this.untrackRuleDeclaration(style, property);
+          continue;
+        }
+        mappedValue = formatMappedColor(currentValue);
       } else {
-        if (!hasColorToken(value)) continue;
-        mappedValue = mapColorsInValue(value);
+        if (!hasColorToken(currentValue)) {
+          this.untrackRuleDeclaration(style, property);
+          continue;
+        }
+        mappedValue = mapColorsInValue(currentValue);
       }
 
-      if (mappedValue === value) continue;
-
-      const tracked = this.trackedSheetStyles.get(style) ?? new Map();
-      if (!tracked.has(property)) {
-        tracked.set(property, {
-          value,
-          priority: style.getPropertyPriority(property),
-        });
-        this.trackedSheetStyles.set(style, tracked);
-        this.touchedDeclarations.add(style);
+      if (mappedValue === currentValue) {
+        this.untrackRuleDeclaration(style, property);
+        continue;
       }
 
+      const tracked = this.trackRuleDeclaration(style, property, mappedValue);
       style.setProperty(property, mappedValue, "important");
+      tracked.mappedValue = style.getPropertyValue(property).trim();
     }
   }
 
