@@ -14,6 +14,10 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.n0RXqYzbZhrogj2dpzXG:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, rgba(255, 255, 255, 0.7)) → var(--text-subdued, #000000b3) */
+}
+
 .Nm4OkhSqNeSIH82Fvte7:not(#spotify-light-mode-specificity-bump) {
   background: #80d2b7; /* hardcoded-color: #056952 → #80d2b7 */
 }

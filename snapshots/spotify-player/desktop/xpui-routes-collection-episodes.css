@@ -75,6 +75,10 @@ __workaround_element__ {
   justify-content: flex-end;
   display: flex;
 }
+.n0RXqYzbZhrogj2dpzXG {
+  color: var(--text-subdued, rgba(255, 255, 255, 0.7));
+  white-space: nowrap;
+}
 .Nm4OkhSqNeSIH82Fvte7 {
   background: #056952;
   border-radius: 6px;
