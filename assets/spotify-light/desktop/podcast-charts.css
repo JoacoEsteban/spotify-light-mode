@@ -11,5 +11,5 @@
 
 
 .aNgVdQDUBF3JEn7uwFLw:not(#spotify-light-mode-specificity-bump), .f5Ew11tui70DEQoe7NM3:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-subdued) !important; /* css-var: var(--text-subdued) */
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }

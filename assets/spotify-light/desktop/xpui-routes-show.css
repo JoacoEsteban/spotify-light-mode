@@ -104,11 +104,11 @@
 }
 
 .Nimr3gGN23LDd_XdovrF:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
 .eefswIkx7SEAF7KWnKzh:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-base) !important; /* css-var: var(--background-tinted-base) */
+  background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
 }
 
 .j0nEgiQZPwCTTCS7J9XI:not(#spotify-light-mode-specificity-bump) {
@@ -120,15 +120,15 @@
 }
 
 .SlcRSjK_b1XskHi646GX.fXjTjLIvXMZ5HN2AHniu:not(#spotify-light-mode-specificity-bump), .SlcRSjK_b1XskHi646GX.fXjTjLIvXMZ5HN2AHniu:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-highlight) !important; /* css-var: var(--background-highlight) */
+  background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
 .SlcRSjK_b1XskHi646GX:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
 .SlcRSjK_b1XskHi646GX:focus-within:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
 .bG9OLJSRR4xL5MFBOgpA.Ye8u1F1e6DlCFf6dQl3W .edd4i5ZpEFmAOUPcVND5:not(#spotify-light-mode-specificity-bump) {
@@ -176,7 +176,7 @@
 }
 
 .aP3se7EyGE1WzGTgcB1l:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
+  background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
 .GcviLKXldqLs6pQE39R2:not(#spotify-light-mode-specificity-bump) {

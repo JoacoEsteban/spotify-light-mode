@@ -11,7 +11,7 @@
 
 
 :root:not(#spotify-light-mode-specificity-bump) {
-  --color: #000000 !important; /* custom-property: #fff → #000000 */
+  --color: #000000; /* custom-property: #fff → #000000 */
 }
 
 .EKtUjVbJbkhTfkFxHjnu:not(#spotify-light-mode-specificity-bump) {
@@ -19,7 +19,7 @@
 }
 
 .EKtUjVbJbkhTfkFxHjnu:not(#spotify-light-mode-specificity-bump):before {
-  color: var(--color) !important; /* css-var: var(--color) */
+  color: var(--color); /* css-var: var(--color) */
 }
 
 .EKtUjVbJbkhTfkFxHjnu:not(#spotify-light-mode-specificity-bump):after {

@@ -39,7 +39,7 @@
 }
 
 .GKaEZI9sAblaNFW2h79V:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base) !important; /* css-var: var(--text-base) */
+  color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .GKaEZI9sAblaNFW2h79V:hover:not(#spotify-light-mode-specificity-bump), .GKaEZI9sAblaNFW2h79V[data-active]:not(#spotify-light-mode-specificity-bump) {
@@ -47,15 +47,15 @@
 }
 
 .GKaEZI9sAblaNFW2h79V:active:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-press) !important; /* css-var: var(--background-press) */
+  background-color: var(--background-press); /* css-var: var(--background-press) */
 }
 
 .Z_PUP7Ruyo826dvvaeNH:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base) !important; /* css-var: var(--text-base) */
+  color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .zc6TmfmXx6Xsk768NK7U:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-subdued) !important; /* css-var: var(--text-subdued) */
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
 
 .v5_etrLcM1X6hmsKpbGC:not(#spotify-light-mode-specificity-bump) {

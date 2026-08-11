@@ -11,5 +11,5 @@
 
 
 .cYRr5QyifKYuUfehIpgY:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-highlight) !important; /* css-var: var(--background-elevated-highlight) */
+  background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
 }

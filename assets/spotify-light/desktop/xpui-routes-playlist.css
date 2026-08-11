@@ -65,16 +65,16 @@
 }
 
 ._8RWqJULA5HdPeW2W2HhO:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-base) !important; /* css-var: var(--background-tinted-base) */
+  background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
 ._8RWqJULA5HdPeW2W2HhO:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-highlight) !important; /* css-var: var(--background-tinted-highlight) */
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
 ._8RWqJULA5HdPeW2W2HhO:active:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-tinted-press) !important; /* css-var: var(--background-tinted-press) */
+  background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
 }
 
 ._8RWqJULA5HdPeW2W2HhO:focus-visible:not(#spotify-light-mode-specificity-bump) {

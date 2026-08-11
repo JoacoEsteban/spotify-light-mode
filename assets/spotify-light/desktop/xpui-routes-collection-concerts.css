@@ -15,33 +15,33 @@
 }
 
 .rdp:not(#spotify-light-mode-specificity-bump) {
-  --rdp-accent-color: #a2c1ff !important; /* custom-property: #00f → #a2c1ff */
-  --rdp-background-color: #404452 !important; /* custom-property: #e7edff → #404452 */
-  --rdp-accent-color-dark: #b2c4ff !important; /* custom-property: #3003e1 → #b2c4ff */
-  --rdp-background-color-dark: #dfe6ff !important; /* custom-property: #180270 → #dfe6ff */
-  --rdp-selected-color: #000000 !important; /* custom-property: #fff → #000000 */
+  --rdp-accent-color: #a2c1ff; /* custom-property: #00f → #a2c1ff */
+  --rdp-background-color: #404452; /* custom-property: #e7edff → #404452 */
+  --rdp-accent-color-dark: #b2c4ff; /* custom-property: #3003e1 → #b2c4ff */
+  --rdp-background-color-dark: #dfe6ff; /* custom-property: #180270 → #dfe6ff */
+  --rdp-selected-color: #000000; /* custom-property: #fff → #000000 */
 }
 
 .rdp-button:focus-visible:not([disabled]):not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--rdp-background-color) !important; /* css-var: var(--rdp-background-color) */
+  background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
 .rdp-button:hover:not([disabled]):not(.rdp-day_selected):not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--rdp-background-color) !important; /* css-var: var(--rdp-background-color) */
+  background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
 .rdp-dropdown:focus-visible:not([disabled]) + .rdp-caption_label:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--rdp-background-color) !important; /* css-var: var(--rdp-background-color) */
+  background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
 .rdp-day_selected:not(#spotify-light-mode-specificity-bump), .rdp-day_selected:hover:not(#spotify-light-mode-specificity-bump) {
-  color: var(--rdp-selected-color) !important; /* css-var: var(--rdp-selected-color) */
-  background-color: var(--rdp-accent-color) !important; /* css-var: var(--rdp-accent-color) */
+  color: var(--rdp-selected-color); /* css-var: var(--rdp-selected-color) */
+  background-color: var(--rdp-accent-color); /* css-var: var(--rdp-accent-color) */
 }
 
 .rdp-day_selected:focus-visible:not(#spotify-light-mode-specificity-bump) {
-  color: var(--rdp-selected-color) !important; /* css-var: var(--rdp-selected-color) */
-  background-color: var(--rdp-accent-color) !important; /* css-var: var(--rdp-accent-color) */
+  color: var(--rdp-selected-color); /* css-var: var(--rdp-selected-color) */
+  background-color: var(--rdp-accent-color); /* css-var: var(--rdp-accent-color) */
 }
 
 .El6PpSSxMesnkRNgQQXp:not(#spotify-light-mode-specificity-bump) {
@@ -49,8 +49,8 @@
 }
 
 .El6PpSSxMesnkRNgQQXp .rdp:not(#spotify-light-mode-specificity-bump) {
-  --rdp-accent-color: #43be6b !important; /* custom-property: #009948 → #43be6b */
-  --rdp-background-color: #d9d9d9 !important; /* custom-property: #363636 → #d9d9d9 */
+  --rdp-accent-color: #43be6b; /* custom-property: #009948 → #43be6b */
+  --rdp-background-color: #d9d9d9; /* custom-property: #363636 → #d9d9d9 */
 }
 
 .El6PpSSxMesnkRNgQQXp .rdp-head_cell:not(#spotify-light-mode-specificity-bump) {
@@ -74,7 +74,7 @@
 }
 
 .nHJ_Abf72WxtqNTpR0kW:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
 .hmDplE1cMKXzEN85MaT9:not(#spotify-light-mode-specificity-bump) {
@@ -90,7 +90,7 @@
 }
 
 .M1am6wN3imcHVy_6Vaxn:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px rgba(0, 0, 0, 0.2) → 0 2px 4px #ffffff33 */
 }
 
@@ -139,11 +139,11 @@
 }
 
 .PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_subtitle__bkQ5C:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base) !important; /* css-var: var(--text-base) */
+  color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_pretitle__-lsnK:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base) !important; /* css-var: var(--text-base) */
+  color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .PromotionDefaultPoster-module_cardLink__mT-31.PromotionDefaultPoster-module_withBackgroundGradient__a8nsM:not(#spotify-light-mode-specificity-bump):after {
@@ -212,11 +212,11 @@
 .PromotionDefaultPoster-module_videoLayoutCard__3vfoC
   .PromotionDefaultPoster-module_condensed-tertiary-icons__5XK1v
   button:not([aria-checked="true"]):not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base) !important; /* css-var: var(--text-base) */
+  color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .ZivhWWfrum34KapzQw38:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
 .qYsShnjqVVGZUoXKOK8n:not(#spotify-light-mode-specificity-bump):before {
@@ -224,10 +224,10 @@
 }
 
 .xZpSGMDAtNEJQ2V2CGQl:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
 .LSUT0SOkrt4xomEYupo9:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px rgba(0, 0, 0, 0.2) → 0 2px 4px #ffffff33 */
 }

@@ -54,7 +54,7 @@
 }
 
 .mQIiKpn2vfkyvdg9oSTK:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-color) !important; /* css-var: var(--background-color) */
+  background-color: var(--background-color); /* css-var: var(--background-color) */
 }
 
 .lsMP4l5Xv6LT6XBO7RzW:not(#spotify-light-mode-specificity-bump) {

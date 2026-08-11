@@ -32,21 +32,21 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 }
 
 .qlztBvYSudkICUPJU5Lk:not(#spotify-light-mode-specificity-bump) {
-  --bg-color: #0000004d !important; /* custom-property: rgba(255, 255, 255, 0.3) → #0000004d */
-  --mg-color: #000000b3 !important; /* custom-property: rgba(255, 255, 255, 0.7) → #000000b3 */
-  --fg-color: #000000 !important; /* custom-property: #fff → #000000 */
+  --bg-color: #0000004d; /* custom-property: rgba(255, 255, 255, 0.3) → #0000004d */
+  --mg-color: #000000b3; /* custom-property: rgba(255, 255, 255, 0.7) → #000000b3 */
+  --fg-color: #000000; /* custom-property: #fff → #000000 */
 }
 
 .H_o1A1RgPB3_6z7nL3_I:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--bg-color) !important; /* css-var: var(--bg-color) */
+  background-color: var(--bg-color); /* css-var: var(--bg-color) */
 }
 
 .DLLKcwqV3By8LJf4oOur:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--mg-color) !important; /* css-var: var(--mg-color) */
+  background-color: var(--mg-color); /* css-var: var(--mg-color) */
 }
 
 .TfVTZDI_lRJD2nIOQv3b:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--fg-color) !important; /* css-var: var(--fg-color) */
+  background-color: var(--fg-color); /* css-var: var(--fg-color) */
 }
 
 .gQp3eui_nShZZ0Ly0xlw:not(#spotify-light-mode-specificity-bump) {
@@ -55,11 +55,11 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 }
 
 .ECIY8k2bCFYI4MqX9D3k .yjgkYQm0E4jSiM59dtrV .TfVTZDI_lRJD2nIOQv3b:not(#spotify-light-mode-specificity-bump), .ECIY8k2bCFYI4MqX9D3k .qlztBvYSudkICUPJU5Lk:hover .TfVTZDI_lRJD2nIOQv3b:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--is-active-fg-color) !important; /* css-var: var(--is-active-fg-color) */
+  background-color: var(--is-active-fg-color); /* css-var: var(--is-active-fg-color) */
 }
 
 .ECIY8k2bCFYI4MqX9D3k:focus-within .TfVTZDI_lRJD2nIOQv3b:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--is-active-fg-color) !important; /* css-var: var(--is-active-fg-color) */
+  background-color: var(--is-active-fg-color); /* css-var: var(--is-active-fg-color) */
 }
 
 .SPsJguVhxzskM6GfbRyF:not(#spotify-light-mode-specificity-bump) {
@@ -85,7 +85,7 @@ video:not(#spotify-light-mode-specificity-bump)::cue {
 }
 
 .QemKsvStg9UNl8epXSuC:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
+  background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
 .ih_WXLOCQ6NwtdH4KKBL:not(#spotify-light-mode-specificity-bump) {

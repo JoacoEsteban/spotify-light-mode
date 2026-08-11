@@ -52,7 +52,7 @@
 }
 
 .nHJ_Abf72WxtqNTpR0kW:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
 .hmDplE1cMKXzEN85MaT9:not(#spotify-light-mode-specificity-bump) {
@@ -68,6 +68,6 @@
 }
 
 .M1am6wN3imcHVy_6Vaxn:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base) !important; /* css-var: var(--background-elevated-base) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px rgba(0, 0, 0, 0.2) → 0 2px 4px #ffffff33 */
 }

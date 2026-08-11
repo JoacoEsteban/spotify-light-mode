@@ -11,16 +11,16 @@
 
 
 .d4E8XcFPHnx83zzodKSJ:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-highlight) !important; /* css-var: var(--background-highlight) */
+  background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
 .wFB2j9gSSkvEmIcfmnwF:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
+  background-color: var(--background-base); /* css-var: var(--background-base) */
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px rgba(0, 0, 0, 0.3) → 0 4px 12px #ffffff4d */
 }
 
 .YY18mEAhwwPaTn87a5Ue:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-base) !important; /* css-var: var(--background-base) */
+  background-color: var(--background-base); /* css-var: var(--background-base) */
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px rgba(0, 0, 0, 0.3) → 0 4px 12px #ffffff4d */
 }
 
