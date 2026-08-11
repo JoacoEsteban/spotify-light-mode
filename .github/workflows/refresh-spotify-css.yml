@@ -36,14 +36,23 @@ jobs:
       - name: Check for generated changes
         id: changes
         run: |
+          before_fingerprint="$(git show HEAD:assets/spotify-light/css-manifest.json | jq -r '.output.fingerprint')"
+          after_fingerprint="$(jq -r '.output.fingerprint' assets/spotify-light/css-manifest.json)"
+
           if [ -n "$(git status --porcelain)" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+          if [ "$before_fingerprint" != "$after_fingerprint" ]; then
+            echo "output_fingerprint_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "output_fingerprint_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Bump package version
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true' && steps.changes.outputs.output_fingerprint_changed == 'true'
         run: npm version minor --no-git-tag-version
 
       - name: Commit and push refresh
@@ -54,14 +63,20 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add package.json assets/spotify-light snapshots
-          git commit -m "refresh Spotify CSS assets for v$version"
-          git tag "v$version"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
-          git push origin "v$version"
+          git add -A
+
+          if [ "${{ steps.changes.outputs.output_fingerprint_changed }}" = "true" ]; then
+            git commit -m "refresh Spotify CSS assets for v$version"
+            git tag "v$version"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+            git push origin "v$version"
+          else
+            git commit -m "refresh Spotify CSS assets"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
 
       - name: Trigger publish workflow
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true' && steps.changes.outputs.output_fingerprint_changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
