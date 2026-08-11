@@ -20,7 +20,7 @@ type DeclarationKind =
   | "custom-property"
   | "hardcoded-color"
   | "css-var"
-  | "transparent-color"
+  | "forwarded-reset"
   | "derived-static-rule";
 
 type Declaration = {
@@ -312,21 +312,24 @@ function isColorProperty(property: string): boolean {
     .otherwise(() => false);
 }
 
+function isForwardedResetDeclaration(property: string, value: string): boolean {
+  return match({ property, value })
+    .with({ value: "transparent" }, () => true)
+    .with({ property: P.union("outline", "border"), value: "none" }, () => true)
+    .otherwise(() => false);
+}
+
 function parseColorBlocks(sourceCss: string): Block[] {
   return collectBlocks(sourceCss, (body) => {
     const declarations: Declaration[] = [];
     for (const { property, value, important } of parseDeclarations(body)) {
-      if (
-        match(value)
-          .with("transparent", () => true)
-          .otherwise(() => false)
-      ) {
+      if (isForwardedResetDeclaration(property, value)) {
         declarations.push({
           property,
           original: value,
           mapped: value,
           important,
-          kind: "transparent-color",
+          kind: "forwarded-reset",
         });
         continue;
       }
@@ -425,7 +428,7 @@ function renderBlock({ selector, declarations, layers }: Block): string {
     .map(({ property, original, mapped, important, kind }) => {
       const importantSuffix = important ? " !important" : "";
       const comment = match(kind)
-        .with(P.union("css-var", "transparent-color"), () => `/* ${kind}: ${original} */`)
+        .with(P.union("css-var", "forwarded-reset"), () => `/* ${kind}: ${original} */`)
         .otherwise(() => `/* ${kind}: ${original} → ${mapped} */`);
       return `  ${property}: ${mapped}${importantSuffix}; ${comment}`;
     })
