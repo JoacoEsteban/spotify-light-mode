@@ -53,7 +53,7 @@ jobs:
 
       - name: Bump package version
         if: steps.changes.outputs.changed == 'true' && steps.changes.outputs.output_fingerprint_changed == 'true'
-        run: npm version minor --no-git-tag-version
+        run: npm version patch --no-git-tag-version
 
       - name: Commit and push refresh
         if: steps.changes.outputs.changed == 'true'
