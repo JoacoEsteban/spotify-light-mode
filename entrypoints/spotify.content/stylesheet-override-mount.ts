@@ -14,6 +14,21 @@ type StylesheetOverrideMountOptions = {
 };
 
 const STYLE_ID_PREFIX = "spotify-light-mode-overrides";
+const SHOULD_LOG_STYLESHEET_MOUNTS = import.meta.env.DEV;
+
+function logStylesheetMount(action: "mounted" | "unmounted", sourceFileName: string): void {
+  if (!SHOULD_LOG_STYLESHEET_MOUNTS) return;
+
+  const color = action === "mounted" ? "#1ed760" : "#ff6b6b";
+  console.debug(
+    `%c[spotify-light-mode]%c stylesheet override %c${action}`,
+    "color: #000; background: #1ed760; border-radius: 3px; padding: 1px 4px; font-weight: 700;",
+    "color: inherit;",
+    `color: ${color}; font-weight: 700;`,
+    { sourceFileName },
+  );
+}
+
 
 function rawStylesheetFileName(href: string): string | null {
   const url = new URL(href, document.location.href);
@@ -95,8 +110,14 @@ export class StylesheetOverrideMount {
     try {
       for (const { sourceFileName, styleEl } of this.overrideStyleEls) {
         if (mountedFileNames.has(sourceFileName)) {
+          if (!styleEl.isConnected) {
+            logStylesheetMount("mounted", sourceFileName);
+          }
           head.appendChild(styleEl);
         } else {
+          if (styleEl.isConnected) {
+            logStylesheetMount("unmounted", sourceFileName);
+          }
           styleEl.remove();
         }
       }
@@ -147,7 +168,10 @@ export class StylesheetOverrideMount {
 
   private unmountAll(): void {
     this.baseStyleEl.remove();
-    for (const { styleEl } of this.overrideStyleEls) {
+    for (const { sourceFileName, styleEl } of this.overrideStyleEls) {
+      if (styleEl.isConnected) {
+        logStylesheetMount("unmounted", sourceFileName);
+      }
       styleEl.remove();
     }
   }
