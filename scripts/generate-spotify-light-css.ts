@@ -4,11 +4,12 @@ import { argv, exit } from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import chroma from "chroma-js";
 import {
+  buildOutputCssManifestFromFiles,
   buildSourceCssManifestFromFiles,
+  cssManifestOutputFileName,
   findCssFiles,
-  sourceManifestOutputFileName,
   sourceSnapshotDirName,
-  writeGeneratedSourceManifest,
+  writeGeneratedCssManifest,
 } from "./core/source-css-manifest";
 
 import { formatMappedColor, hasColorToken, mapColorsInValue } from "../lib/style-color-mapping";
@@ -88,7 +89,7 @@ const outputIndexPath = resolve(outputDir, "index.ts");
 const staticRulesOutputFileName = "static-rules.css";
 
 const staticRulesOutputPath = resolve(outputDir, staticRulesOutputFileName);
-const sourceManifestOutputPath = resolve(outputDir, sourceManifestOutputFileName);
+const cssManifestOutputPath = resolve(outputDir, cssManifestOutputFileName);
 
 function splitTopLevel(input: string, delimiter: string): string[] {
   const parts: string[] = [];
@@ -555,7 +556,7 @@ function parseOptions(args: string[]): GenerateSpotifyLightCssOptions {
           "       bun scripts/generate-spotify-light-css.ts --version spotify-player.web-player.c1348e22 [--snapshots-dir snapshots] [--verbose]",
           "",
           "Generates light-mode overrides from <snapshots-dir>/spotify-player/.",
-          "A snapshot version is required for source-manifest metadata.",
+          "A snapshot version is required for css-manifest metadata.",
           "--verbose prints per-selector color mappings and stale-file cleanup.",
         ].join("\n"),
       );
@@ -603,16 +604,14 @@ export async function generateSpotifyLightCss({
   const expectedOutputFileNames = new Set([
     ...stylesheets.map((s) => s.outputFileName),
     staticRulesOutputFileName,
-    sourceManifestOutputFileName,
+    cssManifestOutputFileName,
     "index.ts",
   ]);
 
   const existingOutputFiles = [
     ...(await findCssFiles(outputDir)),
     ...(await readdir(outputDir, { withFileTypes: true }))
-      .filter(
-        (e) => e.isFile() && (e.name.endsWith(".ts") || e.name === sourceManifestOutputFileName),
-      )
+      .filter((e) => e.isFile() && (e.name.endsWith(".ts") || e.name.endsWith(".json")))
       .map((e) => resolve(outputDir, e.name)),
   ];
   for (const existingFile of existingOutputFiles) {
@@ -624,11 +623,7 @@ export async function generateSpotifyLightCss({
   }
   await pruneEmptyDirectories(outputDir, logger);
 
-  const sourceManifest = await buildSourceCssManifestFromFiles(
-    snapshotVersion,
-    snapshotsDir,
-    cssFiles,
-  );
+  const sourceManifest = await buildSourceCssManifestFromFiles(snapshotsDir, cssFiles);
   const staticRuleBlocks: Block[] = [];
 
   for (const stylesheet of stylesheets) {
@@ -655,14 +650,25 @@ export async function generateSpotifyLightCss({
 
   await writeFile(staticRulesOutputPath, renderStaticRules(staticRuleBlocks), "utf8");
   await writeFile(outputIndexPath, renderIndex(stylesheets), "utf8");
-  await writeGeneratedSourceManifest(sourceManifest, outputDir);
+  const outputManifest = await buildOutputCssManifestFromFiles(outputDir, [
+    ...stylesheets.map((stylesheet) => stylesheet.outputFileName),
+    staticRulesOutputFileName,
+  ]);
+  await writeGeneratedCssManifest(
+    {
+      snapshotVersion,
+      source: sourceManifest,
+      output: outputManifest,
+    },
+    outputDir,
+  );
 
   logger.success(`Generated ${stylesheets.length} light-mode stylesheets.`);
   logger.info(`Snapshot: ${snapshotVersion}`);
   logger.info(`Output directory: ${outputDir}`);
   logger.verboseInfo(`Static rules: ${staticRulesOutputPath}`);
   logger.verboseInfo(`Index: ${outputIndexPath}`);
-  logger.verboseInfo(`Source manifest: ${sourceManifestOutputPath}`);
+  logger.verboseInfo(`CSS manifest: ${cssManifestOutputPath}`);
 }
 
 const entrypointPath = argv[1] ? pathToFileURL(argv[1]).href : "";

@@ -9,9 +9,9 @@ import {
 } from "./fetch-spotify-css-files";
 import {
   buildSourceCssManifest,
-  readGeneratedSourceManifest,
-  writeGeneratedSourceManifest,
-  type SourceCssManifest,
+  readGeneratedCssManifest,
+  writeGeneratedCssManifest,
+  type CssManifest,
 } from "./core/source-css-manifest";
 import { generateSpotifyLightCss } from "./generate-spotify-light-css";
 import { createLogger } from "./logger";
@@ -147,7 +147,7 @@ async function fileExists(path: string): Promise<boolean> {
 }
 
 async function generatedAssetsExistForManifest(
-  manifest: SourceCssManifest,
+  manifest: CssManifest,
   assetsDir: string,
 ): Promise<boolean> {
   let indexText: string;
@@ -164,7 +164,7 @@ async function generatedAssetsExistForManifest(
     return false;
   }
 
-  for (const files of Object.values(manifest.targets)) {
+  for (const files of Object.values(manifest.source.targets)) {
     for (const file of files) {
       if (!indexText.includes(`"./${file.relativePath}?inline"`)) {
         return false;
@@ -176,6 +176,11 @@ async function generatedAssetsExistForManifest(
     }
   }
 
+  for (const file of manifest.output.files) {
+    if (!(await fileExists(resolve(assetsDir, file.relativePath)))) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -185,12 +190,12 @@ async function main(): Promise<void> {
 
   logger.info("Checking latest Spotify web player snapshot...");
   const latest = await fetchLatestSpotifyWebPlayerInfo(options.pageUrl);
-  const previousSourceManifest = await readGeneratedSourceManifest(defaultAssetsDir);
-  const previousGenerated = previousSourceManifest
-    ? await generatedAssetsExistForManifest(previousSourceManifest, defaultAssetsDir)
+  const previousCssManifest = await readGeneratedCssManifest(defaultAssetsDir);
+  const previousGenerated = previousCssManifest
+    ? await generatedAssetsExistForManifest(previousCssManifest, defaultAssetsDir)
     : false;
   const generated =
-    previousGenerated && previousSourceManifest?.snapshotVersion === latest.snapshotVersion;
+    previousGenerated && previousCssManifest?.snapshotVersion === latest.snapshotVersion;
   logger.info(`Latest snapshot: ${latest.snapshotVersion}`);
   logger.verboseInfo(
     `Targets: ${latest.targets.map(({ targetName, snapshotVersion }) => `${targetName}=${snapshotVersion}`).join(", ")}`,
@@ -219,21 +224,25 @@ async function main(): Promise<void> {
     webPlayerInfo: latest,
   });
 
-  const latestSourceManifest = await buildSourceCssManifest(
-    latest.snapshotVersion,
-    options.snapshotsRootDir,
-  );
+  const latestSourceManifest = await buildSourceCssManifest(options.snapshotsRootDir);
 
   if (
-    previousSourceManifest &&
+    previousCssManifest &&
     previousGenerated &&
-    previousSourceManifest.sourceFingerprint === latestSourceManifest.sourceFingerprint &&
+    previousCssManifest.source.fingerprint === latestSourceManifest.fingerprint &&
     !options.force
   ) {
     logger.success("Source CSS content is unchanged; generation skipped.");
-    await writeGeneratedSourceManifest(latestSourceManifest, defaultAssetsDir);
+    await writeGeneratedCssManifest(
+      {
+        snapshotVersion: latest.snapshotVersion,
+        source: latestSourceManifest,
+        output: previousCssManifest.output,
+      },
+      defaultAssetsDir,
+    );
     logger.info("Use --force after generator logic changes.");
-    logger.verboseInfo(`Generated snapshot: ${previousSourceManifest.snapshotVersion}`);
+    logger.verboseInfo(`Generated snapshot: ${previousCssManifest.snapshotVersion}`);
     logger.verboseInfo(`Latest snapshot: ${latest.snapshotVersion}`);
     logger.verboseInfo(`Assets directory: ${defaultAssetsDir}`);
     logger.verboseInfo(`Snapshot directory: ${result.snapshotDir}`);
@@ -242,10 +251,10 @@ async function main(): Promise<void> {
 
   if (options.force) {
     logger.info("Generating because --force was set.");
-  } else if (!previousSourceManifest) {
-    logger.verboseInfo("No source CSS manifest found; generating now.");
+  } else if (!previousCssManifest) {
+    logger.verboseInfo("No CSS manifest found; generating now.");
   } else if (!previousGenerated) {
-    logger.verboseInfo("Source CSS manifest points to missing generated assets; generating now.");
+    logger.verboseInfo("CSS manifest points to missing generated assets; generating now.");
   } else {
     logger.info("Source CSS content changed; generating now.");
   }

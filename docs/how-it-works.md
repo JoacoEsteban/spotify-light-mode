@@ -57,7 +57,7 @@ It formats the minified CSS with Prettier before it writes the file.
 Then the manifest hashes the formatted CSS.
 
 The combined version includes the desktop bundle hash and the mobile bundle hash.
-This version stays in `source-manifest.json` as metadata.
+This version stays in `css-manifest.json` as metadata.
 It does not appear in the source CSS path.
 
 The ensure script also compares formatted source CSS content.
@@ -98,13 +98,13 @@ It also writes three shared files:
 
 ```text
 assets/spotify-light/static-rules.css
-assets/spotify-light/source-manifest.json
+assets/spotify-light/css-manifest.json
 assets/spotify-light/index.ts
 ```
 
 `static-rules.css` contains rules that do not come from color mapping.
-`source-manifest.json` records SHA-256 hashes for the formatted source CSS files.
-The ensure script uses this manifest to skip generation when formatted CSS content is unchanged.
+`css-manifest.json` records SHA-256 hashes for formatted source CSS and generated output CSS.
+The ensure script uses the source fingerprint to skip generation when formatted CSS content is unchanged.
 `index.ts` imports every generated CSS file with Vite `?inline` imports.
 As a result, WXT bundles the CSS as strings in the content script.
 
