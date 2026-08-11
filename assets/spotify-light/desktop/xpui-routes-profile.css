@@ -31,6 +31,7 @@
 .kYhiVqst8bTbw93d_X3J:not(#spotify-light-mode-specificity-bump) {
   --user-edit-surface: #e4e4e4; /* custom-property: #282828 → #e4e4e4 */
   --user-edit-text-color: #000000; /* custom-property: #fff → #000000 */
+  --user-edit-shadow: 0 4px 4px #ffffff4d; /* custom-property: 0 4px 4px rgba(0, 0, 0, 0.3) → 0 4px 4px #ffffff4d */
   --user-edit-label-color: #7a7a7a; /* custom-property: #b3b3b3 → #7a7a7a */
   --user-edit-input-bg: #0000001a; /* custom-property: rgba(255, 255, 255, 0.1) → #0000001a */
   --user-edit-input-text: #000000; /* custom-property: #fff → #000000 */
@@ -47,6 +48,9 @@
 }
 
 .qvAjQd_kNTtXrwUbltHg:not(#spotify-light-mode-specificity-bump) {
+  --user-edit-surface: var(--background-base, #000000); /* custom-property: var(--background-base, #fff) → var(--background-base, #000000) */
+  --user-edit-text-color: var(--text-base, #f6f6f6); /* custom-property: var(--text-base, #121212) → var(--text-base, #f6f6f6) */
+  --user-edit-shadow: 0 20px 48px #ffffff29; /* custom-property: 0 20px 48px rgba(0, 0, 0, 0.16) → 0 20px 48px #ffffff29 */
   --user-edit-label-color: #f6f6f68c; /* custom-property: rgba(18, 18, 18, 0.55) → #f6f6f68c */
   --user-edit-input-bg: #f6f6f60f; /* custom-property: rgba(18, 18, 18, 0.06) → #f6f6f60f */
   --user-edit-input-text: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */

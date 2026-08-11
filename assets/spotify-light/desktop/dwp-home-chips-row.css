@@ -33,6 +33,91 @@
   background-color: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
 }
 
+.YnAC1ukzhm57GCm4GKtT:not(#spotify-light-mode-specificity-bump) {
+  --home-chips-left-mask: var(--home-chips-start-mask, #ffffff); /* custom-property: var(--home-chips-start-mask, black) → var(--home-chips-start-mask, #ffffff) */
+  --home-chips-right-mask: var(--home-chips-end-mask, #ffffff); /* custom-property: var(--home-chips-end-mask, black) → var(--home-chips-end-mask, #ffffff) */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ); /* hardcoded-color: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    black 72px,
+    black calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) → linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ); /* hardcoded-color: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    black 72px,
+    black calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) → linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) */
+  mask-image: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ); /* hardcoded-color: linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    black 72px,
+    black calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) → linear-gradient(
+    90deg,
+    var(--home-chips-left-mask) 0,
+    var(--home-chips-left-mask) 32px,
+    #ffffff 72px,
+    #ffffff calc(100% - 72px),
+    var(--home-chips-right-mask) calc(100% - 32px),
+    var(--home-chips-right-mask) 100%
+  ) */
+}
+
+[dir="rtl"] .YnAC1ukzhm57GCm4GKtT:not(#spotify-light-mode-specificity-bump) {
+  --home-chips-left-mask: var(--home-chips-end-mask, #ffffff); /* custom-property: var(--home-chips-end-mask, black) → var(--home-chips-end-mask, #ffffff) */
+  --home-chips-right-mask: var(--home-chips-start-mask, #ffffff); /* custom-property: var(--home-chips-start-mask, black) → var(--home-chips-start-mask, #ffffff) */
+}
+
 .RiqrU6263_YuXOOffr8b:not(#spotify-light-mode-specificity-bump) {
   --chevrons-button-color: #ffffff2b; /* custom-property: rgba(0, 0, 0, 0.17) → #ffffff2b */
   --chevrons-button-hover-color: #ffffff2b; /* custom-property: rgba(0, 0, 0, 0.17) → #ffffff2b */
@@ -119,11 +204,15 @@
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 92%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 92%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 92%,
+    #ffffff
   ) */
 }
 
@@ -131,11 +220,15 @@
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 80%,
+    #ffffff
   ) */
 }
 
@@ -155,11 +248,15 @@ button:focus-visible .WXntoxzYRlNRHiiIigwz:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 92%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 92%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 92%,
+    #ffffff
   ) */
 }
 
@@ -167,11 +264,15 @@ button:focus-visible .WXntoxzYRlNRHiiIigwz:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 87%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 87%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 87%,
+    #ffffff
   ) */
 }
 
@@ -179,11 +280,15 @@ button:focus-visible .WXntoxzYRlNRHiiIigwz:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 80%,
+    #ffffff
   ) */
 }
 
@@ -191,11 +296,15 @@ button:focus-visible .WXntoxzYRlNRHiiIigwz:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 70%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 70%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 70%,
+    #ffffff
   ) */
 }
 
@@ -215,11 +324,15 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   background-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
-    black
-  ) !important; /* css-var: color-mix(
+    #ffffff
+  ) !important; /* hardcoded-color: color-mix(
     in srgb,
     var(--home-chip-highlight-color) 80%,
     black
+  ) → color-mix(
+    in srgb,
+    var(--home-chip-highlight-color) 80%,
+    #ffffff
   ) */
 }
 

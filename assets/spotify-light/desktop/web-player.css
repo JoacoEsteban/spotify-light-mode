@@ -1352,13 +1352,66 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.f49QbfVhlxFolwm4YVhg:not(#spotify-light-mode-specificity-bump) {
+  --start-gradient-color: #ffffff; /* custom-property: black → #ffffff */
+  --end-gradient-color: #ffffff; /* custom-property: black → #ffffff */
+  -webkit-mask-image: linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ); /* hardcoded-color: linear-gradient(90deg, var(--start-gradient-color) 0%, black 120px),
+    linear-gradient(
+      90deg,
+      black calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) → linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) */
+  -webkit-mask-image: linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ); /* hardcoded-color: linear-gradient(90deg, var(--start-gradient-color) 0%, black 120px),
+    linear-gradient(
+      90deg,
+      black calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) → linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) */
+  mask-image: linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ); /* hardcoded-color: linear-gradient(90deg, var(--start-gradient-color) 0%, black 120px),
+    linear-gradient(
+      90deg,
+      black calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) → linear-gradient(90deg, var(--start-gradient-color) 0%, #ffffff 120px),
+    linear-gradient(
+      90deg,
+      #ffffff calc(100% - 120px),
+      var(--end-gradient-color) 100%
+    ) */
+}
+
 [dir="rtl"] .f49QbfVhlxFolwm4YVhg:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: linear-gradient(
       90deg,
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px); /* hardcoded-color: linear-gradient(
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px); /* hardcoded-color: linear-gradient(
       90deg,
       #000 calc(100% - 120px),
       var(--start-gradient-color) 100%
@@ -1368,13 +1421,13 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px) */
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px) */
   -webkit-mask-image: linear-gradient(
       90deg,
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px); /* hardcoded-color: linear-gradient(
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px); /* hardcoded-color: linear-gradient(
       90deg,
       #000 calc(100% - 120px),
       var(--start-gradient-color) 100%
@@ -1384,13 +1437,13 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px) */
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px) */
   mask-image: linear-gradient(
       90deg,
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px); /* hardcoded-color: linear-gradient(
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px); /* hardcoded-color: linear-gradient(
       90deg,
       #000 calc(100% - 120px),
       var(--start-gradient-color) 100%
@@ -1400,7 +1453,7 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
       #ffffff calc(100% - 120px),
       var(--start-gradient-color) 100%
     ),
-    linear-gradient(90deg, var(--end-gradient-color) 0%, black 120px) */
+    linear-gradient(90deg, var(--end-gradient-color) 0%, #ffffff 120px) */
 }
 
 .EP3LBOia3Hgj7HnbQvxB:not(#spotify-light-mode-specificity-bump):before {
@@ -1485,6 +1538,14 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
     --chevrons-button-hover-color,
     var(--background-elevated-highlight)
   ) */
+}
+
+.pR4EESxR3uh6SdgUergN:not(#spotify-light-mode-specificity-bump) {
+  --start-gradient-color: #ffffff; /* custom-property: black → #ffffff */
+}
+
+.EHcV2FVKDUS_1y9cOfPz:not(#spotify-light-mode-specificity-bump) {
+  --end-gradient-color: #ffffff; /* custom-property: black → #ffffff */
 }
 
 .Pd1v0JVx8HrmD3dpKWOv:not(#spotify-light-mode-specificity-bump) {
@@ -2085,6 +2146,22 @@ html:not(.no-focus-outline) .AWIrTV2Lx3pp211jnrfX:focus-within:not(#spotify-ligh
 
 .rhgad0KCkY7pC3Jjdt9T:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
+}
+
+.DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+  --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
+}
+
+.DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+  --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
+}
+
+[dir="rtl"] .DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+  --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
+}
+
+[dir="rtl"] .DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+  --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
 ._ehvtNb15IxmxomR0T9E .YCQudASYII9oSA3VRAJv:not(#spotify-light-mode-specificity-bump) {
@@ -3012,6 +3089,10 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
   background-color: #0000004d; /* hardcoded-color: rgba(255, 255, 255, 0.3) → #0000004d */
 }
 
+.zayZDU6yXcINWZMzUh5B:not(#spotify-light-mode-specificity-bump) {
+  outline: var(--panel-gap) solid #ffffff; /* hardcoded-color: var(--panel-gap) solid black → var(--panel-gap) solid #ffffff */
+}
+
 .bRZ1bXD3IAPPsiam5Owd:not(#spotify-light-mode-specificity-bump):before {
   background: linear-gradient(
     #ffffffd9 0%,
@@ -3050,6 +3131,10 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
     #ffffff03 93%,
     transparent 100%
   ) */
+}
+
+.yqQQ3a6EliT3QqxuMFUq:not(#spotify-light-mode-specificity-bump) {
+  outline: var(--panel-gap) solid #ffffff; /* hardcoded-color: var(--panel-gap) solid black → var(--panel-gap) solid #ffffff */
 }
 
 .pzCYFFhf2Aim2CoOMg4d > *:not(#spotify-light-mode-specificity-bump) {
@@ -4309,6 +4394,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 @layer encore {
   .encore-light-theme .encore-over-media-set > *:not(#spotify-light-mode-specificity-bump) {
     --parents-essential-base: #000000; /* custom-property: #fff → #000000 */
+  }
+}
+
+@layer encore {
+  :root:not(#spotify-light-mode-specificity-bump) {
+    --encore-overlay-box-shadow: 0 4px 12px 0 #ffffff4d; /* custom-property: 0 4px 12px 0 rgba(0, 0, 0, 0.3) → 0 4px 12px 0 #ffffff4d */
+    --encore-overlay-drop-shadow: 0 4px 6px #ffffff4d; /* custom-property: 0 4px 6px rgba(0, 0, 0, 0.3) → 0 4px 6px #ffffff4d */
   }
 }
 
@@ -5894,6 +5986,12 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 @layer encore {
   .e-10750-legacy-tooltip:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
+  }
+}
+
+@layer encore {
+  html[class*="-dark-theme"] .e-10750-verified-badge:not(#spotify-light-mode-specificity-bump) {
+    --encore-verified-badge-background: var(--green-desat-185, #355b3a); /* custom-property: var(--green-desat-185, #c5f0c9) → var(--green-desat-185, #355b3a) */
   }
 }
 

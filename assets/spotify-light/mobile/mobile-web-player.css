@@ -1375,6 +1375,11 @@
   --parents-essential-base: #000000; /* custom-property: #fff → #000000 */
 }
 
+:root:not(#spotify-light-mode-specificity-bump) {
+  --encore-overlay-box-shadow: 0 4px 12px 0 #ffffff4d; /* custom-property: 0 4px 12px 0 rgba(0, 0, 0, 0.3) → 0 4px 12px 0 #ffffff4d */
+  --encore-overlay-drop-shadow: 0 4px 6px #ffffff4d; /* custom-property: 0 4px 6px rgba(0, 0, 0, 0.3) → 0 4px 6px #ffffff4d */
+}
+
 html:not(#spotify-light-mode-specificity-bump) {
   -webkit-tap-highlight-color: transparent; /* transparent-color: transparent */
 }
@@ -2492,6 +2497,10 @@ input:checked + .e-10750-form-toggle__wrapper:not(#spotify-light-mode-specificit
 
 .e-10750-legacy-tooltip:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
+}
+
+html[class*="-dark-theme"] .e-10750-verified-badge:not(#spotify-light-mode-specificity-bump) {
+  --encore-verified-badge-background: var(--green-desat-185, #355b3a); /* custom-property: var(--green-desat-185, #c5f0c9) → var(--green-desat-185, #355b3a) */
 }
 
 .e-10750-image__container:not(#spotify-light-mode-specificity-bump) {

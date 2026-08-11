@@ -556,7 +556,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:5153717bc3434830b6dbbe6b82d5118e09295c169e8bb3278843cd0efed6a603",
+    "fingerprint": "sha256:61042179ce37bbda8a98936fc381a459b06b4f59026c155afa61033dbc8b4346",
     "files": [
       {
         "fileName": "1691.css",
@@ -579,8 +579,8 @@
       {
         "fileName": "4727.css",
         "relativePath": "desktop/4727.css",
-        "sha256": "039d02d18f06af74b946262a20e6c3279b8c848ece7b1811111774c8861ca7cc",
-        "byteLength": 3296
+        "sha256": "419080a29e7be5d8d5afd142e157e567414a9482fdb04aa06fa95b1811d9463b",
+        "byteLength": 3972
       },
       {
         "fileName": "5578.css",
@@ -639,8 +639,8 @@
       {
         "fileName": "dwp-home-chips-row.css",
         "relativePath": "desktop/dwp-home-chips-row.css",
-        "sha256": "84f9d296dce860bc0668b723946660315e5607cee163797e9b2678c18548373d",
-        "byteLength": 11077
+        "sha256": "5d97abedb90d97b28f12c382a59762ce424b38a4297b3eb9d245f74f1e69e9fa",
+        "byteLength": 14879
       },
       {
         "fileName": "dwp-home-header.css",
@@ -795,8 +795,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "63f9414ebf8b44cbf67f2f05bb4d0a4b3ae6af71bb4f24c643991af9be1015ba",
-        "byteLength": 261125
+        "sha256": "6139e27f659592edf93e264dbb8a8674a849086c76da7c116a8549e95eba0562",
+        "byteLength": 265115
       },
       {
         "fileName": "xpui-debug-window-contents.css",
@@ -831,8 +831,8 @@
       {
         "fileName": "xpui-routes-album.css",
         "relativePath": "desktop/xpui-routes-album.css",
-        "sha256": "38a70e35901affcae79cd82dea7c9d2c3eea6e519198a5b70f6c2efba7a7ae09",
-        "byteLength": 3474
+        "sha256": "14d0198bcc4ac7888fecbfdfeb631531bae724adb7ec6f94d2d0e6865afc4ea8",
+        "byteLength": 4150
       },
       {
         "fileName": "xpui-routes-all-show-ads.css",
@@ -879,8 +879,8 @@
       {
         "fileName": "xpui-routes-collection-songs.css",
         "relativePath": "desktop/xpui-routes-collection-songs.css",
-        "sha256": "4e8eda14324d66057f39c2a5a012a0d9d9557e9169ccafee939eb2cef07d9995",
-        "byteLength": 4959
+        "sha256": "227923d9609a73c70fd0bd84234e64ee26078e746d6af34246b025b09a9e82e6",
+        "byteLength": 5635
       },
       {
         "fileName": "xpui-routes-concert-campaign.css",
@@ -963,8 +963,8 @@
       {
         "fileName": "xpui-routes-profile.css",
         "relativePath": "desktop/xpui-routes-profile.css",
-        "sha256": "da7bd6cf6cc59c482a2b652219ded674e281f89f0c4dc4e568ec86a08f70d8b7",
-        "byteLength": 6123
+        "sha256": "2254d1d03f2b0289b84b781a36fcd785b2c5577e4fe965e8e1e11e18ce559aa3",
+        "byteLength": 6644
       },
       {
         "fileName": "xpui-routes-recent-searches.css",
@@ -1005,8 +1005,8 @@
       {
         "fileName": "xpui-routes-show.css",
         "relativePath": "desktop/xpui-routes-show.css",
-        "sha256": "a7e26299474e0239b6df989d8820a4b0f78eb8bd7cadac3e5bf683b7316445f0",
-        "byteLength": 8048
+        "sha256": "582fe94a957cf291879777008a53a76d4598f98b631dc37a5250c91717c9710d",
+        "byteLength": 8724
       },
       {
         "fileName": "xpui-routes-stage-page.css",
@@ -1053,8 +1053,8 @@
       {
         "fileName": "mobile-web-player.css",
         "relativePath": "mobile/mobile-web-player.css",
-        "sha256": "20e6766fe5ea1bde2323941569f662364abd6dd5c7ad86d3a6a134976dc6098d",
-        "byteLength": 160395
+        "sha256": "2eede912d1dd213db4de30dbe10708d990f2aa89a20637c9661edb5c6669e49c",
+        "byteLength": 160974
       },
       {
         "fileName": "mwp-artist-page.css",
