@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.91c889e0__mobile-web-player.92887e5a",
+  "snapshotVersion": "spotify-player.web-player.50530fd5__mobile-web-player.92887e5a",
   "source": {
-    "fingerprint": "sha256:066a4b63afab605f62b370507222ce6c9b2a7e14f481b899c5021b31a2295419",
+    "fingerprint": "sha256:640518c8982865c983b72c739063fe55085d8c20b18bb58dd87894294f5880b8",
     "targets": {
       "desktop": [
         {
@@ -469,8 +469,8 @@
         {
           "fileName": "xpui-routes-track-v2.css",
           "relativePath": "desktop/xpui-routes-track-v2.css",
-          "sha256": "4488b2479bd055a52515cc6c4738de88fca05bcb13e7a5824331f5f843620d22",
-          "byteLength": 6021
+          "sha256": "ad092dbd22d4f7210fef83e5c53115536ed1e53374507e1e41e21d0e18f1cbb6",
+          "byteLength": 6166
         },
         {
           "fileName": "xpui-routes-venues.css",
