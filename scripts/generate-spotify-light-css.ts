@@ -15,7 +15,12 @@ import {
 import { formatMappedColor, hasColorToken, mapColorsInValue } from "../lib/style-color-mapping";
 import { createLogger, type Logger } from "./logger";
 
-type DeclarationKind = "custom-property" | "hardcoded-color" | "css-var" | "derived-static-rule";
+type DeclarationKind =
+  | "custom-property"
+  | "hardcoded-color"
+  | "css-var"
+  | "transparent-color"
+  | "derived-static-rule";
 
 type Declaration = {
   property: string;
@@ -307,6 +312,17 @@ function parseColorBlocks(sourceCss: string): Block[] {
   return collectBlocks(sourceCss, (body) => {
     const declarations: Declaration[] = [];
     for (const { property, value, important } of parseDeclarations(body)) {
+      if (value === "transparent") {
+        declarations.push({
+          property,
+          original: value,
+          mapped: value,
+          important,
+          kind: "transparent-color",
+        });
+        continue;
+      }
+
       if (property.startsWith("--")) {
         if (hasColorToken(value) && chroma.valid(value)) {
           const mapped = formatMappedColor(value);
@@ -401,7 +417,7 @@ function renderBlock({ selector, declarations, layers }: Block): string {
     .map(({ property, original, mapped, important, kind }) => {
       const importantSuffix = important ? " !important" : "";
       const comment =
-        kind === "css-var"
+        kind === "css-var" || kind === "transparent-color"
           ? `/* ${kind}: ${original} */`
           : `/* ${kind}: ${original} → ${mapped} */`;
       return `  ${property}: ${mapped}${importantSuffix}; ${comment}`;
