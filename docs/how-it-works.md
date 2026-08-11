@@ -64,6 +64,12 @@ The ensure script also compares formatted source CSS content.
 If only Spotify artifact hashes changed, it keeps the current generated CSS.
 Use `--force` after generator logic changes.
 
+Use this command to regenerate light-mode CSS from the current source snapshot without fetching newer Spotify CSS:
+
+```sh
+bun run regenerate
+```
+
 The script also caches JavaScript bundles under `.cache/spotify-web-player/<target>/`.
 The cache prevents repeated downloads during local development.
 Use `--refresh` to fetch the JavaScript bundles again.

@@ -18,7 +18,8 @@
     "fetch:spotify-css": "bun scripts/fetch-spotify-css-files.ts",
     "generate:spotify-light-css": "bun scripts/generate-spotify-light-css.ts",
     "refresh:spotify-light-css": "bun scripts/fetch-spotify-css-files.ts --generate",
-    "ensure:spotify-light-css": "bun scripts/ensure-latest-spotify-light-css.ts"
+    "ensure:spotify-light-css": "bun scripts/ensure-latest-spotify-light-css.ts",
+    "regenerate": "bun scripts/generate-spotify-light-css.ts $(bun -p \"(await Bun.file('assets/spotify-light/css-manifest.json').json()).snapshotVersion\")"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",

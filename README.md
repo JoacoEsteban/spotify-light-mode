@@ -57,6 +57,12 @@ If only Spotify artifact hashes change, it keeps the current generated CSS.
 It stores formatted source CSS under stable file names in `snapshots/spotify-player/`.
 It writes generated CSS under stable file names in `assets/spotify-light/`.
 
+Use this command to regenerate light-mode CSS from the current source snapshot without fetching newer Spotify CSS:
+
+```sh
+bun run regenerate
+```
+
 ## How it works
 
 See [How the extension works](docs/how-it-works.md) for the asset flow, generated CSS, and runtime behavior.
