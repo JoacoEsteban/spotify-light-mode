@@ -49,3 +49,11 @@
 .qIXOpd2IXQHUddyONhQt:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff4d; /* hardcoded-color: rgba(0, 0, 0, 0.3) → #ffffff4d */
 }
+
+.PQBXxslN9Htyfr9Wj2G5 .V4Caj67aER2Al8c30mzP:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent !important; /* transparent-color: transparent */
+}
+
+.G_w7OvxaGMckTw_hH_RA .PQBXxslN9Htyfr9Wj2G5 .V4Caj67aER2Al8c30mzP:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent !important; /* transparent-color: transparent */
+}

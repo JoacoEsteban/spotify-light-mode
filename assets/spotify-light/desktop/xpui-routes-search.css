@@ -193,6 +193,7 @@
 
 .R1fJUxpBe5Iv07tCXqRv:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .R1fJUxpBe5Iv07tCXqRv:hover:not(#spotify-light-mode-specificity-bump), .R1fJUxpBe5Iv07tCXqRv:focus:not(#spotify-light-mode-specificity-bump) {

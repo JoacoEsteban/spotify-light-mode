@@ -14,8 +14,16 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
+  border-color: transparent; /* transparent-color: transparent */
+}
+
 .Tsv5PQ6zARrrKSjYXLN5 a:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
+}
+
+.VfWBvwqPUmtMZOCbBp6d:not(#spotify-light-mode-specificity-bump) {
+  color: transparent; /* transparent-color: transparent */
 }
 
 .WNJCHYJTMjdKYLDjCL8m:not(#spotify-light-mode-specificity-bump) {

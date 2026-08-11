@@ -14,6 +14,10 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
+  border-color: transparent; /* transparent-color: transparent */
+}
+
 .lG4nyXnX96VX1CduiT90:not(#spotify-light-mode-specificity-bump) {
   background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
 }

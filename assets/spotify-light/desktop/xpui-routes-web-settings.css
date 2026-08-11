@@ -91,6 +91,7 @@ select:disabled:hover:not(#spotify-light-mode-specificity-bump) {
 
 .i2wKPcAykptKYaQ2a6IV:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .z5UiCCJ0Dl016Vux6bSg:focus:not(#spotify-light-mode-specificity-bump) {

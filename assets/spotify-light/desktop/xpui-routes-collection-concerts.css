@@ -30,6 +30,10 @@
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
+.rdp-dropdown:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent; /* transparent-color: transparent */
+}
+
 .rdp-dropdown:focus-visible:not([disabled]) + .rdp-caption_label:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
@@ -71,6 +75,10 @@
 
 .FFMIxCdjTsPV8aspOkCq:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
+.vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
+  border-color: transparent; /* transparent-color: transparent */
 }
 
 .nHJ_Abf72WxtqNTpR0kW:hover:not(#spotify-light-mode-specificity-bump) {

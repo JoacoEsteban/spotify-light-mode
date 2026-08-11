@@ -61,11 +61,17 @@
 
 .XBpq0Wl3FF8q1tY1nH32:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+  background-color: transparent; /* transparent-color: transparent */
   border: 1px solid #000000; /* hardcoded-color: 1px solid #fff → 1px solid #000000 */
 }
 
 .XBpq0Wl3FF8q1tY1nH32.hgj2VPpnbPoKeduIfOkA:not(#spotify-light-mode-specificity-bump), .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"]:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff; /* hardcoded-color: #000 → #ffffff */
+  border-color: transparent; /* transparent-color: transparent */
+}
+
+.XBpq0Wl3FF8q1tY1nH32.hgj2VPpnbPoKeduIfOkA:hover:not(#spotify-light-mode-specificity-bump), .XBpq0Wl3FF8q1tY1nH32.hgj2VPpnbPoKeduIfOkA:focus:not(#spotify-light-mode-specificity-bump), .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"]:hover:not(#spotify-light-mode-specificity-bump), .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"]:focus:not(#spotify-light-mode-specificity-bump) {
+  border-color: transparent; /* transparent-color: transparent */
 }
 
 .ffX3I28uXi9abWqCBosi:not(#spotify-light-mode-specificity-bump) {

@@ -20,6 +20,7 @@
 
 .rIVErOrtD0FmPDHEZ4pe:not(#spotify-light-mode-specificity-bump) {
   --color-from: #c3c3c3b3; /* custom-property: rgba(83, 83, 83, 0.7) → #c3c3c3b3 */
+  --color-to: transparent; /* transparent-color: transparent */
 }
 
 .rIVErOrtD0FmPDHEZ4pe:not(#spotify-light-mode-specificity-bump) {

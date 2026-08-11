@@ -78,6 +78,10 @@
   ) */
 }
 
+.Xf_0kIqW985vlJFwF9El:not(#spotify-light-mode-specificity-bump) {
+  --color-to: transparent; /* transparent-color: transparent */
+}
+
 .XxY06TgkEGIREvxriycb:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(
     #ffffff99 46.75%,

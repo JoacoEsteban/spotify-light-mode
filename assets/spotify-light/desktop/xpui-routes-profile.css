@@ -21,6 +21,7 @@
 
 ._BZdu8EQu8mVMt02IF9U:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .EPaM5xfBVGqBixFj3NQo:not(#spotify-light-mode-specificity-bump) {
@@ -39,6 +40,8 @@
   --user-edit-close-hover: #0000001a; /* custom-property: rgba(255, 255, 255, 0.1) → #0000001a */
   --user-edit-close-active: #00000033; /* custom-property: rgba(255, 255, 255, 0.2) → #00000033 */
   --user-edit-disclaimer-color: #000000; /* custom-property: #fff → #000000 */
+  --user-edit-header-bg: transparent; /* transparent-color: transparent */
+  --user-edit-header-border: transparent; /* transparent-color: transparent */
   color: var(--user-edit-text-color); /* css-var: var(--user-edit-text-color) */
   background-color: var(--user-edit-surface); /* css-var: var(--user-edit-surface) */
 }
@@ -64,6 +67,7 @@
 
 .wi8R_MBOs3av_CKIprZ3:not(#spotify-light-mode-specificity-bump) {
   color: var(--user-edit-close-color); /* css-var: var(--user-edit-close-color) */
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .wi8R_MBOs3av_CKIprZ3:hover:not(#spotify-light-mode-specificity-bump), .wi8R_MBOs3av_CKIprZ3:focus:not(#spotify-light-mode-specificity-bump) {

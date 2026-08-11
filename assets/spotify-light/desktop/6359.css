@@ -16,6 +16,10 @@
   background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
 }
 
+.VWEr9pQb4l9V37dXJFsI:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent; /* transparent-color: transparent */
+}
+
 .LfSMCbB9S2gtuLE3tiDG:not(#spotify-light-mode-specificity-bump) {
   border: 1px solid #0000001a; /* hardcoded-color: 1px solid rgba(255, 255, 255, 0.1) → 1px solid #0000001a */
 }

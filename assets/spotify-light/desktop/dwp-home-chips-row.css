@@ -80,6 +80,7 @@
     var(--background-tinted-highlight, #ffffff1f) 48px,
     var(--background-tinted-highlight, #ffffff1f) 100%
   ) */
+  background-color: transparent !important; /* transparent-color: transparent */
 }
 
 .uyGUhCYTaL8QBxcjWCFS:focus-visible:not(#spotify-light-mode-specificity-bump) {
@@ -102,6 +103,7 @@
     var(--background-tinted-highlight, #ffffff1f) 48px,
     var(--background-tinted-highlight, #ffffff1f) 100%
   ) */
+  background-color: transparent !important; /* transparent-color: transparent */
 }
 
 .PVhKUi35u46oRUJRd3Kk:not(#spotify-light-mode-specificity-bump):after {

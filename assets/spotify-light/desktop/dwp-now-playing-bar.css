@@ -37,6 +37,7 @@
 
 .SaUODI6b8RnhwQ3I5abK:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .SaUODI6b8RnhwQ3I5abK:hover:not(#spotify-light-mode-specificity-bump) {
@@ -57,6 +58,10 @@
 
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK:active:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+}
+
+.wXCLBYv3_IHgX9cVGGFO:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent; /* transparent-color: transparent */
 }
 
 .AQxGpl1iLm1aNNziqSnG:focus-within:not(#spotify-light-mode-specificity-bump) {

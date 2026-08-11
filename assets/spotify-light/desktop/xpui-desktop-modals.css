@@ -24,6 +24,10 @@
   background-color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
 }
 
+.PUZRAb9P9jkWepu2wZNs:not(#spotify-light-mode-specificity-bump) {
+  background-color: transparent; /* transparent-color: transparent */
+}
+
 .PUZRAb9P9jkWepu2wZNs:hover:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
