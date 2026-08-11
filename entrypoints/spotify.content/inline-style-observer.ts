@@ -1,10 +1,6 @@
 import chroma from "chroma-js";
 
-import {
-  formatMappedColor,
-  hasColorToken,
-  mapColorsInValue,
-} from "../../lib/style-color-mapping";
+import { formatMappedColor, hasColorToken, mapColorsInValue } from "../../lib/style-color-mapping";
 
 type TrackedInlineStyle = {
   value: string;
@@ -30,18 +26,11 @@ export function createInlineStyleObserver(): InlineStyleObserver {
   const touchedElements = new Set<HTMLElement>();
   let observer: MutationObserver | null = null;
 
-  let trackedSheetStyles = new WeakMap<
-    CSSStyleDeclaration,
-    Map<string, TrackedInlineStyle>
-  >();
+  let trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
   const touchedDeclarations = new Set<CSSStyleDeclaration>();
-  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null =
-    null;
+  let originalInsertRule: typeof CSSStyleSheet.prototype.insertRule | null = null;
 
-  function trackOriginalInlineStyle(
-    element: HTMLElement,
-    property: InlineStyleProperty,
-  ): void {
+  function trackOriginalInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
     const tracked = trackedInlineStyles.get(element) ?? {};
 
     if (property === "background-image" && tracked.backgroundImage == null) {
@@ -62,10 +51,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     touchedElements.add(element);
   }
 
-  function trackOriginalCustomProperty(
-    element: HTMLElement,
-    property: string,
-  ): void {
+  function trackOriginalCustomProperty(element: HTMLElement, property: string): void {
     const tracked = trackedInlineStyles.get(element) ?? {};
     const customProperties = tracked.customProperties ?? new Map();
 
@@ -81,10 +67,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     touchedElements.add(element);
   }
 
-  function maybeOverrideInlineStyle(
-    element: HTMLElement,
-    property: InlineStyleProperty,
-  ): void {
+  function maybeOverrideInlineStyle(element: HTMLElement, property: InlineStyleProperty): void {
     const originalValue = element.style.getPropertyValue(property).trim();
     if (originalValue.length === 0 || !hasColorToken(originalValue)) {
       return;
@@ -190,8 +173,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
 
   function isStyledSheet(sheet: CSSStyleSheet): boolean {
     return (
-      sheet.ownerNode instanceof HTMLStyleElement &&
-      sheet.ownerNode.hasAttribute("data-styled")
+      sheet.ownerNode instanceof HTMLStyleElement && sheet.ownerNode.hasAttribute("data-styled")
     );
   }
 
@@ -276,10 +258,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
     }
 
     touchedDeclarations.clear();
-    trackedSheetStyles = new WeakMap<
-      CSSStyleDeclaration,
-      Map<string, TrackedInlineStyle>
-    >();
+    trackedSheetStyles = new WeakMap<CSSStyleDeclaration, Map<string, TrackedInlineStyle>>();
   }
 
   function start(): void {
@@ -300,10 +279,7 @@ export function createInlineStyleObserver(): InlineStyleObserver {
       for (const mutation of mutations) {
         if (mutation.type === "attributes") {
           const target = mutation.target;
-          if (
-            target instanceof HTMLElement &&
-            !selfMutatingElements.has(target)
-          ) {
+          if (target instanceof HTMLElement && !selfMutatingElements.has(target)) {
             processElement(target);
           }
           continue;

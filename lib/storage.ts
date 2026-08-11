@@ -5,19 +5,13 @@ export const enabledItem = storage.defineItem<boolean>("local:enabled", {
   fallback: true,
 });
 
-export const useSystemPrefItem = storage.defineItem<boolean>(
-  "local:useSystemPref",
-  {
-    fallback: false,
-  },
-);
+export const useSystemPrefItem = storage.defineItem<boolean>("local:useSystemPref", {
+  fallback: false,
+});
 
-export const rateWidgetDismissedItem = storage.defineItem<boolean>(
-  "local:rateWidgetDismissed",
-  {
-    fallback: false,
-  },
-);
+export const rateWidgetDismissedItem = storage.defineItem<boolean>("local:rateWidgetDismissed", {
+  fallback: false,
+});
 
 const BooleanSchema = z.boolean();
 

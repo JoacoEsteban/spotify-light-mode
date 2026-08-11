@@ -29,7 +29,6 @@ function logStylesheetMount(action: "mounted" | "unmounted", sourceFileName: str
   );
 }
 
-
 function rawStylesheetFileName(href: string): string | null {
   const url = new URL(href, document.location.href);
   const fileName = url.pathname.slice(url.pathname.lastIndexOf("/") + 1);

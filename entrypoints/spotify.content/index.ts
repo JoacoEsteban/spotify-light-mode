@@ -1,14 +1,6 @@
 import { defineContentScript } from "wxt/utils/define-content-script";
-import {
-  enabledItem,
-  useSystemPrefItem,
-  readEnabled,
-  readUseSystemPref,
-} from "../../lib/storage";
-import {
-  baseLightModeCss,
-  lightModeStylesheetOverrides,
-} from "../../assets/spotify-light/index";
+import { enabledItem, useSystemPrefItem, readEnabled, readUseSystemPref } from "../../lib/storage";
+import { baseLightModeCss, lightModeStylesheetOverrides } from "../../assets/spotify-light/index";
 import { createInlineStyleObserver } from "./inline-style-observer";
 import { StylesheetOverrideMount } from "./stylesheet-override-mount";
 

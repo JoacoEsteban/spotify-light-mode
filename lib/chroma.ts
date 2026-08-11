@@ -21,10 +21,7 @@ function clamp01(value: number): number {
   return Math.min(1, Math.max(0, value));
 }
 
-function mapCounterpartLightness(
-  lightness: number,
-  chromaValue: number,
-): number {
+function mapCounterpartLightness(lightness: number, chromaValue: number): number {
   if (chromaValue < ACHROMATIC_THRESHOLD) {
     if (lightness >= 1 - EXTREME_LIGHTNESS_THRESHOLD) {
       return 0;
@@ -37,21 +34,12 @@ function mapCounterpartLightness(
 
   const curved =
     COUNTERPART_LIGHTNESS_OFFSET +
-    COUNTERPART_LIGHTNESS_SCALE *
-      Math.pow(1 - lightness, COUNTERPART_LIGHTNESS_EXPONENT);
+    COUNTERPART_LIGHTNESS_SCALE * Math.pow(1 - lightness, COUNTERPART_LIGHTNESS_EXPONENT);
 
-  return Math.min(
-    COUNTERPART_LIGHTNESS_MAX,
-    Math.max(COUNTERPART_LIGHTNESS_MIN, curved),
-  );
+  return Math.min(COUNTERPART_LIGHTNESS_MAX, Math.max(COUNTERPART_LIGHTNESS_MIN, curved));
 }
 
-function fitOklchToSrgb(
-  lightness: number,
-  chromaValue: number,
-  hue: number,
-  alpha: number,
-): Color {
+function fitOklchToSrgb(lightness: number, chromaValue: number, hue: number, alpha: number): Color {
   const safeHue = Number.isFinite(hue) ? hue : 0;
   const base = chroma.oklch(lightness, 0, safeHue, alpha);
 
@@ -87,21 +75,14 @@ function fitOklchToSrgb(
 export function toCounterpart(color: Color): Color {
   const source = chroma(color);
   const [lightness, chromaValue, hue] = source.oklch();
-  const mappedLightness = clamp01(
-    mapCounterpartLightness(lightness, chromaValue),
-  );
+  const mappedLightness = clamp01(mapCounterpartLightness(lightness, chromaValue));
 
   return fitOklchToSrgb(mappedLightness, chromaValue, hue, source.alpha());
 }
 
 export function toShadowCounterpart(color: Color): Color {
   const source = chroma(color);
-  return chroma.oklch(
-    SHADOW_LIGHTNESS,
-    0,
-    0,
-    clamp01(source.alpha() * SHADOW_ALPHA_SCALE),
-  );
+  return chroma.oklch(SHADOW_LIGHTNESS, 0, 0, clamp01(source.alpha() * SHADOW_ALPHA_SCALE));
 }
 
 export function toFocusCounterpart(color: Color): Color {
@@ -130,8 +111,7 @@ export function toBorderCounterpart(color: Color): Color {
       Math.max(
         BORDER_NEUTRAL_LIGHTNESS_MIN,
         BORDER_NEUTRAL_LIGHTNESS_OFFSET +
-          BORDER_NEUTRAL_LIGHTNESS_SCALE *
-            Math.pow(1 - normalizedLightness, 0.8),
+          BORDER_NEUTRAL_LIGHTNESS_SCALE * Math.pow(1 - normalizedLightness, 0.8),
       ),
     ),
   );
