@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.88546ebb__mobile-web-player.09dfb871",
+  "snapshotVersion": "spotify-player.web-player.88546ebb__mobile-web-player.c1ec766b",
   "source": {
-    "fingerprint": "sha256:18bf9759b6256ee24238d62ff9814d91a020b9875422673133e82662c942cd26",
+    "fingerprint": "sha256:8c4b0226fc96d1828ad7951231d515d086fd06750f86ae3d3765152918edab1d",
     "targets": {
       "desktop": [
         {
@@ -501,8 +501,8 @@
         {
           "fileName": "mobile-web-player.css",
           "relativePath": "mobile/mobile-web-player.css",
-          "sha256": "ac43a668314ca03519319ffcc7e58c15f10f0a370f636293c4ba1f96e4d2a3e4",
-          "byteLength": 355364
+          "sha256": "8744163e03484ed3acd9181d51c26bef7fde2e8c1dde650a9209110efeea2ccd",
+          "byteLength": 355651
         },
         {
           "fileName": "mwp-artist-page.css",

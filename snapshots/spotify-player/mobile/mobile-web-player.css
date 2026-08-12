@@ -10520,11 +10520,12 @@ a:focus {
 .ZU98qfjiL4qqsEKt8pDT {
   text-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 40px;
   width: 100%;
   height: 100%;
-  padding: 80px 8px 32px;
+  padding: 0;
   display: flex;
   overflow-y: auto;
 }
@@ -10536,6 +10537,8 @@ a:focus {
 }
 .l_LdsUO66onALvPmr0y4 {
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
   width: 100%;
 }
@@ -10823,6 +10826,19 @@ a:focus {
 }
 .oew5gPxaY8VgaXCOedfM {
   padding: 0;
+}
+.XukYkWfuTKyi8vSO2xB4 {
+  max-width: 332px;
+}
+.XukYkWfuTKyi8vSO2xB4 > div {
+  width: 100%;
+}
+.XukYkWfuTKyi8vSO2xB4 span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+  overflow: hidden;
 }
 @keyframes _4LSWKY3jazvi1npOuCk {
   0% {
