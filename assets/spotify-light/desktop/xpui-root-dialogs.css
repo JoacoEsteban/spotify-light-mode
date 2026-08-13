@@ -485,6 +485,10 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.Ulh6JqjSv0rlTOsUg3_M:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff66; /* hardcoded-color: rgba(0, 0, 0, 0.4) → #ffffff66 */
+}
+
 .oWVIO3yRPkTg2i804Esc:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(
     -180deg,
