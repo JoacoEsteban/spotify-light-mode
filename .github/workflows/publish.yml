@@ -44,6 +44,9 @@ jobs:
       - name: Package Firefox extension
         run: bun run zip:firefox
 
+      - name: Package Edge extension
+        run: bun run zip:edge
+
       - name: Submit to Chrome Web Store and Firefox Add-ons
         env:
           CHROME_EXTENSION_ID: ${{ vars.CHROME_EXTENSION_ID }}
@@ -54,8 +57,12 @@ jobs:
           FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
           FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
           FIREFOX_CHANNEL: ${{ vars.FIREFOX_CHANNEL }}
+          EDGE_PRODUCT_ID: ${{ vars.EDGE_PRODUCT_ID }}
+          EDGE_CLIENT_ID: ${{ secrets.EDGE_CLIENT_ID }}
+          EDGE_API_KEY: ${{ secrets.EDGE_CLIENT_SECRET }}
         run: |
           bun wxt submit \
             --chrome-zip .output/*-chrome.zip \
             --firefox-zip .output/*-firefox.zip \
-            --firefox-sources-zip .output/*-sources.zip
+            --firefox-sources-zip .output/*-sources.zip \
+            --edge-zip .output/*-edge.zip
