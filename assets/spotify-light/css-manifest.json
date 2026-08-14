@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.765d5916__mobile-web-player.9d7afc22",
+  "snapshotVersion": "spotify-player.web-player.2db20e62__mobile-web-player.cfa7e401",
   "source": {
-    "fingerprint": "sha256:45342c3e389d9234d013fae9d2bf0d9f9dd9ff1cf14fa1aa39b80e7d30d16ba3",
+    "fingerprint": "sha256:673d300d585425fff3303c33a2ebdeedd85d2111a91790af3674e48ed6826ab0",
     "targets": {
       "desktop": [
         {
@@ -103,7 +103,7 @@
         {
           "fileName": "dwp-leaderboard-component.css",
           "relativePath": "desktop/dwp-leaderboard-component.css",
-          "sha256": "f8bf61ac68ddaf8c9159ccc32cfbf3f2142e56fe6f7e666b218e8ecb2cc21f83",
+          "sha256": "0d7dd2fe18f05acdfd996ca528822b7dd810c01cfda3742951c1b7b20558d496",
           "byteLength": 4578
         },
         {
@@ -507,8 +507,8 @@
         {
           "fileName": "mobile-web-player.css",
           "relativePath": "mobile/mobile-web-player.css",
-          "sha256": "07deecb6599a557541b779af7976411274452d3d0e4f8caeed736743607b0859",
-          "byteLength": 355709
+          "sha256": "9ef99d457955899bb69c1a2ac313426bddc61b9b887e6bd56fe22f0e70359edc",
+          "byteLength": 355927
         },
         {
           "fileName": "mwp-artist-page.css",
