@@ -11276,6 +11276,8 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
 .JyPf5g8aQAD8_by_AP1M {
   aspect-ratio: 16/9;
   pointer-events: none;
+  min-inline-size: var(--video-card-image-min-width, auto);
+  max-inline-size: var(--video-card-image-max-width, auto);
   border-radius: 4px;
   display: flex;
   position: relative;
@@ -24124,4 +24126,4 @@ div:has(> .profile-dropdown-menu) {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.7bdea1cf.css.map*/
+/*# sourceMappingURL=web-player.6d064115.css.map*/
