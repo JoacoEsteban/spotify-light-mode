@@ -187,6 +187,14 @@ video::-webkit-media-text-track-display {
   font-variant-numeric: tabular-nums;
   text-align: right;
   width: 50px;
+  height: 1lh;
+  position: relative;
+}
+.zcjVzhNTVw3lxrllvqAd {
+  contain: size layout;
+  white-space: nowrap;
+  position: absolute;
+  inset: 0;
 }
 .L7QsWqK06mXnTXnw5A73 {
   justify-content: space-between;
@@ -206,11 +214,10 @@ video::-webkit-media-text-track-display {
   grid-area: timer-slot-start;
 }
 .g7tGqptFmsodwHnvjZgH .BSRDApE8H6ZhaDfdh94U {
+  text-align: end;
   width: 100%;
   color: var(--text-subdued, rgba(255, 255, 255, 0.7));
   grid-area: timer-slot-end;
-  justify-content: flex-end;
-  display: flex;
 }
 .F4nAHhYSzPD3oUuvjO7h {
   flex: auto;
@@ -578,6 +585,14 @@ video::-webkit-media-text-track-display {
   font-variant-numeric: tabular-nums;
   text-align: left;
   width: 50px;
+  height: 1lh;
+  position: relative;
+}
+.RDKbPCSJsB25JKWcZMPp {
+  contain: size layout;
+  white-space: nowrap;
+  position: absolute;
+  inset: 0;
 }
 .HRtoRiInGxi6565nR5Ve {
   z-index: 1;
@@ -785,4 +800,4 @@ __workaround_element__ {
 [data-transition="cinema-library-npv"] .OoKo7A6ilpNYoTX21rkV video {
   view-transition-name: var(--npv-view-transition-name-none, cinema-npv-video);
 }
-/*# sourceMappingURL=dwp-video-player.f339b4af.css.map*/
+/*# sourceMappingURL=dwp-video-player.64657afa.css.map*/
