@@ -24,7 +24,7 @@
 }
 .hmDplE1cMKXzEN85MaT9 {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: #0009;
   border-radius: 4px;
   width: 48px;
   height: 48px;
@@ -79,7 +79,7 @@
   align-items: center;
   width: 100%;
   display: flex;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
 .xZpSGMDAtNEJQ2V2CGQl {
   border: none;
@@ -116,7 +116,7 @@
   align-items: center;
   width: 100%;
   display: flex;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
 .I6nBPL57J9p0gbSxBDKM {
   margin-top: 8px;
@@ -157,7 +157,7 @@ __workaround_element__ {
   }
 }
 .vgJqRkalrJegEDFscI31:hover {
-  border-color: transparent;
+  border-color: #0000;
 }
 .QuUEeTI5hHlx3BR0qFc4 {
   margin-top: 20px;
@@ -177,4 +177,4 @@ __workaround_element__ {
 .JlxGv_NjTt7PFiqIPyiK {
   margin-top: 16px;
 }
-/*# sourceMappingURL=xpui-routes-collection-concert-gallery.9ecfb4be.css.map*/
+/*# sourceMappingURL=xpui-routes-collection-concert-gallery.7cf7c07f.css.map*/

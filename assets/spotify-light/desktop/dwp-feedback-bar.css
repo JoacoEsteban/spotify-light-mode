@@ -23,7 +23,7 @@
 }
 
 .XjB_YWYRiLUhPxzZWkzQ:not(#spotify-light-mode-specificity-bump) {
-  background-color: #ffffffcc; /* hardcoded-color: rgba(0, 0, 0, 0.8) → #ffffffcc */
+  background-color: #ffffffcc; /* hardcoded-color: #000c → #ffffffcc */
 }
 
 .ycRIw7RtUTEdUm1grSFp a:active:not(#spotify-light-mode-specificity-bump), .ycRIw7RtUTEdUm1grSFp a:hover:not(#spotify-light-mode-specificity-bump), .ycRIw7RtUTEdUm1grSFp a:link:not(#spotify-light-mode-specificity-bump), .ycRIw7RtUTEdUm1grSFp a:visited:not(#spotify-light-mode-specificity-bump) {

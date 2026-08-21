@@ -19,5 +19,5 @@
 }
 
 .gTZuk2nO8Ysk0PHZIXBC:not(#spotify-light-mode-specificity-bump) {
-  background: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
+  background: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }

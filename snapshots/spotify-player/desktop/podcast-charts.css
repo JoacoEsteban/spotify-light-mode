@@ -41,9 +41,7 @@
 .AAcggvcBoxYu3zN5iHea {
   padding-block: 8px;
 }
-.AAcggvcBoxYu3zN5iHea:hover .sFi5vZbR9eJe2XP13LlK {
-  opacity: 1;
-}
+.AAcggvcBoxYu3zN5iHea:hover .sFi5vZbR9eJe2XP13LlK,
 .AAcggvcBoxYu3zN5iHea:focus-within .sFi5vZbR9eJe2XP13LlK {
   opacity: 1;
 }
@@ -112,4 +110,4 @@
   margin: 0 auto;
   padding: 24px 32px 64px;
 }
-/*# sourceMappingURL=podcast-charts.257bb78e.css.map*/
+/*# sourceMappingURL=podcast-charts.d405583e.css.map*/

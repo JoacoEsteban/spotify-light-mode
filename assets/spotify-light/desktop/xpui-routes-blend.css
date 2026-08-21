@@ -19,11 +19,11 @@
 }
 
 .Av8efGMw19TSieracH_o .QwwfChH2aHzisnHCu4ET:not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 2px 5px #ffffff40; /* hardcoded-color: 0 2px 5px rgba(0, 0, 0, 0.25) → 0 2px 5px #ffffff40 */
+  box-shadow: 0 2px 5px #ffffff40; /* hardcoded-color: 0 2px 5px #00000040 → 0 2px 5px #ffffff40 */
 }
 
 .Av8efGMw19TSieracH_o .PzbLJ6ybVOKTyphszV9q:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(#e6e6e600 0%, #e6e6e6 75%); /* hardcoded-color: linear-gradient(rgba(37, 37, 37, 0) 0%, #252525 75%) → linear-gradient(#e6e6e600 0%, #e6e6e6 75%) */
+  background-image: linear-gradient(#e6e6e600 0%, #e6e6e6 75%); /* hardcoded-color: linear-gradient(#25252500 0%, #252525 75%) → linear-gradient(#e6e6e600 0%, #e6e6e6 75%) */
 }
 
 .nLgX1Z1uuplyQEQbhnQj:not(#spotify-light-mode-specificity-bump) {

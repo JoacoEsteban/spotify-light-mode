@@ -16,19 +16,16 @@
 
 .wFB2j9gSSkvEmIcfmnwF:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
-  box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px rgba(0, 0, 0, 0.3) → 0 4px 12px #ffffff4d */
+  box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
 .YY18mEAhwwPaTn87a5Ue:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
-  box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px rgba(0, 0, 0, 0.3) → 0 4px 12px #ffffff4d */
+  box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
 .NrlD9AuIgoPMucxO47SS:not(#spotify-light-mode-specificity-bump) {
-  border-bottom: var(--encore-border-width-hairline) solid
-    #0000001a; /* hardcoded-color: var(--encore-border-width-hairline) solid
-    rgba(255, 255, 255, 0.1) → var(--encore-border-width-hairline) solid
-    #0000001a */
+  border-bottom: var(--encore-border-width-hairline) solid #0000001a; /* hardcoded-color: var(--encore-border-width-hairline) solid #ffffff1a → var(--encore-border-width-hairline) solid #0000001a */
 }
 
 .NnFGvBFkp0vGLdKLB4wU:not(#spotify-light-mode-specificity-bump) {

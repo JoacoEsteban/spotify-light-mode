@@ -19,12 +19,12 @@
 }
 
 .rIVErOrtD0FmPDHEZ4pe:not(#spotify-light-mode-specificity-bump) {
-  --color-from: #c3c3c3b3; /* custom-property: rgba(83, 83, 83, 0.7) → #c3c3c3b3 */
+  --color-from: #c3c3c3b3; /* custom-property: #535353b3 → #c3c3c3b3 */
   --color-to: transparent; /* forwarded-reset: transparent */
 }
 
 .rIVErOrtD0FmPDHEZ4pe:not(#spotify-light-mode-specificity-bump) {
-  --color-from: #c3c3c3b3; /* custom-property: rgba(83, 83, 83, 0.7) → #c3c3c3b3 */
+  --color-from: #c3c3c3b3; /* custom-property: #535353b3 → #c3c3c3b3 */
   --color-to: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 

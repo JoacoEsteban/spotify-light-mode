@@ -1,5 +1,5 @@
 .sTEp2Mwpg2Qm9shHd5Bg {
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: #ffffff12;
   border-radius: 8px;
   flex-direction: column;
   gap: 16px;
@@ -112,7 +112,7 @@
   display: flex;
 }
 .YafgADo7E6hSoZvsYmhd {
-  background: rgba(0, 0, 0, 0.6);
+  background: #0009;
   border-radius: 8px;
   display: inline-block;
 }
@@ -248,7 +248,7 @@
   text-align: center;
   color: #fff;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: #0000;
   border: 1px solid #fff;
   height: 32px;
 }
@@ -256,13 +256,13 @@
 .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"] {
   color: #000;
   background-color: #1ed760;
-  border-color: transparent;
+  border-color: #0000;
 }
 .XBpq0Wl3FF8q1tY1nH32.hgj2VPpnbPoKeduIfOkA:hover,
 .XBpq0Wl3FF8q1tY1nH32.hgj2VPpnbPoKeduIfOkA:focus,
 .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"]:hover,
 .XBpq0Wl3FF8q1tY1nH32[aria-checked="true"]:focus {
-  border-color: transparent;
+  border-color: #0000;
 }
 .ApAUzBkpmsJi7fT7VLMN {
   position: fixed;
@@ -413,7 +413,7 @@
 }
 .hmDplE1cMKXzEN85MaT9 {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: #0009;
   border-radius: 4px;
   width: 48px;
   height: 48px;
@@ -468,7 +468,7 @@
   align-items: center;
   width: 100%;
   display: flex;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
 .ShZIrVUVSu46pY3GbhZ8 {
   border: none;
@@ -510,7 +510,7 @@
   height: 100%;
   position: absolute;
   bottom: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
 [data-carousel-gridlist-item]:has(.DRQyRGLQgzsvDpmsv5Cp) {
   width: calc(2 * var(--carousel-shelf-element-width));
@@ -551,7 +551,7 @@
 }
 .e20XRCxocMO4iuo8APkf .mhQcZ7wLn30s2ULU29Yd {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: #000000b3;
   border-radius: 4px;
   margin: 12px 0;
   padding: 0 8px;
@@ -568,6 +568,6 @@
   height: 100%;
   position: absolute;
   bottom: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
-/*# sourceMappingURL=xpui-routes-concert.5e00798a.css.map*/
+/*# sourceMappingURL=xpui-routes-concert.855a446d.css.map*/

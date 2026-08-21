@@ -27,7 +27,7 @@
   display: inline-block;
   position: relative;
   top: 115%;
-  box-shadow: inset -10px -10px rgba(0, 0, 0, 0.07);
+  box-shadow: inset -10px -10px #00000012;
 }
 .zlBzohG5JP_rRq5ofjCf {
   top: -75%;
@@ -46,7 +46,7 @@
 }
 .EKtUjVbJbkhTfkFxHjnu:after {
   content: "";
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff3;
   width: 3px;
   height: 250px;
   position: absolute;
@@ -62,4 +62,4 @@
     transform: translateY(-2em) rotate(4deg);
   }
 }
-/*# sourceMappingURL=3934.cb2bfd98.css.map*/
+/*# sourceMappingURL=3934.9a69a678.css.map*/

@@ -15,7 +15,7 @@
 }
 
 .LKmgD5etGfGRkdZn6FTx:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .LKmgD5etGfGRkdZn6FTx:hover ._jNQ1ZCCq5b_PlKsOYmg:not(#spotify-light-mode-specificity-bump) {
@@ -35,11 +35,11 @@
 }
 
 .EXEj_CZOVCfFPZX2_VuQ:not(#spotify-light-mode-specificity-bump) {
-  background: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .aYyrEIOLoHEDCHcKZpZN:not(#spotify-light-mode-specificity-bump) {
-  background: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .v6gpDRQbTaN60R0FTiAA:not(#spotify-light-mode-specificity-bump) {
@@ -48,25 +48,26 @@
 
 .wshBvWtfpjGQ7tgjV_La:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
+  border: 1px solid #ffffff00; /* hardcoded-color: 1px solid #0000 → 1px solid #ffffff00 */
   -webkit-mask-image: linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
     #000 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
   mask-image: linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
     #000 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
 }
 
@@ -85,7 +86,7 @@
 }
 
 .IOA4FYlFzLW2RpeHcfDr:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* forwarded-reset: transparent */
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .qgkXnd5qSkRvVbW0OMJe:not(#spotify-light-mode-specificity-bump), .LvsZbofFhFUByDPxEz_C:not(#spotify-light-mode-specificity-bump) {
@@ -100,76 +101,68 @@
   border: none !important; /* forwarded-reset: none */
 }
 
-.yHYzbtEoKiEYXU10PbJb:hover .KldUtRLf5NPaqIWPfFKd:not(#spotify-light-mode-specificity-bump) {
+.yHYzbtEoKiEYXU10PbJb:hover .KldUtRLf5NPaqIWPfFKd:not(#spotify-light-mode-specificity-bump), .yHYzbtEoKiEYXU10PbJb:focus-visible .KldUtRLf5NPaqIWPfFKd:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.yHYzbtEoKiEYXU10PbJb:focus-visible .KldUtRLf5NPaqIWPfFKd:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base); /* css-var: var(--text-base) */
-}
-
-.yHYzbtEoKiEYXU10PbJb:hover [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
-  fill: var(--text-base); /* css-var: var(--text-base) */
-}
-
-.yHYzbtEoKiEYXU10PbJb:focus-visible [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
+.yHYzbtEoKiEYXU10PbJb:hover [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump), .yHYzbtEoKiEYXU10PbJb:focus-visible [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
   fill: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .zXzrx1dtc7vgDRVqgkg_.f8yhxTIRVol6Cmf0WwrA:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(transparent 0 8px, #ffffff 24px 100%); /* hardcoded-color: linear-gradient(transparent 0 8px, #000 24px 100%) → linear-gradient(transparent 0 8px, #ffffff 24px 100%) */
-  mask-image: linear-gradient(transparent 0 8px, #ffffff 24px 100%); /* hardcoded-color: linear-gradient(transparent 0 8px, #000 24px 100%) → linear-gradient(transparent 0 8px, #ffffff 24px 100%) */
+  -webkit-mask-image: linear-gradient(#ffffff00 0 8px, #ffffff 24px 100%); /* hardcoded-color: linear-gradient(#0000 0 8px, #000 24px 100%) → linear-gradient(#ffffff00 0 8px, #ffffff 24px 100%) */
+  mask-image: linear-gradient(#ffffff00 0 8px, #ffffff 24px 100%); /* hardcoded-color: linear-gradient(#0000 0 8px, #000 24px 100%) → linear-gradient(#ffffff00 0 8px, #ffffff 24px 100%) */
 }
 
 .zXzrx1dtc7vgDRVqgkg_._id1jvSFHStOgsr95auK:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
     #000 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
   mask-image: linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
     #000 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
     #ffffff 0 calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
 }
 
 .zXzrx1dtc7vgDRVqgkg_.f8yhxTIRVol6Cmf0WwrA._id1jvSFHStOgsr95auK:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: linear-gradient(
-    transparent 0 8px,
+    #ffffff00 0 8px,
     #ffffff 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
-    transparent 0 8px,
+    #0000 0 8px,
     #000 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
-    transparent 0 8px,
+    #ffffff00 0 8px,
     #ffffff 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
   mask-image: linear-gradient(
-    transparent 0 8px,
+    #ffffff00 0 8px,
     #ffffff 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ); /* hardcoded-color: linear-gradient(
-    transparent 0 8px,
+    #0000 0 8px,
     #000 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #0000 calc(100% - 8px) 100%
   ) → linear-gradient(
-    transparent 0 8px,
+    #ffffff00 0 8px,
     #ffffff 24px calc(100% - 24px),
-    transparent calc(100% - 8px) 100%
+    #ffffff00 calc(100% - 8px) 100%
   ) */
 }
 
@@ -177,24 +170,16 @@
   background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
 }
 
-.wsaFfGLIFzV78zgFvij8:hover .BbvHQDIwKYKlRLXJ8QDQ:not(#spotify-light-mode-specificity-bump) {
+.wsaFfGLIFzV78zgFvij8:hover .BbvHQDIwKYKlRLXJ8QDQ:not(#spotify-light-mode-specificity-bump), .wsaFfGLIFzV78zgFvij8:focus-visible .BbvHQDIwKYKlRLXJ8QDQ:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.wsaFfGLIFzV78zgFvij8:focus-visible .BbvHQDIwKYKlRLXJ8QDQ:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base); /* css-var: var(--text-base) */
-}
-
-.wsaFfGLIFzV78zgFvij8:hover [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
-  fill: var(--text-base); /* css-var: var(--text-base) */
-}
-
-.wsaFfGLIFzV78zgFvij8:focus-visible [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
+.wsaFfGLIFzV78zgFvij8:hover [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump), .wsaFfGLIFzV78zgFvij8:focus-visible [data-encore-id="icon"]:not(#spotify-light-mode-specificity-bump) {
   fill: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .yBFqDK0ypp1834w1lAwq:not(#spotify-light-mode-specificity-bump) {
-  background-color: #ffffff80; /* hardcoded-color: rgba(0, 0, 0, 0.5) → #ffffff80 */
+  background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
 }
 
 .XgaTXcTAYkoR7ldX_C_X:not(#spotify-light-mode-specificity-bump) {
@@ -202,7 +187,7 @@
 }
 
 .XgaTXcTAYkoR7ldX_C_X:has(textarea:focus-within):not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px rgba(0, 0, 0, 0.9) → 0 4px 60px #ffffffe6 */
+  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px #000000e6 → 0 4px 60px #ffffffe6 */
 }
 
 .GRCxZ5HzWcByHcLpDL6k:not(#spotify-light-mode-specificity-bump) {
@@ -214,7 +199,7 @@
 }
 
 .makONBLepF32IPR_NBnu:has(textarea:focus-within):not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px rgba(0, 0, 0, 0.9) → 0 4px 60px #ffffffe6 */
+  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px #000000e6 → 0 4px 60px #ffffffe6 */
 }
 
 .bnKoiV5tfbwJx4jsy3Hk:not(#spotify-light-mode-specificity-bump) {
@@ -222,11 +207,11 @@
 }
 
 .bnKoiV5tfbwJx4jsy3Hk:has(textarea:focus-within):not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px rgba(0, 0, 0, 0.9) → 0 4px 60px #ffffffe6 */
+  box-shadow: 0 4px 60px #ffffffe6; /* hardcoded-color: 0 4px 60px #000000e6 → 0 4px 60px #ffffffe6 */
 }
 
 .pK6RNEyPZPAEKa3ZrJEv:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .BEvCDkU2l5vcp7rE3qVg:not(#spotify-light-mode-specificity-bump) {
@@ -234,8 +219,8 @@
 }
 
 .gJZfqNvzxOyr8ivj6rBl:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(#ffffff, transparent); /* hardcoded-color: linear-gradient(#000, transparent) → linear-gradient(#ffffff, transparent) */
-  mask-image: linear-gradient(#ffffff, transparent); /* hardcoded-color: linear-gradient(#000, transparent) → linear-gradient(#ffffff, transparent) */
+  -webkit-mask-image: linear-gradient(#ffffff, #ffffff00); /* hardcoded-color: linear-gradient(#000, #0000) → linear-gradient(#ffffff, #ffffff00) */
+  mask-image: linear-gradient(#ffffff, #ffffff00); /* hardcoded-color: linear-gradient(#000, #0000) → linear-gradient(#ffffff, #ffffff00) */
 }
 
 .DwyYPm51TNVLJz8Iz5ql:not(#spotify-light-mode-specificity-bump) {
@@ -244,12 +229,12 @@
 
 .I1eDJkxwt6LnLSsD_BWJ:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-warning) !important; /* css-var: var(--text-warning) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
+  background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .CWlep20z_ciourQxkrb_:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-negative) !important; /* css-var: var(--text-negative) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
+  background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .OluyuMGFMePYHFjMQoDB:not(:hover):not(:focus-within) a:not(#spotify-light-mode-specificity-bump) {
@@ -258,79 +243,64 @@
 
 .mD4bd4kLxCOqiAjFQKzw .RzxBQ41l6zUGLSSa891u:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
-  background: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
+  background: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
 
 .DhVajTkTFjYmdbBPdoyd:not(#spotify-light-mode-specificity-bump):after {
-  background-image: linear-gradient(
-      90deg,
-      transparent,
-      #0000001a,
-      transparent
-    ); /* hardcoded-color: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    ) → linear-gradient(
-      90deg,
-      transparent,
-      #0000001a,
-      transparent
-    ) */
+  background-image: linear-gradient(90deg, #ffffff00, #0000001a, #ffffff00); /* hardcoded-color: linear-gradient(90deg, #0000, #ffffff1a, #0000) → linear-gradient(90deg, #ffffff00, #0000001a, #ffffff00) */
 }
 
 .SJqgUqTfRLRKqObpw6jt:not(#spotify-light-mode-specificity-bump) {
-  color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
 [dir="ltr"]
   .ppxGTREISEGqLKCYTtbX.F_0lIeFDAIblCh4XMaol.uGdjmsI6z7Yko55fo9MJ
   .y7GnkB_J8quZfddaYA0U:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #ffffff calc(75% - 40px), transparent 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #000 calc(75% - 40px), transparent 80%) → linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #ffffff calc(75% - 40px), transparent 80%) */
-  mask-image: linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #ffffff calc(75% - 40px), transparent 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #000 calc(75% - 40px), transparent 80%) → linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(90deg, #ffffff calc(75% - 40px), transparent 80%) */
+  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(90deg, #ffffff calc(75% - 40px), #ffffff00 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 50% 100%),
+    linear-gradient(90deg, #000 calc(75% - 40px), #0000 80%) → linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(90deg, #ffffff calc(75% - 40px), #ffffff00 80%) */
+  mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(90deg, #ffffff calc(75% - 40px), #ffffff00 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 50% 100%),
+    linear-gradient(90deg, #000 calc(75% - 40px), #0000 80%) → linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(90deg, #ffffff calc(75% - 40px), #ffffff00 80%) */
 }
 
 [dir="rtl"]
   .ppxGTREISEGqLKCYTtbX.F_0lIeFDAIblCh4XMaol.uGdjmsI6z7Yko55fo9MJ
   .y7GnkB_J8quZfddaYA0U:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #ffffff calc(75% - 40px), transparent 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #000 calc(75% - 40px), transparent 80%) → linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #ffffff calc(75% - 40px), transparent 80%) */
-  mask-image: linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #ffffff calc(75% - 40px), transparent 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #000 calc(75% - 40px), transparent 80%) → linear-gradient(#ffffff 0% 50%, transparent 50% 100%),
-    linear-gradient(270deg, #ffffff calc(75% - 40px), transparent 80%) */
+  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(270deg, #ffffff calc(75% - 40px), #ffffff00 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 50% 100%),
+    linear-gradient(270deg, #000 calc(75% - 40px), #0000 80%) → linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(270deg, #ffffff calc(75% - 40px), #ffffff00 80%) */
+  mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(270deg, #ffffff calc(75% - 40px), #ffffff00 80%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 50% 100%),
+    linear-gradient(270deg, #000 calc(75% - 40px), #0000 80%) → linear-gradient(#ffffff 0% 50%, #ffffff00 50% 100%),
+    linear-gradient(270deg, #ffffff calc(75% - 40px), #ffffff00 80%) */
 }
 
 [dir="ltr"] .ppxGTREISEGqLKCYTtbX.F_0lIeFDAIblCh4XMaol .SaVyVGaCSz5JoIO528UA:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #ffffff 12px); /* hardcoded-color: linear-gradient(90deg, transparent 0, #000 12px) → linear-gradient(90deg, transparent 0, #ffffff 12px) */
-  mask-image: linear-gradient(90deg, transparent 0, #ffffff 12px); /* hardcoded-color: linear-gradient(90deg, transparent 0, #000 12px) → linear-gradient(90deg, transparent 0, #ffffff 12px) */
+  -webkit-mask-image: linear-gradient(90deg, #ffffff00 0, #ffffff 12px); /* hardcoded-color: linear-gradient(90deg, #0000 0, #000 12px) → linear-gradient(90deg, #ffffff00 0, #ffffff 12px) */
+  mask-image: linear-gradient(90deg, #ffffff00 0, #ffffff 12px); /* hardcoded-color: linear-gradient(90deg, #0000 0, #000 12px) → linear-gradient(90deg, #ffffff00 0, #ffffff 12px) */
 }
 
 [dir="rtl"] .ppxGTREISEGqLKCYTtbX.F_0lIeFDAIblCh4XMaol .SaVyVGaCSz5JoIO528UA:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(270deg, transparent 0, #ffffff 12px); /* hardcoded-color: linear-gradient(270deg, transparent 0, #000 12px) → linear-gradient(270deg, transparent 0, #ffffff 12px) */
-  mask-image: linear-gradient(270deg, transparent 0, #ffffff 12px); /* hardcoded-color: linear-gradient(270deg, transparent 0, #000 12px) → linear-gradient(270deg, transparent 0, #ffffff 12px) */
+  -webkit-mask-image: linear-gradient(270deg, #ffffff00 0, #ffffff 12px); /* hardcoded-color: linear-gradient(270deg, #0000 0, #000 12px) → linear-gradient(270deg, #ffffff00 0, #ffffff 12px) */
+  mask-image: linear-gradient(270deg, #ffffff00 0, #ffffff 12px); /* hardcoded-color: linear-gradient(270deg, #0000 0, #000 12px) → linear-gradient(270deg, #ffffff00 0, #ffffff 12px) */
 }
 
 .S2w6jMzR7bmzL03E7WSf:not(.DDN0r02HeyiE7HbUzVMw):not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .ue5CTU9VuFvYoECme2Rd:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-warning) !important; /* css-var: var(--text-warning) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
+  background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .Xq5Ag8ekzHetmwFykhIg:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-negative) !important; /* css-var: var(--text-negative) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
+  background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }

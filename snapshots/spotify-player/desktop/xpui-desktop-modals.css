@@ -48,7 +48,7 @@
 .PUZRAb9P9jkWepu2wZNs {
   cursor: pointer;
   top: 0;
-  background-color: transparent;
+  background-color: #0000;
   border: none;
   margin: 0;
   padding: 16px;
@@ -141,10 +141,8 @@
   text-decoration: none;
 }
 .QCRj0Ft7If47dDhAswev:hover,
+.QCRj0Ft7If47dDhAswev:focus-visible,
 .QCRj0Ft7If47dDhAswev[data-context-menu-open="true"] {
   text-decoration: underline;
 }
-.QCRj0Ft7If47dDhAswev:focus-visible {
-  text-decoration: underline;
-}
-/*# sourceMappingURL=xpui-desktop-modals.cd1779d5.css.map*/
+/*# sourceMappingURL=xpui-desktop-modals.25e39c48.css.map*/

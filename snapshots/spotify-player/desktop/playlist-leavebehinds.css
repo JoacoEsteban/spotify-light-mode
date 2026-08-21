@@ -9,7 +9,7 @@
 .FH2JaNk1Hnsu7oYUFMQ0:hover > div:first-child,
 .FH2JaNk1Hnsu7oYUFMQ0:focus > div:first-child,
 .FH2JaNk1Hnsu7oYUFMQ0[data-context-menu-open="true"] > div:first-child {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
 }
 .FH2JaNk1Hnsu7oYUFMQ0:only-child {
   max-width: 384px;
@@ -27,4 +27,4 @@
   justify-content: space-between;
   display: flex;
 }
-/*# sourceMappingURL=playlist-leavebehinds.245cd358.css.map*/
+/*# sourceMappingURL=playlist-leavebehinds.564c08ba.css.map*/

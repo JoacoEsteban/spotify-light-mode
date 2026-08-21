@@ -15,7 +15,7 @@
 }
 
 .vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
-  border-color: transparent; /* forwarded-reset: transparent */
+  border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .lG4nyXnX96VX1CduiT90:not(#spotify-light-mode-specificity-bump) {
@@ -28,7 +28,7 @@
 }
 
 .KlTjd3l0WuTkVAz2XIrS:not(#spotify-light-mode-specificity-bump) {
-  color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   border: none; /* forwarded-reset: none */
 }
 
@@ -45,7 +45,7 @@
 }
 
 .jANA4b30quV8DYikKHuF:not(#spotify-light-mode-specificity-bump) {
-  color: #000000b3; /* hardcoded-color: rgba(255, 255, 255, 0.7) → #000000b3 */
+  color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
 .PdXj_8uTq3g_ljxRvXw7:not(#spotify-light-mode-specificity-bump) {
@@ -53,12 +53,12 @@
 }
 
 .PdXj_8uTq3g_ljxRvXw7:hover .nCVlfpt3bUdw52WCAV61:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000002b; /* hardcoded-color: rgba(255, 255, 255, 0.17) → #0000002b */
+  background-color: #0000002b; /* hardcoded-color: #ffffff2b → #0000002b */
 }
 
 .nCVlfpt3bUdw52WCAV61:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .nHJ_Abf72WxtqNTpR0kW:not(#spotify-light-mode-specificity-bump) {
@@ -71,7 +71,7 @@
 }
 
 .hmDplE1cMKXzEN85MaT9:not(#spotify-light-mode-specificity-bump) {
-  background: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
+  background: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
 
 .LuIT_0usVqY5OP2WlYsk:not(#spotify-light-mode-specificity-bump) {
@@ -84,5 +84,5 @@
 
 .M1am6wN3imcHVy_6Vaxn:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
-  box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px rgba(0, 0, 0, 0.2) → 0 2px 4px #ffffff33 */
+  box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px #0003 → 0 2px 4px #ffffff33 */
 }

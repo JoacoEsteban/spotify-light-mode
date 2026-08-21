@@ -15,5 +15,5 @@
 }
 
 .vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
-  border-color: transparent; /* forwarded-reset: transparent */
+  border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }

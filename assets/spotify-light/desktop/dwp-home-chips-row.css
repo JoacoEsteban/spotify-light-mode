@@ -11,8 +11,8 @@
 
 
 .feCw4n0mCGLuvA5wpqOR .RnOSBfAZBALn6I8UbVnp:not(#spotify-light-mode-specificity-bump) {
-  --carousel-start-chevron-gradient: #f6f6f6b3; /* custom-property: rgba(18, 18, 18, 0.7) → #f6f6f6b3 */
-  --carousel-end-chevron-gradient: #f6f6f6b3; /* custom-property: rgba(18, 18, 18, 0.7) → #f6f6f6b3 */
+  --carousel-start-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
+  --carousel-end-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
 }
 
 .feCw4n0mCGLuvA5wpqOR
@@ -30,7 +30,7 @@
 }
 
 .yKCAvGVbd6TgspV2YaTf.p21x4R9OyvxWhr9old3h:not(#spotify-light-mode-specificity-bump):after {
-  background-color: #ffffff99; /* hardcoded-color: rgba(0, 0, 0, 0.6) → #ffffff99 */
+  background-color: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
 
 .YnAC1ukzhm57GCm4GKtT:not(#spotify-light-mode-specificity-bump) {
@@ -119,8 +119,8 @@
 }
 
 .RiqrU6263_YuXOOffr8b:not(#spotify-light-mode-specificity-bump) {
-  --chevrons-button-color: #ffffff2b; /* custom-property: rgba(0, 0, 0, 0.17) → #ffffff2b */
-  --chevrons-button-hover-color: #ffffff2b; /* custom-property: rgba(0, 0, 0, 0.17) → #ffffff2b */
+  --chevrons-button-color: #ffffff2b; /* custom-property: #0000002b → #ffffff2b */
+  --chevrons-button-hover-color: #ffffff2b; /* custom-property: #0000002b → #ffffff2b */
 }
 
 .uyGUhCYTaL8QBxcjWCFS:not(#spotify-light-mode-specificity-bump) {
@@ -134,8 +134,8 @@
     to right,
     transparent,
     transparent 22px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 48px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 100%
+    var(--background-tinted-base, #00000014) 48px,
+    var(--background-tinted-base, #00000014) 100%
   ) → linear-gradient(
     to right,
     transparent,
@@ -145,7 +145,7 @@
   ) */
 }
 
-.uyGUhCYTaL8QBxcjWCFS:hover:not(#spotify-light-mode-specificity-bump), .uyGUhCYTaL8QBxcjWCFS:focus:not(#spotify-light-mode-specificity-bump), .uyGUhCYTaL8QBxcjWCFS:active:not(#spotify-light-mode-specificity-bump) {
+.uyGUhCYTaL8QBxcjWCFS:hover:not(#spotify-light-mode-specificity-bump), .uyGUhCYTaL8QBxcjWCFS:focus:not(#spotify-light-mode-specificity-bump), .uyGUhCYTaL8QBxcjWCFS:focus-visible:not(#spotify-light-mode-specificity-bump), .uyGUhCYTaL8QBxcjWCFS:active:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(
     to right,
     transparent 0,
@@ -156,8 +156,8 @@
     to right,
     transparent 0,
     transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
+    var(--background-tinted-highlight, #0000001f) 48px,
+    var(--background-tinted-highlight, #0000001f) 100%
   ) → linear-gradient(
     to right,
     transparent 0,
@@ -165,30 +165,7 @@
     var(--background-tinted-highlight, #ffffff1f) 48px,
     var(--background-tinted-highlight, #ffffff1f) 100%
   ) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
-}
-
-.uyGUhCYTaL8QBxcjWCFS:focus-visible:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(
-    to right,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ); /* hardcoded-color: linear-gradient(
-    to right,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  ) → linear-gradient(
-    to right,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ) */
-  background-color: transparent !important; /* forwarded-reset: transparent */
+  background-color: #ffffff00 !important; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .PVhKUi35u46oRUJRd3Kk:not(#spotify-light-mode-specificity-bump):after {
@@ -337,7 +314,7 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
 }
 
 .rGL7d4TLcHyEhGxvWUoA:not(#spotify-light-mode-specificity-bump) {
-  background: #00000033; /* hardcoded-color: rgba(255, 255, 255, 0.2) → #00000033 */
+  background: #00000033; /* hardcoded-color: #fff3 → #00000033 */
 }
 
 .Y_S5MTnXUUzJabat0JJr:not(#spotify-light-mode-specificity-bump) {
@@ -355,8 +332,8 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
     to left,
     transparent,
     transparent 22px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 48px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 100%
+    var(--background-tinted-base, #00000014) 48px,
+    var(--background-tinted-base, #00000014) 100%
   ) → linear-gradient(
     to left,
     transparent,
@@ -366,7 +343,7 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
   ) */
 }
 
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:hover:not(#spotify-light-mode-specificity-bump) {
+[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:hover:not(#spotify-light-mode-specificity-bump), [dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus:not(#spotify-light-mode-specificity-bump), [dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus-visible:not(#spotify-light-mode-specificity-bump), [dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:active:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(
     to left,
     transparent 0,
@@ -377,74 +354,8 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7):not(#spoti
     to left,
     transparent 0,
     transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  ) → linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ) */
-}
-
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ); /* hardcoded-color: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  ) → linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ) */
-}
-
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus-visible:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ); /* hardcoded-color: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  ) → linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ) */
-}
-
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:active:not(#spotify-light-mode-specificity-bump) {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, #ffffff1f) 48px,
-    var(--background-tinted-highlight, #ffffff1f) 100%
-  ); /* hardcoded-color: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
+    var(--background-tinted-highlight, #0000001f) 48px,
+    var(--background-tinted-highlight, #0000001f) 100%
   ) → linear-gradient(
     to left,
     transparent 0,

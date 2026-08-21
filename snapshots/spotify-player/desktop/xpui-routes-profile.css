@@ -37,16 +37,14 @@
   position: absolute;
   inset: 0;
 }
-.OoLU5N1eto82G2kJrMug:hover .HVesjuVq0lgoMcuS_9rJ {
-  opacity: 1;
-}
+.OoLU5N1eto82G2kJrMug:hover .HVesjuVq0lgoMcuS_9rJ,
 .HVesjuVq0lgoMcuS_9rJ:focus-within {
   opacity: 1;
 }
 ._BZdu8EQu8mVMt02IF9U {
   color: #fff;
   text-align: center;
-  background-color: transparent;
+  background-color: #0000;
   border: 0;
   padding: 0;
 }
@@ -54,7 +52,7 @@
   text-decoration: underline;
 }
 .EPaM5xfBVGqBixFj3NQo {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000000b3;
   border-radius: 50%;
 }
 .AjFml7qjpAhX7ZDGCGzw {
@@ -63,16 +61,16 @@
 .kYhiVqst8bTbw93d_X3J {
   --user-edit-surface: #282828;
   --user-edit-text-color: #fff;
-  --user-edit-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  --user-edit-shadow: 0 4px 4px #0000004d;
   --user-edit-label-color: #b3b3b3;
-  --user-edit-input-bg: rgba(255, 255, 255, 0.1);
+  --user-edit-input-bg: #ffffff1a;
   --user-edit-input-text: #fff;
   --user-edit-input-focus-border: #535353;
   --user-edit-input-focus-bg: #333;
   --user-edit-input-disabled: var(--text-subdued);
-  --user-edit-close-color: rgba(255, 255, 255, 0.7);
-  --user-edit-close-hover: rgba(255, 255, 255, 0.1);
-  --user-edit-close-active: rgba(255, 255, 255, 0.2);
+  --user-edit-close-color: #ffffffb3;
+  --user-edit-close-hover: #ffffff1a;
+  --user-edit-close-active: #fff3;
   --user-edit-disclaimer-color: #fff;
   --user-edit-header-bg: transparent;
   --user-edit-header-blur: none;
@@ -91,25 +89,25 @@
 .qvAjQd_kNTtXrwUbltHg {
   --user-edit-surface: var(--background-base, #fff);
   --user-edit-text-color: var(--text-base, #121212);
-  --user-edit-shadow: 0 20px 48px rgba(0, 0, 0, 0.16);
-  --user-edit-label-color: rgba(18, 18, 18, 0.55);
-  --user-edit-input-bg: rgba(18, 18, 18, 0.06);
+  --user-edit-shadow: 0 20px 48px #00000029;
+  --user-edit-label-color: #1212128c;
+  --user-edit-input-bg: #1212120f;
   --user-edit-input-text: #121212;
-  --user-edit-input-focus-border: rgba(18, 18, 18, 0.24);
-  --user-edit-input-focus-bg: rgba(18, 18, 18, 0.1);
-  --user-edit-input-disabled: rgba(18, 18, 18, 0.45);
-  --user-edit-close-color: rgba(18, 18, 18, 0.55);
-  --user-edit-close-hover: rgba(18, 18, 18, 0.08);
-  --user-edit-close-active: rgba(18, 18, 18, 0.12);
-  --user-edit-disclaimer-color: rgba(18, 18, 18, 0.72);
-  --user-edit-header-bg: rgba(255, 255, 255, 0.68);
+  --user-edit-input-focus-border: #1212123d;
+  --user-edit-input-focus-bg: #1212121a;
+  --user-edit-input-disabled: #12121273;
+  --user-edit-close-color: #1212128c;
+  --user-edit-close-hover: #12121214;
+  --user-edit-close-active: #1212121f;
+  --user-edit-disclaimer-color: #121212b8;
+  --user-edit-header-bg: #ffffffad;
   --user-edit-header-blur: blur(16px);
-  --user-edit-header-border: rgba(18, 18, 18, 0.08);
+  --user-edit-header-border: #12121214;
 }
 .bBw1BQLyFNCIQZZPZiOB {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  background-color: rgba(18, 18, 18, 0.16);
+  background-color: #12121229;
 }
 .CVEaff_cNd15D1tpxpcW {
   grid-gap: 16px;
@@ -136,7 +134,7 @@
 .wi8R_MBOs3av_CKIprZ3 {
   color: var(--user-edit-close-color);
   margin-top: -8px;
-  background-color: transparent;
+  background-color: #0000;
   border: 0;
   border-radius: 32px;
   grid-area: close-button;
@@ -164,7 +162,7 @@
   position: relative;
 }
 .n3qShBGwxKYbtmeBPo7W {
-  background: rgba(0, 0, 0, 0.5);
+  background: #00000080;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -179,7 +177,7 @@
   fill: #fff;
 }
 .fMzEUxACYZjZSRzfkOZ1 {
-  border: 1px solid transparent;
+  border: 1px solid #0000;
 }
 .fMzEUxACYZjZSRzfkOZ1:focus {
   border: 1px solid var(--user-edit-input-focus-border);
@@ -224,7 +222,7 @@
 .NJ292AiwOIeM0SXISEgy {
   background: var(--user-edit-input-bg);
   color: var(--user-edit-input-text);
-  border: 1px solid transparent;
+  border: 1px solid #0000;
   border-radius: 4px;
   width: 100%;
   height: 40px;
@@ -295,11 +293,11 @@
 .TA9CeGsJ_G9M7He0TKpg:focus {
   opacity: 1;
 }
-.TA9CeGsJ_G9M7He0TKpg:focus:not(:is(:focus-visible, :hover)) {
+.TA9CeGsJ_G9M7He0TKpg:focus:not(:focus-visible, :hover) {
   opacity: 0;
 }
 .zNUCMdlRvoLHHn63m1kn {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000000b3;
 }
 .c6NV2Hzb1kqVgOj9qXjw {
   border-radius: 50%;
@@ -395,4 +393,4 @@ __workaround_element__ {
   width: 100%;
   padding-bottom: var(--encore-spacing-looser-2);
 }
-/*# sourceMappingURL=xpui-routes-profile.6f008b03.css.map*/
+/*# sourceMappingURL=xpui-routes-profile.9e879371.css.map*/

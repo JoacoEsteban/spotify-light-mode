@@ -23,7 +23,7 @@
   }
 }
 .vgJqRkalrJegEDFscI31:hover {
-  border-color: transparent;
+  border-color: #0000;
 }
 .QuUEeTI5hHlx3BR0qFc4 {
   margin-top: 20px;
@@ -71,7 +71,7 @@
   display: flex;
 }
 .VfWBvwqPUmtMZOCbBp6d {
-  color: transparent;
+  color: #0000;
 }
 .GK9KIkN1f7Fl5djyvN6u {
   transition: opacity 0.5s ease-in-out;
@@ -101,16 +101,12 @@
 .WNJCHYJTMjdKYLDjCL8m .AdJc5h7NoX2mEyIuAj9K {
   opacity: 1;
 }
+.WNJCHYJTMjdKYLDjCL8m:focus-within,
 .WNJCHYJTMjdKYLDjCL8m:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
 }
-.WNJCHYJTMjdKYLDjCL8m:focus-within {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.WNJCHYJTMjdKYLDjCL8m:focus-within .UbBV5RHdhb18_Epg7IDw > *,
 .WNJCHYJTMjdKYLDjCL8m:hover .UbBV5RHdhb18_Epg7IDw > * {
-  opacity: 1;
-}
-.WNJCHYJTMjdKYLDjCL8m:focus-within .UbBV5RHdhb18_Epg7IDw > * {
   opacity: 1;
 }
 .UbBV5RHdhb18_Epg7IDw {
@@ -259,16 +255,12 @@ __workaround_element__ {
 .KGvvoifNBAHXlHkOHAA0 .Z3B7rbZ87RGjX31q2Rjr {
   opacity: 1;
 }
+.KGvvoifNBAHXlHkOHAA0:focus-within,
 .KGvvoifNBAHXlHkOHAA0:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
 }
-.KGvvoifNBAHXlHkOHAA0:focus-within {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.KGvvoifNBAHXlHkOHAA0:focus-within .eo_2JCJBwN9Mq792dNVA > *,
 .KGvvoifNBAHXlHkOHAA0:hover .eo_2JCJBwN9Mq792dNVA > * {
-  opacity: 1;
-}
-.KGvvoifNBAHXlHkOHAA0:focus-within .eo_2JCJBwN9Mq792dNVA > * {
   opacity: 1;
 }
 .eo_2JCJBwN9Mq792dNVA {
@@ -317,7 +309,7 @@ __workaround_element__ {
 }
 .aootSWAMFtKUssqBUpkH .dobaO0XKaZaouIpWOxNY > img {
   width: auto;
-  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 28px #000c;
 }
 .aootSWAMFtKUssqBUpkH .dobaO0XKaZaouIpWOxNY.P7Q0n_SRHhdOeJ3uHP1W {
   border-radius: 4px;
@@ -387,11 +379,11 @@ __workaround_element__ {
   border-radius: 8px;
 }
 .lh1DGz1dal79HbzcUZNp {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff1a;
   margin: 0;
 }
 .aqVPjLLwDC6N5gtOUGtT:hover > .lh1DGz1dal79HbzcUZNp,
 .aqVPjLLwDC6N5gtOUGtT:hover + .aqVPjLLwDC6N5gtOUGtT > .lh1DGz1dal79HbzcUZNp {
   visibility: hidden;
 }
-/*# sourceMappingURL=dwp-whats-new-feed.7d84f42e.css.map*/
+/*# sourceMappingURL=dwp-whats-new-feed.afdb5e10.css.map*/

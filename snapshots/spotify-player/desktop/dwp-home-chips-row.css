@@ -91,8 +91,8 @@
   --shelf-fixed-max-width: var(--shelf-fixed-width);
   --shelf-fixed-min-height: var(--shelf-fixed-height);
   --shelf-fixed-max-height: var(--shelf-fixed-height);
-  --carousel-start-chevron-gradient: rgba(18, 18, 18, 0.7);
-  --carousel-end-chevron-gradient: rgba(18, 18, 18, 0.7);
+  --carousel-start-chevron-gradient: #121212b3;
+  --carousel-end-chevron-gradient: #121212b3;
   padding-inline: 40px;
 }
 @container homepage (width<2304px) {
@@ -210,12 +210,12 @@
     --home-chips-start-mask: black;
   }
   to {
-    --home-chips-start-mask: transparent;
+    --home-chips-start-mask: #0000;
   }
 }
 @keyframes _mk_8d403bB1PDMArmcg {
   0% {
-    --home-chips-end-mask: transparent;
+    --home-chips-end-mask: #0000;
   }
   to {
     --home-chips-end-mask: black;
@@ -250,7 +250,7 @@
 }
 .yKCAvGVbd6TgspV2YaTf.p21x4R9OyvxWhr9old3h:after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #0009;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -323,8 +323,8 @@
   display: flex;
 }
 .RiqrU6263_YuXOOffr8b {
-  --chevrons-button-color: rgba(0, 0, 0, 0.17);
-  --chevrons-button-hover-color: rgba(0, 0, 0, 0.17);
+  --chevrons-button-color: #0000002b;
+  --chevrons-button-hover-color: #0000002b;
   align-items: center;
   margin-block: 2px;
 }
@@ -349,31 +349,22 @@
     to right,
     transparent,
     transparent 22px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 48px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 100%
+    var(--background-tinted-base, #00000014) 48px,
+    var(--background-tinted-base, #00000014) 100%
   );
 }
 .uyGUhCYTaL8QBxcjWCFS:hover,
 .uyGUhCYTaL8QBxcjWCFS:focus,
+.uyGUhCYTaL8QBxcjWCFS:focus-visible,
 .uyGUhCYTaL8QBxcjWCFS:active {
   background-image: linear-gradient(
     to right,
     transparent 0,
     transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
+    var(--background-tinted-highlight, #0000001f) 48px,
+    var(--background-tinted-highlight, #0000001f) 100%
   );
-  background-color: transparent !important;
-}
-.uyGUhCYTaL8QBxcjWCFS:focus-visible {
-  background-image: linear-gradient(
-    to right,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  );
-  background-color: transparent !important;
+  background-color: #0000 !important;
 }
 .PVhKUi35u46oRUJRd3Kk {
   position: relative;
@@ -480,7 +471,7 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7) {
   position: relative;
 }
 .rGL7d4TLcHyEhGxvWUoA {
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff3;
   align-self: center;
   width: 1px;
   height: 20px;
@@ -499,44 +490,20 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7) {
     to left,
     transparent,
     transparent 22px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 48px,
-    var(--background-tinted-base, rgba(0, 0, 0, 0.08)) 100%
+    var(--background-tinted-base, #00000014) 48px,
+    var(--background-tinted-base, #00000014) 100%
   );
 }
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:hover {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  );
-}
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  );
-}
-[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus-visible {
-  background-image: linear-gradient(
-    to left,
-    transparent 0,
-    transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
-  );
-}
+[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:hover,
+[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus,
+[dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:focus-visible,
 [dir="rtl"] .uyGUhCYTaL8QBxcjWCFS:active {
   background-image: linear-gradient(
     to left,
     transparent 0,
     transparent 22px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 48px,
-    var(--background-tinted-highlight, rgba(0, 0, 0, 0.12)) 100%
+    var(--background-tinted-highlight, #0000001f) 48px,
+    var(--background-tinted-highlight, #0000001f) 100%
   );
 }
-/*# sourceMappingURL=dwp-home-chips-row.43f935be.css.map*/
+/*# sourceMappingURL=dwp-home-chips-row.965801ac.css.map*/

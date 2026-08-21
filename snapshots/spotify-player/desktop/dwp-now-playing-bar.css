@@ -59,7 +59,7 @@
   display: flex;
 }
 .FHqq73bn2hJVuPS9Tyrm {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px #0000004d;
 }
 .QHTQSGdaIckHkk8wWSa6 {
   align-items: center;
@@ -93,24 +93,20 @@
   margin: 0 10px;
 }
 .SaUODI6b8RnhwQ3I5abK {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: transparent;
+  color: #ffffffb3;
+  background-color: #0000;
   border: none;
   width: 32px;
   height: 32px;
   position: relative;
 }
-.SaUODI6b8RnhwQ3I5abK:hover {
-  color: #fff;
-}
+.SaUODI6b8RnhwQ3I5abK:hover,
 .SaUODI6b8RnhwQ3I5abK:focus-visible {
   color: #fff;
 }
-.SaUODI6b8RnhwQ3I5abK:hover:active {
-  color: rgba(255, 255, 255, 0.7);
-}
+.SaUODI6b8RnhwQ3I5abK:hover:active,
 .SaUODI6b8RnhwQ3I5abK:focus-visible:active {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffffb3;
 }
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK {
   color: #1db954;
@@ -120,7 +116,7 @@
   color: #1ed760;
 }
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK:active {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffffb3;
 }
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK:active:hover,
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK:active:focus {
@@ -168,7 +164,7 @@
 }
 .wXCLBYv3_IHgX9cVGGFO {
   -webkit-app-region: no-drag;
-  background-color: transparent;
+  background-color: #0000;
 }
 .wXCLBYv3_IHgX9cVGGFO:hover {
   transition: background-color 0.2s linear;
@@ -249,6 +245,33 @@
   flex-shrink: 0;
   margin-inline-end: 8px;
   position: relative;
+}
+__workaround_element__ {
+  --__workaround_property__: 0;
+}
+.MLDFXwlQWunaUGoBnTnC {
+  --video-player-npv-min-width: 99px;
+  --video-player-npv-min-height: 56px;
+  appearance: none;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.MLDFXwlQWunaUGoBnTnC:focus {
+  outline: none;
+}
+.MLDFXwlQWunaUGoBnTnC[hidden] {
+  display: none;
+}
+.MLDFXwlQWunaUGoBnTnC video {
+  max-width: var(--video-player-npv-min-width);
+  max-height: var(--video-player-npv-min-height);
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #000;
+  width: 100%;
 }
 .uLMkPrH3R9Q9Zyx9lzKY {
   padding: var(--encore-spacing-tighter-4);
@@ -406,4 +429,4 @@
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.c2e0b7c3.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.a088d117.css.map*/

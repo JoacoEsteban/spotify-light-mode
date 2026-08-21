@@ -26,7 +26,7 @@ __workaround_element__ {
   }
 }
 .vgJqRkalrJegEDFscI31:hover {
-  border-color: transparent;
+  border-color: #0000;
 }
 .QuUEeTI5hHlx3BR0qFc4 {
   margin-top: 20px;
@@ -54,7 +54,7 @@ __workaround_element__ {
   display: flex;
 }
 .VfWBvwqPUmtMZOCbBp6d {
-  color: transparent;
+  color: #0000;
 }
 .GK9KIkN1f7Fl5djyvN6u {
   transition: opacity 0.5s ease-in-out;
@@ -76,7 +76,7 @@ __workaround_element__ {
   display: flex;
 }
 .n0RXqYzbZhrogj2dpzXG {
-  color: var(--text-subdued, rgba(255, 255, 255, 0.7));
+  color: var(--text-subdued, #ffffffb3);
   white-space: nowrap;
 }
 .Nm4OkhSqNeSIH82Fvte7 {
@@ -228,4 +228,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .brN0jkXouF_sZ8McRZdy {
   margin-bottom: calc(var(--content-spacing) - 8px);
 }
-/*# sourceMappingURL=xpui-routes-collection-episodes.d899370e.css.map*/
+/*# sourceMappingURL=xpui-routes-collection-episodes.cd97bf6f.css.map*/

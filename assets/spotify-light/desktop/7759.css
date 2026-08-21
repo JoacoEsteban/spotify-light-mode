@@ -22,6 +22,10 @@
   outline: none; /* forwarded-reset: none */
 }
 
+.rdp-button:not(#spotify-light-mode-specificity-bump) {
+  border: 2px solid #ffffff00; /* hardcoded-color: 2px solid #0000 → 2px solid #ffffff00 */
+}
+
 .rdp-button:focus-visible:not([disabled]):not(#spotify-light-mode-specificity-bump) {
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
@@ -30,8 +34,12 @@
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
+.rdp-caption_label:not(#spotify-light-mode-specificity-bump) {
+  border: 2px solid #ffffff00; /* hardcoded-color: 2px solid #0000 → 2px solid #ffffff00 */
+}
+
 .rdp-dropdown:not(#spotify-light-mode-specificity-bump) {
-  background-color: transparent; /* forwarded-reset: transparent */
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
   border: none; /* forwarded-reset: none */
 }
 
@@ -39,18 +47,17 @@
   background-color: var(--rdp-background-color); /* css-var: var(--rdp-background-color) */
 }
 
-.rdp-day_selected:not(#spotify-light-mode-specificity-bump), .rdp-day_selected:hover:not(#spotify-light-mode-specificity-bump) {
-  color: var(--rdp-selected-color); /* css-var: var(--rdp-selected-color) */
-  background-color: var(--rdp-accent-color); /* css-var: var(--rdp-accent-color) */
+.rdp-weeknumber:not(#spotify-light-mode-specificity-bump), .rdp-day:not(#spotify-light-mode-specificity-bump) {
+  border: 2px solid #ffffff00; /* hardcoded-color: 2px solid #0000 → 2px solid #ffffff00 */
 }
 
-.rdp-day_selected:focus-visible:not(#spotify-light-mode-specificity-bump) {
+.rdp-day_selected:not(#spotify-light-mode-specificity-bump), .rdp-day_selected:focus-visible:not(#spotify-light-mode-specificity-bump), .rdp-day_selected:hover:not(#spotify-light-mode-specificity-bump) {
   color: var(--rdp-selected-color); /* css-var: var(--rdp-selected-color) */
   background-color: var(--rdp-accent-color); /* css-var: var(--rdp-accent-color) */
 }
 
 .PromotionDefaultNativeImage-module_image-container__gQhJp:not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px rgba(0, 0, 0, 0.4) → 0 4px 60px #ffffff66 */
+  box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px #0006 → 0 4px 60px #ffffff66 */
 }
 
 .PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_subtitle__bkQ5C:not(#spotify-light-mode-specificity-bump) {
@@ -62,7 +69,7 @@
 }
 
 .PromotionDefaultPoster-module_cardLink__mT-31.PromotionDefaultPoster-module_withBackgroundGradient__a8nsM:not(#spotify-light-mode-specificity-bump):after {
-  background: linear-gradient(transparent 0%, #ffffff99 58.67%); /* hardcoded-color: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 58.67%) → linear-gradient(transparent 0%, #ffffff99 58.67%) */
+  background: linear-gradient(#ffffff00 0%, #ffffff99 58.67%); /* hardcoded-color: linear-gradient(#0000 0%, #0009 58.67%) → linear-gradient(#ffffff00 0%, #ffffff99 58.67%) */
 }
 
 .PromotionDefaultPoster-module_cardLink__mT-31:not(#spotify-light-mode-specificity-bump) {
@@ -71,7 +78,7 @@
 
 .PromotionDefaultPoster-module_videoLayoutCard__3vfoC:not(#spotify-light-mode-specificity-bump):after {
   background: linear-gradient(
-    transparent 45.15%,
+    #ffffff00 45.15%,
     #ffffff03 48.44%,
     #ffffff05 51.74%,
     #ffffff0d 56.12%,
@@ -88,24 +95,24 @@
     #ffffff96 96.34%,
     #ffffff99 100%
   ); /* hardcoded-color: linear-gradient(
-    transparent 45.15%,
-    rgba(0, 0, 0, 0.01) 48.44%,
-    rgba(0, 0, 0, 0.02) 51.74%,
-    rgba(0, 0, 0, 0.05) 56.12%,
-    rgba(0, 0, 0, 0.09) 59.78%,
-    rgba(0, 0, 0, 0.14) 63.44%,
-    rgba(0, 0, 0, 0.2) 67.09%,
-    rgba(0, 0, 0, 0.27) 70.75%,
-    rgba(0, 0, 0, 0.33) 74.41%,
-    rgba(0, 0, 0, 0.4) 78.06%,
-    rgba(0, 0, 0, 0.46) 81.72%,
-    rgba(0, 0, 0, 0.51) 85.37%,
-    rgba(0, 0, 0, 0.55) 89.03%,
-    rgba(0, 0, 0, 0.58) 92.69%,
-    rgba(0, 0, 0, 0.59) 96.34%,
-    rgba(0, 0, 0, 0.6) 100%
+    #0000 45.15%,
+    #00000003 48.44%,
+    #00000005 51.74%,
+    #0000000d 56.12%,
+    #00000017 59.78%,
+    #00000024 63.44%,
+    #0003 67.09%,
+    #00000045 70.75%,
+    #00000054 74.41%,
+    #0006 78.06%,
+    #00000075 81.72%,
+    #00000082 85.37%,
+    #0000008c 89.03%,
+    #00000094 92.69%,
+    #00000096 96.34%,
+    #0009 100%
   ) → linear-gradient(
-    transparent 45.15%,
+    #ffffff00 45.15%,
     #ffffff03 48.44%,
     #ffffff05 51.74%,
     #ffffff0d 56.12%,

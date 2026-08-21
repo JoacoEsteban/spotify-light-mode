@@ -10,30 +10,13 @@
 
 
 
-.daVmMyyAd2Yos2cTs0dc:hover:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
-  color: var(--text-base); /* css-var: var(--text-base) */
-}
-
-.daVmMyyAd2Yos2cTs0dc:focus-visible:not(#spotify-light-mode-specificity-bump) {
+.daVmMyyAd2Yos2cTs0dc:hover:not(#spotify-light-mode-specificity-bump), .daVmMyyAd2Yos2cTs0dc:focus-visible:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
 .QMzrfOoZyvI_jFfSoOwX:not(#spotify-light-mode-specificity-bump) {
-  background: linear-gradient(
-    #ffffffb3 0%,
-    transparent 13.54% 78.65%,
-    #f6f6f6 100%
-  ); /* hardcoded-color: linear-gradient(
-    rgba(0, 0, 0, 0.7) 0%,
-    transparent 13.54% 78.65%,
-    #121212 100%
-  ) → linear-gradient(
-    #ffffffb3 0%,
-    transparent 13.54% 78.65%,
-    #f6f6f6 100%
-  ) */
+  background: linear-gradient(#ffffffb3 0%, #ffffff00 13.54% 78.65%, #f6f6f6 100%); /* hardcoded-color: linear-gradient(#000000b3 0%, #0000 13.54% 78.65%, #121212 100%) → linear-gradient(#ffffffb3 0%, #ffffff00 13.54% 78.65%, #f6f6f6 100%) */
 }
 
 .DvWLUdZDIa4V36fdNIfu:not(#spotify-light-mode-specificity-bump) {
@@ -48,28 +31,28 @@
 .eonvO1mqguT_e70s2kWJ:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #ffffff00 calc(100% - 2px),
     #ffffff calc(100% - 2px)
   ); /* hardcoded-color: radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #0000 calc(100% - 2px),
     #000 calc(100% - 2px)
   ) → radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #ffffff00 calc(100% - 2px),
     #ffffff calc(100% - 2px)
   ) */
   mask-image: radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #ffffff00 calc(100% - 2px),
     #ffffff calc(100% - 2px)
   ); /* hardcoded-color: radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #0000 calc(100% - 2px),
     #000 calc(100% - 2px)
   ) → radial-gradient(
     circle closest-side,
-    transparent calc(100% - 2px),
+    #ffffff00 calc(100% - 2px),
     #ffffff calc(100% - 2px)
   ) */
 }
@@ -79,39 +62,27 @@
 }
 
 .MhkMZsZmwr6Me00lCcig:not(#spotify-light-mode-specificity-bump):before {
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .O5EnZyvtTWrgOmM6LW7A:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(#ffffff80, #ffffff80),
-    linear-gradient(#b98eff 0%, #fb5f45 100%); /* hardcoded-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(#b98eff 0%, #fb5f45 100%); /* hardcoded-color: linear-gradient(#00000080, #00000080),
     linear-gradient(#9334f5 0%, #e94e35 100%) → linear-gradient(#ffffff80, #ffffff80),
     linear-gradient(#b98eff 0%, #fb5f45 100%) */
 }
 
 .MBwK4cXB2xepbhJnuXm7:not(#spotify-light-mode-specificity-bump) {
-  background-color: #ffffff80; /* hardcoded-color: rgba(0, 0, 0, 0.5) → #ffffff80 */
+  background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
 }
 
 .BN2Pw7d5Z7OTJf_bcK33:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(#ffffff80, #ffffff80),
-    linear-gradient(#b98eff 0%, #fb5f45 100%); /* hardcoded-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(#b98eff 0%, #fb5f45 100%); /* hardcoded-color: linear-gradient(#00000080, #00000080),
     linear-gradient(#9334f5 0%, #e94e35 100%) → linear-gradient(#ffffff80, #ffffff80),
     linear-gradient(#b98eff 0%, #fb5f45 100%) */
 }
 
 .Np0otBheZqnGszC8IO5q:not(#spotify-light-mode-specificity-bump) {
-  background: linear-gradient(
-    #ffffffb3 0%,
-    transparent 13.54% 78.65%,
-    #f6f6f6 100%
-  ); /* hardcoded-color: linear-gradient(
-    rgba(0, 0, 0, 0.7) 0%,
-    transparent 13.54% 78.65%,
-    #121212 100%
-  ) → linear-gradient(
-    #ffffffb3 0%,
-    transparent 13.54% 78.65%,
-    #f6f6f6 100%
-  ) */
+  background: linear-gradient(#ffffffb3 0%, #ffffff00 13.54% 78.65%, #f6f6f6 100%); /* hardcoded-color: linear-gradient(#000000b3 0%, #0000 13.54% 78.65%, #121212 100%) → linear-gradient(#ffffffb3 0%, #ffffff00 13.54% 78.65%, #f6f6f6 100%) */
 }

@@ -93,10 +93,10 @@
   pointer-events: none;
   position: absolute;
 }
-input:hover:not(:is([disabled], :active)) ~ .rIZf5Dl8ejanejy1X35Q {
+input:hover:not([disabled], :active) ~ .rIZf5Dl8ejanejy1X35Q {
   background-color: #b3b3b3;
 }
-input:checked:hover:not(:is([disabled], :active)) ~ .rIZf5Dl8ejanejy1X35Q {
+input:checked:hover:not([disabled], :active) ~ .rIZf5Dl8ejanejy1X35Q {
   background-color: #1ed760;
 }
 input:active:not([disabled]) ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM {
@@ -152,7 +152,7 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   cursor: pointer;
   background-color: var(--background-elevated-base);
   border: 0;
-  border-inline-end: 12px solid transparent;
+  border-inline-end: 12px solid #0000;
   border-radius: 4px;
   width: 100%;
   height: 32px;
@@ -195,7 +195,7 @@ select:disabled:hover {
 }
 .sEIdzA7XFlZslnJiUafj:before {
   content: "";
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #ffffff1a;
   position: absolute;
   top: 50%;
   left: 0;
@@ -210,7 +210,7 @@ select:disabled:hover {
 .LoJaWz3GM7y9bCpg7l62:after {
   content: "";
   pointer-events: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid #ffffff1a;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -322,7 +322,7 @@ select:disabled:hover {
 .i2wKPcAykptKYaQ2a6IV {
   color: var(--text-base);
   padding: var(--encore-spacing-tighter-2);
-  background-color: transparent;
+  background-color: #0000;
   border: 0;
   border-radius: 50%;
   justify-content: center;
@@ -336,7 +336,7 @@ select:disabled:hover {
   transform: scale(1.1);
 }
 .z5UiCCJ0Dl016Vux6bSg {
-  border: 1px solid transparent;
+  border: 1px solid #0000;
 }
 .z5UiCCJ0Dl016Vux6bSg:focus {
   background-color: #333;
@@ -348,8 +348,8 @@ select:disabled:hover {
   height: 40px;
   padding: 0 var(--encore-spacing-tighter);
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid transparent;
+  background: #ffffff1a;
+  border: 1px solid #0000;
   border-radius: 4px;
   font-family: inherit;
   font-size: 14px;
@@ -440,4 +440,4 @@ select:disabled:hover {
 .voCABqHyl_q3yoPaoV1V {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.594726a0.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.282f5265.css.map*/

@@ -11,7 +11,7 @@
   margin: 0 4px;
 }
 .xCn72QlawF3rgUNijaKJ {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff9;
   text-align: start;
   word-break: break-word;
   stroke: #b3b3b3;
@@ -26,14 +26,14 @@
   left: 0;
   overflow: hidden;
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.3),
-    0 1px 2px rgba(0, 0, 0, 0.2);
+    0 10px 30px #0000004d,
+    0 1px 2px #0003;
 }
 .eynZnK1KEPNeJz1xVo2D {
   height: 100%;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(#000 0% 50%, transparent 100%);
-  mask-image: linear-gradient(#000 0% 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(#000 0% 50%, #0000 100%);
+  mask-image: linear-gradient(#000 0% 50%, #0000 100%);
 }
 .RmweRidui_YMBauFgrvW {
   bottom: 0;
@@ -42,8 +42,8 @@
   position: absolute;
   inset-inline-start: 0;
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.3),
-    0 1px 2px rgba(0, 0, 0, 0.2);
+    0 10px 30px #0000004d,
+    0 1px 2px #0003;
 }
 .p4obtgG_ICUjl3ik4t0d {
   margin-inline-end: 4px;
@@ -77,4 +77,4 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
   background: var(--background-base);
   isolation: isolate;
 }
-/*# sourceMappingURL=xpui-routes-cultural-moment-hub.7ba0b59c.css.map*/
+/*# sourceMappingURL=xpui-routes-cultural-moment-hub.5cebc01b.css.map*/

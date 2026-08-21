@@ -11,23 +11,23 @@
 
 
 .xCn72QlawF3rgUNijaKJ:not(#spotify-light-mode-specificity-bump) {
-  color: #00000099; /* hardcoded-color: rgba(255, 255, 255, 0.6) → #00000099 */
+  color: #00000099; /* hardcoded-color: #fff9 → #00000099 */
   stroke: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
   box-shadow: 0 10px 30px #ffffff4d,
-    0 1px 2px #ffffff33; /* hardcoded-color: 0 10px 30px rgba(0, 0, 0, 0.3),
-    0 1px 2px rgba(0, 0, 0, 0.2) → 0 10px 30px #ffffff4d,
+    0 1px 2px #ffffff33; /* hardcoded-color: 0 10px 30px #0000004d,
+    0 1px 2px #0003 → 0 10px 30px #ffffff4d,
     0 1px 2px #ffffff33 */
 }
 
 .eynZnK1KEPNeJz1xVo2D:not(#spotify-light-mode-specificity-bump) {
-  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, transparent 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 100%) → linear-gradient(#ffffff 0% 50%, transparent 100%) */
-  mask-image: linear-gradient(#ffffff 0% 50%, transparent 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, transparent 100%) → linear-gradient(#ffffff 0% 50%, transparent 100%) */
+  -webkit-mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 100%) → linear-gradient(#ffffff 0% 50%, #ffffff00 100%) */
+  mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 100%) → linear-gradient(#ffffff 0% 50%, #ffffff00 100%) */
 }
 
 .RmweRidui_YMBauFgrvW:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 10px 30px #ffffff4d,
-    0 1px 2px #ffffff33; /* hardcoded-color: 0 10px 30px rgba(0, 0, 0, 0.3),
-    0 1px 2px rgba(0, 0, 0, 0.2) → 0 10px 30px #ffffff4d,
+    0 1px 2px #ffffff33; /* hardcoded-color: 0 10px 30px #0000004d,
+    0 1px 2px #0003 → 0 10px 30px #ffffff4d,
     0 1px 2px #ffffff33 */
 }
 
@@ -40,8 +40,8 @@
 }
 
 .ReTHuCza_blUi0f9wcZI .kS9ybJVUDlfs_4RLFhwR:not(#spotify-light-mode-specificity-bump) {
-  --carousel-start-chevron-gradient: #f6f6f6b3; /* custom-property: rgba(18, 18, 18, 0.7) → #f6f6f6b3 */
-  --carousel-end-chevron-gradient: #f6f6f6b3; /* custom-property: rgba(18, 18, 18, 0.7) → #f6f6f6b3 */
+  --carousel-start-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
+  --carousel-end-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
 }
 
 .ReTHuCza_blUi0f9wcZI

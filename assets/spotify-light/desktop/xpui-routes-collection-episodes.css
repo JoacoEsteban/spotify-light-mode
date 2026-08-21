@@ -15,15 +15,15 @@
 }
 
 .vgJqRkalrJegEDFscI31:hover:not(#spotify-light-mode-specificity-bump) {
-  border-color: transparent; /* forwarded-reset: transparent */
+  border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .VfWBvwqPUmtMZOCbBp6d:not(#spotify-light-mode-specificity-bump) {
-  color: transparent; /* forwarded-reset: transparent */
+  color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
 .n0RXqYzbZhrogj2dpzXG:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, rgba(255, 255, 255, 0.7)) → var(--text-subdued, #000000b3) */
+  color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, #ffffffb3) → var(--text-subdued, #000000b3) */
 }
 
 .Nm4OkhSqNeSIH82Fvte7:not(#spotify-light-mode-specificity-bump) {

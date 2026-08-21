@@ -29,5 +29,5 @@
 }
 
 .n0RXqYzbZhrogj2dpzXG:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, rgba(255, 255, 255, 0.7)) → var(--text-subdued, #000000b3) */
+  color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, #ffffffb3) → var(--text-subdued, #000000b3) */
 }
