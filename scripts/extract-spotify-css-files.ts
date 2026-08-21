@@ -20,8 +20,10 @@ export type SpotifyCssAsset = {
   url: string;
 };
 
+type MiniCssFunction = ts.ArrowFunction | ts.FunctionExpression;
+
 type MiniCssDeclaration = {
-  arrowFunction: ts.ArrowFunction;
+  cssFunction: MiniCssFunction;
   runtimeName: string;
 };
 
@@ -132,9 +134,9 @@ function findMiniCssDeclaration(sourceFile: ts.SourceFile): MiniCssDeclaration |
       cssFunctionNames[node.left.name.text] === true
     ) {
       const right = unwrapExpression(node.right);
-      if (ts.isArrowFunction(right)) {
+      if (ts.isArrowFunction(right) || ts.isFunctionExpression(right)) {
         result = {
-          arrowFunction: right,
+          cssFunction: right,
           runtimeName: node.left.expression.text,
         };
         return;
@@ -173,8 +175,8 @@ function findWebpackPublicPath(sourceFile: ts.SourceFile, runtimeName: string): 
   return publicPath;
 }
 
-function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
-  const [parameter] = arrowFunction.parameters;
+function collectChunkMaps(cssFunction: MiniCssFunction): ChunkMap[] {
+  const [parameter] = cssFunction.parameters;
   if (!parameter || !ts.isIdentifier(parameter.name)) {
     throw new Error("miniCssF declaration does not use a single identifier parameter.");
   }
@@ -202,7 +204,7 @@ function collectChunkMaps(arrowFunction: ts.ArrowFunction): ChunkMap[] {
     ts.forEachChild(node, visit);
   }
 
-  visit(arrowFunction.body);
+  visit(cssFunction.body);
   return maps;
 }
 
@@ -255,7 +257,7 @@ export function extractSpotifyCssFilesFromSource(
     );
   }
 
-  const maps = collectChunkMaps(miniCssDeclaration.arrowFunction);
+  const maps = collectChunkMaps(miniCssDeclaration.cssFunction);
   if (maps.length < 2) {
     throw new Error(`Expected at least 2 object maps in miniCssF; found ${maps.length}.`);
   }
