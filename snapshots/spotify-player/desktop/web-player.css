@@ -6715,11 +6715,11 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
   white-space: nowrap;
   overflow: hidden;
 }
-.iwwpvs8zSHSimsMegrIT a {
+.iwwpvs8zSHSimsMegrIT .PTsNAzbx6fKIUPvW6EEB {
   color: var(--text-subdued, #b3b3b3);
 }
-.iwwpvs8zSHSimsMegrIT a:hover,
-.iwwpvs8zSHSimsMegrIT a:focus-visible {
+.iwwpvs8zSHSimsMegrIT .PTsNAzbx6fKIUPvW6EEB:hover,
+.iwwpvs8zSHSimsMegrIT .PTsNAzbx6fKIUPvW6EEB:focus-visible {
   color: var(--text-base, #fff);
 }
 .tBkjCnH1WWxRO5VfsBWk {
@@ -8068,11 +8068,6 @@ body[data-dragging-uri-type] .gtgliQkSW6D3wmGeWvYQ {
   max-width: 395px;
   margin: 8px 0;
   display: flex;
-}
-@property --marquee-width {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0;
 }
 .Db0nZgxiZgw1o0mqNyK7 {
   margin-inline-start: -6px;
@@ -13902,7 +13897,7 @@ dialog:not([open]) {
   border-radius: 50%;
   width: 16px;
   padding: 2px;
-  animation: 1s linear infinite GFrQaUhadcpz338LjcFF;
+  animation: 1s linear infinite paused GFrQaUhadcpz338LjcFF;
   -webkit-mask-image: conic-gradient(#0000, #000), linear-gradient(#000 0 0);
   mask-image: conic-gradient(#0000, #000), linear-gradient(#000 0 0);
   -webkit-mask-position:
@@ -13923,6 +13918,9 @@ dialog:not([open]) {
   mask-composite: subtract;
   -webkit-mask-source-type: auto, auto;
   mask-mode: match-source, match-source;
+}
+.yVmU53fSKyPlJHKkfL8x .GFrQaUhadcpz338LjcFF {
+  animation-play-state: running;
 }
 .a0tBzWhdP9VFDFLVHvM8 {
   overflow-wrap: normal;
@@ -16800,6 +16798,24 @@ div:has(> .profile-dropdown-menu) {
     url(https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2)
       format("woff2");
   font-stretch: 50% 150%;
+}
+@font-face {
+  font-family: SpotifyMixMono;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range:
+    U+20-7E, U+A0-131, U+134-137, U+139-148, U+14A-17E, U+1A0-1A1, U+1AF-1B0,
+    U+1CD-1D4, U+1E6-1E7, U+1F4-1F5, U+1FA-1FF, U+218-21B, U+226-227, U+232-233,
+    U+237, U+259, U+2BC, U+2C6-2C7, U+2D8-2DD, U+300-304, U+306-30C, U+312,
+    U+31B, U+323, U+326-328, U+335-338, U+3BC, U+1E0C-1E0D, U+1E20-1E21,
+    U+1E24-1E25, U+1E36-1E37, U+1E44-1E45, U+1E56-1E57, U+1E62-1E63,
+    U+1E6C-1E6D, U+1E80-1E85, U+1E8A-1E8D, U+1E92-1E93, U+1E9E, U+1EA0-1EF9,
+    U+2010-2011, U+2013-2015, U+2018-201A, U+201C-201E, U+2020-2022, U+2026,
+    U+2030, U+2032-2033, U+2039-203A, U+2044, U+2070, U+2074-2079, U+2080-2089,
+    U+20AC, U+2117, U+2122, U+2126, U+2190-2199, U+2202, U+2206, U+2212, U+2215,
+    U+2248, U+2260, U+2264-2265, U+2500-259F, U+FFFF;
+  src: url(https://encore.scdn.co/fonts/SpotifyMixMono-Regular-134eeb986fc0f94a9f0acb9cedaeb584.woff2)
+    format("woff2");
 }
 @layer fonts {
   html {
@@ -24959,4 +24975,4 @@ div:has(> .profile-dropdown-menu) {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.f933af55.css.map*/
+/*# sourceMappingURL=web-player.4da58ee5.css.map*/

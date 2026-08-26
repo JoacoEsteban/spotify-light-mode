@@ -110,9 +110,6 @@
 .wshBvWtfpjGQ7tgjV_La {
   resize: none;
   background: var(--background-elevated-highlight);
-  font-family:
-    Fira Code,
-    monospace;
   font-size: var(--encore-text-size-smaller);
   color: var(--text-subdued);
   box-shadow: none;
@@ -828,9 +825,6 @@
   white-space: pre-wrap;
   height: 83px;
   margin-top: 20px;
-  font-family:
-    Fira Code,
-    monospace;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(#000, #0000);
   mask-image: linear-gradient(#000, #0000);
@@ -1428,4 +1422,4 @@ __workaround_element__ {
   max-height: 900px;
   position: sticky;
 }
-/*# sourceMappingURL=dwp-promptedPlaylists.b48a86ac.css.map*/
+/*# sourceMappingURL=dwp-promptedPlaylists.9377e454.css.map*/

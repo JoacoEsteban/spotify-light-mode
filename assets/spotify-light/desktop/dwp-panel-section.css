@@ -544,6 +544,10 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
+.u8BYSyhiQMmApDt6zmrk[data-scroll-background-disabled]:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
 .LEsMhVH3q1yp3Ld6vWLQ:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(#f6f6f6d9 0%, #ffffff00 30%); /* hardcoded-color: linear-gradient(#121212d9 0%, #0000 30%) → linear-gradient(#f6f6f6d9 0%, #ffffff00 30%) */
   background: linear-gradient(lab(5.26802% 0 0/0.85) 0%, #ffffff00 30%); /* hardcoded-color: linear-gradient(lab(5.26802% 0 0/0.85) 0%, #0000 30%) → linear-gradient(lab(5.26802% 0 0/0.85) 0%, #ffffff00 30%) */

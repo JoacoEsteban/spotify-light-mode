@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.33338144__mobile-web-player.62a520d9",
+  "snapshotVersion": "spotify-player.web-player.0156f715__mobile-web-player.26fa21d9",
   "source": {
-    "fingerprint": "sha256:30c7bc1cc6a374e24448ab21e1d8335ae196841d9049530c32b203a83ef83fec",
+    "fingerprint": "sha256:fb16328042128bf0df9cfa952b58f974cb02a918d91fc99c7c0b3901594053e9",
     "targets": {
       "desktop": [
         {
@@ -9,12 +9,6 @@
           "relativePath": "desktop/1718.css",
           "sha256": "ad314bcee5762c10386dd7541659de5bed5f5b1128bec3e90515a81c07f15a0a",
           "byteLength": 1210
-        },
-        {
-          "fileName": "1743.css",
-          "relativePath": "desktop/1743.css",
-          "sha256": "d692340628e6e490aeae583571533b51ea1c35e11b3d548e87f1a88a442b262a",
-          "byteLength": 10494
         },
         {
           "fileName": "3059.css",
@@ -45,6 +39,12 @@
           "relativePath": "desktop/7016.css",
           "sha256": "aa226170cdeeb1b72e67c460a378c63ba4fdfb72ffecac1186aff0d7172cde79",
           "byteLength": 58465
+        },
+        {
+          "fileName": "7501.css",
+          "relativePath": "desktop/7501.css",
+          "sha256": "f937da8d20a51bdacca2ab0eb561ba01555f6441fb6db40cd352e44359f0b01d",
+          "byteLength": 10494
         },
         {
           "fileName": "7567.css",
@@ -127,8 +127,8 @@
         {
           "fileName": "dwp-panel-section.css",
           "relativePath": "desktop/dwp-panel-section.css",
-          "sha256": "fb8c75a4d27a31dad4b6a14b0026ec761f75dbf186ce612e9f89cdfaa8a6bcd5",
-          "byteLength": 94156
+          "sha256": "5ce5b5576922c396e53d7d59a46f4166cc768379a0c54aab73d57c7713802446",
+          "byteLength": 94281
         },
         {
           "fileName": "dwp-premium-page.css",
@@ -145,8 +145,8 @@
         {
           "fileName": "dwp-promptedPlaylists.css",
           "relativePath": "desktop/dwp-promptedPlaylists.css",
-          "sha256": "58e3ed22c2d41fafce590cdc54e2d1dd717a669a631ddd907e7a62d05ad8acad",
-          "byteLength": 32083
+          "sha256": "ca65c33768e6bfae95128d081339e130b2b773029ef8ef2f55d1f1ca72ee6cf6",
+          "byteLength": 31993
         },
         {
           "fileName": "dwp-socialPrompting.css",
@@ -175,8 +175,8 @@
         {
           "fileName": "dwp-watch-feed-view-container.css",
           "relativePath": "desktop/dwp-watch-feed-view-container.css",
-          "sha256": "82027fa2dfd9042b097487042761d049d730027dfe569765850b4fa0b151435d",
-          "byteLength": 13055
+          "sha256": "2a1e253e0f3df40833ae4ecdb415db642a2dbd7cd0a42979b7a5d2ab5f69bd2e",
+          "byteLength": 13132
         },
         {
           "fileName": "dwp-whats-new-feed.css",
@@ -247,8 +247,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "e21f377a945044be5afd09bbff95327865c43dc6d3475ca1c371691d6e900e02",
-          "byteLength": 643124
+          "sha256": "b7086ed25252d065a0b0a2c4948b641453bfc2a91c176b2fd984769fc88ec913",
+          "byteLength": 644156
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -265,8 +265,8 @@
         {
           "fileName": "xpui-pip-mini-player.css",
           "relativePath": "desktop/xpui-pip-mini-player.css",
-          "sha256": "8d07da712df5abfb34777a1694e88e6b067ed8b5be16e0874001dd3ec38acdbc",
-          "byteLength": 33790
+          "sha256": "b760f2f5a69a754eba41495eb0401dca347210288d459bf32160859ca927538a",
+          "byteLength": 33796
         },
         {
           "fileName": "xpui-root-dialogs.css",
@@ -507,8 +507,8 @@
         {
           "fileName": "mobile-web-player.css",
           "relativePath": "mobile/mobile-web-player.css",
-          "sha256": "64ddc453e8c162f57802dace4013145a05d68487732f2fa97fa3cfae235bb420",
-          "byteLength": 392582
+          "sha256": "772ebc04696d93b5d89621e3b4f7e0f66ce262faed1868bf43090afc9b30f5a7",
+          "byteLength": 393667
         },
         {
           "fileName": "mwp-artist-page.css",
@@ -562,19 +562,13 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:199d0987a72152d059819476704a252e8a0c6c35e786aab2fdb946d096f79f8c",
+    "fingerprint": "sha256:b62869a386e8ce3007a23da578424d4c3593b23eaa5d907f7653c99ce35c5f79",
     "files": [
       {
         "fileName": "1718.css",
         "relativePath": "desktop/1718.css",
         "sha256": "891b8abfffdd22c8a904e409a4d43ce4ec36ac704864e3a92b7dc24c6978f6a5",
         "byteLength": 824
-      },
-      {
-        "fileName": "1743.css",
-        "relativePath": "desktop/1743.css",
-        "sha256": "f939a638b0d93620ce444e47c6e2088ad324636b25f9b127e0664a46626068f8",
-        "byteLength": 3427
       },
       {
         "fileName": "3059.css",
@@ -605,6 +599,12 @@
         "relativePath": "desktop/7016.css",
         "sha256": "9f347bd64c8d651eac3293033ee86d2a4183bfe1e024e41bbbbb4bd74b1f79de",
         "byteLength": 14740
+      },
+      {
+        "fileName": "7501.css",
+        "relativePath": "desktop/7501.css",
+        "sha256": "7ade9874429f2565f0b70ca9ee735efbcfad63cd3b37c0dc5f09a20769a948dd",
+        "byteLength": 3427
       },
       {
         "fileName": "7567.css",
@@ -687,8 +687,8 @@
       {
         "fileName": "dwp-panel-section.css",
         "relativePath": "desktop/dwp-panel-section.css",
-        "sha256": "9ed8c6f4c180effa09c987469bd1d944112b109c452c92feb7ba441e5c882c2a",
-        "byteLength": 29060
+        "sha256": "ed51957cead877a7a8bb38568b9266018e9f3c89b79f2e4839cc78570bbf3239",
+        "byteLength": 29236
       },
       {
         "fileName": "dwp-premium-page.css",
@@ -807,8 +807,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "7f08f302739c08c6453694418c53b73d9f96323b16d68a7076d76e27de2f1f78",
-        "byteLength": 278242
+        "sha256": "b597396e197a40bf5a548fb3ee3521a3da61b1f742b7c435307f26501b01a8bb",
+        "byteLength": 278302
       },
       {
         "fileName": "xpui-debug-window-contents.css",

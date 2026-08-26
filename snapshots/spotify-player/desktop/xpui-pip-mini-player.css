@@ -1009,9 +1009,6 @@ html:not(.no-focus-outline)
 [data-transition="pip-mini-player"] .y1dGEHPJ9UVrwsYVu7bZ {
   view-transition-name: pip-media;
 }
-[data-transition="pip-mini-player"] .y1dGEHPJ9UVrwsYVu7bZ img {
-  view-transition-name: pip-media-image;
-}
 ::view-transition-old(pip-media) {
   height: 100%;
 }
@@ -1070,6 +1067,9 @@ html:not(.no-focus-outline)
   }
 }
 @media (height>=171px) {
+  [data-transition="pip-mini-player"] .y1dGEHPJ9UVrwsYVu7bZ img {
+    view-transition-name: pip-media-image;
+  }
   .LoLj06QlFjobDdDDAb_3.nQsBSPn5yHXnunSyYQNU {
     border-radius: var(--cinema-mode-border-radius);
   }
@@ -1456,4 +1456,4 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   height: 100%;
   max-height: 100%;
 }
-/*# sourceMappingURL=xpui-pip-mini-player.4a814529.css.map*/
+/*# sourceMappingURL=xpui-pip-mini-player.3900c02d.css.map*/

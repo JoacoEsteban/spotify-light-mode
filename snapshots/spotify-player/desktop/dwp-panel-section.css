@@ -3285,6 +3285,11 @@ __workaround_element__ {
     animation-range: 0 32px;
   }
 }
+.u8BYSyhiQMmApDt6zmrk[data-scroll-background-disabled] {
+  box-shadow: none;
+  background-color: #0000;
+  animation: none;
+}
 .AZf1O4HGoRZp1Rb45CF8 {
   flex: auto;
   min-width: 0;
@@ -4434,4 +4439,4 @@ __workaround_element__ {
 .buRwHVvDJWz2JcjWxKQz {
   text-align: center;
 }
-/*# sourceMappingURL=dwp-panel-section.78cb8e05.css.map*/
+/*# sourceMappingURL=dwp-panel-section.ab9fc404.css.map*/
