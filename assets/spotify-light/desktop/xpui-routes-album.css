@@ -35,6 +35,10 @@
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
+.ZPyQciwDfwJ2lgieXAfG:not(#spotify-light-mode-specificity-bump) {
+  color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
 .vvokofZHMkIo13xngnyn:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
