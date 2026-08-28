@@ -3199,7 +3199,7 @@ __workaround_element__ {
 }
 .WAD_tmCrJ8rzTl46FbHB {
   opacity: 0;
-  flex-shrink: 0;
+  justify-self: start;
   padding-inline: 0;
   transition:
     transform 0.1s ease-out,
@@ -3224,32 +3224,12 @@ __workaround_element__ {
 }
 @media (prefers-reduced-motion: reduce) {
   .WAD_tmCrJ8rzTl46FbHB {
-    transition: none;
+    transition: none !important;
   }
 }
 .qu_zv412WcaFDbscs4Ar {
   flex: auto;
   min-width: 0;
-  margin-inline-start: 12px;
-  transition: transform 0.1s ease-out 0.1s;
-  transform: translate(-28px);
-}
-[dir="rtl"] .qu_zv412WcaFDbscs4Ar {
-  transform: translate(28px);
-}
-[data-npv-root]:is(:hover, :has(:focus-visible)) .qu_zv412WcaFDbscs4Ar {
-  transition: transform 0.1s ease-out;
-  transform: translate(0);
-}
-@media (pointer: coarse) {
-  .qu_zv412WcaFDbscs4Ar {
-    transform: translate(0);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .qu_zv412WcaFDbscs4Ar {
-    transition: none;
-  }
 }
 .XAmxH1Uo7dChCnHzim86:is(:focus-visible, :hover) {
   text-decoration: underline;
@@ -3292,19 +3272,44 @@ __workaround_element__ {
 }
 .AZf1O4HGoRZp1Rb45CF8 {
   flex: auto;
-  min-width: 0;
+  min-inline-size: 0;
   display: flex;
 }
 [data-transition="cinema-npv"] .AZf1O4HGoRZp1Rb45CF8,
 [data-transition="cinema-library-npv"] .AZf1O4HGoRZp1Rb45CF8 {
   view-transition-name: var(--npv-view-transition-name-none, cinema-npv-title);
 }
+.c4qITjlaMcuGs0pUtm06,
+.xKefNTTT3Bk6WDqa15QU {
+  interpolate-size: allow-keywords;
+  inline-size: 0;
+  min-inline-size: 0;
+  transition:
+    inline-size 0.3s ease-out,
+    overflow 0s allow-discrete;
+  flex: none;
+  display: flex;
+  overflow: clip;
+}
+.c4qITjlaMcuGs0pUtm06 {
+  justify-content: flex-start;
+}
+.EjC9HkiSLaRgElPYLclS {
+  flex: none;
+  inline-size: max-content;
+  padding-inline-end: 12px;
+  display: flex;
+}
+.xKefNTTT3Bk6WDqa15QU {
+  justify-content: flex-end;
+}
 .ubuhvo_MzBQsAWp5mEDx {
   opacity: 0;
+  pointer-events: none;
+  flex: none;
   align-items: center;
-  gap: 8px;
-  margin-inline-start: auto;
-  transition: opacity 0.3s ease-out;
+  inline-size: max-content;
+  transition: opacity 0.15s ease-out;
   display: flex;
 }
 [data-transition="cinema-npv"] .ubuhvo_MzBQsAWp5mEDx,
@@ -3314,17 +3319,35 @@ __workaround_element__ {
     cinema-npv-actions
   );
 }
+[data-npv-root]:is(:hover, :has(:focus-visible))
+  :is(.c4qITjlaMcuGs0pUtm06, .xKefNTTT3Bk6WDqa15QU) {
+  inline-size: max-content;
+  transition:
+    inline-size 0.3s ease-out,
+    overflow 0s 0.3s allow-discrete;
+  overflow: visible;
+}
 [data-npv-root]:is(:hover, :has(:focus-visible)) .ubuhvo_MzBQsAWp5mEDx {
   opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.15s ease-out 0.15s;
 }
 @media (pointer: coarse) {
+  .c4qITjlaMcuGs0pUtm06,
+  .xKefNTTT3Bk6WDqa15QU {
+    inline-size: max-content;
+    overflow: visible;
+  }
   .ubuhvo_MzBQsAWp5mEDx {
     opacity: 1;
+    pointer-events: auto;
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .c4qITjlaMcuGs0pUtm06,
+  .xKefNTTT3Bk6WDqa15QU,
   .ubuhvo_MzBQsAWp5mEDx {
-    transition: none;
+    transition: none !important;
   }
 }
 .c5qcnsHS13PIuQa65pMd {
@@ -4256,33 +4279,6 @@ __workaround_element__ {
 .Zf6rBDvXfCuiSXJOW3XH:focus {
   text-decoration: underline;
 }
-.MfOa93LbLCmu0AMXLZmD {
-  color: #121212;
-  text-align: start;
-  background-color: #fff;
-  border-radius: 8px;
-  flex-direction: column;
-  max-width: 315px;
-  padding: 16px;
-  display: flex;
-}
-.puR1sQH1T6PWmkU8Xhtu {
-  margin-bottom: 8px;
-}
-.JOYMzYkCtojkPtdhTxc9 {
-  -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
-  white-space: normal;
-  -webkit-box-orient: vertical;
-  max-height: 130px;
-  display: -webkit-box;
-  overflow: hidden;
-}
-.lv04Vvjb96_Q1mfC_bTA {
-  flex-direction: row;
-  justify-content: space-between;
-  display: flex;
-}
 .pF840jLfR7kNHuYuEN5a {
   flex-direction: column;
   gap: 24px;
@@ -4454,4 +4450,4 @@ __workaround_element__ {
 .buRwHVvDJWz2JcjWxKQz {
   text-align: center;
 }
-/*# sourceMappingURL=dwp-panel-section.635a551d.css.map*/
+/*# sourceMappingURL=dwp-panel-section.02974a2f.css.map*/

@@ -630,11 +630,6 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   border: none; /* forwarded-reset: none */
 }
 
-.MfOa93LbLCmu0AMXLZmD:not(#spotify-light-mode-specificity-bump) {
-  color: #f6f6f6; /* hardcoded-color: #121212 → #f6f6f6 */
-  background-color: #000000; /* hardcoded-color: #fff → #000000 */
-}
-
 .wAr2xW04qkrrxiNgEHXH:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
 }
