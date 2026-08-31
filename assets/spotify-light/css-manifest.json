@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.12de7466__mobile-web-player.8a00a8c9",
+  "snapshotVersion": "spotify-player.web-player.f4788590__mobile-web-player.4c041c55",
   "source": {
-    "fingerprint": "sha256:cba5a4118ff278988ca21df75b0ae8e8e27f1a3feb30ace531f369e8e1aaad6d",
+    "fingerprint": "sha256:4e8be2161a1041fa4282de092872862726a5b10040a1202ad706edd7484dce2e",
     "targets": {
       "desktop": [
         {
@@ -169,14 +169,8 @@
         {
           "fileName": "dwp-video-player.css",
           "relativePath": "desktop/dwp-video-player.css",
-          "sha256": "8180fabdbe083aadf3344ba4e4e09210b420098b0588f20fb9164a40711ddaec",
-          "byteLength": 758
-        },
-        {
-          "fileName": "dwp-video-takeover.css",
-          "relativePath": "desktop/dwp-video-takeover.css",
-          "sha256": "9d753f93a359f6ce879f252f624a8f1676a7be7d742cfc18293cf10075ce1b12",
-          "byteLength": 1571
+          "sha256": "de0f34dc4693df96b961188470475c00bb47fa5bf3e9d6c3787f2c49aa0a4e20",
+          "byteLength": 2270
         },
         {
           "fileName": "dwp-watch-feed-view-container.css",
@@ -253,8 +247,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "e8194d5d855df16b550c32305b4bc521ec6fedb7a9b7015280ef82130587df8c",
-          "byteLength": 648554
+          "sha256": "40dd1ae7d3a5a7ec888b671a2bef6120d3be48200f37481986d5655b689e0ed2",
+          "byteLength": 649099
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -568,7 +562,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:98c1d500d889eda74764f9f6cdf91bf9cb94d1d72e0cb558c9057a5d4c7f52ca",
+    "fingerprint": "sha256:be4f737acd0fd118a24a1fae844e49ceee768469b6130313e32e51626c288c03",
     "files": [
       {
         "fileName": "1718.css",
@@ -739,12 +733,6 @@
         "byteLength": 495
       },
       {
-        "fileName": "dwp-video-takeover.css",
-        "relativePath": "desktop/dwp-video-takeover.css",
-        "sha256": "55e9bc21571761c6ab564c14c6fa339c47bf50c773e4fa1a859259e24e07c30e",
-        "byteLength": 169
-      },
-      {
         "fileName": "dwp-watch-feed-view-container.css",
         "relativePath": "desktop/dwp-watch-feed-view-container.css",
         "sha256": "ff692fbfb4a0ace8b57287331db91b9d58d2c334ca65b10d41d1638dfa20bbed",
@@ -819,8 +807,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "310f95a4371fcb5436ce815e6a16a848d0bca7dc316ead2192780736fda26eb3",
-        "byteLength": 278341
+        "sha256": "631abaa4d95e2795b58af91e7c98792ed654ed2db4a5f8768319068e99192893",
+        "byteLength": 278616
       },
       {
         "fileName": "xpui-debug-window-contents.css",

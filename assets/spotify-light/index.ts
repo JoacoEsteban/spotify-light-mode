@@ -27,71 +27,70 @@ import _24 from "./desktop/dwp-socialPrompting.css?inline";
 import _25 from "./desktop/dwp-tuna.css?inline";
 import _26 from "./desktop/dwp-user-comments.css?inline";
 import _27 from "./desktop/dwp-video-player.css?inline";
-import _28 from "./desktop/dwp-video-takeover.css?inline";
-import _29 from "./desktop/dwp-watch-feed-view-container.css?inline";
-import _30 from "./desktop/dwp-whats-new-feed.css?inline";
-import _31 from "./desktop/home-ads-container.css?inline";
-import _32 from "./desktop/home-subfeed.css?inline";
-import _33 from "./desktop/home-v2-section.css?inline";
-import _34 from "./desktop/listening-stats-modal.css?inline";
-import _35 from "./desktop/playlist-leavebehinds.css?inline";
-import _36 from "./desktop/podcast-charts-hub.css?inline";
-import _37 from "./desktop/podcast-charts.css?inline";
-import _38 from "./desktop/this-is-playlist-concerts-carousel.css?inline";
-import _39 from "./desktop/trending-near-you-toolbar.css?inline";
-import _40 from "./desktop/ubi-highlighting.css?inline";
-import _41 from "./desktop/web-player.css?inline";
-import _42 from "./desktop/xpui-debug-window-contents.css?inline";
-import _43 from "./desktop/xpui-desktop-modals.css?inline";
-import _44 from "./desktop/xpui-pip-mini-player.css?inline";
-import _45 from "./desktop/xpui-root-dialogs.css?inline";
-import _46 from "./desktop/xpui-routes-album-prerelease.css?inline";
-import _47 from "./desktop/xpui-routes-album.css?inline";
-import _48 from "./desktop/xpui-routes-all-show-ads.css?inline";
-import _49 from "./desktop/xpui-routes-blend.css?inline";
-import _50 from "./desktop/xpui-routes-buddy-feed.css?inline";
-import _51 from "./desktop/xpui-routes-collection-concert-gallery.css?inline";
-import _52 from "./desktop/xpui-routes-collection-concerts.css?inline";
-import _53 from "./desktop/xpui-routes-collection-episodes.css?inline";
-import _54 from "./desktop/xpui-routes-collection-local-files.css?inline";
-import _55 from "./desktop/xpui-routes-collection-songs.css?inline";
-import _56 from "./desktop/xpui-routes-concert-campaign.css?inline";
-import _57 from "./desktop/xpui-routes-concert.css?inline";
-import _58 from "./desktop/xpui-routes-country-hub-section.css?inline";
-import _59 from "./desktop/xpui-routes-country-hub.css?inline";
-import _60 from "./desktop/xpui-routes-cultural-moment-hub.css?inline";
-import _61 from "./desktop/xpui-routes-episode-more-like-this.css?inline";
-import _62 from "./desktop/xpui-routes-episode.css?inline";
-import _63 from "./desktop/xpui-routes-label-artists.css?inline";
-import _64 from "./desktop/xpui-routes-label.css?inline";
-import _65 from "./desktop/xpui-routes-offline-browse.css?inline";
-import _66 from "./desktop/xpui-routes-playlist.css?inline";
-import _67 from "./desktop/xpui-routes-podcast-chapter.css?inline";
-import _68 from "./desktop/xpui-routes-premium-page.css?inline";
-import _69 from "./desktop/xpui-routes-profile.css?inline";
-import _70 from "./desktop/xpui-routes-recent-searches.css?inline";
-import _71 from "./desktop/xpui-routes-recently-played.css?inline";
-import _72 from "./desktop/xpui-routes-recents.css?inline";
-import _73 from "./desktop/xpui-routes-search.css?inline";
-import _74 from "./desktop/xpui-routes-see-all-playlist-leavebehinds.css?inline";
-import _75 from "./desktop/xpui-routes-show-more-like-this.css?inline";
-import _76 from "./desktop/xpui-routes-show.css?inline";
-import _77 from "./desktop/xpui-routes-stage-page.css?inline";
-import _78 from "./desktop/xpui-routes-taste-profile.css?inline";
-import _79 from "./desktop/xpui-routes-track-v2.css?inline";
-import _80 from "./desktop/xpui-routes-venues.css?inline";
-import _81 from "./desktop/xpui-routes-web-settings.css?inline";
-import _82 from "./desktop/xpui-routes-your-library-x.css?inline";
-import _83 from "./desktop/your-sound-capsule-modal.css?inline";
-import _84 from "./mobile/mobile-web-player.css?inline";
-import _85 from "./mobile/mwp-artist-page.css?inline";
-import _86 from "./mobile/mwp-browse-page.css?inline";
-import _87 from "./mobile/mwp-download-page.css?inline";
-import _88 from "./mobile/mwp-home-page.css?inline";
-import _89 from "./mobile/mwp-search-landing.css?inline";
-import _90 from "./mobile/mwp-search-results.css?inline";
-import _91 from "./mobile/mwp-section-page.css?inline";
-import _92 from "./mobile/mwp-user-profile.css?inline";
+import _28 from "./desktop/dwp-watch-feed-view-container.css?inline";
+import _29 from "./desktop/dwp-whats-new-feed.css?inline";
+import _30 from "./desktop/home-ads-container.css?inline";
+import _31 from "./desktop/home-subfeed.css?inline";
+import _32 from "./desktop/home-v2-section.css?inline";
+import _33 from "./desktop/listening-stats-modal.css?inline";
+import _34 from "./desktop/playlist-leavebehinds.css?inline";
+import _35 from "./desktop/podcast-charts-hub.css?inline";
+import _36 from "./desktop/podcast-charts.css?inline";
+import _37 from "./desktop/this-is-playlist-concerts-carousel.css?inline";
+import _38 from "./desktop/trending-near-you-toolbar.css?inline";
+import _39 from "./desktop/ubi-highlighting.css?inline";
+import _40 from "./desktop/web-player.css?inline";
+import _41 from "./desktop/xpui-debug-window-contents.css?inline";
+import _42 from "./desktop/xpui-desktop-modals.css?inline";
+import _43 from "./desktop/xpui-pip-mini-player.css?inline";
+import _44 from "./desktop/xpui-root-dialogs.css?inline";
+import _45 from "./desktop/xpui-routes-album-prerelease.css?inline";
+import _46 from "./desktop/xpui-routes-album.css?inline";
+import _47 from "./desktop/xpui-routes-all-show-ads.css?inline";
+import _48 from "./desktop/xpui-routes-blend.css?inline";
+import _49 from "./desktop/xpui-routes-buddy-feed.css?inline";
+import _50 from "./desktop/xpui-routes-collection-concert-gallery.css?inline";
+import _51 from "./desktop/xpui-routes-collection-concerts.css?inline";
+import _52 from "./desktop/xpui-routes-collection-episodes.css?inline";
+import _53 from "./desktop/xpui-routes-collection-local-files.css?inline";
+import _54 from "./desktop/xpui-routes-collection-songs.css?inline";
+import _55 from "./desktop/xpui-routes-concert-campaign.css?inline";
+import _56 from "./desktop/xpui-routes-concert.css?inline";
+import _57 from "./desktop/xpui-routes-country-hub-section.css?inline";
+import _58 from "./desktop/xpui-routes-country-hub.css?inline";
+import _59 from "./desktop/xpui-routes-cultural-moment-hub.css?inline";
+import _60 from "./desktop/xpui-routes-episode-more-like-this.css?inline";
+import _61 from "./desktop/xpui-routes-episode.css?inline";
+import _62 from "./desktop/xpui-routes-label-artists.css?inline";
+import _63 from "./desktop/xpui-routes-label.css?inline";
+import _64 from "./desktop/xpui-routes-offline-browse.css?inline";
+import _65 from "./desktop/xpui-routes-playlist.css?inline";
+import _66 from "./desktop/xpui-routes-podcast-chapter.css?inline";
+import _67 from "./desktop/xpui-routes-premium-page.css?inline";
+import _68 from "./desktop/xpui-routes-profile.css?inline";
+import _69 from "./desktop/xpui-routes-recent-searches.css?inline";
+import _70 from "./desktop/xpui-routes-recently-played.css?inline";
+import _71 from "./desktop/xpui-routes-recents.css?inline";
+import _72 from "./desktop/xpui-routes-search.css?inline";
+import _73 from "./desktop/xpui-routes-see-all-playlist-leavebehinds.css?inline";
+import _74 from "./desktop/xpui-routes-show-more-like-this.css?inline";
+import _75 from "./desktop/xpui-routes-show.css?inline";
+import _76 from "./desktop/xpui-routes-stage-page.css?inline";
+import _77 from "./desktop/xpui-routes-taste-profile.css?inline";
+import _78 from "./desktop/xpui-routes-track-v2.css?inline";
+import _79 from "./desktop/xpui-routes-venues.css?inline";
+import _80 from "./desktop/xpui-routes-web-settings.css?inline";
+import _81 from "./desktop/xpui-routes-your-library-x.css?inline";
+import _82 from "./desktop/your-sound-capsule-modal.css?inline";
+import _83 from "./mobile/mobile-web-player.css?inline";
+import _84 from "./mobile/mwp-artist-page.css?inline";
+import _85 from "./mobile/mwp-browse-page.css?inline";
+import _86 from "./mobile/mwp-download-page.css?inline";
+import _87 from "./mobile/mwp-home-page.css?inline";
+import _88 from "./mobile/mwp-search-landing.css?inline";
+import _89 from "./mobile/mwp-search-results.css?inline";
+import _90 from "./mobile/mwp-section-page.css?inline";
+import _91 from "./mobile/mwp-user-profile.css?inline";
 import _staticRules from "./static-rules.css?inline";
 
 export type LightModeStylesheetOverride = {
@@ -128,71 +127,70 @@ export const lightModeStylesheetOverrides = [
   { sourceFileName: "dwp-tuna.css", css: _25 },
   { sourceFileName: "dwp-user-comments.css", css: _26 },
   { sourceFileName: "dwp-video-player.css", css: _27 },
-  { sourceFileName: "dwp-video-takeover.css", css: _28 },
-  { sourceFileName: "dwp-watch-feed-view-container.css", css: _29 },
-  { sourceFileName: "dwp-whats-new-feed.css", css: _30 },
-  { sourceFileName: "home-ads-container.css", css: _31 },
-  { sourceFileName: "home-subfeed.css", css: _32 },
-  { sourceFileName: "home-v2-section.css", css: _33 },
-  { sourceFileName: "listening-stats-modal.css", css: _34 },
-  { sourceFileName: "playlist-leavebehinds.css", css: _35 },
-  { sourceFileName: "podcast-charts-hub.css", css: _36 },
-  { sourceFileName: "podcast-charts.css", css: _37 },
-  { sourceFileName: "this-is-playlist-concerts-carousel.css", css: _38 },
-  { sourceFileName: "trending-near-you-toolbar.css", css: _39 },
-  { sourceFileName: "ubi-highlighting.css", css: _40 },
-  { sourceFileName: "web-player.css", css: _41 },
-  { sourceFileName: "xpui-debug-window-contents.css", css: _42 },
-  { sourceFileName: "xpui-desktop-modals.css", css: _43 },
-  { sourceFileName: "xpui-pip-mini-player.css", css: _44 },
-  { sourceFileName: "xpui-root-dialogs.css", css: _45 },
-  { sourceFileName: "xpui-routes-album-prerelease.css", css: _46 },
-  { sourceFileName: "xpui-routes-album.css", css: _47 },
-  { sourceFileName: "xpui-routes-all-show-ads.css", css: _48 },
-  { sourceFileName: "xpui-routes-blend.css", css: _49 },
-  { sourceFileName: "xpui-routes-buddy-feed.css", css: _50 },
-  { sourceFileName: "xpui-routes-collection-concert-gallery.css", css: _51 },
-  { sourceFileName: "xpui-routes-collection-concerts.css", css: _52 },
-  { sourceFileName: "xpui-routes-collection-episodes.css", css: _53 },
-  { sourceFileName: "xpui-routes-collection-local-files.css", css: _54 },
-  { sourceFileName: "xpui-routes-collection-songs.css", css: _55 },
-  { sourceFileName: "xpui-routes-concert-campaign.css", css: _56 },
-  { sourceFileName: "xpui-routes-concert.css", css: _57 },
-  { sourceFileName: "xpui-routes-country-hub-section.css", css: _58 },
-  { sourceFileName: "xpui-routes-country-hub.css", css: _59 },
-  { sourceFileName: "xpui-routes-cultural-moment-hub.css", css: _60 },
-  { sourceFileName: "xpui-routes-episode-more-like-this.css", css: _61 },
-  { sourceFileName: "xpui-routes-episode.css", css: _62 },
-  { sourceFileName: "xpui-routes-label-artists.css", css: _63 },
-  { sourceFileName: "xpui-routes-label.css", css: _64 },
-  { sourceFileName: "xpui-routes-offline-browse.css", css: _65 },
-  { sourceFileName: "xpui-routes-playlist.css", css: _66 },
-  { sourceFileName: "xpui-routes-podcast-chapter.css", css: _67 },
-  { sourceFileName: "xpui-routes-premium-page.css", css: _68 },
-  { sourceFileName: "xpui-routes-profile.css", css: _69 },
-  { sourceFileName: "xpui-routes-recent-searches.css", css: _70 },
-  { sourceFileName: "xpui-routes-recently-played.css", css: _71 },
-  { sourceFileName: "xpui-routes-recents.css", css: _72 },
-  { sourceFileName: "xpui-routes-search.css", css: _73 },
-  { sourceFileName: "xpui-routes-see-all-playlist-leavebehinds.css", css: _74 },
-  { sourceFileName: "xpui-routes-show-more-like-this.css", css: _75 },
-  { sourceFileName: "xpui-routes-show.css", css: _76 },
-  { sourceFileName: "xpui-routes-stage-page.css", css: _77 },
-  { sourceFileName: "xpui-routes-taste-profile.css", css: _78 },
-  { sourceFileName: "xpui-routes-track-v2.css", css: _79 },
-  { sourceFileName: "xpui-routes-venues.css", css: _80 },
-  { sourceFileName: "xpui-routes-web-settings.css", css: _81 },
-  { sourceFileName: "xpui-routes-your-library-x.css", css: _82 },
-  { sourceFileName: "your-sound-capsule-modal.css", css: _83 },
-  { sourceFileName: "mobile-web-player.css", css: _84 },
-  { sourceFileName: "mwp-artist-page.css", css: _85 },
-  { sourceFileName: "mwp-browse-page.css", css: _86 },
-  { sourceFileName: "mwp-download-page.css", css: _87 },
-  { sourceFileName: "mwp-home-page.css", css: _88 },
-  { sourceFileName: "mwp-search-landing.css", css: _89 },
-  { sourceFileName: "mwp-search-results.css", css: _90 },
-  { sourceFileName: "mwp-section-page.css", css: _91 },
-  { sourceFileName: "mwp-user-profile.css", css: _92 },
+  { sourceFileName: "dwp-watch-feed-view-container.css", css: _28 },
+  { sourceFileName: "dwp-whats-new-feed.css", css: _29 },
+  { sourceFileName: "home-ads-container.css", css: _30 },
+  { sourceFileName: "home-subfeed.css", css: _31 },
+  { sourceFileName: "home-v2-section.css", css: _32 },
+  { sourceFileName: "listening-stats-modal.css", css: _33 },
+  { sourceFileName: "playlist-leavebehinds.css", css: _34 },
+  { sourceFileName: "podcast-charts-hub.css", css: _35 },
+  { sourceFileName: "podcast-charts.css", css: _36 },
+  { sourceFileName: "this-is-playlist-concerts-carousel.css", css: _37 },
+  { sourceFileName: "trending-near-you-toolbar.css", css: _38 },
+  { sourceFileName: "ubi-highlighting.css", css: _39 },
+  { sourceFileName: "web-player.css", css: _40 },
+  { sourceFileName: "xpui-debug-window-contents.css", css: _41 },
+  { sourceFileName: "xpui-desktop-modals.css", css: _42 },
+  { sourceFileName: "xpui-pip-mini-player.css", css: _43 },
+  { sourceFileName: "xpui-root-dialogs.css", css: _44 },
+  { sourceFileName: "xpui-routes-album-prerelease.css", css: _45 },
+  { sourceFileName: "xpui-routes-album.css", css: _46 },
+  { sourceFileName: "xpui-routes-all-show-ads.css", css: _47 },
+  { sourceFileName: "xpui-routes-blend.css", css: _48 },
+  { sourceFileName: "xpui-routes-buddy-feed.css", css: _49 },
+  { sourceFileName: "xpui-routes-collection-concert-gallery.css", css: _50 },
+  { sourceFileName: "xpui-routes-collection-concerts.css", css: _51 },
+  { sourceFileName: "xpui-routes-collection-episodes.css", css: _52 },
+  { sourceFileName: "xpui-routes-collection-local-files.css", css: _53 },
+  { sourceFileName: "xpui-routes-collection-songs.css", css: _54 },
+  { sourceFileName: "xpui-routes-concert-campaign.css", css: _55 },
+  { sourceFileName: "xpui-routes-concert.css", css: _56 },
+  { sourceFileName: "xpui-routes-country-hub-section.css", css: _57 },
+  { sourceFileName: "xpui-routes-country-hub.css", css: _58 },
+  { sourceFileName: "xpui-routes-cultural-moment-hub.css", css: _59 },
+  { sourceFileName: "xpui-routes-episode-more-like-this.css", css: _60 },
+  { sourceFileName: "xpui-routes-episode.css", css: _61 },
+  { sourceFileName: "xpui-routes-label-artists.css", css: _62 },
+  { sourceFileName: "xpui-routes-label.css", css: _63 },
+  { sourceFileName: "xpui-routes-offline-browse.css", css: _64 },
+  { sourceFileName: "xpui-routes-playlist.css", css: _65 },
+  { sourceFileName: "xpui-routes-podcast-chapter.css", css: _66 },
+  { sourceFileName: "xpui-routes-premium-page.css", css: _67 },
+  { sourceFileName: "xpui-routes-profile.css", css: _68 },
+  { sourceFileName: "xpui-routes-recent-searches.css", css: _69 },
+  { sourceFileName: "xpui-routes-recently-played.css", css: _70 },
+  { sourceFileName: "xpui-routes-recents.css", css: _71 },
+  { sourceFileName: "xpui-routes-search.css", css: _72 },
+  { sourceFileName: "xpui-routes-see-all-playlist-leavebehinds.css", css: _73 },
+  { sourceFileName: "xpui-routes-show-more-like-this.css", css: _74 },
+  { sourceFileName: "xpui-routes-show.css", css: _75 },
+  { sourceFileName: "xpui-routes-stage-page.css", css: _76 },
+  { sourceFileName: "xpui-routes-taste-profile.css", css: _77 },
+  { sourceFileName: "xpui-routes-track-v2.css", css: _78 },
+  { sourceFileName: "xpui-routes-venues.css", css: _79 },
+  { sourceFileName: "xpui-routes-web-settings.css", css: _80 },
+  { sourceFileName: "xpui-routes-your-library-x.css", css: _81 },
+  { sourceFileName: "your-sound-capsule-modal.css", css: _82 },
+  { sourceFileName: "mobile-web-player.css", css: _83 },
+  { sourceFileName: "mwp-artist-page.css", css: _84 },
+  { sourceFileName: "mwp-browse-page.css", css: _85 },
+  { sourceFileName: "mwp-download-page.css", css: _86 },
+  { sourceFileName: "mwp-home-page.css", css: _87 },
+  { sourceFileName: "mwp-search-landing.css", css: _88 },
+  { sourceFileName: "mwp-search-results.css", css: _89 },
+  { sourceFileName: "mwp-section-page.css", css: _90 },
+  { sourceFileName: "mwp-user-profile.css", css: _91 },
 ] satisfies readonly LightModeStylesheetOverride[];
 
 const _colorScheme = `:root,

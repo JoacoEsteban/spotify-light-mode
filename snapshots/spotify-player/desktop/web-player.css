@@ -10357,6 +10357,33 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   background-color: #ffffff1a;
   border-radius: 50%;
 }
+.Rz3Mz9MzQIAs5ZSXuLec {
+  --context-menu-v2-selected-background: var(--background-tinted-base);
+  background-color: #181818;
+  border-radius: 8px;
+  gap: 4px;
+  padding: 4px;
+  display: flex;
+}
+.Rz3Mz9MzQIAs5ZSXuLec > [role="presentation"] {
+  flex: 1;
+  min-width: 0;
+}
+.cPVhIbMabD69Z60hzc0L {
+  min-width: 32px;
+  height: 32px;
+  color: var(--text-subdued);
+  flex: 1;
+  justify-content: center;
+  padding: 8px 12px;
+}
+.lsiqyoiAasl_5fi4rs7Q {
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  display: flex;
+}
 .MYWr4UY4pKAAscUXvqrB {
   grid-gap: 8px;
   min-width: 0;
@@ -25081,4 +25108,4 @@ div:has(> .profile-dropdown-menu) {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.030f105a.css.map*/
+/*# sourceMappingURL=web-player.80d5ea77.css.map*/
