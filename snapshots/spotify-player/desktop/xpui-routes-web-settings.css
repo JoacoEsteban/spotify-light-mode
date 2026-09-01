@@ -185,6 +185,7 @@ select:disabled:hover {
 .xxhBmV3Xgm0D2SY9K5Hq {
   height: 200px;
   position: relative;
+  container-type: inline-size;
 }
 .TelRIusziawohKGYgKEl {
   display: block;
@@ -248,6 +249,11 @@ select:disabled:hover {
   bottom: -40px;
   left: 0;
   right: 0;
+}
+@container (width<280px) {
+  .LoJaWz3GM7y9bCpg7l62:nth-child(2n) .vy4lidLCiETkFu25LIV3 {
+    transform: translateY(16px);
+  }
 }
 .R7r17EL7nC1EvWpNn9h7 {
   text-align: left;
@@ -440,4 +446,4 @@ select:disabled:hover {
 .voCABqHyl_q3yoPaoV1V {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.282f5265.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.588d59ea.css.map*/

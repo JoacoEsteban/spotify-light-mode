@@ -86,14 +86,6 @@
   border-bottom: 1px solid #0000001a; /* hardcoded-color: 1px solid #ffffff1a → 1px solid #0000001a */
 }
 
-.Ar39fdw_GxJtyZ6C9Ml6 .qRbEzo6F5Y4A8rvtzsw2:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-subdued); /* css-var: var(--text-subdued) */
-}
-
-.Ar39fdw_GxJtyZ6C9Ml6 .qRbEzo6F5Y4A8rvtzsw2.UFMTQoKay04eVURJ1Z41:not(#spotify-light-mode-specificity-bump) {
-  color: var(--text-base); /* css-var: var(--text-base) */
-}
-
 .FH2JaNk1Hnsu7oYUFMQ0:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .FH2JaNk1Hnsu7oYUFMQ0:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .FH2JaNk1Hnsu7oYUFMQ0[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }

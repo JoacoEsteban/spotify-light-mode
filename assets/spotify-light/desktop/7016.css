@@ -187,83 +187,83 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.PromotionDefaultNativeImage-module_image-container__gQhJp:not(#spotify-light-mode-specificity-bump) {
+._image-container_1g0iv_7:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px #0006 → 0 4px 60px #ffffff66 */
 }
 
-.PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_subtitle__bkQ5C:not(#spotify-light-mode-specificity-bump) {
+._description_6489u_117:not(#spotify-light-mode-specificity-bump), ._subtitle_6489u_117:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.PromotionDefaultPoster-module_description__KkGF0:not(#spotify-light-mode-specificity-bump), .PromotionDefaultPoster-module_pretitle__-lsnK:not(#spotify-light-mode-specificity-bump) {
+._description_6489u_117:not(#spotify-light-mode-specificity-bump), ._pretitle_6489u_123:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.PromotionDefaultPoster-module_cardLink__mT-31.PromotionDefaultPoster-module_withBackgroundGradient__a8nsM:not(#spotify-light-mode-specificity-bump):after {
-  background: linear-gradient(#ffffff00 0%, #ffffff99 58.67%); /* hardcoded-color: linear-gradient(#0000 0%, #0009 58.67%) → linear-gradient(#ffffff00 0%, #ffffff99 58.67%) */
+._cardLink_6489u_187._withBackgroundGradient_6489u_202:not(#spotify-light-mode-specificity-bump):after {
+  background: linear-gradient(#ffffff00, #ffffff99 58.67%); /* hardcoded-color: linear-gradient(#0000, #0009 58.67%) → linear-gradient(#ffffff00, #ffffff99 58.67%) */
 }
 
-.PromotionDefaultPoster-module_cardLink__mT-31:not(#spotify-light-mode-specificity-bump) {
+._cardLink_6489u_187:not(#spotify-light-mode-specificity-bump) {
   background-color: #5f5f5f; /* hardcoded-color: #d3d3d3 → #5f5f5f */
 }
 
-.PromotionDefaultPoster-module_videoLayoutCard__3vfoC:not(#spotify-light-mode-specificity-bump):after {
+._videoLayoutCard_6489u_244:not(#spotify-light-mode-specificity-bump):after {
   background: linear-gradient(
     #ffffff00 45.15%,
-    #ffffff03 48.44%,
+    #ffffff03,
     #ffffff05 51.74%,
     #ffffff0d 56.12%,
-    #ffffff17 59.78%,
-    #ffffff24 63.44%,
-    #ffffff33 67.09%,
-    #ffffff45 70.75%,
-    #ffffff54 74.41%,
-    #ffffff66 78.06%,
-    #ffffff75 81.72%,
-    #ffffff82 85.37%,
-    #ffffff8c 89.03%,
-    #ffffff94 92.69%,
-    #ffffff96 96.34%,
-    #ffffff99 100%
+    #ffffff17,
+    #ffffff24,
+    #ffffff33,
+    #ffffff45,
+    #ffffff54,
+    #ffffff66,
+    #ffffff75,
+    #ffffff82,
+    #ffffff8c,
+    #ffffff94,
+    #ffffff96,
+    #ffffff99
   ); /* hardcoded-color: linear-gradient(
     #0000 45.15%,
-    #00000003 48.44%,
+    #00000003,
     #00000005 51.74%,
     #0000000d 56.12%,
-    #00000017 59.78%,
-    #00000024 63.44%,
-    #0003 67.09%,
-    #00000045 70.75%,
-    #00000054 74.41%,
-    #0006 78.06%,
-    #00000075 81.72%,
-    #00000082 85.37%,
-    #0000008c 89.03%,
-    #00000094 92.69%,
-    #00000096 96.34%,
-    #0009 100%
+    #00000017,
+    #00000024,
+    #0003,
+    #00000045,
+    #00000054,
+    #0006,
+    #00000075,
+    #00000082,
+    #0000008c,
+    #00000094,
+    #00000096,
+    #0009
   ) → linear-gradient(
     #ffffff00 45.15%,
-    #ffffff03 48.44%,
+    #ffffff03,
     #ffffff05 51.74%,
     #ffffff0d 56.12%,
-    #ffffff17 59.78%,
-    #ffffff24 63.44%,
-    #ffffff33 67.09%,
-    #ffffff45 70.75%,
-    #ffffff54 74.41%,
-    #ffffff66 78.06%,
-    #ffffff75 81.72%,
-    #ffffff82 85.37%,
-    #ffffff8c 89.03%,
-    #ffffff94 92.69%,
-    #ffffff96 96.34%,
-    #ffffff99 100%
+    #ffffff17,
+    #ffffff24,
+    #ffffff33,
+    #ffffff45,
+    #ffffff54,
+    #ffffff66,
+    #ffffff75,
+    #ffffff82,
+    #ffffff8c,
+    #ffffff94,
+    #ffffff96,
+    #ffffff99
   ) */
 }
 
-.PromotionDefaultPoster-module_videoLayoutCard__3vfoC
-  .PromotionDefaultPoster-module_condensed-tertiary-icons__5XK1v
+._videoLayoutCard_6489u_244
+  ._condensed-tertiary-icons_6489u_28
   button:not([aria-checked="true"]):not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
 }
