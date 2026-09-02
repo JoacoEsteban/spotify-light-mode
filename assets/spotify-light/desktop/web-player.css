@@ -4236,7 +4236,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-overlay:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-overlay:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
     outline: none; /* forwarded-reset: none */
@@ -4244,19 +4244,19 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-overlay__arrow-svg:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-overlay__arrow-svg:not(#spotify-light-mode-specificity-bump) {
     fill: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-overlay:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-overlay:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-focus-border:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-focus-border:not(#spotify-light-mode-specificity-bump) {
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #0000 → var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -4265,19 +4265,19 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-focus-border-bottom:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-focus-border-bottom:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-focus-border-bottom-element:not(#spotify-light-mode-specificity-bump), .e-10810-focus-border-bottom:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-focus-border-bottom-element:not(#spotify-light-mode-specificity-bump), .e-10860-focus-border-bottom:not(#spotify-light-mode-specificity-bump):after {
     border-bottom: var(--encore-border-width-focus) solid #ffffff00; /* hardcoded-color: var(--encore-border-width-focus) solid #0000 → var(--encore-border-width-focus) solid #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-focus-border:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-focus-border:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -4289,69 +4289,69 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-form-control:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-control:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-control:not(#spotify-light-mode-specificity-bump)::placeholder {
+  .e-10860-form-control:not(#spotify-light-mode-specificity-bump)::placeholder {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-form-control[readonly]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-control[readonly]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--naked:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--naked:not(#spotify-light-mode-specificity-bump) {
     --encore-container-bg: #ffffff00; /* custom-property: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-variant--tinted:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--tinted:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-bg); /* css-var: var(--encore-container-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--elevated:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--elevated:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-bg); /* css-var: var(--encore-container-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--bordered:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--bordered:not(#spotify-light-mode-specificity-bump) {
     --encore-container-bg: #ffffff00; /* custom-property: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-variant--contrasting:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--contrasting:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-bg); /* css-var: var(--encore-container-bg) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--interactive:hover:not(#spotify-light-mode-specificity-bump), .e-10810-variant--interactive[data-hovered]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--interactive:hover:not(#spotify-light-mode-specificity-bump), .e-10860-variant--interactive[data-hovered]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-hover-bg); /* css-var: var(--encore-container-hover-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--interactive:active:not(#spotify-light-mode-specificity-bump), .e-10810-variant--interactive[data-pressed]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--interactive:active:not(#spotify-light-mode-specificity-bump), .e-10860-variant--interactive[data-pressed]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-active-bg); /* css-var: var(--encore-container-active-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--interactive:focus-visible:where(
+  .e-10860-variant--interactive:focus-visible:where(
         [data-focused]:not([data-focus-visible="true"])
       ):not(#spotify-light-mode-specificity-bump) {
     outline-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
@@ -4359,391 +4359,391 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-variant--interactive[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--interactive[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(--encore-focus-outline-color, var(--essential-base)); /* css-var: var(--encore-focus-outline-color, var(--essential-base)) */
   }
 }
 
 @layer encore {
-  .e-10810-variant--interactive:disabled:hover:not(#spotify-light-mode-specificity-bump), .e-10810-variant--interactive[aria-disabled="true"]:hover:not(#spotify-light-mode-specificity-bump), .e-10810-variant--interactive[aria-disabled="true"][data-hovered]:not(#spotify-light-mode-specificity-bump), .e-10810-variant--interactive[data-hovered]:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-variant--interactive:disabled:hover:not(#spotify-light-mode-specificity-bump), .e-10860-variant--interactive[aria-disabled="true"]:hover:not(#spotify-light-mode-specificity-bump), .e-10860-variant--interactive[aria-disabled="true"][data-hovered]:not(#spotify-light-mode-specificity-bump), .e-10860-variant--interactive[data-hovered]:disabled:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-container-bg); /* css-var: var(--encore-container-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-accordion:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-accordion:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-accordion-content:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-accordion-content:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-accordion-title__button:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-accordion-title__button:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     border: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-accordion-title__icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-accordion-title__icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-app:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-app:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-backdrop:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-backdrop:not(#spotify-light-mode-specificity-bump) {
     background: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
   }
 }
 
 @layer encore {
-  .e-10810-banner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-banner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-banner--color-set:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-banner--color-set:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-box:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--interactive.e-10810-legacy-box--contrasting:hover:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--interactive.e-10860-legacy-box--contrasting:hover:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--interactive.e-10810-legacy-box--contrasting:active:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--interactive.e-10860-legacy-box--contrasting:active:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--tinted:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-box--tinted:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--tinted.e-10810-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--tinted.e-10860-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--tinted.e-10810-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--tinted.e-10860-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--elevated:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-box--elevated:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--elevated.e-10810-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--elevated.e-10860-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--elevated.e-10810-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--elevated.e-10860-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--hover-custom.e-10810-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--hover-custom.e-10860-legacy-box--interactive:hover:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--box-hover-background-color); /* css-var: var(--box-hover-background-color) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--active-custom.e-10810-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-box--active-custom.e-10860-legacy-box--interactive:active:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--box-active-background-color); /* css-var: var(--box-active-background-color) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-box--contrasting:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-box--contrasting:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-link.e-10810-breadcrumb-item[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-link.e-10860-breadcrumb-item[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button:not(#spotify-light-mode-specificity-bump) {
     border: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-button:focus-visible:where(
+  .e-10860-button:focus-visible:where(
         [data-focused]:not([data-focus-visible="true"])
-      ):not(.e-10810-button--secondary-bordered):not(#spotify-light-mode-specificity-bump) {
+      ):not(.e-10860-button--secondary-bordered):not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-button--floating-background:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--floating-background:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--floating-background:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--floating-background:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-button--floating-background:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--floating-background:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
   }
 }
 
 @layer encore {
-  .e-10810-button--primary:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--primary:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--primary:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--primary:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-button--primary:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--primary:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-button--primary.e-10810-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10810-button--primary:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--primary.e-10860-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10860-button--primary:disabled:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary.e-10810-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10810-button--secondary:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary.e-10860-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10860-button--secondary:disabled:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-text-base:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-text-base:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-text-base:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-text-base:hover:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-text-base.e-10810-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10810-button--secondary-bordered-text-base:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-text-base.e-10860-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10860-button--secondary-bordered-text-base:disabled:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-subdued:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-subdued:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-subdued:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-subdued:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--secondary-bordered-subdued.e-10810-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10810-button--secondary-bordered-subdued:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--secondary-bordered-subdued.e-10860-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10860-button--secondary-bordered-subdued:disabled:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button--tertiary:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--tertiary:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--tertiary:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--tertiary:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-button--tertiary-text-subdued:active:not(#spotify-light-mode-specificity-bump), .e-10810-button--tertiary-text-subdued:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--tertiary-text-subdued:active:not(#spotify-light-mode-specificity-bump), .e-10860-button--tertiary-text-subdued:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button--tertiary-text-subdued.e-10810-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10810-button--tertiary-text-subdued:disabled:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button--tertiary-text-subdued.e-10860-button--has-disabled-styling:not(#spotify-light-mode-specificity-bump), .e-10860-button--tertiary-text-subdued:disabled:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-primary:hover .e-10810-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-primary:hover .e-10860-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-primary:active .e-10810-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-primary:active .e-10860-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-primary:disabled .e-10810-button-primary__inner:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-button-primary[aria-disabled="true"]
-      .e-10810-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-primary:disabled .e-10860-button-primary__inner:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-button-primary[aria-disabled="true"]
+      .e-10860-button-primary__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--text-base:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--text-base:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--text-base:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--text-base:hover:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--subdued:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--subdued:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     border-color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--text-base:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--text-base:active:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--text-base:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-button-secondary--text-base[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--text-base:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-button-secondary--text-base[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-button-secondary--subdued:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-button-secondary--subdued[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-button-secondary--subdued:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-button-secondary--subdued[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--text-subdued); /* css-var: var(--text-subdued) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-button-tertiary--text-subdued:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button-tertiary--text-subdued:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-button-tertiary--text-subdued:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-button-tertiary--text-subdued[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-button-tertiary--text-subdued:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-button-tertiary--text-subdued[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-card__button:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-card__button:not(#spotify-light-mode-specificity-bump) {
     border: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-card__button:focus:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-card__button:focus:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-card.e-10810-focus-border:has(> :first-child:focus-visible):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-card.e-10860-focus-border:has(> :first-child:focus-visible):not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -4755,13 +4755,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-card-title--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-card-title--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-checkbox-indicator--indeterminate:not(#spotify-light-mode-specificity-bump), .e-10810-checkbox-indicator--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-checkbox-indicator--indeterminate:not(#spotify-light-mode-specificity-bump), .e-10860-checkbox-indicator--selected:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--essential-bright-accent); /* css-var: var(--essential-bright-accent) */
     border: none; /* forwarded-reset: none */
   }
@@ -4769,105 +4769,105 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 @layer encore {
   :is(
-      .e-10810-checkbox-indicator--selected,
-      .e-10810-checkbox-indicator--indeterminate
+      .e-10860-checkbox-indicator--selected,
+      .e-10860-checkbox-indicator--indeterminate
     ):not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip__inner--secondary:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip__inner--secondary:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip:hover > .e-10810-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip:hover > .e-10860-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip:hover
-      > .e-10810-legacy-chip__inner.e-10810-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip:hover
+      > .e-10860-legacy-chip__inner.e-10860-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip:active > .e-10810-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip:active > .e-10860-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip:active
-      > .e-10810-legacy-chip__inner.e-10810-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip:active
+      > .e-10860-legacy-chip__inner.e-10860-legacy-chip__inner--selected:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip:disabled > .e-10810-legacy-chip__inner:not(#spotify-light-mode-specificity-bump), .e-10810-legacy-chip[aria-disabled="true"] > .e-10810-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-chip:disabled > .e-10860-legacy-chip__inner:not(#spotify-light-mode-specificity-bump), .e-10860-legacy-chip[aria-disabled="true"] > .e-10860-legacy-chip__inner:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-chip__inner--selected:is(
-      .e-10810-legacy-chip:disabled > .e-10810-legacy-chip__inner,
-      .e-10810-legacy-chip[aria-disabled="true"] > .e-10810-legacy-chip__inner
+  .e-10860-legacy-chip__inner--selected:is(
+      .e-10860-legacy-chip:disabled > .e-10860-legacy-chip__inner,
+      .e-10860-legacy-chip[aria-disabled="true"] > .e-10860-legacy-chip__inner
     ):not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-clear:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-chip-clear:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-clear:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-chip-clear:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-clear:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-chip-clear:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-press); /* css-var: var(--background-tinted-press) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-clear:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-chip-clear[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-chip-clear:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-chip-clear[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-group:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-chip-group:not(#spotify-light-mode-specificity-bump):before {
     background: linear-gradient(270deg, #ffffff00, var(--background-base) 75%); /* hardcoded-color: linear-gradient(270deg, #0000, var(--background-base) 75%) → linear-gradient(270deg, #ffffff00, var(--background-base) 75%) */
   }
 }
 
 @layer encore {
-  .e-10810-chip-group:not(#spotify-light-mode-specificity-bump):after, [dir="rtl"] :is():not(#spotify-light-mode-specificity-bump) {
+  .e-10860-chip-group:not(#spotify-light-mode-specificity-bump):after, [dir="rtl"] :is():not(#spotify-light-mode-specificity-bump) {
     background: linear-gradient(90deg, #ffffff00, var(--background-base) 75%); /* hardcoded-color: linear-gradient(90deg, #0000, var(--background-base) 75%) → linear-gradient(90deg, #ffffff00, var(--background-base) 75%) */
   }
 }
@@ -4879,107 +4879,107 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-collapse-button:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-collapse-button:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .encore-internal-color-text-subdued.e-10810-collapse-button:hover:not(#spotify-light-mode-specificity-bump) {
+  .encore-internal-color-text-subdued.e-10860-collapse-button:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dialog-full-screen:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dialog-full-screen:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-divider:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-divider:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown__arrow:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown__arrow:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown-link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown-link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown-link:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown-link:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown-link:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-dropdown-link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown-link:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-dropdown-link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown-link:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown-link:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-dropdown-list:focus-visible .e-10810-dropdown-link--selected:not(#spotify-light-mode-specificity-bump), .e-10810-dropdown-list:focus-visible .e-10810-dropdown-link--selected:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-dropdown-list:focus-visible .e-10860-dropdown-link--selected:not(#spotify-light-mode-specificity-bump), .e-10860-dropdown-list:focus-visible .e-10860-dropdown-link--selected:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state--contextual:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state--contextual:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state--contextual:not(#spotify-light-mode-specificity-bump), .e-10810-empty-state__message-container:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state--contextual:not(#spotify-light-mode-specificity-bump), .e-10860-empty-state__message-container:not(#spotify-light-mode-specificity-bump) {
     border: var(--encore-border-width-hairline) solid #ffffff00; /* hardcoded-color: var(--encore-border-width-hairline) solid #0000 → var(--encore-border-width-hairline) solid #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state__icon-container:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state__icon-container:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state__icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state__icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state--has-background:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state--has-background:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-empty-state__message-container--contextual:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-empty-state__message-container--contextual:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
     border-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #0000 → var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -4988,13 +4988,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  input:active + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:active + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(
         --encore-form-checkbox-semantic-color,
         var(--essential-bright-accent)
@@ -5006,7 +5006,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:checked + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:checked + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(
         --encore-form-checkbox-semantic-color,
         var(--essential-bright-accent)
@@ -5025,7 +5025,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:focus-visible + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:focus-visible + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -5037,7 +5037,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:not(:checked):hover + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:not(:checked):active + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump), input:not(:checked):hover + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(
         --encore-form-checkbox-semantic-color,
         var(--essential-bright-accent)
@@ -5049,34 +5049,22 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:not(:checked):active + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
-    border-color: var(
-        --encore-form-checkbox-semantic-color,
-        var(--essential-bright-accent)
-      ); /* css-var: var(
-        --encore-form-checkbox-semantic-color,
-        var(--essential-bright-accent)
-      ) */
-  }
-}
-
-@layer encore {
-  input:checked + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump):before {
+  input:checked + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump):before {
     border-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  input:not(:checked):disabled + label .e-10810-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:not(:checked):disabled + label .e-10860-form-checkbox__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
-  input + label .e-10810-form-checkbox__indicator.e-10810-Encore_indeterminate:not(#spotify-light-mode-specificity-bump), input:disabled
+  input + label .e-10860-form-checkbox__indicator.e-10860-Encore_indeterminate:not(#spotify-light-mode-specificity-bump), input:disabled
       + label
-      .e-10810-form-checkbox__indicator.e-10810-Encore_indeterminate:not(#spotify-light-mode-specificity-bump) {
+      .e-10860-form-checkbox__indicator.e-10860-Encore_indeterminate:not(#spotify-light-mode-specificity-bump) {
     background-color: var(
         --encore-form-checkbox-semantic-color,
         var(--essential-bright-accent)
@@ -5097,55 +5085,55 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 @layer encore {
   input
       + label
-      .e-10810-form-checkbox__indicator.e-10810-Encore_indeterminate:not(#spotify-light-mode-specificity-bump):before {
+      .e-10860-form-checkbox__indicator.e-10860-Encore_indeterminate:not(#spotify-light-mode-specificity-bump):before {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-checkbox__text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-checkbox__text:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-group__label:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-group__label:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-group__required:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-group__required:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-negative); /* css-var: var(--text-negative) */
   }
 }
 
 @layer encore {
-  .e-10810-form-group__indicator-text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-group__indicator-text:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-form-help-text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-help-text:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-form-help-text--error:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-help-text--error:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-negative); /* css-var: var(--text-negative) */
   }
 }
 
 @layer encore {
-  .e-10810-form-input-icon__icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-input-icon__icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -5155,7 +5143,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:checked + .e-10810-form-radio__label .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+  input:checked + .e-10860-form-radio__label .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(
         --encore-form-radio-semantic-color,
         var(--essential-bright-accent)
@@ -5168,8 +5156,8 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 @layer encore {
   input:focus-visible
-      + .e-10810-form-radio__label
-      .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+      + .e-10860-form-radio__label
+      .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -5182,30 +5170,30 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 @layer encore {
   input:not(:checked):disabled
-      + .e-10810-form-radio__label
-      .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+      + .e-10860-form-radio__label
+      .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-subdued); /* css-var: var(--essential-subdued) */
   }
 }
 
 @layer encore {
   input:checked
-      + .e-10810-form-radio__label
-      .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump):before {
+      + .e-10860-form-radio__label
+      .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump):before {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-radio__text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-radio__text:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
   input:not(:checked, :disabled):hover
-      + .e-10810-form-radio__label
-      .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+      + .e-10860-form-radio__label
+      .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(
         --encore-form-radio-semantic-color,
         var(--essential-bright-accent)
@@ -5218,8 +5206,8 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 @layer encore {
   input:not(:checked, :disabled):active
-      + .e-10810-form-radio__label
-      .e-10810-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
+      + .e-10860-form-radio__label
+      .e-10860-form-radio__indicator:not(#spotify-light-mode-specificity-bump) {
     border-color: var(
         --encore-form-radio-semantic-color,
         var(--essential-bright-accent)
@@ -5231,7 +5219,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #0000 → var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -5241,7 +5229,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:focus-visible + .e-10810-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
+  input:focus-visible + .e-10860-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -5253,7 +5241,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  input:checked + .e-10810-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
+  input:checked + .e-10860-form-toggle__wrapper:not(#spotify-light-mode-specificity-bump) {
     background-color: var(
         --encore-form-toggle-semantic-color,
         var(--essential-bright-accent)
@@ -5265,96 +5253,96 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-form-toggle__indicator:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-toggle__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-form-toggle__label:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-form-toggle__label:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
     fill: var(--encore-icon-fill, currentColor); /* css-var: var(--encore-icon-fill, currentColor) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-image__placeholder-wrapper:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-image__placeholder-wrapper:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-link:where(button):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-link:where(button):not(#spotify-light-mode-specificity-bump) {
     border: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-link--inline-color:not([aria-disabled="true"]):hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-link--inline-color:not([aria-disabled="true"]):hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-bright-accent); /* css-var: var(--text-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-link--inline-color:not([aria-disabled="true"]):active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-link--inline-color:not([aria-disabled="true"]):active:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-bright-accent); /* css-var: var(--text-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-list--divider > :not(:first-child):not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-list--divider > :not(:first-child):not(#spotify-light-mode-specificity-bump):before {
     border-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-list--divider:has(.e-10810-box)
-      > .e-10810-box:active
-      + .e-10810-box:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-list--divider:has(.e-10860-box)
+      > .e-10860-box:active
+      + .e-10860-box:not(#spotify-light-mode-specificity-bump):before {
     border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-list--divider:has(.e-10810-box) > .e-10810-box:active:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-list--divider:has(.e-10860-box) > .e-10860-box:active:not(#spotify-light-mode-specificity-bump):before {
     border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-list--divider:has(.e-10810-box)
-      > .e-10810-box:hover
-      + .e-10810-box:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-list--divider:has(.e-10860-box)
+      > .e-10860-box:hover
+      + .e-10860-box:not(#spotify-light-mode-specificity-bump):before {
     border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-list--divider:has(.e-10810-box) > .e-10810-box:hover:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-list--divider:has(.e-10860-box) > .e-10860-box:hover:not(#spotify-light-mode-specificity-bump):before {
     border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-list-row__row-button:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-list-row__row-button:not(#spotify-light-mode-specificity-bump) {
     border: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-list-row__row-button:focus:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-list-row__row-button:focus:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-list-row.e-10810-focus-border:has(
+  .e-10860-legacy-list-row.e-10860-focus-border:has(
         > :first-child:focus-visible
       ):not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
@@ -5368,226 +5356,200 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-legacy-list-row-title--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-list-row-title--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-logo:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-logo:not(#spotify-light-mode-specificity-bump) {
     stroke: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
     fill: var(--encore-logo-fill-color); /* css-var: var(--encore-logo-fill-color) */
   }
 }
 
 @layer encore {
-  .e-10810-logo-spotify-for-artists:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-logo-spotify-for-artists:not(#spotify-light-mode-specificity-bump) {
     stroke: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
     fill: var(--encore-logo-artists-fill-color); /* css-var: var(--encore-logo-artists-fill-color) */
   }
 }
 
 @layer encore {
-  .e-10810-menu:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-menu:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-menu-row[data-focused]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-menu-row[data-focused]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--list-row-hover-bg); /* css-var: var(--list-row-hover-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-menu-row[data-open]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-menu-row[data-open]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--list-row-hover-bg); /* css-var: var(--list-row-hover-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-menu-search-field:not(#spotify-light-mode-specificity-bump) {
-    background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
+  .e-10860-nav-bar:not(#spotify-light-mode-specificity-bump) {
+    color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-menu-search-field__icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-bar-list-item__link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-menu-search-field__input:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-bar-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10860-nav-bar-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
-    border: none; /* forwarded-reset: none */
+  }
+}
+
+@layer encore {
+  .e-10860-nav-bar-list-item__link--focus-border:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-menu-search-field__input:not(#spotify-light-mode-specificity-bump)::placeholder {
-    color: var(--text-subdued); /* css-var: var(--text-subdued) */
-  }
-}
-
-@layer encore {
-  .e-10810-nav-bar:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-bar-list-item__link--focus-border:focus-visible:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-bar-list-item__link:not(#spotify-light-mode-specificity-bump) {
-    color: var(--text-subdued); /* css-var: var(--text-subdued) */
-  }
-}
-
-@layer encore {
-  .e-10810-nav-bar-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10810-nav-bar-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
-    color: var(--text-base); /* css-var: var(--text-base) */
-  }
-}
-
-@layer encore {
-  .e-10810-nav-bar-list-item__link--focus-border:not(#spotify-light-mode-specificity-bump) {
-    outline: none; /* forwarded-reset: none */
-  }
-}
-
-@layer encore {
-  .e-10810-nav-bar-list-item__link--focus-border:focus-visible:not(#spotify-light-mode-specificity-bump) {
-    color: var(--text-base); /* css-var: var(--text-base) */
-  }
-}
-
-@layer encore {
-  .e-10810-nav-bar-list-item__link--active:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-nav-bar-list-item__link--active:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-bar-list-item__link--focus-border:focus-visible:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-nav-bar-list-item__link--focus-border:focus-visible:not(#spotify-light-mode-specificity-bump):after {
     background-color: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-pill-list-item__link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-pill-list-item__link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-pill-list-item__link:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-nav-pill-list-item__link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-pill-list-item__link:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-nav-pill-list-item__link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-pill-list-item__link--hover:not(#spotify-light-mode-specificity-bump), .e-10810-nav-pill-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-pill-list-item__link--hover:not(#spotify-light-mode-specificity-bump), .e-10860-nav-pill-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-pill-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10810-nav-pill-list-item__link:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-pill-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10860-nav-pill-list-item__link:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-pill-panel:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-pill-panel:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-nav-stepper-item__text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-stepper-item__text:not(#spotify-light-mode-specificity-bump) {
     border-block-end: 2px solid #ffffff00; /* hardcoded-color: 2px solid #0000 → 2px solid #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-nav-stepper-item__text--active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-stepper-item__text--active:not(#spotify-light-mode-specificity-bump) {
     border-color: var(--essential-bright-accent); /* css-var: var(--essential-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-nav-stepper-item__icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-nav-stepper-item__icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-action:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-action:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-action:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-action:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-action .e-10810-navigation-action--active:not(#spotify-light-mode-specificity-bump), .e-10810-navigation-action:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-action .e-10860-navigation-action--active:not(#spotify-light-mode-specificity-bump), .e-10860-navigation-action:active:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-action:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-navigation-action[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-action:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-navigation-action[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-item__link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link:active:not(#spotify-light-mode-specificity-bump), .e-10810-navigation-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-item__link:active:not(#spotify-light-mode-specificity-bump), .e-10860-navigation-list-item__link:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-navigation-list-item__link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-item__link:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-navigation-list-item__link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10810-navigation-list-item__link--active:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-item__link--active:not(#spotify-light-mode-specificity-bump), .e-10860-navigation-list-item__link--active:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link--active
-        .e-10810-navigation-list-item__link-child:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-navigation-list-item__link--active
+        .e-10860-navigation-list-item__link-child:not(#spotify-light-mode-specificity-bump):after {
     border-color: var(--essential-bright-accent); /* css-var: var(--essential-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link--focus:focus-visible
-      .e-10810-navigation-list-item__link-child:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-navigation-list-item__link--focus:focus-visible
+      .e-10860-navigation-list-item__link-child:not(#spotify-light-mode-specificity-bump):after {
     border-color: var(--text-base); /* css-var: var(--text-base) */
     outline-color: var(
         --encore-focus-outline-color,
@@ -5600,50 +5562,50 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-navigation-list-item__link--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-item__link--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-navigation-list-title:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-navigation-list-title:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-controls__label:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-controls__label:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown__arrow:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown__arrow:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown-link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown-link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown-link--selected:not(#spotify-light-mode-specificity-bump), .e-10810-pagination-dropdown-link--selected:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown-link--selected:not(#spotify-light-mode-specificity-bump), .e-10860-pagination-dropdown-link--selected:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown-link:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown-link:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
@@ -5651,11 +5613,11 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 @layer encore {
   :is(
-      .e-10810-pagination-dropdown-link:focus-visible,
-      .e-10810-pagination-dropdown-link:active
+      .e-10860-pagination-dropdown-link:focus-visible,
+      .e-10860-pagination-dropdown-link:active
     ):not(#spotify-light-mode-specificity-bump), :is(
-      .e-10810-pagination-dropdown-link:focus-visible,
-      .e-10810-pagination-dropdown-link:active
+      .e-10860-pagination-dropdown-link:focus-visible,
+      .e-10860-pagination-dropdown-link:active
     ):hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
@@ -5663,47 +5625,47 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown-list--focus:focus:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown-list--focus:focus:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-pagination-dropdown-list--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-pagination-dropdown-list--focus:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-top-start:not(#spotify-light-mode-specificity-bump):after, .e-10810-legacy-popover--arrow-top:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-top-start:not(#spotify-light-mode-specificity-bump):after, .e-10860-legacy-popover--arrow-top:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(0 -2px 1px #ffffff0d); /* hardcoded-color: drop-shadow(0 -2px 1px #0000000d) → drop-shadow(0 -2px 1px #ffffff0d) */
     border-inline: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-top-end:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-top-end:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(0 -2px 1px #ffffff0d); /* hardcoded-color: drop-shadow(0 -2px 1px #0000000d) → drop-shadow(0 -2px 1px #ffffff0d) */
     border-inline: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-bottom-start:not(#spotify-light-mode-specificity-bump):after, .e-10810-legacy-popover--arrow-bottom:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-bottom-start:not(#spotify-light-mode-specificity-bump):after, .e-10860-legacy-popover--arrow-bottom:not(#spotify-light-mode-specificity-bump):after {
     border-inline: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(0 2px 1px #ffffff0d); /* hardcoded-color: drop-shadow(0 2px 1px #0000000d) → drop-shadow(0 2px 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-bottom-end:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-bottom-end:not(#spotify-light-mode-specificity-bump):after {
     border-inline: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(0 2px 1px #ffffff0d); /* hardcoded-color: drop-shadow(0 2px 1px #0000000d) → drop-shadow(0 2px 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-start:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-start:not(#spotify-light-mode-specificity-bump):after {
     border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
     border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
@@ -5711,13 +5673,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  [dir="rtl"] .e-10810-legacy-popover--arrow-start:not(#spotify-light-mode-specificity-bump):after {
+  [dir="rtl"] .e-10860-legacy-popover--arrow-start:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-start-top:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-start-top:not(#spotify-light-mode-specificity-bump):after {
     border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
     border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
@@ -5725,13 +5687,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  [dir="rtl"] .e-10810-legacy-popover--arrow-start-top:not(#spotify-light-mode-specificity-bump):after {
+  [dir="rtl"] .e-10860-legacy-popover--arrow-start-top:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-start-bottom:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-start-bottom:not(#spotify-light-mode-specificity-bump):after {
     border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
     border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
@@ -5739,40 +5701,26 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after, [dir="rtl"] .e-10810-legacy-popover--arrow-start-bottom:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after, [dir="rtl"] .e-10860-legacy-popover--arrow-start-bottom:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after {
     border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
   }
 }
 
 @layer encore {
-  [dir="rtl"] .e-10810-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after {
+  [dir="rtl"] .e-10860-legacy-popover--arrow-end:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-popover--arrow-end-top:not(#spotify-light-mode-specificity-bump):after {
-    border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
-    filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
-    border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
-  }
-}
-
-@layer encore {
-  [dir="rtl"] .e-10810-legacy-popover--arrow-end-top:not(#spotify-light-mode-specificity-bump):after {
-    filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
-  }
-}
-
-@layer encore {
-  .e-10810-legacy-popover--arrow-end-bottom:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-legacy-popover--arrow-end-top:not(#spotify-light-mode-specificity-bump):after {
     border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
     filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
     border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
@@ -5780,272 +5728,286 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  [dir="rtl"] .e-10810-legacy-popover--arrow-end-bottom:not(#spotify-light-mode-specificity-bump):after {
+  [dir="rtl"] .e-10860-legacy-popover--arrow-end-top:not(#spotify-light-mode-specificity-bump):after {
     filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
   }
 }
 
 @layer encore {
-  .e-10810-popover-navigation-link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-popover--arrow-end-bottom:not(#spotify-light-mode-specificity-bump):after {
+    border-block-end: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
+    filter: drop-shadow(2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(2px 0 1px #0000000d) → drop-shadow(2px 0 1px #ffffff0d) */
+    border-block-start: 8px solid #ffffff00; /* hardcoded-color: 8px solid #0000 → 8px solid #ffffff00 */
+  }
+}
+
+@layer encore {
+  [dir="rtl"] .e-10860-legacy-popover--arrow-end-bottom:not(#spotify-light-mode-specificity-bump):after {
+    filter: drop-shadow(-2px 0 1px #ffffff0d); /* hardcoded-color: drop-shadow(-2px 0 1px #0000000d) → drop-shadow(-2px 0 1px #ffffff0d) */
+  }
+}
+
+@layer encore {
+  .e-10860-popover-navigation-link:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-popover-navigation-link:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-popover-navigation-link:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-popover-navigation-link:disabled:not(#spotify-light-mode-specificity-bump), .e-10810-popover-navigation-link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-popover-navigation-link:disabled:not(#spotify-light-mode-specificity-bump), .e-10860-popover-navigation-link[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-popover-navigation-link:active:not(#spotify-light-mode-specificity-bump), .e-10810-popover-navigation-link:active:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-popover-navigation-link:active:not(#spotify-light-mode-specificity-bump), .e-10860-popover-navigation-link:active:hover:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-elevated-press); /* css-var: var(--background-elevated-press) */
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-progress-bar:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-progress-bar:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   }
 }
 
 @layer encore {
-  .e-10810-progress-bar__indicator:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-progress-bar__indicator:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--progress-bar-color); /* css-var: var(--progress-bar-color) */
   }
 }
 
 @layer encore {
-  .e-10810-progress-dots__dot:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-progress-dots__dot:not(#spotify-light-mode-specificity-bump) {
     fill: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-skip-link:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-skip-link:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-skip-link--browser-default:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-skip-link--browser-default:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-skip-link__text:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-skip-link__text:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     border-color: var(--essential-base); /* css-var: var(--essential-base) */
   }
 }
 
 @layer encore {
-  .e-10810-status-indicator:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-status-indicator:not(#spotify-light-mode-specificity-bump):before {
     background-color: var(--encore-status-indicator-essential-color); /* css-var: var(--encore-status-indicator-essential-color) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tab-item:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tab-item:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tab-item:active:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     background-color: var(--background-press); /* css-var: var(--background-press) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item[aria-selected="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tab-item[aria-selected="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item[aria-selected="true"]:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-tab-item[aria-selected="true"]:not(#spotify-light-mode-specificity-bump):before {
     background-color: var(--essential-bright-accent); /* css-var: var(--essential-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-item[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tab-item[aria-disabled="true"]:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-list:not(#spotify-light-mode-specificity-bump):before {
+  .e-10860-tab-list:not(#spotify-light-mode-specificity-bump):before {
     background: linear-gradient(270deg, #ffffff00, var(--background-base) 75%); /* hardcoded-color: linear-gradient(270deg, #0000, var(--background-base) 75%) → linear-gradient(270deg, #ffffff00, var(--background-base) 75%) */
   }
 }
 
 @layer encore {
-  .e-10810-tab-list:not(#spotify-light-mode-specificity-bump):after {
+  .e-10860-tab-list:not(#spotify-light-mode-specificity-bump):after {
     background: linear-gradient(90deg, #ffffff00, var(--background-base) 75%); /* hardcoded-color: linear-gradient(90deg, #0000, var(--background-base) 75%) → linear-gradient(90deg, #ffffff00, var(--background-base) 75%) */
   }
 }
 
 @layer encore {
-  .e-10810-table-cell:focus:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-cell:focus:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-table-cell--highlight:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-cell--highlight:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-table-container--sticky-header .e-10810-table-header-cell:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-container--sticky-header .e-10860-table-header-cell:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-table-header-cell:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-header-cell:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-table-header-cell--active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-header-cell--active:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-table-header-cell--hoverable:hover:not(#spotify-light-mode-specificity-bump), .e-10810-table-header-cell--selectable:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-header-cell--hoverable:hover:not(#spotify-light-mode-specificity-bump), .e-10860-table-header-cell--selectable:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-table-pagination:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-pagination:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-table-row:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-row:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-table-row--hoverable:hover:not(#spotify-light-mode-specificity-bump), .e-10810-table-row--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-table-row--hoverable:hover:not(#spotify-light-mode-specificity-bump), .e-10860-table-row--selected:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-tag:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tag:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-tag--color-set:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-tag--color-set:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link.e-10810-text-link--colors[href]:active:not(#spotify-light-mode-specificity-bump), .e-10810-text-link.e-10810-text-link--colors[href]:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link.e-10860-text-link--colors[href]:active:not(#spotify-light-mode-specificity-bump), .e-10860-text-link.e-10860-text-link--colors[href]:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-bright-accent); /* css-var: var(--text-bright-accent) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--use-focus.e-10810-text-link--button:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10810-text-link--use-focus[href]:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link--use-focus.e-10860-text-link--button:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10860-text-link--use-focus[href]:focus-visible:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--colors:is(
-      .e-10810-text-link:disabled,
-      .e-10810-text-link[href]:disabled,
-      .e-10810-text-link[aria-disabled="true"],
-      .e-10810-text-link[href][aria-disabled="true"]
+  .e-10860-text-link--colors:is(
+      .e-10860-text-link:disabled,
+      .e-10860-text-link[href]:disabled,
+      .e-10860-text-link[aria-disabled="true"],
+      .e-10860-text-link[href][aria-disabled="true"]
     ):not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--standalone.e-10810-text-link--colors:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link--standalone.e-10860-text-link--colors:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--use-focus.e-10810-text-link--standalone.e-10810-text-link--colors[href]:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link--use-focus.e-10860-text-link--standalone.e-10860-text-link--colors[href]:focus-visible:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--standalone.e-10810-text-link--colors[href]:active:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link--standalone.e-10860-text-link--colors[href]:active:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-text-link--standalone.e-10810-text-link--colors[href]:hover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-link--standalone.e-10860-text-link--colors[href]:hover:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-legacy-tooltip:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-legacy-tooltip:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  html[class*="-dark-theme"] .e-10810-verified-badge:not(#spotify-light-mode-specificity-bump) {
+  html[class*="-dark-theme"] .e-10860-verified-badge:not(#spotify-light-mode-specificity-bump) {
     --encore-verified-badge-background: var(--green-desat-185, #355b3a); /* custom-property: var(--green-desat-185, #c5f0c9) → var(--green-desat-185, #355b3a) */
   }
 }
 
 @layer encore {
-  .e-10810-field-description:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-description:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-field-error:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-error:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-negative); /* css-var: var(--text-negative) */
   }
 }
 
 @layer encore {
-  .e-10810-field-group:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -6056,19 +6018,19 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-field-group:has(input:-moz-read-only, textarea:-moz-read-only):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group:has(input:-moz-read-only, textarea:-moz-read-only):not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-field-group:has(input:read-only, textarea:read-only):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group:has(input:read-only, textarea:read-only):not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-field-group:has(input:focus-visible, textarea:focus-visible):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group:has(input:focus-visible, textarea:focus-visible):not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -6080,13 +6042,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-field-group > .e-10810-icon:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group > .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-input:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-input:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--background-base); /* css-var: var(--background-base) */
     color: var(--text-base); /* css-var: var(--text-base) */
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -6097,13 +6059,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-input:not(#spotify-light-mode-specificity-bump)::placeholder {
+  .e-10860-input:not(#spotify-light-mode-specificity-bump)::placeholder {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-input:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10810-input[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-input:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10860-input[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -6115,32 +6077,33 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-input:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-input:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-input:read-only:not(#spotify-light-mode-specificity-bump), .e-10810-input[data-readonly]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-input:read-only:not(#spotify-light-mode-specificity-bump), .e-10860-input[data-readonly]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-field-group > .e-10810-input:not(#spotify-light-mode-specificity-bump) {
+  :is(.e-10860-field-group, .e-10860-search-field) > .e-10860-input:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-label:not(#spotify-light-mode-specificity-bump), .e-10810-text-area:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-label:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-base); /* css-var: var(--text-base) */
   }
 }
 
 @layer encore {
-  .e-10810-text-area:not(#spotify-light-mode-specificity-bump) {
-    background-color: var(--background-base); /* css-var: var(--background-base) */
+  .e-10860-search-field:not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
+    color: var(--text-base); /* css-var: var(--text-base) */
     outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
         solid #0000 → var(--encore-focus-outline-width, var(--encore-border-width-focus))
@@ -6149,13 +6112,39 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-text-area:not(#spotify-light-mode-specificity-bump)::placeholder {
+  .e-10860-search-field > .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
     color: var(--text-subdued); /* css-var: var(--text-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-text-area:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10810-text-area[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-search-field:hover:not(#spotify-light-mode-specificity-bump), .e-10860-search-field[data-hovered]:not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
+  }
+}
+
+@layer encore {
+  :is(.e-10860-search-field:hover, .e-10860-search-field[data-hovered])
+      > .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
+    color: var(--text-base); /* css-var: var(--text-base) */
+  }
+}
+
+@layer encore {
+  .e-10860-search-field[data-disabled]:not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
+  }
+}
+
+@layer encore {
+  .e-10860-search-field:has(:disabled):not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
+  }
+}
+
+@layer encore {
+  .e-10860-search-field:has(input:focus-visible):not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
     outline-color: var(
         --encore-focus-outline-color,
         var(--parents-essential-base)
@@ -6167,25 +6156,86 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-text-area:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-search-field:has(input:focus-visible) > .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
+    color: var(--text-base); /* css-var: var(--text-base) */
+  }
+}
+
+@layer encore {
+  .e-10860-select-menu-button:not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-base); /* css-var: var(--background-base) */
+    color: var(--text-base); /* css-var: var(--text-base) */
+    outline: 3px solid #ffffff00; /* hardcoded-color: 3px solid #0000 → 3px solid #ffffff00 */
+  }
+}
+
+@layer encore {
+  .e-10860-select-menu-button:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10860-select-menu-button[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
+    outline-color: var(
+        --encore-focus-outline-color,
+        var(--parents-essential-base)
+      ); /* css-var: var(
+        --encore-focus-outline-color,
+        var(--parents-essential-base)
+      ) */
+  }
+}
+
+@layer encore {
+  .e-10860-select-menu-button > .e-10860-icon:not(#spotify-light-mode-specificity-bump) {
+    color: var(--text-subdued); /* css-var: var(--text-subdued) */
+  }
+}
+
+@layer encore {
+  .e-10860-text-area:not(#spotify-light-mode-specificity-bump) {
+    background-color: var(--background-base); /* css-var: var(--background-base) */
+    color: var(--text-base); /* css-var: var(--text-base) */
+    outline: var(--encore-focus-outline-width, var(--encore-border-width-focus))
+        solid #ffffff00; /* hardcoded-color: var(--encore-focus-outline-width, var(--encore-border-width-focus))
+        solid #0000 → var(--encore-focus-outline-width, var(--encore-border-width-focus))
+        solid #ffffff00 */
+  }
+}
+
+@layer encore {
+  .e-10860-text-area:not(#spotify-light-mode-specificity-bump)::placeholder {
+    color: var(--text-subdued); /* css-var: var(--text-subdued) */
+  }
+}
+
+@layer encore {
+  .e-10860-text-area:focus-visible:not(#spotify-light-mode-specificity-bump), .e-10860-text-area[data-focus-visible]:not(#spotify-light-mode-specificity-bump) {
+    outline-color: var(
+        --encore-focus-outline-color,
+        var(--parents-essential-base)
+      ); /* css-var: var(
+        --encore-focus-outline-color,
+        var(--parents-essential-base)
+      ) */
+  }
+}
+
+@layer encore {
+  .e-10860-text-area:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-text-area:read-only:not(#spotify-light-mode-specificity-bump), .e-10810-text-area[data-readonly]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-text-area:read-only:not(#spotify-light-mode-specificity-bump), .e-10860-text-area[data-readonly]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
 @layer encore {
-  .e-10810-field-group > .e-10810-text-area:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-field-group > .e-10860-text-area:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-image__container:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-image__container:not(#spotify-light-mode-specificity-bump) {
     background-color: var(
         --encore-image-background-color,
         var(--background-tinted-base)
@@ -6198,13 +6248,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-listbox:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-listbox:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }
 
 @layer encore {
-  .e-10810-list-row:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-list-row:not(#spotify-light-mode-specificity-bump) {
     --encore-list-row-bg: var(--encore-container-bg, #ffffff00); /* custom-property: var(--encore-container-bg, #0000) → var(--encore-container-bg, #ffffff00) */
     background-color: var(--encore-list-row-bg); /* css-var: var(--encore-list-row-bg) */
     color: var(--text-base); /* css-var: var(--text-base) */
@@ -6212,13 +6262,13 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-list-row:where(button):not(#spotify-light-mode-specificity-bump) {
+  .e-10860-list-row:where(button):not(#spotify-light-mode-specificity-bump) {
     background-color: var(--encore-list-row-bg); /* css-var: var(--encore-list-row-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-list-row:focus-visible:where(
+  .e-10860-list-row:focus-visible:where(
         [data-focused]:not([data-focus-visible="true"])
       ):not(#spotify-light-mode-specificity-bump) {
     outline-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
@@ -6226,19 +6276,19 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-list-row--interactive:hover:not(#spotify-light-mode-specificity-bump), .e-10810-list-row--interactive[data-hovered]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-list-row--interactive:hover:not(#spotify-light-mode-specificity-bump), .e-10860-list-row--interactive[data-hovered]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--list-row-hover-bg); /* css-var: var(--list-row-hover-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-list-row--interactive:active:not(#spotify-light-mode-specificity-bump), .e-10810-list-row--interactive[data-pressed]:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-list-row--interactive:active:not(#spotify-light-mode-specificity-bump), .e-10860-list-row--interactive[data-pressed]:not(#spotify-light-mode-specificity-bump) {
     background-color: var(--list-row-active-bg); /* css-var: var(--list-row-active-bg) */
   }
 }
 
 @layer encore {
-  .e-10810-list-row--selected:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-list-row--selected:not(#spotify-light-mode-specificity-bump) {
     --encore-list-row-bg: color-mix(
         in srgb,
         var(--text-announcement) 6%,
@@ -6256,7 +6306,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10810-popover:not(#spotify-light-mode-specificity-bump) {
+  .e-10860-popover:not(#spotify-light-mode-specificity-bump) {
     outline: none; /* forwarded-reset: none */
   }
 }

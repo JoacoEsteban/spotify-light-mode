@@ -16,9 +16,9 @@
 }
 
 .c_FYrKtmPeg18vLcZynv:not(#spotify-light-mode-specificity-bump):after {
-  background: linear-gradient(transparent, #f6f6f6 90%); /* hardcoded-color: linear-gradient(transparent, #121212 90%) → linear-gradient(transparent, #f6f6f6 90%) */
+  background: linear-gradient(#ffffff00, #f6f6f6 90%); /* hardcoded-color: linear-gradient(#0000, #121212 90%) → linear-gradient(#ffffff00, #f6f6f6 90%) */
 }
 
 .G13WjyPxYCNiK5qVVUBP:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000004d; /* hardcoded-color: rgba(255, 255, 255, 0.3) → #0000004d */
+  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }

@@ -11,5 +11,5 @@
 
 
 .o0xcwkDTzNMaBPKSthK9:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000004d; /* hardcoded-color: rgba(255, 255, 255, 0.3) → #0000004d */
+  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }

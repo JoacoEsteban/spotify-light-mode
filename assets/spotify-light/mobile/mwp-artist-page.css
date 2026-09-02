@@ -19,5 +19,5 @@
 }
 
 .Yjr4uLqAgOcWUcCFm3JK:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000001a; /* hardcoded-color: rgba(255, 255, 255, 0.1) → #0000001a */
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }

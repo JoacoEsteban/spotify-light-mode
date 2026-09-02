@@ -11,7 +11,7 @@
 
 
 .cbU4X6arEd_1lba7ZS6r:not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px rgba(0, 0, 0, 0.2) → 0 2px 4px #ffffff33 */
+  box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px #0003 → 0 2px 4px #ffffff33 */
 }
 
 .jtKeizHUtJLPtJms2x6G:not(#spotify-light-mode-specificity-bump) {

@@ -25,7 +25,7 @@
   left: calc(100% - 45px);
   right: calc(100% - 45px);
   transform: rotate(25deg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #0003;
 }
 html[dir="rtl"] .cbU4X6arEd_1lba7ZS6r {
   transform: rotate(-25deg);
@@ -63,4 +63,4 @@ html[dir="rtl"] .cbU4X6arEd_1lba7ZS6r {
 .jtKeizHUtJLPtJms2x6G :first-child {
   flex-shrink: 0;
 }
-/*# sourceMappingURL=mwp-search-landing.e17cd317.css.map*/
+/*# sourceMappingURL=mwp-search-landing.21d74f93.css.map*/

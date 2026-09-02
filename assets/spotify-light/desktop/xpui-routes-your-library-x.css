@@ -228,6 +228,10 @@
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
+.wwamO9oSbJ0pFVUr10Xm[data-context-menu-layout="v2"]:not(#spotify-light-mode-specificity-bump) {
+  background-color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
+}
+
 .wwamO9oSbJ0pFVUr10Xm:not(#spotify-light-mode-specificity-bump):before {
   background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
 }
