@@ -605,7 +605,6 @@
 }
 .yF2aldiSSIiFtkGn_lHV {
   opacity: 0;
-  transition: opacity 0.2s ease-in;
 }
 .yF2aldiSSIiFtkGn_lHV > .PlayerPoolSlotContainer {
   width: 100%;
@@ -619,6 +618,7 @@
 }
 .uhdMZyqoHVmO0ZgtQegj {
   opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 .Yplh_yEFUd3ZuJqpe3Dp {
   align-items: baseline;
@@ -891,19 +891,25 @@
 .m7OfVSY0YmUeoR0tIDRo .AsCLscbpw_QMtfSCXQTE {
   -o-object-fit: cover;
   object-fit: cover;
-  opacity: 1;
   z-index: 1;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-.m7OfVSY0YmUeoR0tIDRo.geooR0HK9zI6zmw5hysR > .AsCLscbpw_QMtfSCXQTE {
+.m7OfVSY0YmUeoR0tIDRo > .PlayerPoolSlotContainer {
+  z-index: 2;
   opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
-.m7OfVSY0YmUeoR0tIDRo > video {
+.m7OfVSY0YmUeoR0tIDRo.geooR0HK9zI6zmw5hysR > .PlayerPoolSlotContainer {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+.m7OfVSY0YmUeoR0tIDRo video {
   -o-object-fit: cover;
   object-fit: cover;
-  opacity: 1;
   z-index: 2;
   border-radius: 6px;
   width: 100%;
@@ -1776,7 +1782,7 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
 }
 .ReTHuCza_blUi0f9wcZI
   .kS9ybJVUDlfs_4RLFhwR
-  [data-shelf="carousel"][data-shelf-notatedge="true"] {
+  [data-shelf="carousel"][data-shelf-notatedge] {
   --shelf-carousel-margin-start-mul: 0;
   --carousel-start-chevron-gradient: #121212;
 }
@@ -2395,4 +2401,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .piJ0UtEfAm3DUbxerDMo {
   margin-top: 16px;
 }
-/*# sourceMappingURL=695.81c9c9fb.css.map*/
+/*# sourceMappingURL=695.f2a8eaaf.css.map*/

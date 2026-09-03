@@ -151,6 +151,11 @@ __workaround_element__ {
   gap: 16px;
   display: flex;
 }
+.nSQY8BrztHsNxx8bnxFv {
+  text-underline-offset: 2px;
+  text-decoration: underline;
+  display: block;
+}
 .nHJ_Abf72WxtqNTpR0kW {
   border: none;
   border-radius: 8px;
@@ -267,4 +272,4 @@ __workaround_element__ {
 .Swztz829WvQkt7mxEJSw {
   margin-top: 16px;
 }
-/*# sourceMappingURL=xpui-routes-venues.14894942.css.map*/
+/*# sourceMappingURL=xpui-routes-venues.f0d9686c.css.map*/

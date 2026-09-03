@@ -112,6 +112,10 @@
   background: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
 }
 
+.a4MZ5QD4VYDjf8XNro8o:not(#spotify-light-mode-specificity-bump) {
+  color: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
+}
+
 .RUoOPSU05fE4aoQOx7uj:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .RUoOPSU05fE4aoQOx7uj:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .RUoOPSU05fE4aoQOx7uj[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }

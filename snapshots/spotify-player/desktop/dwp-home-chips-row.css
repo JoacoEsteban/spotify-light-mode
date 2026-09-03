@@ -112,7 +112,7 @@
 }
 .feCw4n0mCGLuvA5wpqOR
   .RnOSBfAZBALn6I8UbVnp
-  [data-shelf="carousel"][data-shelf-notatedge="true"] {
+  [data-shelf="carousel"][data-shelf-notatedge] {
   --shelf-carousel-margin-start-mul: 0;
   --carousel-start-chevron-gradient: #121212;
 }
@@ -506,4 +506,4 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7) {
     var(--background-tinted-highlight, #0000001f) 100%
   );
 }
-/*# sourceMappingURL=dwp-home-chips-row.965801ac.css.map*/
+/*# sourceMappingURL=dwp-home-chips-row.2d967810.css.map*/

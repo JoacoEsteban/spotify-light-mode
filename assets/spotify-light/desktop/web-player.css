@@ -1670,6 +1670,10 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   outline: 2px solid #000000; /* hardcoded-color: 2px solid #fff → 2px solid #000000 */
 }
 
+.cRpQBAqKaS195iT0C0kT .E_DaR4Zv4MOqa5mQ8GaG:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
+}
+
 .BvV3VmD3gSgRTBRYITvC:not(#spotify-light-mode-specificity-bump) {
   background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
 }
@@ -2433,7 +2437,7 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 
 .zxZQQ4g6i6M_8LtnbCym
   .pcSGyO66RYNXitwRWG3I
-  [data-shelf="carousel"][data-shelf-notatedge="true"]:not(#spotify-light-mode-specificity-bump) {
+  [data-shelf="carousel"][data-shelf-notatedge]:not(#spotify-light-mode-specificity-bump) {
   --carousel-start-chevron-gradient: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 

@@ -273,6 +273,21 @@ __workaround_element__ {
   background-color: #000;
   width: 100%;
 }
+.UPVhNYAxMWS9yVbPOwBw {
+  white-space: nowrap;
+}
+.rvGmx9eIIf9TuyA5xAdZ {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  display: flex;
+}
+.BwtmcYQhSVBsN0yWymTw {
+  flex: 1;
+  min-width: 0;
+  margin: 0 8px;
+}
 .uLMkPrH3R9Q9Zyx9lzKY {
   padding: var(--encore-spacing-tighter-4);
   justify-content: flex-end;
@@ -429,4 +444,4 @@ __workaround_element__ {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.a088d117.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.7742c715.css.map*/

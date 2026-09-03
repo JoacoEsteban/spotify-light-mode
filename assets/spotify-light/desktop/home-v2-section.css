@@ -46,7 +46,7 @@
 
 .ReTHuCza_blUi0f9wcZI
   .kS9ybJVUDlfs_4RLFhwR
-  [data-shelf="carousel"][data-shelf-notatedge="true"]:not(#spotify-light-mode-specificity-bump) {
+  [data-shelf="carousel"][data-shelf-notatedge]:not(#spotify-light-mode-specificity-bump) {
   --carousel-start-chevron-gradient: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 

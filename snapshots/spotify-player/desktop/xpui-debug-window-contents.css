@@ -1289,6 +1289,54 @@ select:disabled:hover {
   margin-bottom: 12px;
   margin-right: 8px;
 }
+.YVqX2Up1ZdQis8U1uRGo {
+  width: min(560px, 100vw - 32px);
+  max-height: 70vh;
+  color: var(--text-base);
+  background: 0 0;
+  border: 0;
+  margin-block-start: 12vh;
+  padding: 0;
+  overflow: hidden;
+}
+.YVqX2Up1ZdQis8U1uRGo::backdrop {
+  background: #0009;
+}
+.djmUfXLjLyfb0v7czZgi {
+  background: var(--background-elevated-base);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 16px 48px #00000080;
+}
+.Q_VcxNo0NeDrsQ4Z0zjs {
+  max-height: calc(70vh - 80px);
+  margin-block-start: 8px;
+  overflow-y: auto;
+}
+.uzMVWwWXNrqxGtND494D {
+  width: 100%;
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  border-radius: 4px;
+  justify-content: space-between;
+  padding: 12px;
+  display: flex;
+}
+.uzMVWwWXNrqxGtND494D:hover,
+.uzMVWwWXNrqxGtND494D[aria-selected="true"] {
+  background: var(--background-tinted-highlight);
+}
+.QoGw1zv4hK0yIUEQLuqJ,
+.CsGijaSv68YKxnPb51En {
+  color: var(--text-subdued);
+}
+.CsGijaSv68YKxnPb51En {
+  text-align: center;
+  padding: 12px;
+}
 .MaNCYJc4LGBEpBn5y8W3 {
   color: #fff;
   padding: 32px;
@@ -1745,4 +1793,4 @@ select:disabled:hover {
   padding: 12px;
   overflow-y: scroll;
 }
-/*# sourceMappingURL=xpui-debug-window-contents.4f7c7e47.css.map*/
+/*# sourceMappingURL=xpui-debug-window-contents.40862a8e.css.map*/
