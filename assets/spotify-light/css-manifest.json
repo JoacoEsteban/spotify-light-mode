@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.47e08bd3__mobile-web-player.1f5ac101",
+  "snapshotVersion": "spotify-player.web-player.45aecef8__mobile-web-player.0a4cd669",
   "source": {
-    "fingerprint": "sha256:5a264a5fffeaadcc8608cb380a20b7cf8ce86c3d797fc28213e557c8d8375485",
+    "fingerprint": "sha256:f3b51cc4dfb646185236c85d4d85bee4eda0b05401489941caa27a92ec9a7b20",
     "targets": {
       "desktop": [
         {
@@ -247,8 +247,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "7478c9f52c96d12adf8ab6d5751d74880fea409af80b68138572bc6712cb2e5b",
-          "byteLength": 653168
+          "sha256": "42e458e9071d3222178987c1098cea7a6bf9f094788faa783bec3ae95d2bbf1a",
+          "byteLength": 653831
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -439,8 +439,8 @@
         {
           "fileName": "xpui-routes-search.css",
           "relativePath": "desktop/xpui-routes-search.css",
-          "sha256": "06883ecdee3a2ba2fbca1be4ca00d52bf73fac4b954046f927c9cc74551a8a54",
-          "byteLength": 20802
+          "sha256": "3ef327e1a7d1485bcc98fc495962fb1fb530cf5c89e75a71dbc6a22afa8d7843",
+          "byteLength": 20950
         },
         {
           "fileName": "xpui-routes-see-all-playlist-leavebehinds.css",
@@ -562,7 +562,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:e491dbccbb58d93528a37bff751209c5012db92e0b163ef10feca99bc0ea3a87",
+    "fingerprint": "sha256:6b204b49cadfb423f0032864182d9d46f83859ec66c4d1ac074fd7d192d1dfe7",
     "files": [
       {
         "fileName": "1718.css",
@@ -807,8 +807,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "28d5ce72800a0bc4bb111de73670b33a68020103aa8e5818fb872ff12f752ac4",
-        "byteLength": 280716
+        "sha256": "fb8ce2020df5b8dce2081a197bd8a967dd59c5a3f32c9ddf8b987719bf06310c",
+        "byteLength": 280953
       },
       {
         "fileName": "xpui-debug-window-contents.css",
