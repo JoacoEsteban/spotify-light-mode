@@ -1039,7 +1039,6 @@ __workaround_element__ {
 .iU8UhJH3XXdZSOINS_Qq {
   width: 100%;
   height: var(--shelf-min-height, 250px);
-  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -1174,4 +1173,4 @@ __workaround_element__ {
   margin-bottom: 24px;
   display: flex;
 }
-/*# sourceMappingURL=xpui-routes-collection-concerts.b87dbba5.css.map*/
+/*# sourceMappingURL=xpui-routes-collection-concerts.464c9b43.css.map*/

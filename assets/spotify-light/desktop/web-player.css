@@ -802,20 +802,6 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
 .searchInputCollapsed:not(.forceExpandSearchInput)
   .vi4HnZvSILknLijjZ590
   > .f0G3CvZVXIxBqmSarCt9
-  .JT_lB7XtA2AhQHSejYKH:not(#spotify-light-mode-specificity-bump)::-moz-placeholder {
-  color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
-}
-
-.searchInputCollapsed:not(.forceExpandSearchInput)
-  .vi4HnZvSILknLijjZ590
-  > .f0G3CvZVXIxBqmSarCt9
-  .JT_lB7XtA2AhQHSejYKH:-moz-placeholder-shown:not(#spotify-light-mode-specificity-bump) {
-  color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
-}
-
-.searchInputCollapsed:not(.forceExpandSearchInput)
-  .vi4HnZvSILknLijjZ590
-  > .f0G3CvZVXIxBqmSarCt9
   .JT_lB7XtA2AhQHSejYKH:not(#spotify-light-mode-specificity-bump)::placeholder, .searchInputCollapsed:not(.forceExpandSearchInput)
   .vi4HnZvSILknLijjZ590
   > .f0G3CvZVXIxBqmSarCt9
@@ -6027,12 +6013,6 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
 }
 
 @layer encore {
-  .e-10860-field-group:has(input:-moz-read-only, textarea:-moz-read-only):not(#spotify-light-mode-specificity-bump) {
-    background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
-  }
-}
-
-@layer encore {
   .e-10860-field-group:has(input:read-only, textarea:read-only):not(#spotify-light-mode-specificity-bump) {
     background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
@@ -6082,12 +6062,6 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
         --encore-focus-outline-color,
         var(--parents-essential-base)
       ) */
-  }
-}
-
-@layer encore {
-  .e-10860-input:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
-    background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 
@@ -6222,12 +6196,6 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
         --encore-focus-outline-color,
         var(--parents-essential-base)
       ) */
-  }
-}
-
-@layer encore {
-  .e-10860-text-area:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
-    background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
   }
 }
 

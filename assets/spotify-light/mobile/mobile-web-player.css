@@ -2657,10 +2657,6 @@ html[class*="-dark-theme"] .e-10860-verified-badge:not(#spotify-light-mode-speci
     solid #ffffff00 */
 }
 
-.e-10860-field-group:has(input:-moz-read-only, textarea:-moz-read-only):not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
-}
-
 .e-10860-field-group:has(input:read-only, textarea:read-only):not(#spotify-light-mode-specificity-bump) {
   background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
 }
@@ -2700,10 +2696,6 @@ html[class*="-dark-theme"] .e-10860-verified-badge:not(#spotify-light-mode-speci
     --encore-focus-outline-color,
     var(--parents-essential-base)
   ) */
-}
-
-.e-10860-input:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
 }
 
 .e-10860-input:read-only:not(#spotify-light-mode-specificity-bump), .e-10860-input[data-readonly]:not(#spotify-light-mode-specificity-bump) {
@@ -2807,10 +2799,6 @@ html[class*="-dark-theme"] .e-10860-verified-badge:not(#spotify-light-mode-speci
     --encore-focus-outline-color,
     var(--parents-essential-base)
   ) */
-}
-
-.e-10860-text-area:-moz-read-only:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
 }
 
 .e-10860-text-area:read-only:not(#spotify-light-mode-specificity-bump), .e-10860-text-area[data-readonly]:not(#spotify-light-mode-specificity-bump) {

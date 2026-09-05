@@ -332,7 +332,6 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   display: grid;
 }
 .HxoTZyHM6qtzHzgugyE8 {
-  -moz-column-gap: 4%;
   grid-template: "content aside"/2fr 1fr;
   column-gap: 4%;
 }
@@ -342,4 +341,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .yvpoF4nd0IuBGinDkL0o {
   grid-area: content;
 }
-/*# sourceMappingURL=xpui-routes-playlist.451e03e6.css.map*/
+/*# sourceMappingURL=xpui-routes-playlist.7c0e552c.css.map*/

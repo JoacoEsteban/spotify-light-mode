@@ -1428,7 +1428,6 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   }
 }
 .ZFbP3SitmAWkgMe6cuvx {
-  -o-object-fit: contain;
   object-fit: contain;
   background: 0 0;
   width: 100%;
@@ -1447,7 +1446,6 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   display: block;
 }
 .ZFbP3SitmAWkgMe6cuvx .VideoPlayer__container video {
-  -o-object-fit: contain;
   object-fit: contain;
   background: 0 0;
   border-radius: 8px;
@@ -1456,4 +1454,4 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   height: 100%;
   max-height: 100%;
 }
-/*# sourceMappingURL=xpui-pip-mini-player.3900c02d.css.map*/
+/*# sourceMappingURL=xpui-pip-mini-player.6e01a6cd.css.map*/

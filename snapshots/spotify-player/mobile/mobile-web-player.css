@@ -6405,13 +6405,11 @@ html {
   position: relative;
 }
 .e-10860-card__main {
-  -moz-column-gap: var(--encore-spacing-tighter);
   column-gap: var(--encore-spacing-tighter);
   align-items: center;
   display: flex;
 }
 .e-10860-card--custom-gap .e-10860-card__main {
-  -moz-column-gap: var(--encore-card-horizontal-gap);
   column-gap: var(--encore-card-horizontal-gap);
 }
 .e-10860-card__column {
@@ -7632,7 +7630,8 @@ input:disabled + label .e-10860-form-checkbox__text {
   .e-10860-form-input[type="color"]:hover:focus {
     padding: 0;
   }
-  @media not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
+  @media not all and (-webkit-min-device-pixel-ratio: 0),
+    not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
     not all and (min-resolution: 0.001dpcm) {
     @supports ((-webkit-appearance: none)) {
       .e-10860-form-input[type="color"] {
@@ -7653,7 +7652,8 @@ input:disabled + label .e-10860-form-checkbox__text {
     block-size: var(--encore-control-size-base);
     inline-size: var(--encore-control-size-base);
   }
-  @media not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
+  @media not all and (-webkit-min-device-pixel-ratio: 0),
+    not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
     not all and (min-resolution: 0.001dpcm) {
     @supports ((-webkit-appearance: none)) {
       .e-10860-form-input[type="color"] {
@@ -7690,7 +7690,8 @@ input:disabled + label .e-10860-form-checkbox__text {
 .e-10860-form-input-icon--leading .e-10860-form-input {
   padding-inline-start: var(--encore-form-input-icon-padding-leading);
 }
-@media not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
+@media not all and (-webkit-min-device-pixel-ratio: 0),
+  not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
   not all and (min-resolution: 0.001dpcm) {
   @supports ((-webkit-appearance: none)) {
     .e-10860-form-input-icon--leading .e-10860-form-input {
@@ -7701,7 +7702,8 @@ input:disabled + label .e-10860-form-checkbox__text {
 .e-10860-form-input-icon--trailing .e-10860-form-input {
   padding-inline-end: var(--encore-form-input-icon-padding-trailing);
 }
-@media not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
+@media not all and (-webkit-min-device-pixel-ratio: 0),
+  not all and (-webkit-min-device-pixel-ratio: 0.0000264583),
   not all and (min-resolution: 0.001dpcm) {
   @supports ((-webkit-appearance: none)) {
     .e-10860-form-input-icon--trailing .e-10860-form-input {
@@ -10206,9 +10208,6 @@ html[class*="-light-theme"] .e-10860-verified-badge {
   --encore-field-group-box-shadow-color: var(--text-negative);
   outline-offset: -3px;
 }
-.e-10860-field-group:has(input:-moz-read-only, textarea:-moz-read-only) {
-  background-color: var(--decorative-subdued);
-}
 .e-10860-field-group:has(input:read-only, textarea:read-only) {
   background-color: var(--decorative-subdued);
 }
@@ -10272,9 +10271,6 @@ html[class*="-light-theme"] .e-10860-verified-badge {
   cursor: not-allowed;
   opacity: var(--encore-field-disabled-opacity, var(--encore-opacity-disabled));
   --encore-input-box-shadow-color: var(--essential-subdued);
-}
-.e-10860-input:-moz-read-only {
-  background-color: var(--decorative-subdued);
 }
 .e-10860-input:read-only,
 .e-10860-input[data-readonly] {
@@ -10503,9 +10499,6 @@ html[class*="-light-theme"] .e-10860-verified-badge {
   cursor: not-allowed;
   opacity: var(--encore-field-disabled-opacity, var(--encore-opacity-disabled));
   --encore-text-area-box-shadow-color: var(--essential-subdued);
-}
-.e-10860-text-area:-moz-read-only {
-  background-color: var(--decorative-subdued);
 }
 .e-10860-text-area:read-only,
 .e-10860-text-area[data-readonly] {
@@ -12883,7 +12876,6 @@ a:focus {
   display: flex;
 }
 .GeMUW_yIj8a1BP4me597 {
-  -moz-column-gap: 8px;
   justify-content: center;
   align-items: center;
   column-gap: 8px;
@@ -14571,7 +14563,6 @@ a:focus {
   color: #a7a7a7;
 }
 .uJncj4pS94xeRGcmyAtq {
-  -moz-column-gap: 16px;
   border-radius: 4px;
   flex: 1;
   grid-template-columns: 48px auto;
@@ -15320,4 +15311,4 @@ a:focus {
   width: auto;
   padding-inline: 32px;
 }
-/*# sourceMappingURL=mobile-web-player.caaaf48c.css.map*/
+/*# sourceMappingURL=mobile-web-player.9a9ddf9a.css.map*/

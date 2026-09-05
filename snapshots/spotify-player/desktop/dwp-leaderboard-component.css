@@ -129,7 +129,6 @@
 }
 ._8lApauzYMZizYzeTd4i2 {
   border-radius: var(--encore-corner-radius-base);
-  -o-object-fit: cover;
   object-fit: cover;
   width: 48px;
   height: 48px;
@@ -191,4 +190,4 @@ __workaround_element__ {
     margin: var(--encore-spacing-base) auto;
   }
 }
-/*# sourceMappingURL=dwp-leaderboard-component.9007d9e9.css.map*/
+/*# sourceMappingURL=dwp-leaderboard-component.ecd06802.css.map*/

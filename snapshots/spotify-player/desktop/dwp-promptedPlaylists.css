@@ -147,7 +147,6 @@
   outline: none !important;
 }
 .awQzfC5Gxj0SVk2NyEiz {
-  -moz-column-gap: var(--encore-spacing-base);
   column-gap: var(--encore-spacing-base);
   background: var(--background-elevated-highlight);
   max-width: 700px;
@@ -1422,4 +1421,4 @@ __workaround_element__ {
   max-height: 900px;
   position: sticky;
 }
-/*# sourceMappingURL=dwp-promptedPlaylists.9377e454.css.map*/
+/*# sourceMappingURL=dwp-promptedPlaylists.7d462884.css.map*/
