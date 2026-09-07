@@ -585,6 +585,7 @@
   position: relative;
 }
 .q6cvll9gUTHq5p_JkqNO > img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -610,6 +611,7 @@
   height: 100%;
 }
 .yF2aldiSSIiFtkGn_lHV video {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -887,6 +889,7 @@
   box-shadow: 0 8px 24px #00000080;
 }
 .m7OfVSY0YmUeoR0tIDRo .AsCLscbpw_QMtfSCXQTE {
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 1;
   width: 100%;
@@ -905,6 +908,7 @@
   transition: opacity 0.2s ease-in;
 }
 .m7OfVSY0YmUeoR0tIDRo video {
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 2;
   border-radius: 6px;
@@ -2020,6 +2024,7 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   flex: 0;
 }
 .nGnwQycM_BTFt6hYnIAh {
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -2176,6 +2181,7 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   background: linear-gradient(#000000a8 75%, #000000e6 100%);
 }
 .dduhuFkkVqMFQroSkTs4 {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -2359,7 +2365,9 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   position: relative;
 }
 .Hfrq2Tk2KbhfgGA1EEJu {
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: left top;
   object-position: left top;
   border-radius: 0 8px 8px 0;
   max-width: 100%;
@@ -2393,4 +2401,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .piJ0UtEfAm3DUbxerDMo {
   margin-top: 16px;
 }
-/*# sourceMappingURL=1703.e413882f.css.map*/
+/*# sourceMappingURL=695.f2a8eaaf.css.map*/
