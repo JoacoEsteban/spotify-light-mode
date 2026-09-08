@@ -26,6 +26,14 @@
   color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
+.sWaouyn3AyTlhtNlo9WP:not(#spotify-light-mode-specificity-bump) {
+  color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
+}
+
+.sWaouyn3AyTlhtNlo9WP:hover:not(#spotify-light-mode-specificity-bump) {
+  color: #000000; /* hardcoded-color: #fff → #000000 */
+}
+
 .WNJCHYJTMjdKYLDjCL8m:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base) !important; /* css-var: var(--background-base) */
 }

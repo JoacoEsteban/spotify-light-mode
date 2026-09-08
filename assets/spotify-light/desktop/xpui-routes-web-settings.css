@@ -93,6 +93,15 @@ select:disabled:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #ff716e; /* hardcoded-color: #e22134 → #ff716e */
 }
 
+dialog:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+  border: none; /* forwarded-reset: none */
+}
+
+dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
 .nn9CWFDxqwC2qA71jyFB:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */

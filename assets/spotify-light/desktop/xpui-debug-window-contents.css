@@ -295,6 +295,15 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   color: #383833; /* hardcoded-color: #f8f8f2 → #383833 */
 }
 
+dialog:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+  border: none; /* forwarded-reset: none */
+}
+
+dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
 .xlnzR7kkTtrBo_oO1OZ6[open]:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #ffffffe6; /* hardcoded-color: #000000e6 → #ffffffe6 */

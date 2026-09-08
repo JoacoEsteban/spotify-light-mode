@@ -7,3 +7,20 @@
  * Source: snapshots/spotify-player/desktop/xpui-routes-country-hub.css
 
  */
+
+
+
+.SsdRCCBmjjGCoXmWiFiO:not(#spotify-light-mode-specificity-bump) {
+  --color-to: transparent; /* forwarded-reset: transparent */
+}
+
+.SsdRCCBmjjGCoXmWiFiO:not(#spotify-light-mode-specificity-bump) {
+  --color-to: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
+}
+
+.M7ECcaA17LC8UqL2GKVD:not(#spotify-light-mode-specificity-bump) {
+  background-image: linear-gradient(#ffffff99 0%, var(--background-base) 100%),
+    var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%, var(--background-base) 100%),
+    var(--background-noise) → linear-gradient(#ffffff99 0%, var(--background-base) 100%),
+    var(--background-noise) */
+}

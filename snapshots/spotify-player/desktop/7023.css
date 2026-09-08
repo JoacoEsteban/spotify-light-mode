@@ -436,6 +436,19 @@
   transform: translateX(var(--translateX, 0)) translateY(var(--translateY, 0))
     scale(var(--scale, 1));
 }
+.ZJmlyQ3aIx7jHeXu9Qeu:before {
+  width: 4px;
+  inline-size: 4px;
+  content: "";
+  background-color: currentColor;
+  border-radius: 50%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
 .V4IBTVHooSbPy2vjqzQB {
   height: var(--progress-bar-height);
   width: var(--progress-bar-transform);
@@ -475,39 +488,6 @@
   to {
     opacity: 1;
   }
-}
-.KhMq7P44r7w_HjTDGap2 {
-  pointer-events: none;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.ZJmlyQ3aIx7jHeXu9Qeu:before {
-  width: 4px;
-  inline-size: 4px;
-  content: "";
-  background-color: currentColor;
-  border-radius: 50%;
-  height: 4px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-}
-.TcCS0BhwDXw_s2HufffR {
-  font-variant-numeric: tabular-nums;
-  text-align: left;
-  width: 50px;
-  height: 1lh;
-  position: relative;
-}
-.RDKbPCSJsB25JKWcZMPp {
-  contain: size layout;
-  white-space: nowrap;
-  position: absolute;
-  inset: 0;
 }
 .ZhHbavsffPng_7LYxv3o:before {
   width: 4px;
@@ -577,6 +557,50 @@
   text-align: right;
   transform: translateY(2px);
 }
+.KhMq7P44r7w_HjTDGap2 {
+  pointer-events: none;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.WBOnnTeL21OiPPWKZDzA {
+  padding: 8px 12px;
+}
+.izUT0aykBZWkZEWpQoy0[role="menuitem"] {
+  padding-inline: 12px;
+}
+.TcCS0BhwDXw_s2HufffR {
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+  width: 50px;
+  height: 1lh;
+  position: relative;
+}
+.RDKbPCSJsB25JKWcZMPp {
+  contain: size layout;
+  white-space: nowrap;
+  position: absolute;
+  inset: 0;
+}
+.k0_PYTUHst9Qwk5GleNg:after {
+  content: "";
+  background-color: currentColor;
+  border-radius: 50%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 4px !important;
+}
+.k0_PYTUHst9Qwk5GleNg.Oo8e3v9dywKG82ch3isz {
+  outline-offset: 12px;
+}
+.k0_PYTUHst9Qwk5GleNg.Oo8e3v9dywKG82ch3isz:after {
+  bottom: -8px;
+}
 .HRtoRiInGxi6565nR5Ve {
   z-index: 1;
   --saber-hilt-width: 90px;
@@ -602,4 +626,4 @@
   position: absolute;
   transform: translateY(-50%);
 }
-/*# sourceMappingURL=6823.f00d31dd.css.map*/
+/*# sourceMappingURL=7023.7952a9bf.css.map*/

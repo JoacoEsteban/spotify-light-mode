@@ -920,6 +920,46 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
 .VPWVqSEqAm1xCScEKYdO .wpCx9C3WXHlvpsCwsFyF {
   color: #f8f8f2;
 }
+dialog {
+  background-color: #0000;
+  border: none;
+  max-block-size: calc(100vw - 32px);
+  max-inline-size: calc(100vw - 32px);
+  padding: 0;
+}
+dialog::backdrop {
+  background-color: #000000b3;
+}
+dialog:not([open]) {
+  display: none;
+}
+.spotify__container--is-desktop:not(.fullscreen) dialog {
+  -webkit-app-region: no-drag;
+}
+@keyframes yuCzxLeVSfsrsqomgqQ5 {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes GTF5wTyQhxyOS8Clnl2k {
+  0% {
+    transform: translateY(10%);
+  }
+}
+.DtQN_AMSk2glLMJ6WasS[open] {
+  opacity: 0;
+  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
+  animation-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
+  opacity: 0;
+  animation-name: yuCzxLeVSfsrsqomgqQ5;
+  animation-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
 .f_tpyeGVztY5Hn2SjFc9 {
   width: 100%;
   height: 100%;
@@ -1793,4 +1833,4 @@ select:disabled:hover {
   padding: 12px;
   overflow-y: scroll;
 }
-/*# sourceMappingURL=xpui-debug-window-contents.40862a8e.css.map*/
+/*# sourceMappingURL=xpui-debug-window-contents.5753253f.css.map*/

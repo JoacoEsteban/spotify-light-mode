@@ -305,6 +305,46 @@ select:disabled:hover {
 .cWapA2NgfRZx_6hKkPAv {
   margin-inline-end: 8px;
 }
+dialog {
+  background-color: #0000;
+  border: none;
+  max-block-size: calc(100vw - 32px);
+  max-inline-size: calc(100vw - 32px);
+  padding: 0;
+}
+dialog::backdrop {
+  background-color: #000000b3;
+}
+dialog:not([open]) {
+  display: none;
+}
+.spotify__container--is-desktop:not(.fullscreen) dialog {
+  -webkit-app-region: no-drag;
+}
+@keyframes yuCzxLeVSfsrsqomgqQ5 {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes GTF5wTyQhxyOS8Clnl2k {
+  0% {
+    transform: translateY(10%);
+  }
+}
+.DtQN_AMSk2glLMJ6WasS[open] {
+  opacity: 0;
+  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
+  animation-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
+  opacity: 0;
+  animation-name: yuCzxLeVSfsrsqomgqQ5;
+  animation-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
 .nn9CWFDxqwC2qA71jyFB {
   color: #fff;
   background-color: var(--background-elevated-base);
@@ -446,4 +486,4 @@ select:disabled:hover {
 .voCABqHyl_q3yoPaoV1V {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.588d59ea.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.9585c298.css.map*/
