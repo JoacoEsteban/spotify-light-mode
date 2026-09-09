@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.8d77b707__mobile-web-player.8066f573",
+  "snapshotVersion": "spotify-player.web-player.8ebaf5a8__mobile-web-player.736a7c6e",
   "source": {
-    "fingerprint": "sha256:19b4ae6945399c8aa7f6ef623139469eb81ded9b6cf82224d5462295939ade84",
+    "fingerprint": "sha256:afc0858db78095f994860e9d590d98d7ac2f9cfbbddcc28f0f317fb79470b9fe",
     "targets": {
       "desktop": [
         {
@@ -121,8 +121,8 @@
         {
           "fileName": "dwp-now-playing-bar.css",
           "relativePath": "desktop/dwp-now-playing-bar.css",
-          "sha256": "c1c22aacd729a133f770613f108c989fc904470b7c93dfaac46c7dd1f7c3960f",
-          "byteLength": 10081
+          "sha256": "fc5330ea1f9fe4cf4730df4fa6c14f52bda64329463bad93cdaa282fc4b6dcee",
+          "byteLength": 10610
         },
         {
           "fileName": "dwp-offline-empty-state.css",
@@ -265,8 +265,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "4756ae463be99d7849404956017e767095d6cf0697393265bb710be23d3ecf09",
-          "byteLength": 586524
+          "sha256": "1ccaa9b3efaaa46152705ae41bf3ed91ece1a3e185e627a54155e9e079e6dc7c",
+          "byteLength": 588171
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -289,8 +289,8 @@
         {
           "fileName": "xpui-root-dialogs.css",
           "relativePath": "desktop/xpui-root-dialogs.css",
-          "sha256": "212aa24e5320593185f3babe9338dfe5f632156e13feab11c3a430fcc3911542",
-          "byteLength": 72852
+          "sha256": "fadc93774905d3fdd6ca222f305c0d98b2c350053edb4a26ca95f31ed019fe4c",
+          "byteLength": 72974
         },
         {
           "fileName": "xpui-routes-album-prerelease.css",
@@ -586,7 +586,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:0d5541470b97fe5fda107128c6ac0201bb1dee7c2c9234b504b161db060c78af",
+    "fingerprint": "sha256:0b663e102e8fa2db89e8f73b96949e51e0ec460f13bd624c1398ea7c788007d4",
     "files": [
       {
         "fileName": "1160.css",
@@ -705,8 +705,8 @@
       {
         "fileName": "dwp-now-playing-bar.css",
         "relativePath": "desktop/dwp-now-playing-bar.css",
-        "sha256": "396fc8e4608cfb600e7cd2350f2a860ea0bcf123de8191aea82996ad4ccd8322",
-        "byteLength": 4342
+        "sha256": "b2b7b3d202a88a9cb60a1d3daff74327adde4271a1a158b457f6343c188d5197",
+        "byteLength": 4455
       },
       {
         "fileName": "dwp-offline-empty-state.css",
@@ -849,8 +849,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "aeaa8ece0ae2354043f0ae7ad4a6d9e19e621b7678089f22eab442dfd3140e8c",
-        "byteLength": 260933
+        "sha256": "a321c6f1a013dd2a026b9c1c35784ab16d25aa4fdcd2e1b42407cf2cda8b83c1",
+        "byteLength": 262061
       },
       {
         "fileName": "xpui-debug-window-contents.css",

@@ -85,16 +85,20 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.Z3uNT3dJuzBWgZiEH8uJ:focus-visible:not(#spotify-light-mode-specificity-bump) {
-  outline: none; /* forwarded-reset: none */
-}
-
 .pB6wxlpBoMY6FvluTmTz:has(:focus-visible):not(#spotify-light-mode-specificity-bump) {
   outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
 
 .v2bS2P8PLEW6f9yOBo6S a:hover:not(#spotify-light-mode-specificity-bump), .v2bS2P8PLEW6f9yOBo6S a:focus-visible:not(#spotify-light-mode-specificity-bump) {
   color: #000000 !important; /* hardcoded-color: #fff → #000000 */
+}
+
+.Z3uNT3dJuzBWgZiEH8uJ:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
+.xpePbUuEphICtTwXQ2to:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
 }
 
 .DvWLUdZDIa4V36fdNIfu:not(#spotify-light-mode-specificity-bump) {
