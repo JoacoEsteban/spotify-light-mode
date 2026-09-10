@@ -272,6 +272,17 @@ __workaround_element__ {
   background-color: #000;
   width: 100%;
 }
+.Dxf6oNsReqbCik8hkrsH {
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  display: flex;
+}
+.PL4uJ8Sctssp1aP57lw0 {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
 .vZwhMFs89cs6IsGXj3Lw {
   white-space: nowrap;
 }
@@ -294,6 +305,9 @@ __workaround_element__ {
   position: relative;
   top: -0.1rem;
 }
+.GT4JGFET8QLpHqPbVtW3 {
+  flex-shrink: 0;
+}
 .rvGmx9eIIf9TuyA5xAdZ {
   flex-direction: row;
   justify-content: flex-start;
@@ -307,6 +321,16 @@ __workaround_element__ {
 }
 .TB5mbcggB6aBalVcQfak {
   flex-shrink: 0;
+}
+.yBBEeSe_XSvcM_aztjXq {
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+.rlUBUM4aaBWZWTt5bqZv {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .pB6wxlpBoMY6FvluTmTz {
   isolation: isolate;
@@ -528,4 +552,4 @@ button.xpePbUuEphICtTwXQ2to:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.e80c5470.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.50b25e99.css.map*/

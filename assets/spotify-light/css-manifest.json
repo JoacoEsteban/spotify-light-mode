@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.8ebaf5a8__mobile-web-player.736a7c6e",
+  "snapshotVersion": "spotify-player.web-player.8028220c__mobile-web-player.7e1832d4",
   "source": {
-    "fingerprint": "sha256:afc0858db78095f994860e9d590d98d7ac2f9cfbbddcc28f0f317fb79470b9fe",
+    "fingerprint": "sha256:7df5186c14631ba6818c3d913fba305a37c63a7411e5cb7d159c6b82ee0bba2e",
     "targets": {
       "desktop": [
         {
@@ -61,8 +61,8 @@
         {
           "fileName": "7023.css",
           "relativePath": "desktop/7023.css",
-          "sha256": "cc2ca231d420bd0dbdd416f2b968537a0700b9991a604b1a06bb09ee78cf2a1b",
-          "byteLength": 14510
+          "sha256": "562502532c37d2c6fb2dcc6305c8fe50be616716588dba0a54c2c6e1f9b30b70",
+          "byteLength": 14780
         },
         {
           "fileName": "8291.css",
@@ -73,8 +73,8 @@
         {
           "fileName": "browse-v2.css",
           "relativePath": "desktop/browse-v2.css",
-          "sha256": "afcf129b852db742a2f5d80fc7bfe31b6b6968210ec5d18289e801dbdc4101a7",
-          "byteLength": 10122
+          "sha256": "48c75f1a5b09cd66a8404aba8a48c4108581c489ad8aea72a54991008b6dcb5e",
+          "byteLength": 10065
         },
         {
           "fileName": "concerts-on-tour-playlist-card.css",
@@ -121,8 +121,8 @@
         {
           "fileName": "dwp-now-playing-bar.css",
           "relativePath": "desktop/dwp-now-playing-bar.css",
-          "sha256": "fc5330ea1f9fe4cf4730df4fa6c14f52bda64329463bad93cdaa282fc4b6dcee",
-          "byteLength": 10610
+          "sha256": "182f0b1d9e25ce9030ce26044bc693d4e3d0e8d08d01801fb4672ea5695edc6e",
+          "byteLength": 10995
         },
         {
           "fileName": "dwp-offline-empty-state.css",
@@ -139,8 +139,8 @@
         {
           "fileName": "dwp-panel-section.css",
           "relativePath": "desktop/dwp-panel-section.css",
-          "sha256": "d7d9c6f63e89896d3e0f54e64ba6f5c3b6a60be25ce96ea46ec0e231ebced419",
-          "byteLength": 94441
+          "sha256": "8605e28e6dff2b0f40e7057611387f6c4c5183c9c723273dc49862eccdaddf12",
+          "byteLength": 94485
         },
         {
           "fileName": "dwp-premium-page.css",
@@ -265,8 +265,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "1ccaa9b3efaaa46152705ae41bf3ed91ece1a3e185e627a54155e9e079e6dc7c",
-          "byteLength": 588171
+          "sha256": "48601cd96de832fd1451512e9d0846425703dd133a666b5972e54ce64ba30492",
+          "byteLength": 588140
         },
         {
           "fileName": "xpui-debug-window-contents.css",
