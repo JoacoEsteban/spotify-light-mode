@@ -422,6 +422,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -665,4 +666,4 @@ __workaround_element__ {
 .qOBihoZnnASZiCXc2cDY > :not(:last-child) {
   margin-inline-end: var(--content-spacing);
 }
-/*# sourceMappingURL=1160.a582cbed.css.map*/
+/*# sourceMappingURL=1160.2a59277b.css.map*/

@@ -6,9 +6,9 @@ import _3 from "./desktop/2134.css?inline";
 import _4 from "./desktop/2385.css?inline";
 import _5 from "./desktop/3325.css?inline";
 import _6 from "./desktop/5691.css?inline";
-import _7 from "./desktop/6076.css?inline";
-import _8 from "./desktop/6143.css?inline";
-import _9 from "./desktop/7023.css?inline";
+import _7 from "./desktop/5735.css?inline";
+import _8 from "./desktop/6076.css?inline";
+import _9 from "./desktop/6143.css?inline";
 import _10 from "./desktop/8291.css?inline";
 import _11 from "./desktop/browse-v2.css?inline";
 import _12 from "./desktop/concerts-on-tour-playlist-card.css?inline";
@@ -110,9 +110,9 @@ export const lightModeStylesheetOverrides = [
   { sourceFileName: "2385.css", css: _4 },
   { sourceFileName: "3325.css", css: _5 },
   { sourceFileName: "5691.css", css: _6 },
-  { sourceFileName: "6076.css", css: _7 },
-  { sourceFileName: "6143.css", css: _8 },
-  { sourceFileName: "7023.css", css: _9 },
+  { sourceFileName: "5735.css", css: _7 },
+  { sourceFileName: "6076.css", css: _8 },
+  { sourceFileName: "6143.css", css: _9 },
   { sourceFileName: "8291.css", css: _10 },
   { sourceFileName: "browse-v2.css", css: _11 },
   { sourceFileName: "concerts-on-tour-playlist-card.css", css: _12 },

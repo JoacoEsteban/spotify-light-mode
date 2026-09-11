@@ -242,6 +242,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -417,4 +418,4 @@ __workaround_element__ {
 .aqVPjLLwDC6N5gtOUGtT:hover + .aqVPjLLwDC6N5gtOUGtT > .lh1DGz1dal79HbzcUZNp {
   visibility: hidden;
 }
-/*# sourceMappingURL=dwp-whats-new-feed.31522e14.css.map*/
+/*# sourceMappingURL=dwp-whats-new-feed.668d454c.css.map*/

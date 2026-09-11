@@ -318,6 +318,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -643,8 +644,15 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
 .MSusW7bkDuhSoe4hl4df {
   isolation: isolate;
   padding-bottom: var(--encore-spacing-looser-2);
-  --home-full-width: 100cqi;
+  --carousel-extra-inline-margin: 0px;
   background: 0 0;
+}
+@container main-view-grid-area (width>1955px) {
+  .MSusW7bkDuhSoe4hl4df {
+    --carousel-extra-inline-margin: calc(
+      (100cqi - var(--content-max-width)) * 0.5
+    );
+  }
 }
 .viq0Iah8B4QVPOyVYnDp,
 .zxZQQ4g6i6M_8LtnbCym {
@@ -832,8 +840,7 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
 .twXS9pkzV0Sbs_TfjS0K {
   --encore-cards-margin: 0px;
   --margin: calc(
-    40px + var(--encore-cards-margin) +
-      max(0px, (var(--home-full-width) - var(--content-max-width)) * 0.5)
+    40px + var(--encore-cards-margin) + var(--carousel-extra-inline-margin)
   );
   --margin-start: calc(
     var(--encore-cards-margin) +
@@ -1291,4 +1298,4 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
 .bhqJz2sBdln0IgBsbXuc {
   --content-max-width: 1200px;
 }
-/*# sourceMappingURL=xpui-routes-search.e8db49d6.css.map*/
+/*# sourceMappingURL=xpui-routes-search.7a903c2e.css.map*/

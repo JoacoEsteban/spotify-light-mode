@@ -676,6 +676,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -1153,4 +1154,4 @@ __workaround_element__ {
   max-height: 900px;
   position: sticky;
 }
-/*# sourceMappingURL=dwp-promptedPlaylists.53939026.css.map*/
+/*# sourceMappingURL=dwp-promptedPlaylists.c85b8980.css.map*/

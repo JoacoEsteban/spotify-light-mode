@@ -108,6 +108,10 @@
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.pbofaSXUUCALdHPaz4iy:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
 .FnRalYUAiQpa4PsAdrcq:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #69aaff; /* hardcoded-color: #2e77d0 → #69aaff */

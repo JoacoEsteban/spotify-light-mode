@@ -790,15 +790,15 @@ a.lUZOGBvk4CLW2pFEsYsM:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
 }
 
-.BZjGH_FX4WXYr3JuO_9h:not(#spotify-light-mode-specificity-bump) {
+.En4mOui50o7_3MQcOron:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
-.e_UH2cL5fcpSCkayNSro:not(#spotify-light-mode-specificity-bump)::backdrop {
+._0gDfpf183RYnQb5oz83:not(#spotify-light-mode-specificity-bump)::backdrop {
   background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
 }
 
-.K9Sxb9P60i0icl1ixCzR button:focus:not(#spotify-light-mode-specificity-bump) {
+.rN84wdQPm5TQoTU3vZG0 button:focus:not(#spotify-light-mode-specificity-bump) {
   outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
 

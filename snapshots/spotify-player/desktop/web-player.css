@@ -13910,7 +13910,7 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
       U+6B5, U+6BA, U+6BE, U+6C1-6C3, U+6C6, U+6CA, U+6CC, U+6CE-6CF, U+6D2-6D5,
       U+6F0-6F9, U+769, U+2002-2003, U+2009-200A, U+2044, U+2070, U+2074-2079,
       U+2080-2089, U+20C1, U+25CC, U+FD3E-FD3F, U+FDFC, U+FFFF;
-    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Arab-Regular-2a244a51d89f8f62bc7754ddb55b2acf.woff2)
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Arab-Regular-2dcf439a90b0926508484fcfbd2e89e6.woff2)
       format("woff2");
   }
   @font-face {
@@ -13924,7 +13924,7 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
       U+6B5, U+6BA, U+6BE, U+6C1-6C3, U+6C6, U+6CA, U+6CC, U+6CE-6CF, U+6D2-6D5,
       U+6F0-6F9, U+769, U+2002-2003, U+2009-200A, U+2044, U+2070, U+2074-2079,
       U+2080-2089, U+20C1, U+25CC, U+FD3E-FD3F, U+FDFC, U+FFFF;
-    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Arab-Bold-ef72f105569937a1b272d71d7079654f.woff2)
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUI-Arab-Bold-d1e22d2c55a519588f66dd918d95fbc6.woff2)
       format("woff2");
   }
   @font-face {
@@ -13938,7 +13938,7 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
       U+6B5, U+6BA, U+6BE, U+6C1-6C3, U+6C6, U+6CA, U+6CC, U+6CE-6CF, U+6D2-6D5,
       U+6F0-6F9, U+769, U+2002-2003, U+2009-200A, U+2044, U+2070, U+2074-2079,
       U+2080-2089, U+20C1, U+25CC, U+FD3E-FD3F, U+FDFC, U+FFFF;
-    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Arab-Bold-6ff084dc6573d37a0f6fc0c2c2466a85.woff2)
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Arab-Bold-073f28ff26c6768673f9a78e747bdb4d.woff2)
       format("woff2");
   }
   @font-face {
@@ -13952,7 +13952,7 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
       U+6B5, U+6BA, U+6BE, U+6C1-6C3, U+6C6, U+6CA, U+6CC, U+6CE-6CF, U+6D2-6D5,
       U+6F0-6F9, U+769, U+2002-2003, U+2009-200A, U+2044, U+2070, U+2074-2079,
       U+2080-2089, U+20C1, U+25CC, U+FD3E-FD3F, U+FDFC, U+FFFF;
-    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Arab-Extrabold-314176a661ae785ddf2d2ea340214361.woff2)
+    src: url(https://encore.scdn.co/fonts/SpotifyMixUITitle-Arab-Extrabold-e2d0963148748642b2f3001a1cbfe370.woff2)
       format("woff2");
   }
   @font-face {
@@ -14135,9 +14135,9 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
       U+6F0-6F9, U+769, U+2002-2003, U+2009-200A, U+2044, U+2070, U+2074-2079,
       U+2080-2089, U+20C1, U+25CC, U+FD3E-FD3F, U+FDFC, U+FFFF;
     src:
-      url(https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-Arab-10203a26acd235199a41299a5df045be.woff2)
+      url(https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-Arab-8407c115e66f9d3694d7e3448c066696.woff2)
         format("woff2 supports variations"),
-      url(https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-Arab-10203a26acd235199a41299a5df045be.woff2)
+      url(https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-Arab-8407c115e66f9d3694d7e3448c066696.woff2)
         format("woff2-variations");
     font-stretch: 50% 150%;
   }
@@ -14199,18 +14199,38 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
         format("woff2-variations");
     font-stretch: 50% 150%;
   }
+  @font-face {
+    font-family: DevanagariFallback;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+900-97F, U+20B9, U+A8E0-A8FF;
+    src:
+      local(Devanagari Sangam MN), local(Nirmala UI),
+      local(Noto Sans Devanagari);
+  }
+  @font-face {
+    font-family: DevanagariFallback;
+    font-weight: 700;
+    font-display: swap;
+    unicode-range: U+900-97F, U+20B9, U+A8E0-A8FF;
+    src:
+      local(Devanagari Sangam MN Bold), local(Nirmala UI Bold),
+      local(Noto Sans Devanagari Bold);
+  }
   .spotify-mix-non-latin {
     font-family: var(--encore-body-font-stack);
     --encore-body-font-stack:
       SpotifyMixUI, SpotifyMixUI-Arab, SpotifyMixUI-Cyrl, SpotifyMixUI-Grek,
-      SpotifyMixUI-Hebr, SpotifyMixUI-Thai !important;
+      SpotifyMixUI-Hebr, SpotifyMixUI-Thai, DevanagariFallback !important;
     --encore-title-font-stack:
       SpotifyMixUITitle, SpotifyMixUITitle-Arab, SpotifyMixUITitle-Cyrl,
-      SpotifyMixUITitle-Grek, SpotifyMixUITitle-Hebr, SpotifyMixUITitle-Thai !important;
+      SpotifyMixUITitle-Grek, SpotifyMixUITitle-Hebr, SpotifyMixUITitle-Thai,
+      DevanagariFallback !important;
     --encore-variable-font-stack:
       SpotifyMixUITitleVariable, SpotifyMixUITitleVariable-Arab,
       SpotifyMixUITitleVariable-Cyrl, SpotifyMixUITitleVariable-Grek,
-      SpotifyMixUITitleVariable-Hebr, SpotifyMixUITitleVariable-Thai !important;
+      SpotifyMixUITitleVariable-Hebr, SpotifyMixUITitleVariable-Thai,
+      DevanagariFallback !important;
   }
   .spotify-mix-non-latin button,
   .spotify-mix-non-latin select,
@@ -22220,4 +22240,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.00dffb58.css.map*/
+/*# sourceMappingURL=web-player.3f1612e7.css.map*/

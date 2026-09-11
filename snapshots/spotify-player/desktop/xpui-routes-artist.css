@@ -1174,7 +1174,10 @@ __workaround_element__ {
   display: flex;
 }
 .PjGWZO5rgdBC5tDCIzOw {
-  --home-full-width: 100cqi;
+  --carousel-extra-inline-margin: max(
+    0px,
+    (100cqi - var(--content-max-width)) * 0.5
+  );
   --regular-shelf-max-count: 9;
   --carousel-shelf-min-items: 1.5;
   --carousel-shelf-element-width: calc(
@@ -1737,4 +1740,4 @@ __workaround_element__ {
   gap: 8px;
   display: flex;
 }
-/*# sourceMappingURL=xpui-routes-artist.efbfdd26.css.map*/
+/*# sourceMappingURL=xpui-routes-artist.9bfd74a0.css.map*/

@@ -30,6 +30,10 @@
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.pbofaSXUUCALdHPaz4iy:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
 .RSNZxDKpKBgrooCILuCL:not(#spotify-light-mode-specificity-bump) {
   border: none; /* forwarded-reset: none */
 }

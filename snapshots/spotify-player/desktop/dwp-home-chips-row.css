@@ -411,8 +411,15 @@ __workaround_element__ {
 .aweqhiEheZYUHuAnmmmp {
   isolation: isolate;
   padding-bottom: var(--encore-spacing-looser-2);
-  --home-full-width: 100cqi;
+  --carousel-extra-inline-margin: 0px;
   background: 0 0;
+}
+@container main-view-grid-area (width>1955px) {
+  .aweqhiEheZYUHuAnmmmp {
+    --carousel-extra-inline-margin: calc(
+      (100cqi - var(--content-max-width)) * 0.5
+    );
+  }
 }
 .ujCEcl4ovN5iBeiFa_ss,
 .feCw4n0mCGLuvA5wpqOR {
@@ -899,4 +906,4 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7) {
     var(--background-tinted-highlight, #0000001f) 100%
   );
 }
-/*# sourceMappingURL=dwp-home-chips-row.d8c22b24.css.map*/
+/*# sourceMappingURL=dwp-home-chips-row.f1c43b23.css.map*/

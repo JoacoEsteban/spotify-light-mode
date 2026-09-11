@@ -141,6 +141,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -226,4 +227,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .p9tZXRzUoXCHTg_jYt7r {
   margin-top: var(--encore-spacing-looser-3);
 }
-/*# sourceMappingURL=xpui-routes-recents.7218ad53.css.map*/
+/*# sourceMappingURL=xpui-routes-recents.f6b3d0d3.css.map*/

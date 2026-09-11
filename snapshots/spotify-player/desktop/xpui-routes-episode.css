@@ -229,6 +229,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -973,4 +974,4 @@ __workaround_element__ {
     align-self: end;
   }
 }
-/*# sourceMappingURL=xpui-routes-episode.ab0266a6.css.map*/
+/*# sourceMappingURL=xpui-routes-episode.b7ef2173.css.map*/

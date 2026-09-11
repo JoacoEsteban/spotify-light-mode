@@ -18,14 +18,6 @@
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.bwtD_tWm_IXMhUpDpPCe:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-base); /* css-var: var(--background-base) */
-}
-
-.FHqq73bn2hJVuPS9Tyrm:not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 2px 4px #ffffff4d; /* hardcoded-color: 0 2px 4px #0000004d → 0 2px 4px #ffffff4d */
-}
-
 .MZd_PqzVQOdrbpd6ircZ.ABsPxBFldURR4hbFY38Y:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
   color: var(--text-base); /* css-var: var(--text-base) */
@@ -51,6 +43,14 @@
 
 .SaUODI6b8RnhwQ3I5abK.ZfsMQKTLl695iPvUo3GK:active:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
+}
+
+.YXHy2pPXAKIhTXQg8nSs > .iFrQtHX6CURbDCPByQmu:not(#spotify-light-mode-specificity-bump) {
+  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
+}
+
+.nRiX2moSgz3fDzm_rDxe:not(#spotify-light-mode-specificity-bump) {
+  color: var(--extracted-text-subdued, #000000b3); /* hardcoded-color: var(--extracted-text-subdued, #ffffffb3) → var(--extracted-text-subdued, #000000b3) */
 }
 
 .wXCLBYv3_IHgX9cVGGFO:not(#spotify-light-mode-specificity-bump) {
@@ -104,4 +104,16 @@
 .DvWLUdZDIa4V36fdNIfu:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--essential-announcement); /* css-var: var(--essential-announcement) */
   color: var(--background-base); /* css-var: var(--background-base) */
+}
+
+.NmQEMyELmFindy62mDl0:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
+.NmQEMyELmFindy62mDl0:hover:not(#spotify-light-mode-specificity-bump), .NmQEMyELmFindy62mDl0:active:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base); /* css-var: var(--text-base) */
+}
+
+.NmQEMyELmFindy62mDl0.eFT5sY4bbfuySPc3yTGM:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-bright-accent); /* css-var: var(--text-bright-accent) */
 }

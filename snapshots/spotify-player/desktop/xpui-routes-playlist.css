@@ -166,6 +166,7 @@ p.l63c3qgYPYfrOLklvRUk + p:before {
   max-width: 85px;
 }
 .pbofaSXUUCALdHPaz4iy {
+  color: var(--text-subdued);
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -898,4 +899,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .yvpoF4nd0IuBGinDkL0o {
   grid-area: content;
 }
-/*# sourceMappingURL=xpui-routes-playlist.66c57876.css.map*/
+/*# sourceMappingURL=xpui-routes-playlist.26f75b51.css.map*/
