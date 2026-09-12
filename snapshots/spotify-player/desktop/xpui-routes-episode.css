@@ -379,10 +379,10 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .CHISTsIbkG6C_fisz08z {
   align-items: center;
   gap: 4px;
-  margin-inline-start: 4px;
   display: flex;
 }
-.CHISTsIbkG6C_fisz08z:empty {
+.CHISTsIbkG6C_fisz08z:empty,
+.CHISTsIbkG6C_fisz08z:empty + [data-separator] {
   display: none;
 }
 .LngeNf7BhcEKJ0SURGC4 {
@@ -848,9 +848,6 @@ __workaround_element__ {
   margin-top: 8px;
   display: flex;
 }
-.zUSeRapXfxOgV8pOKXd5 {
-  white-space: nowrap;
-}
 .f5lOYVAdETeMBnXk1fL8 {
   white-space: pre;
 }
@@ -974,4 +971,4 @@ __workaround_element__ {
     align-self: end;
   }
 }
-/*# sourceMappingURL=xpui-routes-episode.b7ef2173.css.map*/
+/*# sourceMappingURL=xpui-routes-episode.461464b0.css.map*/

@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.c945befb__mobile-web-player.fea736be",
+  "snapshotVersion": "spotify-player.web-player.585c4669__mobile-web-player.bb9677fe",
   "source": {
-    "fingerprint": "sha256:2a2a8459b0a3822d99fa35eb0173ab2de53d411baf8ea72ac6136c9ac20ea4f1",
+    "fingerprint": "sha256:b5e136e0683950a410ff6a5e1445a45e35588a1f7a1627c1542206e5d4d6e9dd",
     "targets": {
       "desktop": [
         {
@@ -67,8 +67,8 @@
         {
           "fileName": "8291.css",
           "relativePath": "desktop/8291.css",
-          "sha256": "4c0fa5dd104edd6d57ac40f8b848553bcdfe1756fa689a8efa120e34bb390f28",
-          "byteLength": 47238
+          "sha256": "8dc88bc4b7669c2429ff2b5a2ded762b0e02dda484b01700d1bad9733af038a2",
+          "byteLength": 47381
         },
         {
           "fileName": "browse-v2.css",
@@ -205,8 +205,8 @@
         {
           "fileName": "dwp-whats-new-feed.css",
           "relativePath": "desktop/dwp-whats-new-feed.css",
-          "sha256": "4a5faca07edb96264c15456955ace7024558c108ff43669a5d19ea6c11c027c5",
-          "byteLength": 8281
+          "sha256": "7fe1e117737866b41ccc2cbf0ad81a0cbad9eb13f3cdfb19fbeeee190d81bffd",
+          "byteLength": 8300
         },
         {
           "fileName": "home-ads-container.css",
@@ -217,8 +217,8 @@
         {
           "fileName": "home-subfeed.css",
           "relativePath": "desktop/home-subfeed.css",
-          "sha256": "e1886366ce5c4106d7665067e237ef85f5824f537a264bf83e9f5681ddc1eaa2",
-          "byteLength": 2887
+          "sha256": "d5ddbc8a0585f6e4e106d3e1779d491b66650e365c5e25aa487436fdd0eeb9ac",
+          "byteLength": 2906
         },
         {
           "fileName": "listening-stats-modal.css",
@@ -343,8 +343,8 @@
         {
           "fileName": "xpui-routes-collection-episodes.css",
           "relativePath": "desktop/xpui-routes-collection-episodes.css",
-          "sha256": "4dafc9fddb5c3b6bb99d9281ecd4385564084aa37d6f48413f5620b63dcbd438",
-          "byteLength": 13138
+          "sha256": "fa03fd9b46f0e2f74f2f2d1f40a9fb37fb5a8a7e5e581a5ea28a8a3276e53e92",
+          "byteLength": 13157
         },
         {
           "fileName": "xpui-routes-collection-local-files.css",
@@ -355,8 +355,8 @@
         {
           "fileName": "xpui-routes-collection-songs.css",
           "relativePath": "desktop/xpui-routes-collection-songs.css",
-          "sha256": "c0a374253422c68de9635028e6130038a0f49b9473ee6e66290887f04bb98c66",
-          "byteLength": 12011
+          "sha256": "ab834376aeeca50982908c1452eb65b431f7832d0930ddcf32c9edf0ccded546",
+          "byteLength": 12030
         },
         {
           "fileName": "xpui-routes-concert-campaign.css",
@@ -397,8 +397,8 @@
         {
           "fileName": "xpui-routes-episode.css",
           "relativePath": "desktop/xpui-routes-episode.css",
-          "sha256": "2f6eba9636055e02561dd578fe21555550260356043922db54b419c04e805232",
-          "byteLength": 20890
+          "sha256": "12b642165edd36d211bc4b6401d003b32037db7e86406548c1134ae5e63cacdb",
+          "byteLength": 20861
         },
         {
           "fileName": "xpui-routes-label-artists.css",
@@ -421,8 +421,8 @@
         {
           "fileName": "xpui-routes-playlist.css",
           "relativePath": "desktop/xpui-routes-playlist.css",
-          "sha256": "825fa9bdb3c992ed2fc17e61ed07e3c8c3b05d0f654297a7d0134a1758406bb2",
-          "byteLength": 18126
+          "sha256": "81b21c449e6dac14fe74529b28b7689ee75ba946845aac7b1196c71c32509604",
+          "byteLength": 18145
         },
         {
           "fileName": "xpui-routes-podcast-chapter.css",
@@ -457,14 +457,14 @@
         {
           "fileName": "xpui-routes-recents.css",
           "relativePath": "desktop/xpui-routes-recents.css",
-          "sha256": "030bcf868b1068ed867ae820cf5d84fc59bc27852a32cee2f91873195e3756fd",
-          "byteLength": 4999
+          "sha256": "f43fb51af30a7b652c07bb0b1e7901b04ba70656e69100d983aa50333e33e431",
+          "byteLength": 5018
         },
         {
           "fileName": "xpui-routes-search.css",
           "relativePath": "desktop/xpui-routes-search.css",
-          "sha256": "ff6aee57c6f337ef05d39d0de6bc59476bc3c228432f9cbfc0175efe2525ff7d",
-          "byteLength": 29273
+          "sha256": "347605216e31e9a643ef5898032db22f6928341183e4118e8d667642c6a0774e",
+          "byteLength": 29351
         },
         {
           "fileName": "xpui-routes-see-all-playlist-leavebehinds.css",
