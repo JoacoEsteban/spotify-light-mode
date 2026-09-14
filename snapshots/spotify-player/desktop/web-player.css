@@ -769,6 +769,16 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
     24px
   );
 }
+@container main-view-grid-area (width>0) and (width<=600px) {
+  .TheioDphh_FsNXvBiDj4 {
+    --content-spacing: 16px;
+  }
+}
+@container main-view-grid-area (width>=1024px) {
+  .TheioDphh_FsNXvBiDj4 {
+    --content-spacing: 24px;
+  }
+}
 .zXqmJUq4Orp0Adt90GGA {
   --left-sidebar-grid-area-z-index: 4;
   --above-everything-except-now-playing-bar-z-index: 5;
@@ -22240,4 +22250,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.3f1612e7.css.map*/
+/*# sourceMappingURL=web-player.661de219.css.map*/

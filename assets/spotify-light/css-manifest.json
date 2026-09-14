@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.585c4669__mobile-web-player.bb9677fe",
+  "snapshotVersion": "spotify-player.web-player.196872e8__mobile-web-player.ffc604a2",
   "source": {
-    "fingerprint": "sha256:b5e136e0683950a410ff6a5e1445a45e35588a1f7a1627c1542206e5d4d6e9dd",
+    "fingerprint": "sha256:13276f8765b150f574366733a8d416ad351696ae9f13cd69ef5ec84995831da6",
     "targets": {
       "desktop": [
         {
@@ -265,8 +265,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "9719f7b85de6dcae912dfa51443ed7a753edeae12293350c4c97115264588f96",
-          "byteLength": 588729
+          "sha256": "a086870dbf15b6361295ae474a9445aa52ee961004541ac8e945e1f6e674de13",
+          "byteLength": 588962
         },
         {
           "fileName": "xpui-debug-window-contents.css",
