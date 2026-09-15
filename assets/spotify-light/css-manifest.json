@@ -1,56 +1,44 @@
 {
-  "snapshotVersion": "spotify-player.web-player.196872e8__mobile-web-player.ffc604a2",
+  "snapshotVersion": "spotify-player.web-player.0536d2a4__mobile-web-player.a41021fc",
   "source": {
-    "fingerprint": "sha256:13276f8765b150f574366733a8d416ad351696ae9f13cd69ef5ec84995831da6",
+    "fingerprint": "sha256:96210ad35f097b0656d7cc766d01c395113b14c2feefb0359debfd2c302c93e9",
     "targets": {
       "desktop": [
         {
-          "fileName": "1160.css",
-          "relativePath": "desktop/1160.css",
-          "sha256": "6a484115b24e54a89c3675f81841d97a21f5ac66f2f1bd70efecf48a0ad33a50",
-          "byteLength": 13556
-        },
-        {
-          "fileName": "1535.css",
-          "relativePath": "desktop/1535.css",
-          "sha256": "ccc6c938a41ac92af1bd38f350da58a6cffe4d074392210d7b27b96ef0556ed0",
+          "fileName": "1924.css",
+          "relativePath": "desktop/1924.css",
+          "sha256": "cd7883cff56c3b238939c3ac0c9a4f927c23fe3698191e74c5bb05f5f0a13545",
           "byteLength": 1931
         },
         {
-          "fileName": "1975.css",
-          "relativePath": "desktop/1975.css",
-          "sha256": "d34234bd6d8a0373f14bdf452b410b6951c676ca2d9f3d4b28f0f2bb69b6f494",
-          "byteLength": 794
+          "fileName": "2396.css",
+          "relativePath": "desktop/2396.css",
+          "sha256": "362e99a747f04c801f97098e300de76ce6f99fab6be0ef47096eadf2448352ee",
+          "byteLength": 47381
         },
         {
-          "fileName": "2134.css",
-          "relativePath": "desktop/2134.css",
-          "sha256": "ed9b56b574b3b5060bb34e8c36e419097ea93c149a8fccf1af153db8fa7d27f2",
+          "fileName": "3945.css",
+          "relativePath": "desktop/3945.css",
+          "sha256": "9f2226102485d32f3c88e6357104431999d0374fd6547a223a2830262187f6e1",
           "byteLength": 1210
         },
         {
-          "fileName": "2385.css",
-          "relativePath": "desktop/2385.css",
-          "sha256": "c665d79e132b81c2f1781b440823dcaeac6ec81184d8e7c765b9940bd36148be",
-          "byteLength": 15578
+          "fileName": "4700.css",
+          "relativePath": "desktop/4700.css",
+          "sha256": "213e9297a88c45271b35fc7de90916d95dcb6fa085090dc334de6fa8d6b09318",
+          "byteLength": 18042
         },
         {
-          "fileName": "3325.css",
-          "relativePath": "desktop/3325.css",
-          "sha256": "09b0c909dbde9bcfe4fa3228e9aadfa01fbe296228e8c658d51d959535053ca7",
-          "byteLength": 10494
-        },
-        {
-          "fileName": "5691.css",
-          "relativePath": "desktop/5691.css",
-          "sha256": "61774263cfee6544a4c7f2a285869ab2967e9dc5bcf7d2fbe3537f0f83d7c761",
+          "fileName": "5501.css",
+          "relativePath": "desktop/5501.css",
+          "sha256": "56724aa0d7bc8680ad8ffc1717c5d9a2aac61954e211126a6d300cfba43b8d34",
           "byteLength": 14291
         },
         {
-          "fileName": "5735.css",
-          "relativePath": "desktop/5735.css",
-          "sha256": "c7891ee4195dabc8f893ab51e405da6096f29ff85d01e27f6e2739619afb07a7",
-          "byteLength": 11148
+          "fileName": "5757.css",
+          "relativePath": "desktop/5757.css",
+          "sha256": "26dfe0323f9d9a048324c79ac11615428f9a01c6bf9b594c3ef1b6917924fb8f",
+          "byteLength": 15578
         },
         {
           "fileName": "6076.css",
@@ -59,16 +47,28 @@
           "byteLength": 13801
         },
         {
-          "fileName": "6143.css",
-          "relativePath": "desktop/6143.css",
-          "sha256": "a74fe54703bd963ab195caebcb161287813aa6d8d47310612f6dd60528d782e1",
-          "byteLength": 18042
+          "fileName": "7582.css",
+          "relativePath": "desktop/7582.css",
+          "sha256": "d3fceb48d1df43983aca85b6f8649723a82458c744ea51922a907c35a10d0e4f",
+          "byteLength": 10494
         },
         {
-          "fileName": "8291.css",
-          "relativePath": "desktop/8291.css",
-          "sha256": "8dc88bc4b7669c2429ff2b5a2ded762b0e02dda484b01700d1bad9733af038a2",
-          "byteLength": 47381
+          "fileName": "9645.css",
+          "relativePath": "desktop/9645.css",
+          "sha256": "515046b7c981ce2e72ab71243d44379f64f383c01262a709c683e8f46cfc9da6",
+          "byteLength": 13556
+        },
+        {
+          "fileName": "9712.css",
+          "relativePath": "desktop/9712.css",
+          "sha256": "9090fbaea8ab06d683ea6af9684b7e6be364d143e735a99e30d30e054aee4b4e",
+          "byteLength": 11148
+        },
+        {
+          "fileName": "998.css",
+          "relativePath": "desktop/998.css",
+          "sha256": "91671200d54d136d4d70d5108f5428ab62f8312624a0cd3a6cb581fa00bc27c1",
+          "byteLength": 793
         },
         {
           "fileName": "browse-v2.css",
@@ -586,55 +586,43 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:3814fedc64f9c767300862a0916db683d1f1d0ef4e2336e39d37a038f40d3d31",
+    "fingerprint": "sha256:e5da18356c1c532f673019b81a1215198bc84584769bcf007f8b2cba96ffcbdd",
     "files": [
       {
-        "fileName": "1160.css",
-        "relativePath": "desktop/1160.css",
-        "sha256": "0be4d5eb6ac901465d22204ef936411df0f9bc8f311c29b5ef8dfcc3c5df1118",
-        "byteLength": 4609
-      },
-      {
-        "fileName": "1535.css",
-        "relativePath": "desktop/1535.css",
-        "sha256": "1d34d3346cae92b0cbb82f035b27270f49248293654feb2d75630f7fc221193b",
+        "fileName": "1924.css",
+        "relativePath": "desktop/1924.css",
+        "sha256": "ac726f7bbf6db76f2590f7ea29f12ee129937b86f00ba5dc82e72b7e8fd7f86d",
         "byteLength": 775
       },
       {
-        "fileName": "1975.css",
-        "relativePath": "desktop/1975.css",
-        "sha256": "552280b9803a56f44cad1eb58f682d928b8327de57e88ca4d667637d26482366",
-        "byteLength": 336
+        "fileName": "2396.css",
+        "relativePath": "desktop/2396.css",
+        "sha256": "7dc4d37b6e4206e64f59f5aa14967c1000235956f7360c7787accfb4826c6f12",
+        "byteLength": 13193
       },
       {
-        "fileName": "2134.css",
-        "relativePath": "desktop/2134.css",
-        "sha256": "5a7698d35d1426a257c089faa62c62dac0f1e1fceb3dbee94ac18e240ebac3e1",
+        "fileName": "3945.css",
+        "relativePath": "desktop/3945.css",
+        "sha256": "776289b44a11708e5b6bbfafbb506794e92fc2fa059450c390272eb283750da3",
         "byteLength": 824
       },
       {
-        "fileName": "2385.css",
-        "relativePath": "desktop/2385.css",
-        "sha256": "4cf39248eace820de7c7d3f93dae6c4098c80ac3a5f402b0d3f8c4fc484e8357",
-        "byteLength": 6185
+        "fileName": "4700.css",
+        "relativePath": "desktop/4700.css",
+        "sha256": "e5e383e4b7982839ebea031cd4b4d8458058e69289a3e676b0e5ce4cddf9fe27",
+        "byteLength": 3066
       },
       {
-        "fileName": "3325.css",
-        "relativePath": "desktop/3325.css",
-        "sha256": "33755a31f2557929f6e8883aac95932d030b8307eaebf8ebf4a2640f02695fc2",
-        "byteLength": 3427
-      },
-      {
-        "fileName": "5691.css",
-        "relativePath": "desktop/5691.css",
-        "sha256": "edfd6129cf3dd4ce56294db5f4159ea27e8d7b796c37e35818de18d047742e8d",
+        "fileName": "5501.css",
+        "relativePath": "desktop/5501.css",
+        "sha256": "0e2bbe7fdbdfe6204f9682acfa3977be693879de8178d6a632330c35df39363b",
         "byteLength": 3376
       },
       {
-        "fileName": "5735.css",
-        "relativePath": "desktop/5735.css",
-        "sha256": "1eb579e098e831de0e762e990b381275f59aff37aa2434c149a45ee92ee1af37",
-        "byteLength": 4136
+        "fileName": "5757.css",
+        "relativePath": "desktop/5757.css",
+        "sha256": "d499d8630ba856cfb748585cb0f184cf81de0b4273aa2015c1538597d10c95eb",
+        "byteLength": 6185
       },
       {
         "fileName": "6076.css",
@@ -643,16 +631,28 @@
         "byteLength": 2906
       },
       {
-        "fileName": "6143.css",
-        "relativePath": "desktop/6143.css",
-        "sha256": "938cd2d0ec913de48394fa5828c01a919e7df2b4b8a4032c17c606134f94ca7a",
-        "byteLength": 3066
+        "fileName": "7582.css",
+        "relativePath": "desktop/7582.css",
+        "sha256": "68acff572d99db52920c9c882002ad237f4c6e2f4d5bfacc9cdca5111e818ead",
+        "byteLength": 3427
       },
       {
-        "fileName": "8291.css",
-        "relativePath": "desktop/8291.css",
-        "sha256": "8a21b1e2e486a852d431dc745551ede206b0d345a998a1c2e8a43e35a8911b4d",
-        "byteLength": 13193
+        "fileName": "9645.css",
+        "relativePath": "desktop/9645.css",
+        "sha256": "20f5f6bfeb2131191bf848b6aa806b89408486ffcc959d2dc8fd5b4323c75564",
+        "byteLength": 4609
+      },
+      {
+        "fileName": "9712.css",
+        "relativePath": "desktop/9712.css",
+        "sha256": "ae1700158153c1ca76e313b825b24276e95344df59c900f3d335fbfc43ced3ef",
+        "byteLength": 4136
+      },
+      {
+        "fileName": "998.css",
+        "relativePath": "desktop/998.css",
+        "sha256": "1ec5cbf8f1966031ed5665ba484212889ffe0bd3e505dede0b56ec7799ab20df",
+        "byteLength": 335
       },
       {
         "fileName": "browse-v2.css",
