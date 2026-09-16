@@ -42,6 +42,38 @@
     --dither: var(--background-noise);
   }
 }
+.SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+  --direction-and-possibly-color-interpolation: to bottom;
+  --color-from: var(--background-base-20);
+  --color-to: transparent;
+  --dither: none;
+  background-image:
+    linear-gradient(
+      var(--direction-and-possibly-color-interpolation),
+      var(--color-from),
+      var(--color-to)
+    ),
+    var(--dither);
+  height: 112px;
+}
+@supports (
+  background-image: linear-gradient(
+      in oklch to bottom,
+      var(--color-from),
+      var(--color-to)
+    )
+) {
+  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+    --direction-and-possibly-color-interpolation: in oklch to bottom;
+  }
+}
+@media (color<8) {
+  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+    --color-from: var(--background-base-20);
+    --color-to: #121212;
+    --dither: var(--background-noise);
+  }
+}
 .SsdRCCBmjjGCoXmWiFiO.uCKoOMjAq2gERD4HVzvt {
   opacity: 0;
 }
@@ -443,6 +475,14 @@ __workaround_element__ {
 [data-transition="sponsored-playlist"] .yLg7GI3umuhVYx7GBNWt {
   view-transition-name: sponsored-playlist-content-transition;
 }
+.TVge8GAzWxsw7lutv2AR {
+  --action-bar-padding-top: var(--encore-spacing-tighter);
+  --action-bar-padding-bottom: var(--encore-spacing-base);
+}
+.q8lVR9vHL8mgDzmyZkql {
+  width: 100%;
+  padding-block-end: var(--encore-spacing-tighter-2);
+}
 .y3W4YSPHJ4A9sNfzaY_w {
   -webkit-line-clamp: 1;
   word-break: break-word;
@@ -451,10 +491,22 @@ __workaround_element__ {
   display: -webkit-box;
   overflow: hidden;
 }
-@container main-view-grid-area (height<=599px) {
+.y3W4YSPHJ4A9sNfzaY_w.LO80gLxivZCCXTy56xeg {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+[data-entity-header-width-breakpoint="MEDIUM"]
   .y3W4YSPHJ4A9sNfzaY_w.LO80gLxivZCCXTy56xeg {
-    display: none;
-  }
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+[data-entity-header-width-breakpoint="SMALL"]
+  .y3W4YSPHJ4A9sNfzaY_w.LO80gLxivZCCXTy56xeg,
+[data-entity-header-height-breakpoint="SMALL"]
+  .y3W4YSPHJ4A9sNfzaY_w.LO80gLxivZCCXTy56xeg {
+  display: none;
 }
 .vvokofZHMkIo13xngnyn {
   color: #fff;
@@ -724,4 +776,4 @@ ul > ._G3k1eIg6LFgvvq0Lxhg {
 .EeWgdu0p90pQiTkLlYFp:not(:last-child) {
   margin-block-end: 16px;
 }
-/*# sourceMappingURL=5757.fa4ef763.css.map*/
+/*# sourceMappingURL=2385.dc6ba0f3.css.map*/

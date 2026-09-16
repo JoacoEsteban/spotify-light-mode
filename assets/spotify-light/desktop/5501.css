@@ -15,6 +15,10 @@
   --color-to: transparent; /* forwarded-reset: transparent */
 }
 
+.WDUGUzfqySzWZXbHg0mP[data-seamless-gradient]:not(#spotify-light-mode-specificity-bump) {
+  background-color: #f6f6f6; /* hardcoded-color: #121212 → #f6f6f6 */
+}
+
 .ELsCw_Koqs_Q2dLHtg7z:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(#ffffff00 0%, #ffffff80 100%), var(--background-noise); /* hardcoded-color: linear-gradient(#0000 0%, #00000080 100%), var(--background-noise) → linear-gradient(#ffffff00 0%, #ffffff80 100%), var(--background-noise) */
 }

@@ -1128,6 +1128,28 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
   margin: 0 0 16px;
   container: search-item-top-row/inline-size;
 }
+.WUyH2l6WfSGkodrUfbFs .fg25AlACfOfAg9vYdOwi {
+  border-radius: 4px;
+  width: 85.3333px !important;
+  height: 48px !important;
+}
+@container search-item-top-row (width>=600px) {
+  .WUyH2l6WfSGkodrUfbFs .fg25AlACfOfAg9vYdOwi {
+    width: 113.778px !important;
+    height: 64px !important;
+  }
+}
+@container search-item-top-row (width>=1024px) {
+  .WUyH2l6WfSGkodrUfbFs .fg25AlACfOfAg9vYdOwi {
+    width: 156.444px !important;
+    height: 88px !important;
+  }
+}
+@container search-item-top-row (width<600px) {
+  .WUyH2l6WfSGkodrUfbFs .QkbVhArd_JaC2dHIGo75 {
+    font-size: var(--encore-text-size-large);
+  }
+}
 .WUyH2l6WfSGkodrUfbFs .EL39YMU9wuJGN12htxy8 {
   opacity: 0;
   transition: opacity 0.15s cubic-bezier(0.8, 0, 1, 1);
@@ -1301,4 +1323,4 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
 .bhqJz2sBdln0IgBsbXuc {
   --content-max-width: 1200px;
 }
-/*# sourceMappingURL=xpui-routes-search.301369bc.css.map*/
+/*# sourceMappingURL=xpui-routes-search.a6f613be.css.map*/

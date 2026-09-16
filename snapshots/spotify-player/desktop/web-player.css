@@ -13875,23 +13875,27 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   html {
     --fallback-fonts:
       Helvetica Neue, helvetica, arial, Hiragino Sans,
-      Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+      Hiragino Kaku Gothic ProN, Meiryo, MS Gothic, Apple Color Emoji,
+      Segoe UI Emoji, Noto Color Emoji;
   }
   html[lang="zh-TW"] {
     --fallback-fonts:
       Helvetica Neue, helvetica, arial, Microsoft JhengHei, PingFang TC,
-      Lantinghei TC, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+      Lantinghei TC, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo,
+      MS Gothic, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji;
   }
   html[lang="zh-CN"] {
     --fallback-fonts:
       Helvetica Neue, helvetica, arial, Microsoft YaHei, PingFang SC,
-      Lantinghei SC, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+      Lantinghei SC, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo,
+      MS Gothic, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji;
   }
   html[lang="zh-HK"] {
     --fallback-fonts:
       Helvetica Neue, helvetica, arial, Microsoft JhengHei, PingFang HK,
       Lantinghei HK, Microsoft JhengHei, PingFang TC, Lantinghei TC,
-      Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+      Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic,
+      Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji;
   }
   body,
   button,
@@ -22250,4 +22254,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.661de219.css.map*/
+/*# sourceMappingURL=web-player.03f9a81f.css.map*/

@@ -42,6 +42,38 @@
     --dither: var(--background-noise);
   }
 }
+.SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+  --direction-and-possibly-color-interpolation: to bottom;
+  --color-from: var(--background-base-20);
+  --color-to: transparent;
+  --dither: none;
+  background-image:
+    linear-gradient(
+      var(--direction-and-possibly-color-interpolation),
+      var(--color-from),
+      var(--color-to)
+    ),
+    var(--dither);
+  height: 112px;
+}
+@supports (
+  background-image: linear-gradient(
+      in oklch to bottom,
+      var(--color-from),
+      var(--color-to)
+    )
+) {
+  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+    --direction-and-possibly-color-interpolation: in oklch to bottom;
+  }
+}
+@media (color<8) {
+  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+    --color-from: var(--background-base-20);
+    --color-to: #121212;
+    --dither: var(--background-noise);
+  }
+}
 .SsdRCCBmjjGCoXmWiFiO.uCKoOMjAq2gERD4HVzvt {
   opacity: 0;
 }
@@ -360,4 +392,4 @@ html[dir="ltr"] .RmweRidui_YMBauFgrvW {
   background: var(--background-base);
   isolation: isolate;
 }
-/*# sourceMappingURL=xpui-routes-cultural-moment-hub.91397ebc.css.map*/
+/*# sourceMappingURL=xpui-routes-cultural-moment-hub.af6b4a30.css.map*/

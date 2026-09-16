@@ -294,6 +294,9 @@ __workaround_element__ {
   );
   border-radius: 4px;
 }
+.qHMC92m8m3PMCHFBCfrC[data-seamless-gradient] .EhHtOMlXXi5nqb8mtIW2 {
+  z-index: 1;
+}
 .IfnsJmY2oBN7JcMDKR7u {
   cursor: pointer;
   background-color: #0000;
@@ -906,4 +909,4 @@ button:focus-visible .iudWVziOWWKVCctAUTRu:not(.kM6DM5S8K1q547sUMrU7) {
     var(--background-tinted-highlight, #0000001f) 100%
   );
 }
-/*# sourceMappingURL=dwp-home-chips-row.f1c43b23.css.map*/
+/*# sourceMappingURL=dwp-home-chips-row.4afc6012.css.map*/
