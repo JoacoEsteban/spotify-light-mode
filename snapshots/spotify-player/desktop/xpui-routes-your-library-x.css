@@ -293,7 +293,7 @@
   top: 0;
   bottom: 0;
   position: absolute;
-  inset-inline-start: calc(var(--grid-gap) / 2 * -1 - 1px);
+  inset-inline-start: calc(var(--grid-gap, 0px) / 2 * -1 - 1px);
 }
 .aj5QuDKCUrhakkMpuwA1 {
   position: relative;
@@ -306,7 +306,7 @@
   top: 0;
   bottom: 0;
   position: absolute;
-  inset-inline-end: calc(var(--grid-gap) / 2 * -1 - 1px);
+  inset-inline-end: calc(var(--grid-gap, 0px) / 2 * -1 - 1px);
 }
 .QFlnrzOFuom046_u6qPH {
   color: #0000 !important;
@@ -1236,4 +1236,4 @@
   inset-inline: 8px auto !important;
   transform: none !important;
 }
-/*# sourceMappingURL=xpui-routes-your-library-x.fa1efc8e.css.map*/
+/*# sourceMappingURL=xpui-routes-your-library-x.70b611b3.css.map*/

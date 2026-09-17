@@ -3166,36 +3166,9 @@ a.w0M9McvDvK5pG_MAXRcq:hover {
     display: none;
   }
 }
-.toU8YhYQeXBdjKP6dBk6 {
-  background-color: var(--text-subdued);
-  color: var(--background-base);
-  justify-content: center;
-  align-items: center;
-  gap: var(--encore-spacing-tighter-4);
-  text-transform: capitalize;
-  -webkit-user-select: none;
-  user-select: none;
-  border-radius: 2px;
-  flex-wrap: nowrap;
-  padding-block: 1px;
-  padding-inline: 5px;
-  font-size: 10.5px;
-  font-weight: 600;
-  line-height: 14px;
-  display: inline-flex;
-  overflow: hidden;
+.wf4c09M26zqx77rdohj2.wf4c09M26zqx77rdohj2:not(:last-child) {
+  margin-inline-end: 0;
 }
-.YzrTOpfe3GdBBRO_SdJu {
-  flex-shrink: 0;
-  width: 10px;
-  height: 10px;
-}
-.q2Qcinas0rT4zLisHRNx {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.OiP14lzG8b2P_Uq7xiOw,
 .dofOlWR1ybjoMZkGQqBY {
   flex-shrink: 0;
 }
@@ -6357,8 +6330,10 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
   }
 }
 .Mo5RkF8eVjc2i5O5Dg7I {
-  color: var(--text-subdued);
   flex-shrink: 0;
+}
+.Mo5RkF8eVjc2i5O5Dg7I.Mo5RkF8eVjc2i5O5Dg7I:not(:last-child) {
+  margin-inline-end: 0;
 }
 .GRqVI0TGU0ACVflJ7Az_ {
   white-space: nowrap;
@@ -12516,17 +12491,7 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   height: auto;
 }
 .v192J0eMad63T5538h6l {
-  border-radius: var(--encore-corner-radius-smaller);
-  height: 16px;
   color: var(--background-base);
-  justify-content: center;
-  align-items: center;
-  padding-inline: 5px;
-  display: flex;
-}
-.qL3YmvCdJ6JYXB4ldQ2_ {
-  font-size: 10.5px;
-  font-weight: 600;
 }
 .RiKsff85hO0bgWc96kgk {
   align-items: center;
@@ -12535,6 +12500,9 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
 }
 .lz6zRvXaZG4KYbRUsniR {
   min-width: 42px;
+}
+.lz6zRvXaZG4KYbRUsniR.lz6zRvXaZG4KYbRUsniR:not(:last-child) {
+  margin-inline-end: 0;
 }
 .gidM_GMwTYHe5RI_jdCw {
   height: 100%;
@@ -22254,4 +22222,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.03f9a81f.css.map*/
+/*# sourceMappingURL=web-player.c5c9d115.css.map*/

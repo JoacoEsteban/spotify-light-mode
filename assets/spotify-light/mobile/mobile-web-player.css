@@ -86,11 +86,6 @@
   background-color: #c3c3c3; /* hardcoded-color: #535353 → #c3c3c3 */
 }
 
-.toU8YhYQeXBdjKP6dBk6:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--text-subdued); /* css-var: var(--text-subdued) */
-  color: var(--background-base); /* css-var: var(--background-base) */
-}
-
 .CsdJYiqG7_sTuKYLaBVX:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }

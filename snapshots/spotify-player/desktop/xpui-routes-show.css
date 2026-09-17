@@ -70,6 +70,9 @@
   margin-top: 2px;
   display: grid;
 }
+.dTfrqnmob6uWMl9qpVOE.dTfrqnmob6uWMl9qpVOE:not(:last-child) {
+  margin-inline-end: 0;
+}
 .PLnixn0fO_HAuwMOCfUK:before {
   content: "";
   background-color: #0000004d;
@@ -80,8 +83,8 @@
   left: 0;
 }
 .qFWcomIg_9z0L1YYrdwh {
-  margin: 12px 12px 12px 0;
   justify-content: center;
+  margin: 12px 12px 12px 0;
   margin-inline-end: 12px;
   display: flex;
   position: relative;
@@ -1153,4 +1156,4 @@ __workaround_element__ {
 .Vp858xKiie5Eh3mSfSub {
   padding: 16px 0;
 }
-/*# sourceMappingURL=xpui-routes-show.8a5cbe54.css.map*/
+/*# sourceMappingURL=xpui-routes-show.936aeff6.css.map*/
