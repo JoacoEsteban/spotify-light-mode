@@ -96,6 +96,14 @@
     opacity: 1;
   }
 }
+@keyframes EBqUndIE4uAOZYg7i9bG {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .rzJHb_Q4kE2_d81P1hHQ {
   width: 100%;
   height: var(--optimized-entity-header-height, 40vh);
@@ -117,6 +125,22 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+.lxP4FqXzwO7VDFnfmeWX {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+@supports (timeline-scope: --timeline-scope-test) {
+  .lxP4FqXzwO7VDFnfmeWX {
+    opacity: 0;
+    animation-name: EBqUndIE4uAOZYg7i9bG;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: --main-view-scroll;
+    animation-range: 0 1px;
+    display: block;
+  }
 }
 .RB3iA1xLBjGlOh23C5os {
   opacity: 1;
@@ -644,4 +668,4 @@ __workaround_element__ {
   animation-duration: var(--encore-short-4);
   animation-timing-function: var(--encore-expressive-decelerate);
 }
-/*# sourceMappingURL=5501.344c44af.css.map*/
+/*# sourceMappingURL=5501.eb0ce902.css.map*/

@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.441486e6__mobile-web-player.96d3db74",
+  "snapshotVersion": "spotify-player.web-player.a44644f8__mobile-web-player.947edcf6",
   "source": {
-    "fingerprint": "sha256:2454d877e547800da3bb13326ec72c1acc211f288c856b82e369b6ff595d5116",
+    "fingerprint": "sha256:28e035e70676a4b550ddacb9b6ca2acea5cc55c6e36ab69197190aa84ad0b05a",
     "targets": {
       "desktop": [
         {
@@ -43,8 +43,8 @@
         {
           "fileName": "5501.css",
           "relativePath": "desktop/5501.css",
-          "sha256": "5463deed5d18c21c2a40cc5719f409bb011a34a21bb4c0a0687e63bc3437782f",
-          "byteLength": 15268
+          "sha256": "a5138697d14feaf662f24fe044526f1d5b3cdbdce9e462a87cf50bc03419b99f",
+          "byteLength": 15739
         },
         {
           "fileName": "6076.css",
@@ -265,8 +265,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "b8432f08a2c2fe62a09a81e65419cd4aec7e21a24f3c93798e73f5a1478354a1",
-          "byteLength": 588547
+          "sha256": "9ab2b4ebed770e84b22c9cc7a80ee46c523484b98bd4a53bffcae57f8723bcaa",
+          "byteLength": 588646
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -586,7 +586,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:2c20d4dd57023bc05461f387c53a6fb03b3291c4387ad5bf5c0bb8718d247790",
+    "fingerprint": "sha256:6142d829dc39c5b1a0c498071f8f6f52b6b29bbbc7e1ce1441182d06b5149626",
     "files": [
       {
         "fileName": "1924.css",
@@ -849,8 +849,8 @@
       {
         "fileName": "web-player.css",
         "relativePath": "desktop/web-player.css",
-        "sha256": "13aed90dec91595067fccf673cd0fe195f41d0ba3ec1f662a26255acb2fd820a",
-        "byteLength": 261711
+        "sha256": "c7d05e76cd4bbd46746d76bcb28469ab931f2ed61afcdce160f24a9ef83dc8e5",
+        "byteLength": 261510
       },
       {
         "fileName": "xpui-debug-window-contents.css",
