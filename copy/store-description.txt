@@ -33,7 +33,9 @@ FEATURES
 
 PERMISSIONS
 
-Storage — the only permission this extension requests. It is used exclusively to remember your on/off preference and system preference setting between sessions.
+Storage — used exclusively to remember your on/off preference and system preference setting between sessions.
+
+Scripting and access to open.spotify.com — used exclusively to switch light mode on in Spotify tabs you already have open when the extension is installed, updated, or re-enabled. Without it, those tabs stay dark until you reload them.
 
 The extension has no access to your Spotify account, your listening history, your credentials, or any other personal data. It only touches the visual presentation of the page.
 

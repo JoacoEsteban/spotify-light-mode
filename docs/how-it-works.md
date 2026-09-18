@@ -159,6 +159,32 @@ The script reacts to three changes without a page reload:
 WXT calls the cleanup handlers when the content script is invalidated.
 The cleanup removes the color-scheme listener and stops the inline style observer.
 
+## Activation in open tabs
+
+The browser runs a declared content script only when a matching page loads.
+Tabs that are already open have no content script.
+In those tabs, the popup writes to storage and nothing reacts.
+
+`entrypoints/background.ts` corrects this behavior.
+It queries every Spotify tab.
+Then it injects the content script with `browser.scripting.executeScript`.
+
+The background script runs this injection at every start.
+A start happens on install, on update, on enable, and on browser start.
+The `browser.runtime.onInstalled` event covers only install and update.
+It has no reason value for an extension that the user enables.
+There is also no `onEnabled` event.
+
+Some tabs hold an orphan content script instead of no content script.
+A disable or an update leaves the previous content script alive.
+Its extension APIs are severed, but its `<style>` elements stay in the page.
+As a result, light mode stays on and the popup toggle has no effect.
+The new content script invalidates the orphan.
+The orphan then removes its own `<style>` elements before the new script mounts the current ones.
+
+`lib/spotify.ts` holds the match pattern.
+The content script and the background script both use this constant.
+
 ## Inline style observer
 
 Spotify also writes colors outside normal stylesheet files.
@@ -188,6 +214,8 @@ The content script watches the same storage items.
 This storage-based design updates all open Spotify tabs at the same time.
 It does not need `browser.runtime.sendMessage`.
 
-The extension requests only the `storage` permission.
+The extension requests the `storage` and `scripting` permissions.
+It also requests host access to `https://open.spotify.com/*`.
+It uses `scripting` and that host access only to activate tabs that are already open.
 It does not request Spotify account data.
 It does not make runtime network requests from the content script.

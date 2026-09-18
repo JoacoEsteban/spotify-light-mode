@@ -80,7 +80,11 @@ See [How the extension works](docs/how-it-works.md) for the asset flow, generate
 
 ## Permissions
 
-**Storage** — the only permission requested. Used exclusively to remember your on/off and system preference settings between sessions. The extension has no access to your Spotify account, listening history, or credentials.
+**Storage** — remembers your on/off and system preference settings between sessions.
+
+**Scripting** and **access to `open.spotify.com`** — activate light mode in Spotify tabs that are already open when you install, update, or re-enable the extension. Without them, those tabs stay dark until you reload them.
+
+The extension has no access to your Spotify account, listening history, or credentials.
 
 ## Compatibility
 

@@ -8,7 +8,8 @@ export default defineConfig({
     description:
       "Bring light mode to Spotify's web player — always on, or only when your OS is in light mode.",
     version,
-    permissions: ["storage"],
+    permissions: ["storage", "scripting"],
+    host_permissions: ["https://open.spotify.com/*"],
     browser_specific_settings: {
       gecko: {
         id: "spotify-light-mode@joaco.io",

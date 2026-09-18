@@ -1,11 +1,12 @@
 import { defineContentScript } from "wxt/utils/define-content-script";
 import { enabledItem, useSystemPrefItem, readEnabled, readUseSystemPref } from "../../lib/storage";
+import { SPOTIFY_MATCHES } from "../../lib/spotify";
 import { baseLightModeCss, lightModeStylesheetOverrides } from "../../assets/spotify-light/index";
 import { InlineStyleObserver } from "./inline-style-observer";
 import { StylesheetOverrideMount } from "./stylesheet-override-mount";
 
 export default defineContentScript({
-  matches: ["https://open.spotify.com/*"],
+  matches: [...SPOTIFY_MATCHES],
   runAt: "document_start",
   cssInjectionMode: "manual",
 
