@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.53e49eea__mobile-web-player.08838ce9",
+  "snapshotVersion": "spotify-player.web-player.1ea74ac0__mobile-web-player.2eb1be9b",
   "source": {
-    "fingerprint": "sha256:28e035e70676a4b550ddacb9b6ca2acea5cc55c6e36ab69197190aa84ad0b05a",
+    "fingerprint": "sha256:2e638b9042bb5ae136062b4fc1748a9b070faff02d0bec5739ade45d78168ec5",
     "targets": {
       "desktop": [
         {
@@ -271,8 +271,8 @@
         {
           "fileName": "xpui-debug-window-contents.css",
           "relativePath": "desktop/xpui-debug-window-contents.css",
-          "sha256": "a568176b88589c62cb94d6f799078075b34f5a2f4716a3990f2ab8f682fc9ba7",
-          "byteLength": 37893
+          "sha256": "9bc2ba4f3f2364eaecdf92b6c3cedb8bfb1089cad1e30afdf88c54179cae0bda",
+          "byteLength": 37923
         },
         {
           "fileName": "xpui-desktop-modals.css",
@@ -421,8 +421,8 @@
         {
           "fileName": "xpui-routes-playlist.css",
           "relativePath": "desktop/xpui-routes-playlist.css",
-          "sha256": "f8815da4e0c6efa4183a517c8d20bfa877b1f7646b31bbf2ac358689304f9681",
-          "byteLength": 18145
+          "sha256": "e7f5b20fdad8e38429065e245e447c4ed8290940e75a179a5cf3de433032fb6e",
+          "byteLength": 18382
         },
         {
           "fileName": "xpui-routes-podcast-chapter.css",
@@ -586,7 +586,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:6142d829dc39c5b1a0c498071f8f6f52b6b29bbbc7e1ce1441182d06b5149626",
+    "fingerprint": "sha256:9698958707c5debce46a1b41a09b0d1d548ab618d4d5aca421272ce1639a5bb5",
     "files": [
       {
         "fileName": "1924.css",
@@ -1005,8 +1005,8 @@
       {
         "fileName": "xpui-routes-playlist.css",
         "relativePath": "desktop/xpui-routes-playlist.css",
-        "sha256": "63fa3b867107dfa9a7645655420fbb31e5fd4f0e2aeac9c00d05d3201d29b38a",
-        "byteLength": 7464
+        "sha256": "66a94bdef24e1433a56b47b169003a7e593bab1ab2410939bd84f4844ff77577",
+        "byteLength": 7765
       },
       {
         "fileName": "xpui-routes-podcast-chapter.css",

@@ -813,6 +813,16 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .GnacvtNJMVh9w9NhF2lp {
   padding-block: var(--encore-spacing-tighter-2);
 }
+.TRBnZ5YFWYXl0lxqPH2w {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.XnbtwtTv65mtkQaRlYJB {
+  background-color: #ffffff1a;
+}
+.XnbtwtTv65mtkQaRlYJB:active {
+  background-color: #ffffff4d;
+}
 .CdjtcP_lqw0xLb0V7GpJ {
   min-width: 0;
   margin-inline: calc(-1 * var(--content-spacing));
@@ -826,6 +836,9 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   padding-inline: 6px;
   display: flex;
   overflow-y: hidden;
+}
+.tf3nhXo8YcWyd8BK8Tgv:empty {
+  display: none;
 }
 .XHI00cdP8EofJsZXH1q9 {
   background-color: #ffffff1a;
@@ -900,4 +913,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .yvpoF4nd0IuBGinDkL0o {
   grid-area: content;
 }
-/*# sourceMappingURL=xpui-routes-playlist.86fc0459.css.map*/
+/*# sourceMappingURL=xpui-routes-playlist.e202cd78.css.map*/
