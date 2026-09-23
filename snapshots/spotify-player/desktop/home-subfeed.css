@@ -121,9 +121,18 @@ ul > ._G3k1eIg6LFgvvq0Lxhg {
 .MYWr4UY4pKAAscUXvqrB .DooM5Xhlz0FKeraAiSdX {
   flex-shrink: 0;
 }
+.v9E16uwrwOXKRrsrkvxA {
+  white-space: nowrap;
+  background-color: #ffffff1a;
+  flex-shrink: 0;
+  min-inline-size: 40px;
+}
 .D_etfermGVd8hW7FFg2U {
   align-items: center;
   display: flex;
+}
+.D_etfermGVd8hW7FFg2U.DtruFYnBW4lsSQpZ_kth {
+  gap: 8px;
 }
 .PzDEMkr7euiRQILOLemN {
   color: #fff;
@@ -148,4 +157,4 @@ ul > ._G3k1eIg6LFgvvq0Lxhg {
   gap: 16px;
   display: flex;
 }
-/*# sourceMappingURL=home-subfeed.84eb5ed8.css.map*/
+/*# sourceMappingURL=home-subfeed.89e58fb7.css.map*/

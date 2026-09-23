@@ -85,6 +85,12 @@
 .MYWr4UY4pKAAscUXvqrB .DooM5Xhlz0FKeraAiSdX {
   flex-shrink: 0;
 }
+.v9E16uwrwOXKRrsrkvxA {
+  white-space: nowrap;
+  background-color: #ffffff1a;
+  flex-shrink: 0;
+  min-inline-size: 40px;
+}
 .IOXdOZpz_OhQUj2M3A0e {
   position: relative;
 }
@@ -1740,4 +1746,4 @@ __workaround_element__ {
   gap: 8px;
   display: flex;
 }
-/*# sourceMappingURL=xpui-routes-artist.9bfd74a0.css.map*/
+/*# sourceMappingURL=xpui-routes-artist.789865e3.css.map*/

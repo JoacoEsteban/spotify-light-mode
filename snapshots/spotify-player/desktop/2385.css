@@ -172,6 +172,12 @@
 .MYWr4UY4pKAAscUXvqrB .DooM5Xhlz0FKeraAiSdX {
   flex-shrink: 0;
 }
+.v9E16uwrwOXKRrsrkvxA {
+  white-space: nowrap;
+  background-color: #ffffff1a;
+  flex-shrink: 0;
+  min-inline-size: 40px;
+}
 :root {
   --top-bar-z-index: 1;
 }
@@ -443,6 +449,9 @@
 .D_etfermGVd8hW7FFg2U {
   align-items: center;
   display: flex;
+}
+.D_etfermGVd8hW7FFg2U.DtruFYnBW4lsSQpZ_kth {
+  gap: 8px;
 }
 __workaround_element__ {
   --__workaround_property__: 0;
@@ -776,4 +785,4 @@ ul > ._G3k1eIg6LFgvvq0Lxhg {
 .EeWgdu0p90pQiTkLlYFp:not(:last-child) {
   margin-block-end: 16px;
 }
-/*# sourceMappingURL=2385.dc6ba0f3.css.map*/
+/*# sourceMappingURL=2385.8829211b.css.map*/

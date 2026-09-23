@@ -823,6 +823,14 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   background-color: #69aaff; /* hardcoded-color: #2e77d0 → #69aaff */
 }
 
+.JqF3ZHOFbzS7jT12F6d_.tFf2FP5jXicj0UYsUNU6 .owRCnNd0XkXhLaGHk2A7:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
+}
+
+.bcq04_p8RepHYD0aypCl:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
+}
+
 .GLaDjsVWLhjSOo9Y5rC_:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
