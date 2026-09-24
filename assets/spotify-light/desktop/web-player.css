@@ -273,6 +273,10 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   stroke: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
+.zwYZHhwQqz5atdyyGBU9:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base); /* css-var: var(--text-base) */
+}
+
 .UjyJCuPpzUpHcncJJ0mA:not(#spotify-light-mode-specificity-bump) {
   border: none; /* forwarded-reset: none */
 }

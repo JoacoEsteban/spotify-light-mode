@@ -1,58 +1,11 @@
-._GRMvgryzPkzkCDvvVBk {
-  background-color: #00000080;
-  border-radius: 6px;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 9px;
-  width: fit-content;
-  height: 72px;
-  margin-top: 16px;
-  padding: 8px;
-  display: flex;
-}
-._GRMvgryzPkzkCDvvVBk.kM4IdmBz1Bu2FDvfTz2X .j_KYTpjdKG3O5fhRgkH_ {
-  width: 56px;
-}
-.xLuSKIfxuov1BIgjliWa {
-  align-self: center;
-  margin-inline-end: 7px;
-}
-.j_KYTpjdKG3O5fhRgkH_ {
-  font-variant-numeric: tabular-nums;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  width: 74px;
-  height: 48px;
-  line-height: 1.15;
-  display: flex;
-  position: relative;
-}
-.tcS5w6pCiTsJp9b7CMC8:after {
-  content: "";
-  top: 4px;
-  border-inline-end: 1px solid #ffffff4d;
-  width: 100%;
-  height: 18px;
-  position: absolute;
-  inset-inline-start: 4px;
-}
-.b7uoqWOFlz_ELybW2pRA {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-}
-.nYfi82ml4ev3Qj7CaoNi {
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 8px;
-  display: flex;
-}
 .aMzIcj2Nte0MLTJmbH7F {
   white-space: nowrap;
   align-items: center;
   display: flex;
+}
+.OQvaPpLU1thIEA_cpjfa {
+  white-space: normal;
+  display: contents;
 }
 .n0RXqYzbZhrogj2dpzXG {
   color: var(--text-subdued, #ffffffb3);
@@ -197,135 +150,10 @@
     padding: 24px;
   }
 }
-.Zgp2GvDDdff99VCZReRL {
-  cursor: pointer;
-  background: 0 0;
-  border: none;
-  width: 38px;
-  height: 48px;
-  line-height: 0;
-  position: relative;
-}
-.Zgp2GvDDdff99VCZReRL:hover .EJJcmVEim14hgebCJIAg,
-.Zgp2GvDDdff99VCZReRL:focus-visible .EJJcmVEim14hgebCJIAg {
-  opacity: 1;
-}
-.QVI9jkmKYMAmFrn_166g {
-  border-radius: 4px;
-  width: 30px;
-  height: 40px;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  overflow: hidden;
-}
-.y_NUEvqHtBOn_ZrOjFQW {
-  background-color: var(--background-highlight);
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  display: flex;
-}
-.EJJcmVEim14hgebCJIAg {
-  opacity: 0;
-  background-color: var(--background-base);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.3s ease-out;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.qQWFj6qNlK0UyHisXumx {
-  padding-bottom: var(--encore-spacing-base);
-}
-.v7l8R2LqTiqpLnip84fM {
-  background: var(--background-base);
-  isolation: isolate;
-  min-width: 0;
-}
-.dhad7EoV4rOK_TaxsEl3 {
-  grid-template: "aside" "content" 1fr / auto;
-  display: grid;
-}
-.HxoTZyHM6qtzHzgugyE8 {
-  grid-template: "content aside"/2fr 1fr;
-  column-gap: 4%;
-}
-.LJQUF_xUdHtMgUSYbf7u {
-  grid-area: aside;
-}
-.yvpoF4nd0IuBGinDkL0o {
-  grid-area: content;
-}
-.dEzKsDhDYG10frqzZbJt {
-  --modal-max-height: 80vh;
-  max-width: 80vw;
-  max-height: var(--modal-max-height);
-  position: relative;
-  overflow: visible;
-}
-.RB1cV3dpxnnUDPS3MWx4 {
-  --modal-gap: 24px;
-  align-items: center;
-  gap: var(--modal-gap);
-  flex-direction: column;
-  display: flex;
-}
-.RPazRXAdmjTmRniR6qp2 {
-  --modal-button-height: 48px;
-  --available-height: calc(
-    var(--modal-max-height) - var(--modal-gap) - var(--modal-button-height)
-  );
-  max-width: min(var(--image-width, 80vw), 100%);
-  max-height: min(
-    var(--image-height, var(--available-height)),
-    var(--available-height)
-  );
-  object-fit: contain;
-  border-radius: 8px;
-  display: block;
-  overflow: visible;
-}
-.K6Tl7B71cD_j2w1B1oWf {
-  width: min(
-    var(--image-width),
-    80vw,
-    var(--available-height) * var(--image-aspect-ratio)
-  );
-  height: auto;
-  aspect-ratio: var(--image-aspect-ratio);
-}
-.g1hTXUfSrEFgjTskYfVG {
-  opacity: 0;
-  transition:
-    opacity 0.3s linear,
-    transform 0.3s ease-out;
-  transform: translateY(25%) scale(0.6);
-}
-.iwqUYMCDaZtbb9busV9b {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.hizuDAeKhc1y3lqcBUDB {
-  opacity: 0;
-  transform: translateY(25%) scale(0.6);
-}
-.Mw898cSgkZxPcyg5T28R {
-  -webkit-backdrop-filter: grayscale();
-  backdrop-filter: grayscale();
-  overflow: visible;
-}
 .rUv0YMpSVE3nbCdaqNEt {
   margin-top: 40px;
 }
 .G4Z481UYbIzpTpGy_EbL {
   margin-bottom: 40px;
 }
-.HtziCvOin__QUreWCqJ4 {
-  color: #b3b3b3;
-}
-/*# sourceMappingURL=xpui-routes-album.b3ced41c.css.map*/
+/*# sourceMappingURL=xpui-routes-album.f918cfcd.css.map*/
