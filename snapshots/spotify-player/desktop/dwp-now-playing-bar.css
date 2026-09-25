@@ -619,7 +619,12 @@ button.xpePbUuEphICtTwXQ2to:focus-visible {
   }
 }
 .WBOnnTeL21OiPPWKZDzA {
+  block-size: auto;
   padding: 8px 12px;
+  overflow-y: visible;
+}
+.X8ldVh8yryH6PUOaX1gO {
+  min-width: 0;
 }
 .izUT0aykBZWkZEWpQoy0[role="menuitem"] {
   padding-inline: 12px;
@@ -716,4 +721,4 @@ button.xpePbUuEphICtTwXQ2to:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.6fd50a7e.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.66e30b59.css.map*/

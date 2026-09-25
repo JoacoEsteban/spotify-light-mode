@@ -1471,7 +1471,12 @@ html:not(.no-focus-outline)
   padding: 0;
 }
 .WBOnnTeL21OiPPWKZDzA {
+  block-size: auto;
   padding: 8px 12px;
+  overflow-y: visible;
+}
+.X8ldVh8yryH6PUOaX1gO {
+  min-width: 0;
 }
 .izUT0aykBZWkZEWpQoy0[role="menuitem"] {
   padding-inline: 12px;
@@ -2137,4 +2142,4 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   height: 100%;
   max-height: 100%;
 }
-/*# sourceMappingURL=xpui-pip-mini-player.7f4e0ca5.css.map*/
+/*# sourceMappingURL=xpui-pip-mini-player.66770aff.css.map*/

@@ -146,7 +146,12 @@
   min-inline-size: 40px;
 }
 .WBOnnTeL21OiPPWKZDzA {
+  block-size: auto;
   padding: 8px 12px;
+  overflow-y: visible;
+}
+.X8ldVh8yryH6PUOaX1gO {
+  min-width: 0;
 }
 .izUT0aykBZWkZEWpQoy0[role="menuitem"] {
   padding-inline: 12px;
@@ -615,4 +620,4 @@ __workaround_element__ {
   > [data-testid="tracklist-row"] {
   background-color: #ffffff1a;
 }
-/*# sourceMappingURL=3498.bef6ec2c.css.map*/
+/*# sourceMappingURL=3498.44e67b36.css.map*/

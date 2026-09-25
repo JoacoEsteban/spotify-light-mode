@@ -26,6 +26,9 @@
     );
   }
 }
+[data-main-view-scroll-restoration-pending] .MSusW7bkDuhSoe4hl4df {
+  --carousel-shelf-content-visibility: visible;
+}
 .viq0Iah8B4QVPOyVYnDp,
 .zxZQQ4g6i6M_8LtnbCym {
   padding-top: 4px;
@@ -246,7 +249,7 @@
   display: grid;
 }
 .X0xbythb00oWjQBjvqMi.bDR0WqICbHQhtz7WZOPi {
-  content-visibility: auto;
+  content-visibility: var(--carousel-shelf-content-visibility, auto);
   contain-intrinsic-block-size: auto 212px;
 }
 .X0xbythb00oWjQBjvqMi {
@@ -682,4 +685,4 @@
   gap: 8px;
   display: flex;
 }
-/*# sourceMappingURL=90.90497e96.css.map*/
+/*# sourceMappingURL=90.c868a1b0.css.map*/

@@ -1171,6 +1171,7 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
   padding-inline: var(--context-menu-v2-item-padding-inline, 12px);
   --encore-list-row-hover-bg: var(--background-elevated-highlight);
   --encore-list-row-active-bg: var(--background-elevated-press);
+  transition-property: background-color, box-shadow;
 }
 .sq3EljRdXhjUICpdJ3Wn {
   width: 100%;
@@ -6847,6 +6848,13 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
 }
 .L62T9l070btRq7So36Ti .x9Y1lO5PxNe_FoWnyHug {
   flex-shrink: 0;
+}
+.b87XUyJtAIuuN6rwPXCQ {
+  color: #aab6ea;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
 }
 .Llr07cbVXUA4WuvMufUE {
   flex-wrap: wrap;
@@ -22235,4 +22243,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.8eacffee.css.map*/
+/*# sourceMappingURL=web-player.dcc6c80b.css.map*/

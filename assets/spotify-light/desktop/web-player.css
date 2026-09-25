@@ -1167,6 +1167,10 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
 }
 
+.b87XUyJtAIuuN6rwPXCQ:not(#spotify-light-mode-specificity-bump) {
+  color: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
+}
+
 .yu3IKMYQeWGLAZWAUHka:not(#spotify-light-mode-specificity-bump) {
   border: 1px solid #0000001a; /* hardcoded-color: 1px solid #ffffff1a → 1px solid #0000001a */
 }
