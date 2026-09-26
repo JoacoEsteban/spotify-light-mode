@@ -1166,6 +1166,15 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
   --encore-container-hover-bg: var(--background-elevated-highlight);
   --encore-container-active-bg: var(--background-elevated-press);
 }
+.lSgBHojKyMX8EvdqsEvI [class*="menu-row__submenu-icon"] {
+  display: none;
+}
+.WW3UcD1bgFb1E8Pt7Kr3 {
+  transform: rotate(90deg);
+}
+[dir="rtl"] .WW3UcD1bgFb1E8Pt7Kr3 {
+  transform: rotate(-90deg);
+}
 .oKHfwFRu9TXC6l7dLMuZ {
   min-height: var(--menu-item-height);
   padding-inline: var(--context-menu-v2-item-padding-inline, 12px);
@@ -4335,9 +4344,9 @@ html[data-overlayscrollbars-viewport~="scrollbarHidden"]
   opacity: 1;
 }
 .JqF3ZHOFbzS7jT12F6d_.tFf2FP5jXicj0UYsUNU6 .owRCnNd0XkXhLaGHk2A7 {
+  width: var(--filter-box-optimized-expanded-width);
   background-color: var(--background-tinted-highlight);
   border-radius: 999px;
-  width: 200px;
 }
 .JqF3ZHOFbzS7jT12F6d_:not(.tFf2FP5jXicj0UYsUNU6) .owRCnNd0XkXhLaGHk2A7 {
   width: 32px;
@@ -6937,7 +6946,7 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
 }
 .Fug5cMVxqUJjgTwsLGrO {
   margin-block: 8px 16px;
-  margin-inline-start: 104px;
+  margin-inline-start: 60px;
 }
 .V69oyPZH8B26EDCVVF5C {
   border-radius: 50%;
@@ -11777,6 +11786,9 @@ html:not(.no-focus-outline) .F2EQtWZ0MHyB6sFaxUt7:focus {
   padding: 0 16px;
   display: grid;
 }
+.HtZOqK251EhuEdldX8IX {
+  grid-column: 1/-1;
+}
 .N87seVZ8Bw6xEsQPVwsj {
   z-index: 2;
   box-sizing: content-box;
@@ -11838,6 +11850,11 @@ html:not(.no-focus-outline) .F2EQtWZ0MHyB6sFaxUt7:focus {
 .F2EQtWZ0MHyB6sFaxUt7.qTp_kDf7cXEi34p7zw61 .AWIrTV2Lx3pp211jnrfX > * {
   min-height: calc(var(--row-height) - 2px);
 }
+.F2EQtWZ0MHyB6sFaxUt7.qTp_kDf7cXEi34p7zw61
+  .AWIrTV2Lx3pp211jnrfX
+  > .HtZOqK251EhuEdldX8IX {
+  min-height: auto;
+}
 .AWIrTV2Lx3pp211jnrfX {
   height: var(--row-height);
   border: 1px solid #0000;
@@ -11862,11 +11879,11 @@ html:not(.no-focus-outline) .F2EQtWZ0MHyB6sFaxUt7:focus {
 }
 .AWIrTV2Lx3pp211jnrfX.flecGtNOIsAO9iD60puS:after {
   content: "";
-  width: 100%;
-  top: var(--row-height);
   background: var(--text-bright-accent);
+  width: 100%;
   height: 1px;
   position: absolute;
+  bottom: 0;
 }
 html[lang="ar"] .AWIrTV2Lx3pp211jnrfX.flecGtNOIsAO9iD60puS {
   height: 64px;
@@ -12014,6 +12031,37 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
 }
 .WPrlgSMYX1vgdmEbA9MI .YbNgwzjoL09bV0OcHbXg:hover {
   color: #fff;
+}
+.rkoHEUkqPGrxZ5dyBCBP {
+  cursor: grab;
+  touch-action: pan-y;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.rkoHEUkqPGrxZ5dyBCBP > :not(:last-child) {
+  margin-inline-end: 12px;
+}
+.OjgSzmBXiStrTwJcsfDr {
+  z-index: 1;
+  cursor: grabbing;
+  opacity: 0.75;
+}
+.xzR2JuGmC2rCHaBys0a0:before,
+.OYepqxi_OLhvIuzIgXgv:after {
+  background: var(--essential-bright-accent);
+  content: "";
+  width: 2px;
+  position: absolute;
+  inset-block: 4px;
+}
+.xzR2JuGmC2rCHaBys0a0:before {
+  inset-inline-start: -8px;
+}
+.OYepqxi_OLhvIuzIgXgv:after {
+  inset-inline-end: -8px;
 }
 .WPrlgSMYX1vgdmEbA9MI .KordPqtB1UTuzrjjAx_b {
   margin-inline-start: 8px;
@@ -14224,16 +14272,17 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     font-family: var(--encore-body-font-stack);
     --encore-body-font-stack:
       SpotifyMixUI, SpotifyMixUI-Arab, SpotifyMixUI-Cyrl, SpotifyMixUI-Grek,
-      SpotifyMixUI-Hebr, SpotifyMixUI-Thai, DevanagariFallback !important;
+      SpotifyMixUI-Hebr, SpotifyMixUI-Thai, DevanagariFallback,
+      var(--fallback-fonts, sans-serif) !important;
     --encore-title-font-stack:
       SpotifyMixUITitle, SpotifyMixUITitle-Arab, SpotifyMixUITitle-Cyrl,
       SpotifyMixUITitle-Grek, SpotifyMixUITitle-Hebr, SpotifyMixUITitle-Thai,
-      DevanagariFallback !important;
+      DevanagariFallback, var(--fallback-fonts, sans-serif) !important;
     --encore-variable-font-stack:
       SpotifyMixUITitleVariable, SpotifyMixUITitleVariable-Arab,
       SpotifyMixUITitleVariable-Cyrl, SpotifyMixUITitleVariable-Grek,
       SpotifyMixUITitleVariable-Hebr, SpotifyMixUITitleVariable-Thai,
-      DevanagariFallback !important;
+      DevanagariFallback, var(--fallback-fonts, sans-serif) !important;
   }
   .spotify-mix-non-latin button,
   .spotify-mix-non-latin select,
@@ -22243,4 +22292,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.dcc6c80b.css.map*/
+/*# sourceMappingURL=web-player.4bde4ae5.css.map*/

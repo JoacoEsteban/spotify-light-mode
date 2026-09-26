@@ -3024,16 +3024,17 @@ div:has(> .profile-dropdown-menu) {
     font-family: var(--encore-body-font-stack);
     --encore-body-font-stack:
       SpotifyMixUI, SpotifyMixUI-Arab, SpotifyMixUI-Cyrl, SpotifyMixUI-Grek,
-      SpotifyMixUI-Hebr, SpotifyMixUI-Thai, DevanagariFallback !important;
+      SpotifyMixUI-Hebr, SpotifyMixUI-Thai, DevanagariFallback,
+      var(--fallback-fonts, sans-serif) !important;
     --encore-title-font-stack:
       SpotifyMixUITitle, SpotifyMixUITitle-Arab, SpotifyMixUITitle-Cyrl,
       SpotifyMixUITitle-Grek, SpotifyMixUITitle-Hebr, SpotifyMixUITitle-Thai,
-      DevanagariFallback !important;
+      DevanagariFallback, var(--fallback-fonts, sans-serif) !important;
     --encore-variable-font-stack:
       SpotifyMixUITitleVariable, SpotifyMixUITitleVariable-Arab,
       SpotifyMixUITitleVariable-Cyrl, SpotifyMixUITitleVariable-Grek,
       SpotifyMixUITitleVariable-Hebr, SpotifyMixUITitleVariable-Thai,
-      DevanagariFallback !important;
+      DevanagariFallback, var(--fallback-fonts, sans-serif) !important;
   }
   .spotify-mix-non-latin button,
   .spotify-mix-non-latin select,
@@ -15326,4 +15327,4 @@ a:focus {
   width: auto;
   padding-inline: 32px;
 }
-/*# sourceMappingURL=mobile-web-player.a6d09b54.css.map*/
+/*# sourceMappingURL=mobile-web-player.ed603069.css.map*/
