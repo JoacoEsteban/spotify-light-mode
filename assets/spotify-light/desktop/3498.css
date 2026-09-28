@@ -116,3 +116,16 @@
   .tQJgXWq0XvLPYOxSVWYQ:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-highlight); /* css-var: var(--background-elevated-highlight) */
 }
+
+[role="row"]:hover + .B0HdtesBYaDUVtZsQ4CC:not(#spotify-light-mode-specificity-bump), [role="row"]:focus-within + .B0HdtesBYaDUVtZsQ4CC:not(#spotify-light-mode-specificity-bump), .B0HdtesBYaDUVtZsQ4CC:hover:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
+}
+
+[role="row"][aria-selected="true"] + .B0HdtesBYaDUVtZsQ4CC:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
+}
+
+[role="row"]:has(+ .B0HdtesBYaDUVtZsQ4CC:hover)
+  > [data-testid="tracklist-row"]:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
+}
