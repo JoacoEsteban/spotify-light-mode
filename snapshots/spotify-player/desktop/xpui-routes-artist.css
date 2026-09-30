@@ -225,46 +225,6 @@
   margin-bottom: 40px;
   margin-inline-end: 40px;
 }
-dialog {
-  background-color: #0000;
-  border: none;
-  max-block-size: calc(100vw - 32px);
-  max-inline-size: calc(100vw - 32px);
-  padding: 0;
-}
-dialog::backdrop {
-  background-color: #000000b3;
-}
-dialog:not([open]) {
-  display: none;
-}
-.spotify__container--is-desktop:not(.fullscreen) dialog {
-  -webkit-app-region: no-drag;
-}
-@keyframes yuCzxLeVSfsrsqomgqQ5 {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes GTF5wTyQhxyOS8Clnl2k {
-  0% {
-    transform: translateY(10%);
-  }
-}
-.DtQN_AMSk2glLMJ6WasS[open] {
-  opacity: 0;
-  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
-  opacity: 0;
-  animation-name: yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
 .hJvH07fYmldzyi7HBLPA {
   background-color: #121212;
   border-radius: 8px;
@@ -1248,4 +1208,4 @@ dialog:not([open]) {
 .SDbR2NT3Bt1RVvpSrO1a {
   width: 35%;
 }
-/*# sourceMappingURL=xpui-routes-artist.741a1a10.css.map*/
+/*# sourceMappingURL=xpui-routes-artist.b87b0052.css.map*/

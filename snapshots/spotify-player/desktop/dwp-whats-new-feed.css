@@ -261,11 +261,12 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   display: inline;
 }
 .CXe2b3ofHoeFNKfxVXXV {
-  vertical-align: middle;
+  vertical-align: baseline;
   align-items: center;
   display: inline-flex;
 }
 .k3eaqzxQq6HRr8xYnGNc {
+  vertical-align: middle;
   inline-size: 85px;
 }
 .EmdyPrdzytuHnddJbk63 {
@@ -433,4 +434,4 @@ __workaround_element__ {
 .aqVPjLLwDC6N5gtOUGtT:hover + .aqVPjLLwDC6N5gtOUGtT > .lh1DGz1dal79HbzcUZNp {
   visibility: hidden;
 }
-/*# sourceMappingURL=dwp-whats-new-feed.a0e7cd3a.css.map*/
+/*# sourceMappingURL=dwp-whats-new-feed.b6b2b461.css.map*/

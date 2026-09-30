@@ -186,6 +186,10 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
+.oKHfwFRu9TXC6l7dLMuZ.KRgUf4ZCLUMdIIoL8k1b:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  outline: none; /* forwarded-reset: none */
+}
+
 .yl5vamvPghMt82gxhrLl:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
@@ -876,10 +880,6 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
 
 .SKQ_ro1AL4NJXhi4LqKz:not(#spotify-light-mode-specificity-bump):before {
   background: linear-gradient(#ffffff00, #ffffff26); /* hardcoded-color: linear-gradient(#0000, #00000026) → linear-gradient(#ffffff00, #ffffff26) */
-}
-
-.znIte5MdBYabbtEqHqH5.seSHGSjV6MpPReNbLYLn:not(#spotify-light-mode-specificity-bump):after {
-  border-bottom: 1px solid #dbdbdb; /* hardcoded-color: 1px solid #333 → 1px solid #dbdbdb */
 }
 
 .znIte5MdBYabbtEqHqH5.TDA7dxlywYZHnye0tGZ4:not(#spotify-light-mode-specificity-bump):before {
@@ -1996,6 +1996,11 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
 
 .ILsbEY6GONaUpxHNDDc8:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff; /* hardcoded-color: #000 → #ffffff */
+}
+
+.D4c5IAPXupQkguYl6Pt3:not(#spotify-light-mode-specificity-bump) {
+  color: #000000; /* hardcoded-color: #fff → #000000 */
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
 
 .rzOQhNuCNTsDR8rE8ss1:not(#spotify-light-mode-specificity-bump) {

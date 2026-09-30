@@ -209,11 +209,12 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   display: inline;
 }
 .CXe2b3ofHoeFNKfxVXXV {
-  vertical-align: middle;
+  vertical-align: baseline;
   align-items: center;
   display: inline-flex;
 }
 .k3eaqzxQq6HRr8xYnGNc {
+  vertical-align: middle;
   inline-size: 85px;
 }
 .EmdyPrdzytuHnddJbk63 {
@@ -232,9 +233,9 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 }
 .h3TOHPZw_q9umPpOIVYX {
   white-space: nowrap;
-  flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  gap: var(--bpm-key-metadata-gap, 2px);
+  flex-direction: column;
   display: flex;
 }
 .Foff068M8PDz3buzqcB9 {
@@ -3985,4 +3986,4 @@ __workaround_element__ {
 .buRwHVvDJWz2JcjWxKQz {
   text-align: center;
 }
-/*# sourceMappingURL=dwp-panel-section.206d784c.css.map*/
+/*# sourceMappingURL=dwp-panel-section.6f37f4ff.css.map*/

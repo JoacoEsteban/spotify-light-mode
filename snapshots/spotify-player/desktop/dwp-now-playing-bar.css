@@ -264,6 +264,7 @@
   margin: 0 8px;
 }
 .OfI5bg1osE6PsQsLZkKk {
+  --bpm-key-metadata-gap: 0;
   flex-shrink: 0;
 }
 .JYpscJv61gVyxuchsNu1 {
@@ -360,6 +361,7 @@ __workaround_element__ {
   margin: 0 8px;
 }
 .TB5mbcggB6aBalVcQfak {
+  --bpm-key-metadata-gap: 0;
   flex-shrink: 0;
 }
 .yBBEeSe_XSvcM_aztjXq {
@@ -721,4 +723,4 @@ button.xpePbUuEphICtTwXQ2to:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.66e30b59.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.d173bf9f.css.map*/
