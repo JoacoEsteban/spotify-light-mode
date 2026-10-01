@@ -9,7 +9,7 @@
 .VWecpqwKRfLrBGAAmNLZ {
   background-color: #242424;
   border-radius: 8px;
-  grid-template-columns: 102px auto 32px;
+  grid-template-columns: 102px minmax(0, 1fr) 32px;
   width: 420px;
   height: 102px;
   display: grid;
@@ -25,6 +25,7 @@
 }
 .i5qMUIbTNwv9UzOUjvoJ {
   padding-top: 8px;
+  white-space: initial;
   padding-inline: 16px;
 }
 .wuneRS41YdjJmx3yb3BB {
@@ -35,7 +36,7 @@
 .xpQh0qEcAY4r7KFpHexc {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   font-size: 16px;
   font-weight: 700;
   display: -webkit-box;
@@ -87,4 +88,4 @@ a.MTn1EVadOKM__kC7h9z3 {
   top: 50%;
   transform: translateY(-50%);
 }
-/*# sourceMappingURL=this-is-playlist-concerts-carousel.ae524348.css.map*/
+/*# sourceMappingURL=this-is-playlist-concerts-carousel.001d9da5.css.map*/

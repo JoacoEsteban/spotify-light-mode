@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.26565d53__mobile-web-player.cbf2e8eb",
+  "snapshotVersion": "spotify-player.web-player.55991cf1__mobile-web-player.fe0d774b",
   "source": {
-    "fingerprint": "sha256:d447b38ce3fddf23c7bbf3669b11fcfce7cf05bfc1a548cd7d1fbd2a14c03f29",
+    "fingerprint": "sha256:a06e3bd3010b46347160a25ff6eb4de32c3a7441530365bfea71b2c641fd144a",
     "targets": {
       "desktop": [
         {
@@ -151,8 +151,8 @@
         {
           "fileName": "dwp-now-playing-bar.css",
           "relativePath": "desktop/dwp-now-playing-bar.css",
-          "sha256": "ef196f2c1d905aeb6f39a473fe3b7250b994f5b36a1417fa8c4c752e7cf67de4",
-          "byteLength": 14887
+          "sha256": "3cf68ae480cd9ea9d748ac240cfd2d66319a84efb0e7e8d9996ae455cb69180c",
+          "byteLength": 14875
         },
         {
           "fileName": "dwp-offline-empty-state.css",
@@ -277,8 +277,8 @@
         {
           "fileName": "this-is-playlist-concerts-carousel.css",
           "relativePath": "desktop/this-is-playlist-concerts-carousel.css",
-          "sha256": "966016eb8e271fad7d73a3ec8a0fec45af6e39289902f8568c4d19705ed627fe",
-          "byteLength": 1815
+          "sha256": "589bca147e51b29b30b2f81564123b96be8732a68b1816bf73bc6b15009448bb",
+          "byteLength": 1848
         },
         {
           "fileName": "trending-near-you-toolbar.css",
@@ -313,8 +313,8 @@
         {
           "fileName": "xpui-pip-mini-player.css",
           "relativePath": "desktop/xpui-pip-mini-player.css",
-          "sha256": "e5374960739018e65e351393c46ed421d064ec9fce94e554fa594281f2d9ed68",
-          "byteLength": 50480
+          "sha256": "cff95f117b3c88af7e431bbda4ed30a9990e4de8055bbf0a52590c021912e35c",
+          "byteLength": 49835
         },
         {
           "fileName": "xpui-root-dialogs.css",
@@ -379,7 +379,7 @@
         {
           "fileName": "xpui-routes-collection-local-files.css",
           "relativePath": "desktop/xpui-routes-collection-local-files.css",
-          "sha256": "fe8fdeb2ce1ddf000f7fb993b65a0c880bfe639f0662db0c623f9afda934306c",
+          "sha256": "6db8d67bfbd375a020c9696f7997e694763ba5235c9578767a75ee89bfbe0526",
           "byteLength": 1517
         },
         {
@@ -561,7 +561,7 @@
         {
           "fileName": "mobile-web-player.css",
           "relativePath": "mobile/mobile-web-player.css",
-          "sha256": "01aa42a9d1f420987db383f4db7b471149b1c07c718b24e33cb85cba05a40b65",
+          "sha256": "9e4e4e3a0b74453f5c7dcc544b56d0e2307950e6ae1efed048e019c29ea5ead4",
           "byteLength": 397811
         },
         {
@@ -616,7 +616,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:0e3da1c9f1af817ed56ae37e5065bbd50ec808a910cbf49402803d5d9b20b6a7",
+    "fingerprint": "sha256:f995d67913e0813334498d51478ca6fa9b8f94d72786154f6da4a71b78765460",
     "files": [
       {
         "fileName": "1809.css",
@@ -765,8 +765,8 @@
       {
         "fileName": "dwp-now-playing-bar.css",
         "relativePath": "desktop/dwp-now-playing-bar.css",
-        "sha256": "3b849f7451baee45ddc71d195c84db8299460cc42015837a56f127a75e2e2152",
-        "byteLength": 5031
+        "sha256": "47cda49360266ae6bf436c26794d4c36980aa38eaf411cbb2022f45d7a47b33e",
+        "byteLength": 5022
       },
       {
         "fileName": "dwp-offline-empty-state.css",
@@ -927,8 +927,8 @@
       {
         "fileName": "xpui-pip-mini-player.css",
         "relativePath": "desktop/xpui-pip-mini-player.css",
-        "sha256": "6616e1e1efb1c25d75c521f4110550571c89619868e9e47ea4eae03be7d10fe9",
-        "byteLength": 23383
+        "sha256": "450b7bbc57ec3019031dba0b8ed9040b7985f503db2408ecd4405087f61d434e",
+        "byteLength": 22730
       },
       {
         "fileName": "xpui-root-dialogs.css",
@@ -1173,7 +1173,7 @@
       {
         "fileName": "mobile-web-player.css",
         "relativePath": "mobile/mobile-web-player.css",
-        "sha256": "e8332c7fe0832c3915a65bc822a09fecfabccc936f96de37d605cd432f9053b7",
+        "sha256": "00f6331b3642eccdac043482eef435dc185a3336824b7fa8e7fdf706eb36a9a9",
         "byteLength": 176794
       },
       {

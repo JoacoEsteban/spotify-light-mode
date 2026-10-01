@@ -3006,6 +3006,14 @@ a:not(#spotify-light-mode-specificity-bump) {
   filter: drop-shadow(0 2px 4px #ffffff66); /* hardcoded-color: drop-shadow(0 2px 4px #0006) → drop-shadow(0 2px 4px #ffffff66) */
 }
 
+.PtgttsvsihMBVhpnwcls:not(#spotify-light-mode-specificity-bump) {
+  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
+}
+
+.hkIxu0T0nB2hquf5QnCb:not(#spotify-light-mode-specificity-bump) {
+  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
+}
+
 .NQejJ3KPSg9lYIrseeJc:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
@@ -3591,12 +3599,4 @@ a:not(#spotify-light-mode-specificity-bump) {
 
 .sRAHLNP3Ub3qjSvAVYDg:not(#spotify-light-mode-specificity-bump) {
   color: #848484; /* hardcoded-color: #a7a7a7 → #848484 */
-}
-
-.PtgttsvsihMBVhpnwcls:not(#spotify-light-mode-specificity-bump) {
-  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
-}
-
-.hkIxu0T0nB2hquf5QnCb:not(#spotify-light-mode-specificity-bump) {
-  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
 }
