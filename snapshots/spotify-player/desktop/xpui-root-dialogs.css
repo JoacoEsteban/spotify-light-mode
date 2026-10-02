@@ -1,43 +1,3 @@
-dialog {
-  background-color: #0000;
-  border: none;
-  max-block-size: calc(100vw - 32px);
-  max-inline-size: calc(100vw - 32px);
-  padding: 0;
-}
-dialog::backdrop {
-  background-color: #000000b3;
-}
-dialog:not([open]) {
-  display: none;
-}
-.spotify__container--is-desktop:not(.fullscreen) dialog {
-  -webkit-app-region: no-drag;
-}
-@keyframes yuCzxLeVSfsrsqomgqQ5 {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes GTF5wTyQhxyOS8Clnl2k {
-  0% {
-    transform: translateY(10%);
-  }
-}
-.DtQN_AMSk2glLMJ6WasS[open] {
-  opacity: 0;
-  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
-  opacity: 0;
-  animation-name: yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
 .VJ1b0fB4sx7BMqAZpHOQ {
   text-align: start;
   background-color: #000;
@@ -797,6 +757,22 @@ __workaround_element__ {
 }
 .qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.YfJQKpkodkc03G0qXt02 {
   min-height: var(--min-fluid-height-xlarge-header);
+}
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I {
+  min-height: var(--sponsored-ad-video-min-height, var(--min-fluid-height));
+  max-height: var(--sponsored-ad-video-max-height, 395px);
+}
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I.GWwCAVieg27aCQlmCQfS {
+  min-height: var(
+    --sponsored-ad-video-min-height,
+    var(--min-fluid-height-large-header)
+  );
+}
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I.YfJQKpkodkc03G0qXt02 {
+  min-height: var(
+    --sponsored-ad-video-min-height,
+    var(--min-fluid-height-xlarge-header)
+  );
 }
 .qHMC92m8m3PMCHFBCfrC.ztSUcMGPa7QRTsdOA4SQ {
   height: 40vh;
@@ -3563,4 +3539,4 @@ a.lUZOGBvk4CLW2pFEsYsM:hover {
 .UGYyUe4Isd54VDQpBqso {
   border-radius: 8px;
 }
-/*# sourceMappingURL=xpui-root-dialogs.04edcd5c.css.map*/
+/*# sourceMappingURL=xpui-root-dialogs.ec9ae8b5.css.map*/

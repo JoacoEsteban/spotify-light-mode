@@ -9,11 +9,14 @@
   display: flex;
   position: relative;
 }
-.wjpYW2hc0U4nEApcfJp7 {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+.Vyn6sniGcz9bg9HOJZzK {
+  align-items: center;
   display: flex;
+}
+.RFCWN4uy4QKntvTNCMUw {
+  align-items: flex-start;
+  gap: var(--encore-spacing-tighter-4);
+  flex-direction: column;
 }
 .plT26hf3bvW9VFfeEhfa {
   grid-template-columns: 1fr;
@@ -95,15 +98,6 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.Vyn6sniGcz9bg9HOJZzK {
-  align-items: center;
-  display: flex;
-}
-.RFCWN4uy4QKntvTNCMUw {
-  align-items: flex-start;
-  gap: var(--encore-spacing-tighter-4);
-  flex-direction: column;
-}
 .anMcrt9Mz2968RNK_ZAP {
   opacity: 0.3;
 }
@@ -126,6 +120,10 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   gap: 8px;
   display: grid;
 }
+.HdwEUcX8xijMdU7doYPt .O8beONCDTKP64lpfqaL2 {
+  display: var(--settings-section-divider-display, none);
+  margin-block: 16px 0;
+}
 .HdwEUcX8xijMdU7doYPt:not(:has([data-settings-row])) {
   display: none;
 }
@@ -142,6 +140,9 @@ input:disabled ~ .rIZf5Dl8ejanejy1X35Q {
   margin: 0 auto;
   padding: 32px;
   display: flex;
+}
+.KUKp0WoQh2kfkDhJaMAi {
+  --settings-section-divider-display: block;
 }
 .yl44TbW4QLVh3juV_5yo {
   display: flex;
@@ -308,46 +309,6 @@ select:disabled:hover {
 .cWapA2NgfRZx_6hKkPAv {
   margin-inline-end: 8px;
 }
-dialog {
-  background-color: #0000;
-  border: none;
-  max-block-size: calc(100vw - 32px);
-  max-inline-size: calc(100vw - 32px);
-  padding: 0;
-}
-dialog::backdrop {
-  background-color: #000000b3;
-}
-dialog:not([open]) {
-  display: none;
-}
-.spotify__container--is-desktop:not(.fullscreen) dialog {
-  -webkit-app-region: no-drag;
-}
-@keyframes yuCzxLeVSfsrsqomgqQ5 {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes GTF5wTyQhxyOS8Clnl2k {
-  0% {
-    transform: translateY(10%);
-  }
-}
-.DtQN_AMSk2glLMJ6WasS[open] {
-  opacity: 0;
-  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
-  opacity: 0;
-  animation-name: yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
 .bHH_riBov0lT3IGLCUgX {
   color: #fff;
   background-color: var(--background-elevated-base);
@@ -489,4 +450,4 @@ dialog:not([open]) {
 .ZIrVp2lkdTZCsCbrzPXU {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.930c17a2.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.575e666c.css.map*/

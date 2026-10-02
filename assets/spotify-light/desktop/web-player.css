@@ -867,6 +867,15 @@ html:not(.no-focus-outline) main.main-view-container:focus:not(#spotify-light-mo
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
+dialog:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+  border: none; /* forwarded-reset: none */
+}
+
+dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
 .SRLQbJT_7xjdnS7tv7O4:not(#spotify-light-mode-specificity-bump) {
   filter: drop-shadow(0 0 3px #00000040); /* hardcoded-color: drop-shadow(0 0 3px #ffffff40) → drop-shadow(0 0 3px #00000040) */
 }

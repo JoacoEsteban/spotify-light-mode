@@ -336,6 +336,22 @@ __workaround_element__ {
 .qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.YfJQKpkodkc03G0qXt02 {
   min-height: var(--min-fluid-height-xlarge-header);
 }
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I {
+  min-height: var(--sponsored-ad-video-min-height, var(--min-fluid-height));
+  max-height: var(--sponsored-ad-video-max-height, 395px);
+}
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I.GWwCAVieg27aCQlmCQfS {
+  min-height: var(
+    --sponsored-ad-video-min-height,
+    var(--min-fluid-height-large-header)
+  );
+}
+.qHMC92m8m3PMCHFBCfrC.m5yJJcJLSyRTcMWNcDex.Kf9bo_F9rkJermFE1M9I.YfJQKpkodkc03G0qXt02 {
+  min-height: var(
+    --sponsored-ad-video-min-height,
+    var(--min-fluid-height-xlarge-header)
+  );
+}
 .qHMC92m8m3PMCHFBCfrC.ztSUcMGPa7QRTsdOA4SQ {
   height: 40vh;
   max-height: none;
@@ -717,4 +733,4 @@ __workaround_element__ {
   animation-duration: var(--encore-short-4);
   animation-timing-function: var(--encore-expressive-decelerate);
 }
-/*# sourceMappingURL=dwp-top-bar.b2e183f5.css.map*/
+/*# sourceMappingURL=dwp-top-bar.5e9b4aaa.css.map*/

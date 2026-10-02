@@ -466,46 +466,6 @@ __workaround_element__ {
 .spotify__container--is-desktop:not(.fullscreen) .VF3uvIAJTYAgTCYhK9Hc {
   -webkit-app-region: no-drag;
 }
-dialog {
-  background-color: #0000;
-  border: none;
-  max-block-size: calc(100vw - 32px);
-  max-inline-size: calc(100vw - 32px);
-  padding: 0;
-}
-dialog::backdrop {
-  background-color: #000000b3;
-}
-dialog:not([open]) {
-  display: none;
-}
-.spotify__container--is-desktop:not(.fullscreen) dialog {
-  -webkit-app-region: no-drag;
-}
-@keyframes yuCzxLeVSfsrsqomgqQ5 {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes GTF5wTyQhxyOS8Clnl2k {
-  0% {
-    transform: translateY(10%);
-  }
-}
-.DtQN_AMSk2glLMJ6WasS[open] {
-  opacity: 0;
-  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
-  opacity: 0;
-  animation-name: yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
 .gfs1XwADB0pxXizeCVil {
   align-items: baseline;
   gap: var(--encore-spacing-tighter-4);
@@ -782,4 +742,4 @@ dialog:not([open]) {
     var(--background-elevated-highlight) 32px
   );
 }
-/*# sourceMappingURL=3498.1b199070.css.map*/
+/*# sourceMappingURL=3498.c2717d41.css.map*/
