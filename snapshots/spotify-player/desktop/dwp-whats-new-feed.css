@@ -164,13 +164,25 @@
 }
 .fnzXWSwONBYjvyXohS8d .kkSPykYS7_5RTKT4yJhZ {
   object-fit: cover;
-  border-radius: 2px;
-  width: 64px;
-  height: 64px;
-  margin-block-end: 4px;
-}
-.fnzXWSwONBYjvyXohS8d .R0kDxnWm9c3CVNgwa7Um {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-color-from, #535353),
+    var(--bg-color-to, #121212)
+  );
   border-radius: 4px;
+  justify-content: center;
+  margin-block-end: 4px;
+  position: relative;
+  width: 56.25px !important;
+  height: 56.25px !important;
+}
+.fnzXWSwONBYjvyXohS8d .kkSPykYS7_5RTKT4yJhZ > img {
+  width: auto;
+  box-shadow: 0 4px 28px #000c;
+}
+.fnzXWSwONBYjvyXohS8d .kkSPykYS7_5RTKT4yJhZ.R0kDxnWm9c3CVNgwa7Um {
+  width: 176px !important;
+  height: 99px !important;
 }
 .WNjHyAwp1X74FMDDt8O8 {
   vertical-align: middle;
@@ -337,16 +349,16 @@ __workaround_element__ {
 .aootSWAMFtKUssqBUpkH._c4jx1DdNqJ0jhLV2Trs .dobaO0XKaZaouIpWOxNY {
   background: #000;
 }
-.aootSWAMFtKUssqBUpkH._c4jx1DdNqJ0jhLV2Trs img {
-  width: 100% !important;
-  height: 100% !important;
+.aootSWAMFtKUssqBUpkH._c4jx1DdNqJ0jhLV2Trs .dobaO0XKaZaouIpWOxNY img {
+  width: 100%;
+  height: 100%;
 }
 .aootSWAMFtKUssqBUpkH .dobaO0XKaZaouIpWOxNY {
   object-fit: cover;
   background: linear-gradient(
     to bottom,
-    var(--bg-color-from),
-    var(--bg-color-to)
+    var(--bg-color-from, #535353),
+    var(--bg-color-to, #121212)
   );
   border-radius: 4px;
   justify-content: center;
@@ -363,6 +375,11 @@ __workaround_element__ {
   border-radius: 4px;
   width: 176px !important;
   height: 99px !important;
+}
+.aootSWAMFtKUssqBUpkH
+  .dobaO0XKaZaouIpWOxNY.IH3LFqjONbLfXW3BKh13:not(.P7Q0n_SRHhdOeJ3uHP1W) {
+  width: 56.25px !important;
+  height: 56.25px !important;
 }
 .UsfomFa2XRznMbIppcHg {
   vertical-align: middle;
@@ -434,4 +451,4 @@ __workaround_element__ {
 .aqVPjLLwDC6N5gtOUGtT:hover + .aqVPjLLwDC6N5gtOUGtT > .lh1DGz1dal79HbzcUZNp {
   visibility: hidden;
 }
-/*# sourceMappingURL=dwp-whats-new-feed.b6b2b461.css.map*/
+/*# sourceMappingURL=dwp-whats-new-feed.032dd5ff.css.map*/

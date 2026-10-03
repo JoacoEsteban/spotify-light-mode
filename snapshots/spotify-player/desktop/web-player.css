@@ -1137,18 +1137,66 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
     opacity: 1;
   }
 }
+@keyframes O19tGgSzXSWo0DDFg99z {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes p3KIgHIdJdalXvKg6qt3 {
+  0% {
+    opacity: 1;
+  }
+}
 .pQYZLMzKN0LGVS8sQ9oo {
   --context-menu-artwork-border-radius: 2px;
+  --context-menu-surface-padding: 0px;
   --context-menu-submenu-item-height: var(--encore-control-size-smaller);
   --context-menu-submenu-divider-height: calc(
     2 * var(--encore-spacing-tighter-2) + var(--encore-border-width-hairline)
   );
   -webkit-app-region: no-drag;
   box-sizing: border-box;
+  scroll-timeline: --context-menu-scroll block;
   min-width: 160px;
   max-width: 350px;
   max-height: calc(100vh - 24px);
+  scroll-padding-block: 24px;
   overflow-y: auto;
+}
+.pQYZLMzKN0LGVS8sQ9oo:before,
+.pQYZLMzKN0LGVS8sQ9oo:after {
+  content: "";
+  z-index: 1;
+  margin-inline: calc(-1 * var(--context-menu-surface-padding));
+  pointer-events: none;
+  opacity: 0;
+  flex: 0 0 20px;
+  align-self: stretch;
+  position: sticky;
+}
+.pQYZLMzKN0LGVS8sQ9oo:before {
+  background: linear-gradient(var(--background-elevated-base), transparent);
+  margin-bottom: -20px;
+  top: 0;
+}
+.pQYZLMzKN0LGVS8sQ9oo:after {
+  background: linear-gradient(transparent, var(--background-elevated-base));
+  margin-top: -20px;
+  bottom: 0;
+}
+@supports (animation-timeline: --context-menu-scroll) {
+  .pQYZLMzKN0LGVS8sQ9oo:before {
+    animation-name: O19tGgSzXSWo0DDFg99z;
+    animation-fill-mode: both;
+    animation-timeline: --context-menu-scroll;
+    animation-range: 0 1px;
+  }
+  .pQYZLMzKN0LGVS8sQ9oo:after {
+    animation-name: p3KIgHIdJdalXvKg6qt3;
+    animation-fill-mode: both;
+    animation-timeline: --context-menu-scroll;
+    animation-range: calc(100% - 20px) 100%;
+  }
 }
 .pQYZLMzKN0LGVS8sQ9oo[data-v2-leading-slot-disabled] {
   --context-menu-leading-slot-display: none;
@@ -1158,6 +1206,7 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
   display: var(--context-menu-leading-slot-display, flex);
 }
 .JHzzdopx8NeJc8kQmHZg {
+  --context-menu-surface-padding: var(--encore-spacing-tighter-2);
   padding: var(--encore-spacing-tighter-2);
   background-color: var(--background-elevated-base);
   color: var(--text-base);
@@ -4489,7 +4538,20 @@ html[data-overlayscrollbars-viewport~="scrollbarHidden"]
 }
 .MgKsQoAL_Wa2o33nC1Qj[data-encore-id="menuSection"] {
   --context-menu-submenu-filter-height: 0px;
+  min-height: calc(
+    var(--context-menu-submenu-length) *
+      var(--context-menu-submenu-item-height, 40px) +
+      var(--context-menu-submenu-item-height, 40px) +
+      var(--context-menu-submenu-filter-height, 32px) +
+      var(--context-menu-submenu-divider-count, 0) *
+      var(--context-menu-submenu-divider-height, 0px)
+  );
   min-width: 0;
+  height: auto;
+  max-height: none;
+}
+[data-encore-id="menu"]:has(.MgKsQoAL_Wa2o33nC1Qj) {
+  max-height: 50vh;
 }
 .JSlgLkj0Vsj4m0llh4Nx {
   width: 100%;
@@ -8141,8 +8203,8 @@ body[data-dragging-uri-type] .gtgliQkSW6D3wmGeWvYQ {
   background: #000;
 }
 .HOkQNwE3yYFe4WrS5Z1D.ZSw5HSDXnxbOxTX8wpk1 img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 }
 .PFnNypcZeIea0H2wi8H7 {
   margin-inline-end: 4px;
@@ -10477,6 +10539,18 @@ a[data-context-item-type="ad"] .MCkayUaVAuxznWlcW6sh .L4C6eOnG5aASLCzg_aFY {
     margin-right: 200px;
   }
 }
+.KHGQ7HbcizGipLDTPkQH {
+  background: var(--text-bright-accent);
+  color: #000;
+  white-space: nowrap;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2px;
+  padding-inline: 2px;
+  line-height: 16px;
+  display: inline-flex;
+}
 .poDiVnpu_1C6JS5V2dqW {
   grid-template: "pretitle pretitle" "title title" "badges subtitle" "quality quality" / auto 1fr;
   align-items: center;
@@ -10552,6 +10626,9 @@ a[data-context-item-type="ad"] .MCkayUaVAuxznWlcW6sh .L4C6eOnG5aASLCzg_aFY {
 }
 .VBFe56RCs9WUaIA6c40H {
   margin-inline-end: -4px;
+}
+.NoUTFUR3k_OxLRHPWhxQ {
+  margin-inline-end: 2px;
 }
 .Nor_T8XZMFTJNQgsxt3Q {
   grid-area: quality;
@@ -22398,4 +22475,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.e54c8c5c.css.map*/
+/*# sourceMappingURL=web-player.46a308ba.css.map*/

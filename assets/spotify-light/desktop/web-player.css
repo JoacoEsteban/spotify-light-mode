@@ -2115,6 +2115,10 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
   background-color: var(--lyrics-color-background); /* css-var: var(--lyrics-color-background) */
 }
 
+.KHGQ7HbcizGipLDTPkQH:not(#spotify-light-mode-specificity-bump) {
+  color: #ffffff; /* hardcoded-color: #000 → #ffffff */
+}
+
 .PvwqB_9gRNsEMZQCMaiL:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
