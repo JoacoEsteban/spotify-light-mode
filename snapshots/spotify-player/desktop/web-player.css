@@ -4561,82 +4561,6 @@ html[data-overlayscrollbars-viewport~="scrollbarHidden"]
 .ADwrrEWVJ6ahpmLlF9yw {
   box-shadow: none;
 }
-dialog {
-  background-color: #0000;
-  border: none;
-  max-block-size: calc(100vw - 32px);
-  max-inline-size: calc(100vw - 32px);
-  padding: 0;
-}
-dialog::backdrop {
-  background-color: #000000b3;
-}
-dialog:not([open]) {
-  display: none;
-}
-.spotify__container--is-desktop:not(.fullscreen) dialog {
-  -webkit-app-region: no-drag;
-}
-@keyframes yuCzxLeVSfsrsqomgqQ5 {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes GTF5wTyQhxyOS8Clnl2k {
-  0% {
-    transform: translateY(10%);
-  }
-}
-.DtQN_AMSk2glLMJ6WasS[open] {
-  opacity: 0;
-  animation-name: GTF5wTyQhxyOS8Clnl2k, yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.DtQN_AMSk2glLMJ6WasS[open]::backdrop {
-  opacity: 0;
-  animation-name: yuCzxLeVSfsrsqomgqQ5;
-  animation-duration: 0.15s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-fill-mode: forwards;
-}
-.t2KqiJ_0v6kv5V53YcEx {
-  max-width: min(500px, 100vw - 32px);
-  max-height: calc(100vh - 32px);
-  overflow: auto;
-}
-.X4x6fctXQhe9Go9HRQV8 {
-  background: var(--background-elevated-base);
-  border-radius: var(--encore-corner-radius-larger);
-  position: relative;
-}
-.ThUM78aeRSVFLmHLXAxg {
-  z-index: 1;
-  position: absolute;
-  inset-block-start: 16px;
-  inset-inline-end: 16px;
-}
-.EfbsMmLS7VhPefF3zlIm {
-  width: 500px;
-  max-width: 100%;
-}
-.VtYEEgKdFQQyja22KhyI {
-  padding-inline-end: 64px;
-  display: block;
-}
-.WuVS4dLsMpWT_fz3MotE {
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  display: flex;
-}
-.cHsWyGZhFmyycrFvLr5w {
-  align-self: stretch;
-}
-.CC8wIdyIxv5Ny9Sha8xJ {
-  text-align: center;
-}
 @keyframes rsKkqWlBszJevbpEEDTG {
   0% {
     transform: scale(0);
@@ -22475,4 +22399,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.46a308ba.css.map*/
+/*# sourceMappingURL=web-player.59e263f7.css.map*/

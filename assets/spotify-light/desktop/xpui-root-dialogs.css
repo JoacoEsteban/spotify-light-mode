@@ -10,6 +10,15 @@
 
 
 
+dialog:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+  border: none; /* forwarded-reset: none */
+}
+
+dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
 .VJ1b0fB4sx7BMqAZpHOQ:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff; /* hardcoded-color: #000 → #ffffff */
 }
