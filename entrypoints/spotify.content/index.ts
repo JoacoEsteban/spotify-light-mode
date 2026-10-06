@@ -1,4 +1,6 @@
 import { defineContentScript } from "wxt/utils/define-content-script";
+import { browser } from "wxt/browser";
+import { match, P } from "ts-pattern";
 import { enabledItem, useSystemPrefItem, readEnabled, readUseSystemPref } from "../../lib/storage";
 import { SPOTIFY_MATCHES } from "../../lib/spotify";
 import { baseLightModeCss, lightModeStylesheetOverrides } from "../../assets/spotify-light/index";
@@ -43,23 +45,25 @@ export default defineContentScript({
     ]);
     sync();
 
-    ctx.onInvalidated(
-      enabledItem.watch((v) => {
-        currentEnabled = v;
-        sync();
-      }),
-    );
-
-    ctx.onInvalidated(
-      useSystemPrefItem.watch((v) => {
-        currentUseSystemPref = v;
-        sync();
-      }),
-    );
+    const unwatchEnabled = enabledItem.watch((v) => {
+      currentEnabled = v;
+      sync();
+    });
+    const unwatchSystemPref = useSystemPrefItem.watch((v) => {
+      currentUseSystemPref = v;
+      sync();
+    });
 
     const onSchemeChange = (): void => sync();
     darkQuery.addEventListener("change", onSchemeChange);
     ctx.onInvalidated(() => {
+      // Chromium severs extension APIs before an updated script invalidates its predecessor.
+      match(browser.runtime.id)
+        .with(P.string, () => {
+          unwatchEnabled();
+          unwatchSystemPref();
+        })
+        .otherwise(() => undefined);
       darkQuery.removeEventListener("change", onSchemeChange);
       inlineStyleObserver.stop();
       stylesheetOverrideMount.disconnect();

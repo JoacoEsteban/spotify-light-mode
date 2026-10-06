@@ -21,3 +21,7 @@ run = "bun scripts/screenshot.ts"
 [tasks.bundle]
 description = "Bundle all targets"
 run = "bun zip && bun run zip:firefox"
+
+[tasks.test-extension-updates]
+description = "Build and prove extension updates in isolated headless Chromium"
+run = ["bun --bun run build", "bun scripts/test-extension-updates.ts"]

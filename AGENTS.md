@@ -100,6 +100,14 @@ This activation covers installation, updates, extension activation, and browser 
 WXT invalidation handlers remove obsolete styles and listeners.
 `lib/spotify.ts` supplies the shared URL match pattern.
 
+`lib/extension-update.ts` defines the update policy for existing Spotify tabs.
+Patch releases must contain CSS changes only: replace the styles without a page reload.
+Minor or major releases reload Spotify tabs through `runtime.onInstalled`.
+Increment the minor or major version for runtime changes.
+Keep declarative stylesheet matching unchanged.
+`mise run test-extension-updates` proves these behaviors in isolated headless Chromium.
+It saves results and screenshots under `.cache/update-proof/`.
+
 ## Settings and popup
 
 `lib/storage.ts` defines storage items through `wxt/utils/storage` and uses Zod for reads.

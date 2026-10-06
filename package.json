@@ -1,6 +1,6 @@
 {
   "name": "spotify-light-mode",
-  "version": "1.5.13",
+  "version": "1.6.0",
   "description": "Bring light mode to Spotify's web player — always on, or only when your OS is in light mode.",
   "private": true,
   "scripts": {
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@types/semver": "^7.8.0",
     "@wxt-dev/module-react": "^1.2.2",
     "prettier": "^3.9.6",
     "puppeteer-core": "^24.42.0",
@@ -38,7 +39,9 @@
     "chroma-js": "^3.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "semver": "^7.8.5",
     "ts-pattern": "^5.9.0",
+    "ts-pattern-binding": "^0.1.1",
     "zod": "^4.3.6"
   }
 }

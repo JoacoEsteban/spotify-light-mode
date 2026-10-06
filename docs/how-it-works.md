@@ -185,6 +185,45 @@ The orphan then removes its own `<style>` elements before the new script mounts 
 `lib/spotify.ts` holds the match pattern.
 The content script and the background script both use this constant.
 
+## Updates in open tabs
+
+The release version determines how existing Spotify tabs receive an update.
+
+| Version change                            | Release contents | Existing tabs                                   |
+| ----------------------------------------- | ---------------- | ----------------------------------------------- |
+| Patch, such as `1.6.0` → `1.6.1`          | CSS changes only | Replace extension styles without a page reload. |
+| Minor or major, such as `1.6.1` → `1.7.0` | Runtime changes  | Reload the page.                                |
+
+Keep the major and minor version unchanged only when the release can replace CSS without a page reload.
+The automatic CSS refresh workflow already increments the patch version.
+For runtime changes, increment the minor or major version in `package.json`.
+
+On an update, `lib/extension-update.ts` compares the previous and current major and minor versions.
+If either version is invalid or missing, the extension reloads Spotify tabs.
+Reactivation with the same version replaces styles without a page reload.
+The declarative stylesheet registry and filename matching remain unchanged.
+A patch update uses the Spotify stylesheets already loaded in the page.
+If a release removes overrides needed by older stylesheet filenames, use a minor or major version change to reload those tabs.
+
+For a patch update, background startup injects the current content script into existing tabs.
+WXT invalidates the previous instance, which removes its styles and restores mapped inline values.
+The new instance reads the saved settings and mounts its current styles.
+The Spotify document and playback remain active.
+For a minor or major update, `runtime.onInstalled` reloads existing Spotify tabs.
+
+Run the update integration test with the installed Chromium:
+
+```sh
+mise run test-extension-updates
+```
+
+The test uses an isolated profile and controlled pages at the Spotify origin.
+It loads real Spotify slider CSS and plays an audio element.
+It reloads the unpacked extension to trigger the browser's update lifecycle.
+It checks document identity, playback continuity, removed styles, duplicate styles, and unrelated tabs.
+Results and screenshots are saved in `.cache/update-proof/`.
+This test does not exercise a browser store rollout or Spotify's streaming service.
+
 ## Inline style observer
 
 Spotify also writes colors outside normal stylesheet files.
