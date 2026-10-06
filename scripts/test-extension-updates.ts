@@ -65,11 +65,11 @@ class ExtensionUpdateProof {
       ["1.6.9", "1.6.10", "reinject"],
       ["1.6.0", "1.6.0", "reinject"],
       ["1.6.1", "1.6.0", "reinject"],
-      ["1.6.9", "1.7.0", "reload"],
-      ["1.9.9", "2.0.0", "reload"],
-      ["invalid", "1.6.0", "reload"],
-      [undefined, "1.6.0", "reload"],
-      ["1.6.0", "invalid", "reload"],
+      ["1.6.9", "1.7.0", "notify"],
+      ["1.9.9", "2.0.0", "notify"],
+      ["invalid", "1.6.0", "notify"],
+      [undefined, "1.6.0", "notify"],
+      ["1.6.0", "invalid", "notify"],
     ] as const) {
       assert.equal(ExtensionUpdate.tabAction({ previousVersion, currentVersion }), expected);
     }
@@ -296,7 +296,10 @@ class ExtensionUpdateProof {
     );
   }
 
-  private async verifySettings(version: string): Promise<void> {
+  private async verifySettings(
+    version: string,
+    action: "reinject" | "notify" = "reinject",
+  ): Promise<void> {
     const before = await Promise.all(this.pages.map((page) => this.snapshot(page)));
     const [first] = before;
     assert.ok(first);
@@ -311,8 +314,18 @@ class ExtensionUpdateProof {
     await this.reloadExtension(version, first.color);
     await new Promise((resolve) => setTimeout(resolve, 700));
     const disabled = await Promise.all(this.pages.map((page) => this.snapshot(page)));
-    for (const off of disabled) {
-      assert.equal(off.styleCount, 0, "Patch update ignored the disabled setting");
+    for (const [index, off] of disabled.entries()) {
+      const previous = before[index];
+      const page = this.pages[index];
+      assert.ok(previous && page);
+      assert.equal(off.styleCount, 0, "Update ignored the disabled setting");
+      assert.equal(off.documentId, previous.documentId);
+      assert.ok(off.currentTime > previous.currentTime);
+      assert.equal(off.pauses, 0);
+      assert.equal(
+        await page.$$eval("spotify-light-mode-update", (hosts) => hosts.length),
+        Number(action === "notify"),
+      );
       assert.equal(
         off.color,
         "rgb(255, 255, 255)",
@@ -333,7 +346,7 @@ class ExtensionUpdateProof {
     this.results.push({
       version,
       check:
-        "disabled setting survives a patch update; current styles return on enable without reload or playback interruption",
+        "disabled setting survives an update; current styles return on enable without reload or playback interruption",
       before,
       disabled,
       after: await Promise.all(this.pages.map((page) => this.snapshot(page))),
@@ -341,12 +354,13 @@ class ExtensionUpdateProof {
     console.log(
       `PASS ${version}: disabled setting survives update, toggles remain reactive in both tabs`,
     );
+    if (action === "notify") await this.verifyToast(version);
   }
 
   private async update(
     version: string,
     color: string,
-    action: "reinject" | "reload",
+    action: "reinject" | "notify",
   ): Promise<void> {
     const before = await Promise.all(this.pages.map((page) => this.snapshot(page)));
     const oldStyles = await Promise.all(
@@ -361,6 +375,14 @@ class ExtensionUpdateProof {
     const unrelatedNavigations = this.navigations.get(this.unrelated);
     await this.reloadExtension(version, color);
     for (const page of this.pages) await this.waitForVersion(page, version);
+    for (const page of this.pages) {
+      if (action === "notify") await page.waitForSelector("spotify-light-mode-update");
+      assert.equal(
+        await page.$$eval("spotify-light-mode-update", (hosts) => hosts.length),
+        Number(action === "notify"),
+        "Only runtime updates should show a single toast",
+      );
+    }
     await new Promise((resolve) => setTimeout(resolve, 700));
     const after = await Promise.all(this.pages.map((page) => this.snapshot(page)));
     for (const [index, page] of this.pages.entries()) {
@@ -375,33 +397,20 @@ class ExtensionUpdateProof {
       assert.deepEqual(current.sources, [this.sourceStylesheet.sourceFileName]);
       assert.equal(current.paused, false);
       assert.equal(current.pauses, 0);
-      if (action === "reinject") {
-        assert.equal(current.documentId, previous.documentId, "Patch update replaced the document");
-        assert.equal(
-          this.navigations.get(page),
-          navigationCounts[index],
-          "Patch update navigated the tab",
-        );
-        assert.ok(current.currentTime > previous.currentTime, "Playback reset or stopped");
-        const old = oldStyles[index];
-        assert.ok(old);
-        assert.equal(
-          await old.evaluate((nodes) => nodes.some(({ isConnected }) => isConnected)),
-          false,
-          "Old stylesheets remain mounted",
-        );
-      } else {
-        assert.notEqual(
-          current.documentId,
-          previous.documentId,
-          "Runtime update failed to replace the document",
-        );
-        assert.equal(
-          this.navigations.get(page),
-          Number(navigationCounts[index]) + 1,
-          "Runtime update must reload exactly once",
-        );
-      }
+      assert.equal(current.documentId, previous.documentId, "Update replaced the document");
+      assert.equal(
+        this.navigations.get(page),
+        navigationCounts[index],
+        "Update navigated the tab without permission",
+      );
+      assert.ok(current.currentTime > previous.currentTime, "Playback reset or stopped");
+      const old = oldStyles[index];
+      assert.ok(old);
+      assert.equal(
+        await old.evaluate((nodes) => nodes.some(({ isConnected }) => isConnected)),
+        false,
+        "Old stylesheets remain mounted",
+      );
       assert.equal(current.color, color);
     }
     assert.equal(
@@ -411,6 +420,7 @@ class ExtensionUpdateProof {
     );
     await Promise.all(oldStyles.map((handle) => handle.dispose()));
     await this.pages[0]?.screenshot({ path: resolve(output, `${version}.png`) });
+    if (action === "notify") await this.verifyToast(version);
     this.results.push({
       version,
       action,
@@ -422,6 +432,130 @@ class ExtensionUpdateProof {
     console.log(
       `PASS ${version}: ${action}, two Spotify tabs, no duplicate styles, unrelated tab unchanged`,
     );
+  }
+
+  private async verifyToast(version: string): Promise<void> {
+    const [dismissed, reloaded] = this.pages;
+    assert.ok(dismissed && reloaded);
+    await dismissed.bringToFront();
+    const before = await this.snapshot(dismissed);
+    const navigationCount = this.navigations.get(reloaded);
+    const previousReloaded = await this.snapshot(reloaded);
+    const toast = await dismissed.waitForSelector("spotify-light-mode-update >>> section");
+    assert.ok(toast);
+    const entrance = await toast.evaluate((element) => {
+      const [animation] = element.getAnimations();
+      if (!animation || !animation.effect) throw new Error("Toast entrance animation is missing");
+      const { duration } = animation.effect.getComputedTiming();
+      if (typeof duration !== "number") throw new Error("Toast animation has no duration");
+      animation.currentTime = 0;
+      const { y, height } = element.getBoundingClientRect();
+      const opacity = Number(getComputedStyle(element).opacity);
+      animation.currentTime = duration;
+      return { y, height, opacity, endY: element.getBoundingClientRect().y };
+    });
+    assert.ok(entrance.y + entrance.height <= 0, "Toast must enter from outside the screen");
+    assert.equal(entrance.opacity, 0);
+    assert.ok(entrance.endY >= 0 && entrance.endY < 40);
+    const position = await toast.boundingBox();
+    const viewport = dismissed.viewport();
+    assert.ok(position && viewport);
+    assert.ok(position.y >= 0 && position.y < 40, "Toast must appear near the top");
+    assert.ok(Math.abs(position.x + position.width / 2 - viewport.width / 2) < 2);
+    assert.ok(
+      await dismissed.$eval(
+        "spotify-light-mode-update >>> .source",
+        (element, version) => element.textContent?.includes(version),
+        version,
+      ),
+    );
+
+    await dismissed.setViewport({ width: 320, height: 600 });
+    const narrow = await toast.boundingBox();
+    assert.ok(narrow && narrow.x >= 0 && narrow.x + narrow.width <= 320);
+    await dismissed.emulateMediaFeatures([
+      { name: "prefers-color-scheme", value: "dark" },
+      { name: "prefers-reduced-motion", value: "reduce" },
+    ]);
+    assert.equal(
+      await toast.evaluate((element) => getComputedStyle(element).animationName),
+      "none",
+    );
+    await dismissed.screenshot({ path: resolve(output, `${version}-mobile.png`) });
+    await dismissed.setViewport({ width: 960, height: 480 });
+    await dismissed.emulateMediaFeatures([{ name: "prefers-color-scheme", value: "light" }]);
+    await toast.evaluate((element) =>
+      Promise.all(element.getAnimations().map(({ finished }) => finished)).then(() => undefined),
+    );
+    await toast.evaluate((element) => {
+      element.addEventListener(
+        "animationstart",
+        () => {
+          const [animation] = element.getAnimations();
+          if (animation) animation.pause();
+        },
+        { once: true },
+      );
+    });
+    await dismissed.click("spotify-light-mode-update >>> button.dismiss");
+    await dismissed.waitForFunction(
+      (element: Element) => element.getAnimations().some(({ playState }) => playState === "paused"),
+      { polling: 100 },
+      toast,
+    );
+    const exit = await toast.evaluate((element) => {
+      const [animation] = element.getAnimations();
+      if (!animation || !animation.effect) throw new Error("Toast exit animation is missing");
+      const { duration } = animation.effect.getComputedTiming();
+      if (typeof duration !== "number") throw new Error("Toast animation has no duration");
+      animation.currentTime = 0;
+      const startY = element.getBoundingClientRect().y;
+      animation.currentTime = duration / 2;
+      const middleY = element.getBoundingClientRect().y;
+      const mountedDuringExit = element.isConnected;
+      animation.currentTime = duration;
+      const { y, height } = element.getBoundingClientRect();
+      const opacity = Number(getComputedStyle(element).opacity);
+      animation.finish();
+      return { startY, middleY, y, height, opacity, mountedDuringExit };
+    });
+    assert.ok(exit.middleY < exit.startY, "Toast must slide upward on exit");
+    assert.ok(exit.y + exit.height <= 0, "Toast must exit beyond the top edge");
+    assert.equal(exit.opacity, 0);
+    assert.equal(exit.mountedDuringExit, true, "Toast was removed before its animation finished");
+    await dismissed.waitForFunction(() => !document.querySelector("spotify-light-mode-update"));
+    await new Promise((resolve) => setTimeout(resolve, 400));
+    const afterDismiss = await this.snapshot(dismissed);
+    assert.equal(afterDismiss.documentId, before.documentId);
+    assert.ok(afterDismiss.currentTime > before.currentTime);
+    assert.equal(afterDismiss.pauses, 0);
+    assert.ok(await reloaded.$("spotify-light-mode-update"), "Dismissing affected another tab");
+
+    await reloaded.bringToFront();
+    await reloaded.emulateMediaFeatures([
+      { name: "prefers-color-scheme", value: "light" },
+      { name: "prefers-reduced-motion", value: "reduce" },
+    ]);
+    const reload = await reloaded.$("spotify-light-mode-update >>> button:not(.dismiss)");
+    assert.ok(reload);
+    await reload.focus();
+    await Promise.all([
+      reloaded.waitForNavigation({ waitUntil: "load" }),
+      reloaded.keyboard.press("Enter"),
+    ]);
+    await this.waitForVersion(reloaded, version);
+    assert.notEqual((await this.snapshot(reloaded)).documentId, previousReloaded.documentId);
+    assert.equal(this.navigations.get(reloaded), Number(navigationCount) + 1);
+    assert.equal(await reloaded.$("spotify-light-mode-update"), null);
+    assert.equal((await this.snapshot(dismissed)).documentId, before.documentId);
+    this.results.push({
+      version,
+      check:
+        "toast enters and exits beyond the screen; dismiss preserves playback; reduced-motion keyboard reload affects only its own tab",
+      entrance,
+      exit,
+    });
+    console.log(`PASS ${version}: toast, dismiss without interruption, explicit reload of one tab`);
   }
 
   private async verify(): Promise<void> {
@@ -455,15 +589,17 @@ class ExtensionUpdateProof {
       await page.bringToFront();
       await page.goto(`https://open.spotify.com/update-proof-${index}`, { waitUntil: "load" });
       await this.waitForVersion(page, "1.6.0");
+      assert.equal(await page.$("spotify-light-mode-update"), null);
     }
     await this.pages[0]?.screenshot({ path: resolve(output, "1.6.0.png") });
     await this.update("1.6.1", "rgb(31, 111, 235)", "reinject");
     await this.update("1.6.2", "rgb(163, 113, 247)", "reinject");
     await this.verifySettings("1.6.3");
-    await this.update("1.7.0", "rgb(0, 0, 0)", "reload");
-    await this.update("2.0.0", "rgb(0, 0, 0)", "reload");
+    await this.update("1.7.0", "rgb(0, 0, 0)", "notify");
+    await this.update("2.0.0", "rgb(0, 0, 0)", "notify");
     await this.update("2.0.1", "rgb(31, 111, 235)", "reinject");
     await this.verifySettings("2.0.2");
+    await this.verifySettings("2.1.0", "notify");
     assert.deepEqual(this.pageErrors, [], "Extension updates produced uncaught page errors");
     await writeFile(
       resolve(output, "results.json"),

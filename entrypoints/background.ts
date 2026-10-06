@@ -22,7 +22,7 @@ function logFailedTabUpdate(tabId: number, error: unknown): void {
 
 // A disable or an update leaves the previous content script running in a
 // context whose extension APIs are severed.
-async function updateOpenTabs(action: "reinject" | "reload"): Promise<void> {
+async function updateOpenTabs(action: "reinject" | "notify"): Promise<void> {
   const tabs = await browser.tabs.query({ url: [...SPOTIFY_MATCHES] });
 
   await Promise.all(
@@ -36,7 +36,13 @@ async function updateOpenTabs(action: "reinject" | "reload"): Promise<void> {
                 files: [...CONTENT_SCRIPT_FILES],
               }),
             )
-            .with("reload", () => browser.tabs.reload(tabId))
+            .with("notify", () => {
+              const { version } = browser.runtime.getManifest();
+              return browser.tabs.sendMessage(tabId, {
+                type: "spotify-light-mode:update",
+                version,
+              });
+            })
             .exhaustive()
             .then(() => undefined)
             // A tab can navigate or close mid-flight, and Firefox may not have
@@ -50,16 +56,19 @@ async function updateOpenTabs(action: "reinject" | "reload"): Promise<void> {
 }
 
 export default defineBackground(() => {
+  // `runtime.onInstalled` has no reason for an extension being enabled, and
+  // there is no `onEnabled` event.
+  const openTabsReady = updateOpenTabs("reinject");
+
   browser.runtime.onInstalled.addListener(({ reason, previousVersion }) => {
     const { version: currentVersion } = browser.runtime.getManifest();
     const action = ExtensionUpdate.tabAction({ previousVersion, currentVersion });
 
     match({ reason, action })
-      .with({ reason: "update", action: "reload" }, () => void updateOpenTabs("reload"))
+      .with(
+        { reason: "update", action: "notify" },
+        () => void openTabsReady.then(() => updateOpenTabs("notify")),
+      )
       .otherwise(() => undefined);
   });
-
-  // `runtime.onInstalled` has no reason for an extension being enabled, and
-  // there is no `onEnabled` event.
-  void updateOpenTabs("reinject");
 });

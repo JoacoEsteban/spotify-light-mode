@@ -9,7 +9,7 @@ export class ExtensionUpdate {
   }: {
     previousVersion: string | undefined;
     currentVersion: string;
-  }): "reinject" | "reload" {
+  }): "reinject" | "notify" {
     const { bind: major, ref: sameMajor } = binding<number>();
     const { bind: minor, ref: sameMinor } = binding<number>();
 
@@ -21,6 +21,6 @@ export class ExtensionUpdate {
         ],
         () => "reinject" as const,
       )
-      .otherwise(() => "reload" as const);
+      .otherwise(() => "notify" as const);
   }
 }

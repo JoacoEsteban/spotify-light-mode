@@ -102,11 +102,13 @@ WXT invalidation handlers remove obsolete styles and listeners.
 
 `lib/extension-update.ts` defines the update policy for existing Spotify tabs.
 Patch releases must contain CSS changes only: replace the styles without a page reload.
-Minor or major releases reload Spotify tabs through `runtime.onInstalled`.
+Minor or major releases show an update toast through `runtime.onInstalled`.
+The top-center toast offers Reload and Dismiss. Only Reload refreshes its own tab.
 Increment the minor or major version for runtime changes.
 Keep declarative stylesheet matching unchanged.
 `mise run test-extension-updates` proves these behaviors in isolated headless Chromium.
 It saves results and screenshots under `.cache/update-proof/`.
+`mise run demo-extension-update` opens live Spotify in isolated Chromium with the update toast.
 
 ## Settings and popup
 

@@ -192,24 +192,34 @@ The release version determines how existing Spotify tabs receive an update.
 | Version change                            | Release contents | Existing tabs                                   |
 | ----------------------------------------- | ---------------- | ----------------------------------------------- |
 | Patch, such as `1.6.0` → `1.6.1`          | CSS changes only | Replace extension styles without a page reload. |
-| Minor or major, such as `1.6.1` → `1.7.0` | Runtime changes  | Reload the page.                                |
+| Minor or major, such as `1.6.1` → `1.7.0` | Runtime changes  | Show a toast with Reload and Dismiss buttons.    |
 
 Keep the major and minor version unchanged only when the release can replace CSS without a page reload.
 The automatic CSS refresh workflow already increments the patch version.
 For runtime changes, increment the minor or major version in `package.json`.
 
 On an update, `lib/extension-update.ts` compares the previous and current major and minor versions.
-If either version is invalid or missing, the extension reloads Spotify tabs.
+If either version is invalid or missing, the extension shows the update toast.
 Reactivation with the same version replaces styles without a page reload.
 The declarative stylesheet registry and filename matching remain unchanged.
 A patch update uses the Spotify stylesheets already loaded in the page.
-If a release removes overrides needed by older stylesheet filenames, use a minor or major version change to reload those tabs.
+If a release removes overrides needed by older stylesheet filenames, use a minor or major version change to offer a reload.
 
 For a patch update, background startup injects the current content script into existing tabs.
 WXT invalidates the previous instance, which removes its styles and restores mapped inline values.
 The new instance reads the saved settings and mounts its current styles.
 The Spotify document and playback remain active.
-For a minor or major update, `runtime.onInstalled` reloads existing Spotify tabs.
+
+For a minor or major update, `runtime.onInstalled` waits for content script injection and then sends the update notification.
+The content script shows a toast at the top center of each existing Spotify tab.
+The toast uses a shadow root to isolate its styles from Spotify and the color observers.
+Reload refreshes only the tab where the user selects it.
+Dismiss removes the toast from that tab without a reload or playback interruption.
+
+The toast does not take keyboard focus or disappear automatically.
+The toast slides in and out above the screen.
+With reduced motion enabled, the toast appears and disappears immediately.
+New page loads use the current version without a toast.
 
 Run the update integration test with the installed Chromium:
 
@@ -221,8 +231,21 @@ The test uses an isolated profile and controlled pages at the Spotify origin.
 It loads real Spotify slider CSS and plays an audio element.
 It reloads the unpacked extension to trigger the browser's update lifecycle.
 It checks document identity, playback continuity, removed styles, duplicate styles, and unrelated tabs.
+It also checks toast placement, narrow screens, reduced motion, dismissal, and keyboard reload.
 Results and screenshots are saved in `.cache/update-proof/`.
 This test does not exercise a browser store rollout or Spotify's streaming service.
+
+Run the interactive demo:
+
+```sh
+mise run demo-extension-update
+```
+
+The demo opens live Spotify in an isolated Chromium profile with a copy of the production extension.
+It increments the copied extension's minor version and triggers a real extension update.
+The browser stays open with the toast ready for Reload or Dismiss.
+Close the Chromium window before you run the demo again.
+The demo does not change the production extension or personal browser profiles.
 
 ## Inline style observer
 

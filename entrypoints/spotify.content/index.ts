@@ -6,6 +6,7 @@ import { SPOTIFY_MATCHES } from "../../lib/spotify";
 import { baseLightModeCss, lightModeStylesheetOverrides } from "../../assets/spotify-light/index";
 import { InlineStyleObserver } from "./inline-style-observer";
 import { StylesheetOverrideMount } from "./stylesheet-override-mount";
+import { UpdateToast } from "./update-toast";
 
 export default defineContentScript({
   matches: [...SPOTIFY_MATCHES],
@@ -13,6 +14,22 @@ export default defineContentScript({
   cssInjectionMode: "manual",
 
   async main(ctx) {
+    const updateToast = new UpdateToast();
+    const onUpdate = (message: unknown): void => {
+      match(message)
+        .with({ type: "spotify-light-mode:update", version: P.string }, ({ version }) =>
+          updateToast.show(version),
+        )
+        .otherwise(() => undefined);
+    };
+    browser.runtime.onMessage.addListener(onUpdate);
+    ctx.onInvalidated(() => {
+      updateToast.remove();
+      match(browser.runtime.id)
+        .with(P.string, () => browser.runtime.onMessage.removeListener(onUpdate))
+        .otherwise(() => undefined);
+    });
+
     const stylesheetOverrideMount = new StylesheetOverrideMount({
       baseCss: baseLightModeCss,
       overrides: lightModeStylesheetOverrides,
