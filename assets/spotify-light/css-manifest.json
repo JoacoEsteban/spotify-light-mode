@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.eb1124ef__mobile-web-player.648c8564",
+  "snapshotVersion": "spotify-player.web-player.aa85305e__mobile-web-player.c9494832",
   "source": {
-    "fingerprint": "sha256:a29578cb2ff036aebf5ed6b4f85af1687922050c5c6a31df6f7a0da1fabd9674",
+    "fingerprint": "sha256:b674047b5e272ec17d2dc0804dc15c0be07272f30959f3221149114d45197da1",
     "targets": {
       "desktop": [
         {
@@ -295,7 +295,7 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "38564bfcae9695189183b70c20cbc180dc88e1965a9402a8cd97f89c6dac3ee7",
+          "sha256": "fab1aa1f8668fd3f5e8241de5a1e1df06f3f64d1efbfd8a97b5b0df26fc2df13",
           "byteLength": 594501
         },
         {
