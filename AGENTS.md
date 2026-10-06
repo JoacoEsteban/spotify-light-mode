@@ -9,6 +9,20 @@ WXT builds the extension for Chrome, Firefox, and Edge.
 The repository contains generated CSS, icons, store copy, and automated refresh and publication workflows.
 Use the source files and `package.json` for current implementation details and dependency versions.
 
+## Fetch and regenerate before implementation changes
+
+The latest repository revision can still contain stale Spotify CSS assets.
+Before making implementation changes:
+
+1. Fetch repository updates with `jj git fetch --remote origin`.
+2. Use the latest `main@origin` as the baseline for new work.
+3. Run `bun run ensure:spotify-light-css --force --refresh` locally, even if the remote assets appear current.
+4. Rebuild the extension before the browser test.
+5. Reproduce the reported error with the refreshed extension before editing the generator or runtime code.
+
+Preserve existing local work during synchronization.
+`--refresh` bypasses cached downloads, and `--force` regenerates overrides even if the manifest already matches the current Spotify bundles.
+
 ## Investigate color regressions before changing code
 
 Spotify changes stylesheet hashes, numbered chunk names, and selectors between releases.
@@ -57,7 +71,7 @@ If the version changes, the script fetches source CSS and compares formatted sou
 If only artifact hashes change, the script updates manifest metadata without regenerating CSS.
 The source fingerprint includes filenames, so renamed chunks also change that fingerprint.
 
-After a generator change, run `bun run ensure:spotify-light-css -- --force` or `bun run regenerate`.
+After a generator change, run `bun run ensure:spotify-light-css --force` or `bun run regenerate`.
 Use `--refresh` to bypass cached downloads during a refresh.
 
 Do not edit generated files under `assets/spotify-light/` directly.
