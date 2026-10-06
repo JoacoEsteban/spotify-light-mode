@@ -2953,6 +2953,38 @@ a.lUZOGBvk4CLW2pFEsYsM:hover {
 .CC8wIdyIxv5Ny9Sha8xJ {
   text-align: center;
 }
+.xZvu4eYgxRBhF9FQDeEs {
+  border-radius: var(--encore-corner-radius-larger);
+  background: #181818;
+  width: 500px;
+  max-width: min(500px, 100vw - 32px);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  box-shadow: 0 4px 12px #0000004d;
+}
+.y5iNG5z7VsjLYaMRXfm5 {
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 32px;
+  display: flex;
+}
+.lSDHrK0y_dAjWU9pol1s {
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+.jKf9x3d6z6HLubW_IKFY {
+  flex-shrink: 0;
+}
+.A72g41ivo23qg9zDVTjC {
+  min-height: 48px;
+}
+.elZTyMyJ_JKW7y6GjHqD {
+  justify-content: flex-end;
+  padding-top: 8px;
+  display: flex;
+}
 .jsqWV34_87AkWddWVvUm {
   z-index: 4;
   background-color: #000000b3;
@@ -3615,4 +3647,4 @@ a.lUZOGBvk4CLW2pFEsYsM:hover {
 .UGYyUe4Isd54VDQpBqso {
   border-radius: 8px;
 }
-/*# sourceMappingURL=xpui-root-dialogs.e206743f.css.map*/
+/*# sourceMappingURL=xpui-root-dialogs.37aad0d0.css.map*/

@@ -354,6 +354,11 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .w29j5XFO0ZHaZ8fSGPM1 {
   margin-bottom: -32px;
 }
+.CzzNUg39roh9Rh0nA5iV {
+  --tracklist-edit-controls-offset: 32px;
+  --tracklist-title-edit-offset: 32px;
+  --tracklist-index-header-opacity: 0;
+}
 .Zgp2GvDDdff99VCZReRL {
   cursor: pointer;
   background: 0 0;
@@ -418,4 +423,4 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
 .yvpoF4nd0IuBGinDkL0o {
   grid-area: content;
 }
-/*# sourceMappingURL=xpui-routes-playlist.d3bad3cd.css.map*/
+/*# sourceMappingURL=xpui-routes-playlist.54967a47.css.map*/

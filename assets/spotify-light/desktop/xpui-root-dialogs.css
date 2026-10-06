@@ -657,6 +657,11 @@ a.lUZOGBvk4CLW2pFEsYsM:hover:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
 
+.xZvu4eYgxRBhF9FQDeEs:not(#spotify-light-mode-specificity-bump) {
+  background: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
+  box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
+}
+
 .jsqWV34_87AkWddWVvUm:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }

@@ -1016,6 +1016,9 @@ dialog:not([open]) {
   gap: 8px;
   display: flex;
 }
+.xrjFfkINkgbnFjaQpphG {
+  color: #509bf5;
+}
 ::-webkit-scrollbar-corner {
   background-color: #0000;
 }
@@ -1835,4 +1838,4 @@ select:disabled:hover {
   padding: 12px;
   overflow-y: scroll;
 }
-/*# sourceMappingURL=xpui-debug-window-contents.a7e8ebaf.css.map*/
+/*# sourceMappingURL=xpui-debug-window-contents.b4ae5448.css.map*/

@@ -1040,6 +1040,11 @@
 .w29j5XFO0ZHaZ8fSGPM1 {
   margin-bottom: -32px;
 }
+.CzzNUg39roh9Rh0nA5iV {
+  --tracklist-edit-controls-offset: 32px;
+  --tracklist-title-edit-offset: 32px;
+  --tracklist-index-header-opacity: 0;
+}
 .yDMRRUck5XEtyAJ95kN1 {
   margin-top: 64px;
 }
@@ -1208,4 +1213,4 @@
 .SDbR2NT3Bt1RVvpSrO1a {
   width: 35%;
 }
-/*# sourceMappingURL=xpui-routes-artist.b87b0052.css.map*/
+/*# sourceMappingURL=xpui-routes-artist.be9b4d4f.css.map*/

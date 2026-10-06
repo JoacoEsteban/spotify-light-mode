@@ -2554,6 +2554,10 @@ html:not(.no-focus-outline) .AWIrTV2Lx3pp211jnrfX:focus-within:not(#spotify-ligh
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
+.P2t4cJgA5supQkIL3eV9:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
 .v192J0eMad63T5538h6l:not(#spotify-light-mode-specificity-bump) {
   color: var(--background-base); /* css-var: var(--background-base) */
 }

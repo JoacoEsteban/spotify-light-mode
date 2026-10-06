@@ -1,4 +1,5 @@
 .Z6yfNoSJ6OjiEBGI5Osr {
+  margin-block: var(--encore-spacing-tighter-5);
   grid-template-columns: 2fr 1fr;
   gap: 8px 24px;
   display: grid;
@@ -495,4 +496,4 @@ dialog:not([open]) {
 .ZIrVp2lkdTZCsCbrzPXU {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.d74a0ec0.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.df6a3a28.css.map*/

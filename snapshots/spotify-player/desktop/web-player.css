@@ -1241,12 +1241,21 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
 .sq3EljRdXhjUICpdJ3Wn {
   width: 100%;
 }
+[dir="rtl"] .sq3EljRdXhjUICpdJ3Wn {
+  text-align: right;
+  display: block;
+}
 .Ex0sK8oGrGiKTDyIv4Jf {
   display: contents;
 }
 .ajM5o72Fd1kKzKOjiw1G {
   flex-direction: column;
   display: flex;
+}
+[dir="rtl"] .ajM5o72Fd1kKzKOjiw1G {
+  direction: rtl;
+}
+.ajM5o72Fd1kKzKOjiw1G {
   max-height: min(490px, 100vh - 24px) !important;
 }
 .ajM5o72Fd1kKzKOjiw1G > .pQYZLMzKN0LGVS8sQ9oo {
@@ -1277,6 +1286,18 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
   min-width: 0;
   display: flex;
 }
+[dir="rtl"]
+  .aYiT3Ww93vAYcuGQMtXP
+  [data-encore-id="text"]:not(.myRMoKZJqJUbfjjAMbBg),
+[dir="rtl"] .aYiT3Ww93vAYcuGQMtXP [data-encore-id="listRowTitle"],
+[dir="rtl"] .aYiT3Ww93vAYcuGQMtXP [data-encore-id="listRowSubtitle"],
+[dir="rtl"]
+  .EtdJQseBQITu9s739hwP
+  [data-encore-id="text"]:not(.myRMoKZJqJUbfjjAMbBg),
+[dir="rtl"] .EtdJQseBQITu9s739hwP [data-encore-id="listRowTitle"],
+[dir="rtl"] .EtdJQseBQITu9s739hwP [data-encore-id="listRowSubtitle"] {
+  text-align: right;
+}
 .yl5vamvPghMt82gxhrLl {
   min-height: 20px;
   color: var(--text-subdued);
@@ -1292,6 +1313,9 @@ html[dir="ltr"] .LayoutResizer__inline-start .LayoutResizer__input {
 }
 .myRMoKZJqJUbfjjAMbBg {
   flex: 1;
+}
+[dir="rtl"] .myRMoKZJqJUbfjjAMbBg {
+  text-align: right;
 }
 .znOIPIQczeuym6Oo_FpB {
   flex-shrink: 0;
@@ -11916,6 +11940,15 @@ html:not(.no-focus-outline) .F2EQtWZ0MHyB6sFaxUt7:focus {
   color: var(--text-subdued, #b3b3b3);
   border-bottom: 1px solid #ffffff1a;
 }
+.WPrlgSMYX1vgdmEbA9MI .scCF_FeUXBT6pV6u7Wlo {
+  opacity: var(--tracklist-index-header-opacity, 1);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .WPrlgSMYX1vgdmEbA9MI .scCF_FeUXBT6pV6u7Wlo {
+    transition: opacity var(--tracklist-edit-layout-duration, 0s)
+      var(--encore-productive);
+  }
+}
 .NbfMAM0P0UuEZkuoji8f > * {
   grid-row: 1;
 }
@@ -12070,6 +12103,30 @@ html:not(.no-focus-outline) .AWIrTV2Lx3pp211jnrfX:focus-within {
   .dKkyChwDBlxu1BYsZAtP {
   display: none;
 }
+.AWIrTV2Lx3pp211jnrfX.Ku_KHBTPTInFHNKOFaFi {
+  cursor: pointer;
+}
+.AWIrTV2Lx3pp211jnrfX.Ku_KHBTPTInFHNKOFaFi:not(.xot4zapeJe7pwz9UXwj_)
+  .mRhdhvI28hEtH1o6IPeI,
+.AWIrTV2Lx3pp211jnrfX.Ku_KHBTPTInFHNKOFaFi:not(.xot4zapeJe7pwz9UXwj_)
+  .rFLncrzPHwpKJ7KnPap8,
+.AWIrTV2Lx3pp211jnrfX.Ku_KHBTPTInFHNKOFaFi:not(.xot4zapeJe7pwz9UXwj_)
+  .BTM879cHESDCr5BwUts1,
+.AWIrTV2Lx3pp211jnrfX.Ku_KHBTPTInFHNKOFaFi:not(.xot4zapeJe7pwz9UXwj_)
+  .dXezRjWDksvHkq4M37C3 {
+  visibility: hidden;
+  pointer-events: none;
+}
+.AWIrTV2Lx3pp211jnrfX.xot4zapeJe7pwz9UXwj_ {
+  --tracklist-index-content-offset: var(--tracklist-edit-controls-offset, 0);
+  cursor: pointer;
+}
+.AWIrTV2Lx3pp211jnrfX.xot4zapeJe7pwz9UXwj_ .mRhdhvI28hEtH1o6IPeI,
+.AWIrTV2Lx3pp211jnrfX.xot4zapeJe7pwz9UXwj_ .rFLncrzPHwpKJ7KnPap8,
+.AWIrTV2Lx3pp211jnrfX.xot4zapeJe7pwz9UXwj_ .BTM879cHESDCr5BwUts1 {
+  visibility: hidden;
+  pointer-events: none;
+}
 .AWIrTV2Lx3pp211jnrfX.previewActive .previewPlayOverlay {
   opacity: 1;
 }
@@ -12201,9 +12258,12 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   justify-self: end;
   align-items: center;
   display: flex;
+  position: relative;
+  inset-inline-start: var(--tracklist-index-content-offset, 0);
 }
 .fwyEl7IpX7I7HZGGsomh {
   align-items: center;
+  margin-inline-start: var(--tracklist-title-edit-offset, 0);
   display: flex;
   container: tracklist-row-start/inline-size;
 }
@@ -12665,6 +12725,22 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
 }
 .ha0JKcXnSf4caZDvCnIw {
   height: auto;
+}
+.JDhKj8QzFXNkZISC_nvb {
+  align-items: center;
+  gap: var(--encore-spacing-tighter-2);
+  width: 48px;
+  display: inline-flex;
+}
+.P2t4cJgA5supQkIL3eV9 {
+  width: 24px;
+  height: 32px;
+  color: var(--text-subdued);
+  pointer-events: none;
+  flex: 0 0 24px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
 }
 .v192J0eMad63T5538h6l {
   color: var(--background-base);
@@ -22399,4 +22475,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.59e263f7.css.map*/
+/*# sourceMappingURL=web-player.e146cbe0.css.map*/
