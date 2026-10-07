@@ -571,6 +571,50 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   background-color: #e4e4e4; /* hardcoded-color: #282828 → #e4e4e4 */
 }
 
-.IBIP9m4ZNgnyyAnfgHtQ:hover:not(#spotify-light-mode-specificity-bump), .IBIP9m4ZNgnyyAnfgHtQ:focus:not(#spotify-light-mode-specificity-bump) {
+dialog:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+  border: none; /* forwarded-reset: none */
+}
+
+dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
+}
+
+.BivO59Wa_Rkyrpg09wFY:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base); /* css-var: var(--text-base) */
+  background: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
+}
+
+.nac21L7KGQJRstMbstPD:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
+.w1jeqjcUOjcyLe2ju8ed:not(#spotify-light-mode-specificity-bump), .OYFufYM38AymNXbjX6Xi:not(#spotify-light-mode-specificity-bump), .pt7lPezF5SmEV_SP8Ipp:not(#spotify-light-mode-specificity-bump), .T9YQsJOOd6mZUImdvw8p:not(#spotify-light-mode-specificity-bump) {
+  box-shadow: 0 2px 6px #ffffff4d; /* hardcoded-color: 0 2px 6px #0000004d → 0 2px 6px #ffffff4d */
+}
+
+.ovbYD7fchI8kjddmP8BH:not(#spotify-light-mode-specificity-bump) {
+  color: #e2c3ee; /* hardcoded-color: #503659 → #e2c3ee */
+}
+
+.UYFqCCdMji55guTJ_4QI:not(#spotify-light-mode-specificity-bump) {
+  color: #c2a0ff; /* hardcoded-color: #8400e7 → #c2a0ff */
+}
+
+.YlQxIerR9LyvuBZjjtx4:not(#spotify-light-mode-specificity-bump) {
+  fill: #987dac; /* hardcoded-color: #af93c4 → #987dac */
+  stroke: #7e6d8d; /* hardcoded-color: #c4b1d4 → #7e6d8d */
+}
+
+.PsVNMeJwZvzZ0_WvZOsK:not(#spotify-light-mode-specificity-bump), .dyaWRgkGXNdOczovZUZA:not(#spotify-light-mode-specificity-bump) {
+  color: #c2a0ff; /* hardcoded-color: #8400e7 → #c2a0ff */
+}
+
+.IBIP9m4ZNgnyyAnfgHtQ:hover:not(#spotify-light-mode-specificity-bump), .IBIP9m4ZNgnyyAnfgHtQ:focus:not(#spotify-light-mode-specificity-bump), .IBIP9m4ZNgnyyAnfgHtQ:focus-within:not(#spotify-light-mode-specificity-bump) {
   background-color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
+}
+
+.eagp1tX0piXn6FcrB5YQ:not(#spotify-light-mode-specificity-bump) {
+  color: #000000; /* hardcoded-color: #fff → #000000 */
+  background-color: #dbdbdb; /* hardcoded-color: #333 → #dbdbdb */
 }
