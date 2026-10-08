@@ -238,6 +238,11 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   flex-direction: column;
   display: flex;
 }
+.GylwreI64GfAJ9Q8MSw0 {
+  align-items: center;
+  gap: var(--encore-spacing-tighter-4);
+  display: flex;
+}
 .Foff068M8PDz3buzqcB9 {
   align-items: center;
   gap: var(--encore-spacing-tighter-3);
@@ -3617,6 +3622,11 @@ __workaround_element__ {
   position: relative;
   overflow: hidden;
 }
+@media (prefers-contrast: more) {
+  .qb9cvoyw3y6W2evemPij {
+    background-color: #000;
+  }
+}
 .jjd_RI4Jm4qdPLQDWZ7g {
   align-items: center;
   gap: 12px;
@@ -4240,4 +4250,4 @@ dialog:not([open]) {
   gap: 8px;
   display: flex;
 }
-/*# sourceMappingURL=dwp-panel-section.70915846.css.map*/
+/*# sourceMappingURL=dwp-panel-section.647a2f2f.css.map*/

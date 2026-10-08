@@ -542,6 +542,10 @@ input:checked ~ .rIZf5Dl8ejanejy1X35Q .JEdZDZYsfpqpY04VFSnM:not(#spotify-light-m
   background-color: var(--transcript-color-background); /* css-var: var(--transcript-color-background) */
 }
 
+.qb9cvoyw3y6W2evemPij:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff; /* hardcoded-color: #000 → #ffffff */
+}
+
 .W2jgJ8Yu7WA6Av4evQ2_:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
 }

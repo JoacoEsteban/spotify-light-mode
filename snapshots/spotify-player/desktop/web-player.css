@@ -3224,43 +3224,6 @@ a.w0M9McvDvK5pG_MAXRcq:hover {
     var(--panel-gap) / (var(--zoom-level, 100) / 100) * -1
   );
 }
-.E_DaR4Zv4MOqa5mQ8GaG {
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.E_DaR4Zv4MOqa5mQ8GaG.awl7PUHohgsMYsof6ix8 {
-  margin-inline: var(--encore-spacing-tighter-4) var(--encore-spacing-tighter-5);
-}
-.E_DaR4Zv4MOqa5mQ8GaG.hl_UuMn9MyTqKH2kaAGB {
-  background-color: var(--text-subdued);
-  color: var(--background-base);
-}
-.cRpQBAqKaS195iT0C0kT {
-  all: unset;
-  cursor: pointer;
-  border-radius: var(--encore-corner-radius-base);
-  width: fit-content;
-  display: inline-flex;
-}
-.cRpQBAqKaS195iT0C0kT:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid #fff;
-}
-.BvV3VmD3gSgRTBRYITvC {
-  gap: var(--encore-spacing-tighter-2);
-  padding: var(--encore-spacing-base);
-  border-radius: var(--encore-corner-radius-larger);
-  background-color: #282828;
-  flex-direction: column;
-  display: flex;
-}
-.u0Ccz7sKxUA_bpCRJ1sg {
-  align-self: flex-start;
-}
-.W54KCBFuw4fo3V11q9fR {
-  color: inherit;
-  text-decoration: underline;
-}
 .o4aoFcD68q6SDodKFZWr {
   flex-shrink: 0;
   display: inline-flex;
@@ -3283,6 +3246,43 @@ a.w0M9McvDvK5pG_MAXRcq:hover {
   .Neo7rzwFnyDt2rcFfff1 {
     display: none;
   }
+}
+.lp_5jeHxQtXS3E9Gdr2T {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lp_5jeHxQtXS3E9Gdr2T.thrXny42hYEHtvdicRbj {
+  margin-inline: var(--encore-spacing-tighter-4) var(--encore-spacing-tighter-5);
+}
+.lp_5jeHxQtXS3E9Gdr2T.iJK3i8GckdmgtTQkbkiL {
+  background-color: var(--text-subdued);
+  color: var(--background-base);
+}
+.dT6uBewYZm6AnEfzfEWA {
+  all: unset;
+  cursor: pointer;
+  border-radius: var(--encore-corner-radius-base);
+  width: fit-content;
+  display: inline-flex;
+}
+.dT6uBewYZm6AnEfzfEWA:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #fff;
+}
+.guaLVs6ghR9cIdTVcx9p {
+  gap: var(--encore-spacing-tighter-2);
+  padding: var(--encore-spacing-base);
+  border-radius: var(--encore-corner-radius-larger);
+  background-color: #282828;
+  flex-direction: column;
+  display: flex;
+}
+.ygQ7PN6bEcPOVhRLa3Jw {
+  align-self: flex-start;
+}
+.xD31The5_K8I67ADurtq {
+  color: inherit;
+  text-decoration: underline;
 }
 .wf4c09M26zqx77rdohj2.wf4c09M26zqx77rdohj2:not(:last-child) {
   margin-inline-end: 0;
@@ -6923,6 +6923,26 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
 .EYK8sNKyCiLGg11b3oFY {
   display: flex;
 }
+@media (prefers-contrast: more) {
+  .cwAV3tgVDuiVuVi64r7V {
+    scrollbar-color: #fff transparent;
+  }
+  .TESO9DBoCX82zPcGpOzf {
+    color: #b3b3b3;
+  }
+  .TESO9DBoCX82zPcGpOzf.VLqgdNVl49Png85wYkCQ,
+  .oyw4I2qrGnIMDRW_LiFf {
+    color: #fff;
+  }
+  .Skg3WzN9xjkiVY5cxD0a:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid #fff;
+  }
+  .Z1yWsdmCIjc_b41ToiO_,
+  .zn711nAjwnZDYLhFGouV {
+    color: #fff;
+  }
+}
 .y0vtR3IfDfPbXJ2MZnxs {
   opacity: 0;
   z-index: 1;
@@ -6942,6 +6962,11 @@ html[data-transition="right-sidebar-open"][data-right-sidebar-open-duringExit]::
 }
 .pvWgiS0R_7grz0VjKsSZ.VZcxYHfWJOTt_nZpRXkV {
   background-color: var(--transcript-color-background);
+}
+@media (prefers-contrast: more) {
+  .pvWgiS0R_7grz0VjKsSZ.VZcxYHfWJOTt_nZpRXkV {
+    background-color: #000;
+  }
 }
 .qwtQIFamFH_baKUzKNpJ {
   --replies-toggle-author-shadow-color: var(--background-base);
@@ -12661,6 +12686,15 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   gap: 4px;
   display: inline-flex;
 }
+.GdBTxNiMmED5874TGm1A {
+  vertical-align: middle;
+  display: inline-flex;
+}
+.ravqkdlCTq5_JTylXTi9:has(.GdBTxNiMmED5874TGm1A:not(:empty)) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .UCJ6YYe79aBMLBxRY0vg {
   max-inline-size: 332px;
   padding: 16px;
@@ -12786,11 +12820,14 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
   width: 24px;
   height: 32px;
   color: var(--text-subdued);
-  pointer-events: none;
+  cursor: grab;
   flex: 0 0 24px;
   justify-content: center;
   align-items: center;
   display: inline-flex;
+}
+.P2t4cJgA5supQkIL3eV9:active {
+  cursor: grabbing;
 }
 .v192J0eMad63T5538h6l {
   color: var(--background-base);
@@ -22525,4 +22562,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.5d438526.css.map*/
+/*# sourceMappingURL=web-player.91646073.css.map*/

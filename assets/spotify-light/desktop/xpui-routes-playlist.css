@@ -73,19 +73,19 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.XnbtwtTv65mtkQaRlYJB:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
-}
-
-.XnbtwtTv65mtkQaRlYJB:active:not(#spotify-light-mode-specificity-bump) {
-  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
-}
-
 .XHI00cdP8EofJsZXH1q9:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
 .XHI00cdP8EofJsZXH1q9:active:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
+}
+
+.XnbtwtTv65mtkQaRlYJB:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
+}
+
+.XnbtwtTv65mtkQaRlYJB:active:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }
 

@@ -1159,6 +1159,11 @@ html[dir="rtl"] .mrx6NtQg39hpbAl8Gwxz {
   flex-direction: column;
   display: flex;
 }
+.GylwreI64GfAJ9Q8MSw0 {
+  align-items: center;
+  gap: var(--encore-spacing-tighter-4);
+  display: flex;
+}
 .Foff068M8PDz3buzqcB9 {
   align-items: center;
   gap: var(--encore-spacing-tighter-3);
@@ -1565,4 +1570,4 @@ __workaround_element__ {
   max-height: 900px;
   position: sticky;
 }
-/*# sourceMappingURL=dwp-promptedPlaylists.7cc6ecda.css.map*/
+/*# sourceMappingURL=dwp-promptedPlaylists.f15cb37d.css.map*/
