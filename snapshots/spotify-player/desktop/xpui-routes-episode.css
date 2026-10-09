@@ -448,6 +448,10 @@ __workaround_element__ {
   position: sticky;
   top: 64px;
 }
+.Ar39fdw_GxJtyZ6C9Ml6 [role="tab"]:hover,
+.Ar39fdw_GxJtyZ6C9Ml6 [role="tab"]:active {
+  background-color: #0000;
+}
 .Ar39fdw_GxJtyZ6C9Ml6 [role="tab"][aria-selected="true"]:before {
   bottom: 0;
 }
@@ -610,4 +614,4 @@ __workaround_element__ {
     align-self: end;
   }
 }
-/*# sourceMappingURL=xpui-routes-episode.d7ad9ef5.css.map*/
+/*# sourceMappingURL=xpui-routes-episode.301e4c9c.css.map*/

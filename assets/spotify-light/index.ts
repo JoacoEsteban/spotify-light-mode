@@ -8,12 +8,12 @@ import _5 from "./desktop/3945.css?inline";
 import _6 from "./desktop/4508.css?inline";
 import _7 from "./desktop/4557.css?inline";
 import _8 from "./desktop/5501.css?inline";
-import _9 from "./desktop/6814.css?inline";
-import _10 from "./desktop/7052.css?inline";
-import _11 from "./desktop/7057.css?inline";
-import _12 from "./desktop/783.css?inline";
-import _13 from "./desktop/8003.css?inline";
-import _14 from "./desktop/90.css?inline";
+import _9 from "./desktop/7052.css?inline";
+import _10 from "./desktop/7057.css?inline";
+import _11 from "./desktop/783.css?inline";
+import _12 from "./desktop/8003.css?inline";
+import _13 from "./desktop/90.css?inline";
+import _14 from "./desktop/9636.css?inline";
 import _15 from "./desktop/998.css?inline";
 import _16 from "./desktop/browse-v2.css?inline";
 import _17 from "./desktop/concerts-on-tour-playlist-card.css?inline";
@@ -118,12 +118,12 @@ export const lightModeStylesheetOverrides = [
   { sourceFileName: "4508.css", css: _6 },
   { sourceFileName: "4557.css", css: _7 },
   { sourceFileName: "5501.css", css: _8 },
-  { sourceFileName: "6814.css", css: _9 },
-  { sourceFileName: "7052.css", css: _10 },
-  { sourceFileName: "7057.css", css: _11 },
-  { sourceFileName: "783.css", css: _12 },
-  { sourceFileName: "8003.css", css: _13 },
-  { sourceFileName: "90.css", css: _14 },
+  { sourceFileName: "7052.css", css: _9 },
+  { sourceFileName: "7057.css", css: _10 },
+  { sourceFileName: "783.css", css: _11 },
+  { sourceFileName: "8003.css", css: _12 },
+  { sourceFileName: "90.css", css: _13 },
+  { sourceFileName: "9636.css", css: _14 },
   { sourceFileName: "998.css", css: _15 },
   { sourceFileName: "browse-v2.css", css: _16 },
   { sourceFileName: "concerts-on-tour-playlist-card.css", css: _17 },

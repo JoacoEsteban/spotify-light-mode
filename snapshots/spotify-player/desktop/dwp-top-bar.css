@@ -634,6 +634,60 @@ __workaround_element__ {
 .qHMC92m8m3PMCHFBCfrC[data-seamless-gradient] .EhHtOMlXXi5nqb8mtIW2 {
   z-index: 1;
 }
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_
+  .wvLv2Bclu0IFix0ENlo2.EhHtOMlXXi5nqb8mtIW2.QryNXQUNp7AV5wL3xIAy {
+  --video-episode-thumbnail-height: clamp(
+    90px,
+    90px + (var(--main-view-grid-width) - 600px) / 424 * 100,
+    190px
+  );
+  width: calc(var(--video-episode-thumbnail-height) * 16 / 9);
+  height: var(--video-episode-thumbnail-height);
+  aspect-ratio: 16/9;
+}
+.qHMC92m8m3PMCHFBCfrC[data-seamless-gradient]
+  .EhHtOMlXXi5nqb8mtIW2.QryNXQUNp7AV5wL3xIAy {
+  z-index: 0;
+}
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_.bieZTgA_uE2kJqTHJ8cI {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  padding-block: 16px;
+}
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_.bieZTgA_uE2kJqTHJ8cI
+  .a6TMeyEyE1ep5p49x_PD {
+  flex-direction: column;
+  min-width: 0;
+  padding-inline: 16px;
+  position: relative;
+}
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_.bieZTgA_uE2kJqTHJ8cI
+  .wvLv2Bclu0IFix0ENlo2.EhHtOMlXXi5nqb8mtIW2.QryNXQUNp7AV5wL3xIAy {
+  --stacked-video-thumbnail-height: max(
+    103px,
+    var(--video-episode-thumbnail-height)
+  );
+  width: calc(var(--stacked-video-thumbnail-height) * 16 / 9);
+  max-width: 100%;
+  height: var(--stacked-video-thumbnail-height);
+  align-self: flex-start;
+  margin-block-end: 16px;
+  margin-inline-end: 0;
+}
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_.bieZTgA_uE2kJqTHJ8cI
+  .ViFTMkka7s22SQ2yB4nm {
+  flex: none;
+  width: 100%;
+  min-width: 0;
+  padding-block-start: 0;
+}
+.qHMC92m8m3PMCHFBCfrC.zAfKbrKu71aoqv54L5m_.bieZTgA_uE2kJqTHJ8cI
+  .jz1SrWNGKUL7ix_Xcook {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
 .IfnsJmY2oBN7JcMDKR7u {
   cursor: pointer;
   background-color: #0000;
@@ -733,4 +787,4 @@ __workaround_element__ {
   animation-duration: var(--encore-short-4);
   animation-timing-function: var(--encore-expressive-decelerate);
 }
-/*# sourceMappingURL=dwp-top-bar.5e9b4aaa.css.map*/
+/*# sourceMappingURL=dwp-top-bar.ce20d73e.css.map*/

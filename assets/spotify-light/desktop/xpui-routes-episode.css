@@ -98,6 +98,10 @@
   background-color: var(--episode-transcript-selection-background); /* css-var: var(--episode-transcript-selection-background) */
 }
 
+.Ar39fdw_GxJtyZ6C9Ml6 [role="tab"]:hover:not(#spotify-light-mode-specificity-bump), .Ar39fdw_GxJtyZ6C9Ml6 [role="tab"]:active:not(#spotify-light-mode-specificity-bump) {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
 .I07isbvpQA5XZgUsKBWR:not(#spotify-light-mode-specificity-bump) {
   border-bottom: 1px solid #0000001a; /* hardcoded-color: 1px solid #ffffff1a → 1px solid #0000001a */
 }

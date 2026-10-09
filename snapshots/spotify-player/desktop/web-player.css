@@ -10112,6 +10112,53 @@ a[data-context-item-type="ad"] .MCkayUaVAuxznWlcW6sh .L4C6eOnG5aASLCzg_aFY {
   height: 80%;
   display: flex;
 }
+.TALe6uWnPg3wCDwe6tkq {
+  z-index: 3;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+.wJ5GZYVRa1pk7Uy6_YYZ {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #000000b3;
+  border-radius: 500px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  line-height: 1;
+  animation: ease-out forwards e1Hhksl1d4UffcXwkiAV;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.a9AbrHyHgTQtOmuS3Qm9 {
+  inset-inline-start: 10%;
+}
+.siuMj_fShl6KoBByahGQ {
+  inset-inline-end: 10%;
+}
+._hajys25SJYwEHmEjSP0 {
+  animation: none;
+}
+@keyframes e1Hhksl1d4UffcXwkiAV {
+  0%,
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wJ5GZYVRa1pk7Uy6_YYZ {
+    animation: none;
+  }
+}
 .D4c5IAPXupQkguYl6Pt3 {
   z-index: 5;
   color: #fff;
@@ -22562,4 +22609,4 @@ html[lang="ar"] .AWIrTV2Lx3pp211jnrfX {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.91646073.css.map*/
+/*# sourceMappingURL=web-player.a7ac6607.css.map*/

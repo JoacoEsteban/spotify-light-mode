@@ -94,6 +94,10 @@
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
 
+.yRVtkB0W7vFuYd84j2e2:not(#spotify-light-mode-specificity-bump) {
+  background-color: #a2a2a2; /* hardcoded-color: #7f7f7f → #a2a2a2 */
+}
+
 .dPdFwroo6kzNWWlbg19F a:not(#spotify-light-mode-specificity-bump), .dPdFwroo6kzNWWlbg19F button:not(#spotify-light-mode-specificity-bump) {
   outline: none; /* forwarded-reset: none */
 }
