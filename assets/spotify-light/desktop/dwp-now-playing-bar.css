@@ -18,6 +18,10 @@
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
+.xdLNulcV_hFlFEDwVYs8:not(#spotify-light-mode-specificity-bump) {
+  --background-elevated-base: #6da9ff; /* custom-property: #0d72ea → #6da9ff */
+}
+
 .MZd_PqzVQOdrbpd6ircZ.ABsPxBFldURR4hbFY38Y:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
   color: var(--text-base); /* css-var: var(--text-base) */

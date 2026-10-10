@@ -44,6 +44,25 @@
 .zcqJH_LADqvOmeo3NwMy {
   margin: 0 10px;
 }
+.xdLNulcV_hFlFEDwVYs8 {
+  --background-elevated-base: #0d72ea;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(450px, 100vw - 20px);
+}
+.x8ruApCNfa353n7GPjh2 {
+  align-items: center;
+  min-height: 32px;
+  display: flex;
+}
+.iNdPR9Wnr61xlLIIRsAq {
+  padding-block: 8px;
+}
+.UTrwH4BpAP0m_kT8ZCbg {
+  justify-content: flex-end;
+  gap: 24px;
+  display: flex;
+}
 .MZd_PqzVQOdrbpd6ircZ {
   border-radius: 4px;
   flex-direction: row;
@@ -724,4 +743,4 @@ button.xpePbUuEphICtTwXQ2to:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.67968925.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.c828ec0d.css.map*/
