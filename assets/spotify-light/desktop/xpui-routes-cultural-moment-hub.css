@@ -10,64 +10,64 @@
 
 
 
-.SsdRCCBmjjGCoXmWiFiO:not(#spotify-light-mode-specificity-bump) {
+.rRzDzkFoPB1jsHaUjsDT:not(#spotify-light-mode-specificity-bump) {
   --color-to: transparent; /* forwarded-reset: transparent */
 }
 
-.SsdRCCBmjjGCoXmWiFiO:not(#spotify-light-mode-specificity-bump) {
+.rRzDzkFoPB1jsHaUjsDT:not(#spotify-light-mode-specificity-bump) {
   --color-to: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 
-.SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient]:not(#spotify-light-mode-specificity-bump) {
+.rRzDzkFoPB1jsHaUjsDT[data-seamless-gradient]:not(#spotify-light-mode-specificity-bump) {
   --color-to: transparent; /* forwarded-reset: transparent */
 }
 
-.SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient]:not(#spotify-light-mode-specificity-bump) {
+.rRzDzkFoPB1jsHaUjsDT[data-seamless-gradient]:not(#spotify-light-mode-specificity-bump) {
   --color-to: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 
-.M7ECcaA17LC8UqL2GKVD:not(#spotify-light-mode-specificity-bump) {
+.T2XRKvkWneSSMSOCEo40:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(#ffffff99 0%, var(--background-base) 100%),
     var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%, var(--background-base) 100%),
     var(--background-noise) → linear-gradient(#ffffff99 0%, var(--background-base) 100%),
     var(--background-noise) */
 }
 
-.VF3uvIAJTYAgTCYhK9Hc:not(#spotify-light-mode-specificity-bump) {
+.dtiw0OaK6989RIhzPa0d:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
-.rhgad0KCkY7pC3Jjdt9T:not(#spotify-light-mode-specificity-bump) {
+.KOM1bGTDuHGSNj1s_lAa:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff99; /* hardcoded-color: #0009 → #ffffff99 */
 }
 
-.DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+._RX6Cm0oNIzMrjxAwBeJ:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-.DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+._RX6Cm0oNIzMrjxAwBeJ:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-[dir="rtl"] .DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+[dir="rtl"] ._RX6Cm0oNIzMrjxAwBeJ:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-[dir="rtl"] .DniTToJmJJCsNHaxegdR:not(#spotify-light-mode-specificity-bump):after {
+[dir="rtl"] ._RX6Cm0oNIzMrjxAwBeJ:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-._ehvtNb15IxmxomR0T9E .YCQudASYII9oSA3VRAJv:not(#spotify-light-mode-specificity-bump) {
+.BM7VoQ5EzbcdRIVbad2g .InFv2dmzmaw7a3a0LlXD:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
   border: none; /* forwarded-reset: none */
 }
 
-.xCn72QlawF3rgUNijaKJ:not(#spotify-light-mode-specificity-bump) {
+.nFCBTG4WGOz0wTFeFJgN:not(#spotify-light-mode-specificity-bump) {
   color: #00000099; /* hardcoded-color: #fff9 → #00000099 */
   stroke: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
   box-shadow: 0 10px 30px #ffffff4d,
@@ -76,12 +76,12 @@
     0 1px 2px #ffffff33 */
 }
 
-.eynZnK1KEPNeJz1xVo2D:not(#spotify-light-mode-specificity-bump) {
+.PSefAowAWZLDRo8BKeWh:not(#spotify-light-mode-specificity-bump) {
   -webkit-mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 100%) → linear-gradient(#ffffff 0% 50%, #ffffff00 100%) */
   mask-image: linear-gradient(#ffffff 0% 50%, #ffffff00 100%); /* hardcoded-color: linear-gradient(#000 0% 50%, #0000 100%) → linear-gradient(#ffffff 0% 50%, #ffffff00 100%) */
 }
 
-.RmweRidui_YMBauFgrvW:not(#spotify-light-mode-specificity-bump) {
+.orWtrPE8uZ_3bMXgrDGP:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 10px 30px #ffffff4d,
     0 1px 2px #ffffff33; /* hardcoded-color: 0 10px 30px #0000004d,
     0 1px 2px #0003 → 0 10px 30px #ffffff4d,

@@ -14,7 +14,7 @@
   outline: 1px dashed var(--ubi-highlight-color, #006060) !important; /* hardcoded-color: 1px dashed var(--ubi-highlight-color, #0ff) → 1px dashed var(--ubi-highlight-color, #006060) */
 }
 
-.DyEaVTwSXtt9Fa2WQy6X:not(#spotify-light-mode-specificity-bump) {
+.iFCd6rU1TqJ2kWn4_VZA:not(#spotify-light-mode-specificity-bump) {
   background: var(--ubi-highlight-color, #006060); /* hardcoded-color: var(--ubi-highlight-color, #0ff) → var(--ubi-highlight-color, #006060) */
   color: #ffffff; /* hardcoded-color: #000 → #ffffff */
 }

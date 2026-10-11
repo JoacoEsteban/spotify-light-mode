@@ -1,4 +1,4 @@
-.SsdRCCBmjjGCoXmWiFiO {
+.rRzDzkFoPB1jsHaUjsDT {
   z-index: -1;
   opacity: 1;
   width: 100%;
@@ -7,11 +7,11 @@
   position: absolute;
 }
 @media (prefers-reduced-motion: reduce) {
-  .SsdRCCBmjjGCoXmWiFiO {
+  .rRzDzkFoPB1jsHaUjsDT {
     transition: none;
   }
 }
-.SsdRCCBmjjGCoXmWiFiO {
+.rRzDzkFoPB1jsHaUjsDT {
   --direction-and-possibly-color-interpolation: to bottom;
   --color-from: var(--background-base-70);
   --color-to: transparent;
@@ -31,18 +31,18 @@
       var(--color-to)
     )
 ) {
-  .SsdRCCBmjjGCoXmWiFiO {
+  .rRzDzkFoPB1jsHaUjsDT {
     --direction-and-possibly-color-interpolation: in oklch to bottom;
   }
 }
 @media (color<8) {
-  .SsdRCCBmjjGCoXmWiFiO {
+  .rRzDzkFoPB1jsHaUjsDT {
     --color-from: var(--background-base-70);
     --color-to: #121212;
     --dither: var(--background-noise);
   }
 }
-.SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+.rRzDzkFoPB1jsHaUjsDT[data-seamless-gradient] {
   --direction-and-possibly-color-interpolation: to bottom;
   --color-from: var(--background-base-20);
   --color-to: transparent;
@@ -63,21 +63,21 @@
       var(--color-to)
     )
 ) {
-  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+  .rRzDzkFoPB1jsHaUjsDT[data-seamless-gradient] {
     --direction-and-possibly-color-interpolation: in oklch to bottom;
   }
 }
 @media (color<8) {
-  .SsdRCCBmjjGCoXmWiFiO[data-seamless-gradient] {
+  .rRzDzkFoPB1jsHaUjsDT[data-seamless-gradient] {
     --color-from: var(--background-base-20);
     --color-to: #121212;
     --dither: var(--background-noise);
   }
 }
-.SsdRCCBmjjGCoXmWiFiO.uCKoOMjAq2gERD4HVzvt {
+.rRzDzkFoPB1jsHaUjsDT.Fj5xumb4tiTcyUh03DOj {
   opacity: 0;
 }
-.M7ECcaA17LC8UqL2GKVD {
+.T2XRKvkWneSSMSOCEo40 {
   z-index: -1;
   background-image:
     linear-gradient(#0009 0%, var(--background-base) 100%),
@@ -86,14 +86,14 @@
   height: 232px;
   position: absolute;
 }
-.NppyvxEEZzBKl7OGNjfs,
-.BuQj4RbdjUTeDaOz1II8 {
+.GEaesof7q88ZG4Jo9KG8,
+.oqyaIXXz3h5LWIBu0Rfl {
   vertical-align: middle;
 }
-.NppyvxEEZzBKl7OGNjfs {
+.GEaesof7q88ZG4Jo9KG8 {
   margin-inline-end: 8px;
 }
-._Y8V5v9UfGEcyY8_NpIC {
+.wkDDTMD0ON2R9thsbHuY {
   margin-block: 32px;
 }
-/*# sourceMappingURL=xpui-routes-country-hub.d1e4cf27.css.map*/
+/*# sourceMappingURL=xpui-routes-country-hub.30d16fdf.css.map*/

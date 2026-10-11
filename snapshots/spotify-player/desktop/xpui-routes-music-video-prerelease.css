@@ -1,7 +1,7 @@
-.qMctdzNRxBlTSKzIKoI1 {
+.vMy04EWybK3R5b3I5xCQ {
   margin-bottom: var(--encore-spacing-looser-3);
 }
-.eN1Nt7xvnvsEneri3CtE {
+.fiww8WKJDFn1q7my8uNk {
   width: clamp(240px, var(--main-view-grid-width) * 0.38, 400px);
   aspect-ratio: 16/9;
   z-index: 1;
@@ -9,26 +9,26 @@
   align-self: flex-end;
   margin-inline-end: var(--content-spacing);
 }
-.eN1Nt7xvnvsEneri3CtE [data-image-status] {
+.fiww8WKJDFn1q7my8uNk [data-image-status] {
   object-position: 50% 25%;
 }
-.fnkKr6yX245i_0pFLFUo {
+.LghnsNqVsKR1Mo1o0Mu7 {
   align-self: flex-start;
 }
 @container main-view-grid-area (width<=719px) {
-  .eN1Nt7xvnvsEneri3CtE {
+  .fiww8WKJDFn1q7my8uNk {
     display: none;
   }
 }
-.fk8RFHZdNcZdqyxI6ZsF {
+.mNMETZjcKz0Sbwi4dLoQ {
   margin-block-start: 8px;
   padding-block-end: 32px;
 }
-.wYe48SsIKigyGBVmMhT_ {
+.YyWOwT3r4AH9OmUAgWPu {
   margin-block-end: 16px;
 }
-.TKLFVUr3zIFxim_wOwTA {
+.MNx1eJqDKjnQWsI0Z8Dw {
   width: 100%;
   max-width: 416px;
 }
-/*# sourceMappingURL=xpui-routes-music-video-prerelease.e292ca57.css.map*/
+/*# sourceMappingURL=xpui-routes-music-video-prerelease.bcf91516.css.map*/

@@ -10,7 +10,7 @@
 
 
 
-.AYf7zWhdGt7ITWHHtF9j:not(#spotify-light-mode-specificity-bump) {
+.rcLwYWhVQqS0EFgRIve3:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff; /* hardcoded-color: #000 → #ffffff */
   background-color: #734a50; /* hardcoded-color: #ffcdd3 → #734a50 */
 }

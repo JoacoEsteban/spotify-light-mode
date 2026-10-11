@@ -10,11 +10,11 @@
 
 
 
-.cbU4X6arEd_1lba7ZS6r:not(#spotify-light-mode-specificity-bump) {
+.OV_5YjBdMRfwUhu22Ehq:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 2px 4px #ffffff33; /* hardcoded-color: 0 2px 4px #0003 → 0 2px 4px #ffffff33 */
 }
 
-.jtKeizHUtJLPtJms2x6G:not(#spotify-light-mode-specificity-bump) {
+.DTzluNcfd4lvxWTg9pFL:not(#spotify-light-mode-specificity-bump) {
   color: #ffffff; /* hardcoded-color: #000 → #ffffff */
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }

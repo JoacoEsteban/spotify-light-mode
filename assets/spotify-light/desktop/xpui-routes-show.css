@@ -10,259 +10,259 @@
 
 
 
-.cGa_0UFlJeEJh3DinF8w:focus-visible:not(#spotify-light-mode-specificity-bump) {
+.bkqwYrMXDq9F_DJGSmci:focus-visible:not(#spotify-light-mode-specificity-bump) {
   outline: none; /* forwarded-reset: none */
 }
 
-.cGa_0UFlJeEJh3DinF8w:focus-visible > *:not(#spotify-light-mode-specificity-bump) {
+.bkqwYrMXDq9F_DJGSmci:focus-visible > *:not(#spotify-light-mode-specificity-bump) {
   outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
 
-.KhAuu9Czro53W9jQLGcA:not(#spotify-light-mode-specificity-bump) {
+.CXncXO7XfNLIiYsBSkj2:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.Yzj9MRNofZbloP5zmioV:not(#spotify-light-mode-specificity-bump) {
+.XRdZVGbRKSp1gLnOlQQ0:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.arQ6pWime07FpDgjhUNG:not(#spotify-light-mode-specificity-bump) {
+.uAlu0v_YmEp0GaoMH6cw:not(#spotify-light-mode-specificity-bump) {
   color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
-.PLnixn0fO_HAuwMOCfUK:not(#spotify-light-mode-specificity-bump):before {
+.ddzZ4sxPyxvtdAmivt8m:not(#spotify-light-mode-specificity-bump):before {
   background-color: #ffffff4d; /* hardcoded-color: #0000004d → #ffffff4d */
 }
 
-.sWaouyn3AyTlhtNlo9WP:not(#spotify-light-mode-specificity-bump) {
+.NMKqUNqpEeq4rbc5sIAQ:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
 }
 
-.sWaouyn3AyTlhtNlo9WP:hover:not(#spotify-light-mode-specificity-bump) {
+.NMKqUNqpEeq4rbc5sIAQ:hover:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.CsdJYiqG7_sTuKYLaBVX:not(#spotify-light-mode-specificity-bump) {
+.gCe6zqDzjs_BqIpyu6yy:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.YAPmY_HZqu8_uPjkG9hy:not(#spotify-light-mode-specificity-bump) {
+.pT0PxMB1FpSm8CMFpQey:not(#spotify-light-mode-specificity-bump) {
   background-color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.pbofaSXUUCALdHPaz4iy:not(#spotify-light-mode-specificity-bump) {
+.QEkMVVtHy8QF1tKhukaw:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
 
-.qvMyjNeJo3Ti1muIouah:not(#spotify-light-mode-specificity-bump) {
+.GqZu4QupS_wtMV7PQuMA:not(#spotify-light-mode-specificity-bump) {
   border-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-._GRMvgryzPkzkCDvvVBk:not(#spotify-light-mode-specificity-bump) {
+.O8gHC9DMqbNBsQNlbbea:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
 }
 
-.tcS5w6pCiTsJp9b7CMC8:not(#spotify-light-mode-specificity-bump):after {
+.JxzjAwqpOeatm6xByG8H:not(#spotify-light-mode-specificity-bump):after {
   border-inline-end: 1px solid #0000004d; /* hardcoded-color: 1px solid #ffffff4d → 1px solid #0000004d */
 }
 
-.tb2gfDQY8AzIar_PUFZa._geOHbZv1oUUej_nO3Cj:not(#spotify-light-mode-specificity-bump), .tb2gfDQY8AzIar_PUFZa._geOHbZv1oUUej_nO3Cj:hover:not(#spotify-light-mode-specificity-bump) {
+.vYlAt1K1TRkWw6kWuTpz.p7_w7XsdxH3Nz0rt32Tz:not(#spotify-light-mode-specificity-bump), .vYlAt1K1TRkWw6kWuTpz.p7_w7XsdxH3Nz0rt32Tz:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
 }
 
-.tb2gfDQY8AzIar_PUFZa:focus-within:not(#spotify-light-mode-specificity-bump), .tb2gfDQY8AzIar_PUFZa:hover:not(#spotify-light-mode-specificity-bump) {
+.vYlAt1K1TRkWw6kWuTpz:focus-within:not(#spotify-light-mode-specificity-bump), .vYlAt1K1TRkWw6kWuTpz:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.LmRe27j8FjSElQZCKR0I:not(#spotify-light-mode-specificity-bump) {
+.DPzoN1koyEWH3lZAq2pO:not(#spotify-light-mode-specificity-bump) {
   border-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.HtziCvOin__QUreWCqJ4:not(#spotify-light-mode-specificity-bump) {
+.X15qSY_2sKpgZz41acgd:not(#spotify-light-mode-specificity-bump) {
   color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
-.d5TesQWuKJrSgZIvLcKo:not(#spotify-light-mode-specificity-bump) {
+.orBbGXnIJKU8MFnYbFTA:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
   border: none; /* forwarded-reset: none */
 }
 
-.d5TesQWuKJrSgZIvLcKo:hover:not(#spotify-light-mode-specificity-bump), .d5TesQWuKJrSgZIvLcKo:focus-visible:not(#spotify-light-mode-specificity-bump) {
+.orBbGXnIJKU8MFnYbFTA:hover:not(#spotify-light-mode-specificity-bump), .orBbGXnIJKU8MFnYbFTA:focus-visible:not(#spotify-light-mode-specificity-bump) {
   background-color: #00000033; /* hardcoded-color: #fff3 → #00000033 */
 }
 
-.nRalO3Im2JzIckt28GAu.nRalO3Im2JzIckt28GAu:not(#spotify-light-mode-specificity-bump) {
+.Eyq8ahyfQ8HdEpilMKHw.Eyq8ahyfQ8HdEpilMKHw:not(#spotify-light-mode-specificity-bump) {
   background: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
 
-.eBD9HmwhKqdx5qdXobCA.eBD9HmwhKqdx5qdXobCA:not(#spotify-light-mode-specificity-bump) {
+.pusbAKIOgY9NTk_lUTvL.pusbAKIOgY9NTk_lUTvL:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
-.BEfutfgS3bFc7B4USOXA:not(#spotify-light-mode-specificity-bump) {
+.LgvYYCeNiqLngG89hobb:not(#spotify-light-mode-specificity-bump) {
   color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
   background: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
 }
 
-.BmEucO7MW5MHwEPPxEwU.BmEucO7MW5MHwEPPxEwU:not(#spotify-light-mode-specificity-bump) {
+.BGQUj93PWnyjA6UFXG86.BGQUj93PWnyjA6UFXG86:not(#spotify-light-mode-specificity-bump) {
   background: #ffffffb3; /* hardcoded-color: #000000b3 → #ffffffb3 */
 }
 
-.Qrcgq3nWsFrR8AJTzbiA.Qrcgq3nWsFrR8AJTzbiA:not(#spotify-light-mode-specificity-bump) {
+.zPswtH5lDsnzB6Xm2KQJ.zPswtH5lDsnzB6Xm2KQJ:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
-.KG_8jmMkEunu9DEcCRig:not(#spotify-light-mode-specificity-bump) {
+.XLkBMeDX7CSALKzN2vLe:not(#spotify-light-mode-specificity-bump) {
   color: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
   background: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
 }
 
-.a4MZ5QD4VYDjf8XNro8o:not(#spotify-light-mode-specificity-bump) {
+.JCCc7b1jmCKsrOHk66xW:not(#spotify-light-mode-specificity-bump) {
   color: #6872a2; /* hardcoded-color: #aab6ea → #6872a2 */
 }
 
-.RUoOPSU05fE4aoQOx7uj:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .RUoOPSU05fE4aoQOx7uj:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .RUoOPSU05fE4aoQOx7uj[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
+.Qn70A0MP7TxwxER3oHeT:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .Qn70A0MP7TxwxER3oHeT:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .Qn70A0MP7TxwxER3oHeT[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.j0nEgiQZPwCTTCS7J9XI:not(#spotify-light-mode-specificity-bump) {
+.qTU3J6z5d6tl89Nxa3MG:not(#spotify-light-mode-specificity-bump) {
   background: #69aaff; /* hardcoded-color: #2e77d0 → #69aaff */
 }
 
-.SlcRSjK_b1XskHi646GX:not(#spotify-light-mode-specificity-bump) {
+.SaNkzOyTDAU2nXcl2mLO:not(#spotify-light-mode-specificity-bump) {
   color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
-.SlcRSjK_b1XskHi646GX.fXjTjLIvXMZ5HN2AHniu:not(#spotify-light-mode-specificity-bump), .SlcRSjK_b1XskHi646GX.fXjTjLIvXMZ5HN2AHniu:hover:not(#spotify-light-mode-specificity-bump) {
+.SaNkzOyTDAU2nXcl2mLO.Q7xnJ8L_WGbm3CRLTjx1:not(#spotify-light-mode-specificity-bump), .SaNkzOyTDAU2nXcl2mLO.Q7xnJ8L_WGbm3CRLTjx1:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
-.SlcRSjK_b1XskHi646GX:focus-within:not(#spotify-light-mode-specificity-bump), .SlcRSjK_b1XskHi646GX:hover:not(#spotify-light-mode-specificity-bump) {
+.SaNkzOyTDAU2nXcl2mLO:focus-within:not(#spotify-light-mode-specificity-bump), .SaNkzOyTDAU2nXcl2mLO:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
-.bG9OLJSRR4xL5MFBOgpA.Ye8u1F1e6DlCFf6dQl3W .edd4i5ZpEFmAOUPcVND5:not(#spotify-light-mode-specificity-bump) {
+.y0Tbc9SsJ2nauGKcwgfc.pNpCgoQf6NWv24PmIkbr .fGgMnb6wuEr_AJXr60Ep:not(#spotify-light-mode-specificity-bump) {
   background: #ffffff; /* hardcoded-color: #000 → #ffffff */
 }
 
-.bG9OLJSRR4xL5MFBOgpA .edd4i5ZpEFmAOUPcVND5 > img:not(#spotify-light-mode-specificity-bump) {
+.y0Tbc9SsJ2nauGKcwgfc .fGgMnb6wuEr_AJXr60Ep > img:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 28px #ffffffcc; /* hardcoded-color: 0 4px 28px #000c → 0 4px 28px #ffffffcc */
 }
 
-.IO4nD9sDK5smS118AiAg:not(#spotify-light-mode-specificity-bump) {
+.BSZZJdYSJp1bdAngihgd:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.RThW1UXefPhJu5geaAfb:not(#spotify-light-mode-specificity-bump) {
+.JOFAlmIPB1tl3Ibry7BP:not(#spotify-light-mode-specificity-bump) {
   border-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.MYWr4UY4pKAAscUXvqrB:not(#spotify-light-mode-specificity-bump) {
+.uZw_fW1DcgWWRM_3Ftpr:not(#spotify-light-mode-specificity-bump) {
   color: var(--sort-box-text-color, #000000b3); /* hardcoded-color: var(--sort-box-text-color, #ffffffb3) → var(--sort-box-text-color, #000000b3) */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.MYWr4UY4pKAAscUXvqrB:focus:not(#spotify-light-mode-specificity-bump), .MYWr4UY4pKAAscUXvqrB:hover:not(#spotify-light-mode-specificity-bump) {
+.uZw_fW1DcgWWRM_3Ftpr:focus:not(#spotify-light-mode-specificity-bump), .uZw_fW1DcgWWRM_3Ftpr:hover:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.v9E16uwrwOXKRrsrkvxA:not(#spotify-light-mode-specificity-bump) {
+.xALLBixmNzk5pixrPn_G:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
-.Nimr3gGN23LDd_XdovrF:hover:not(#spotify-light-mode-specificity-bump) {
+.jEUy3VSEgKi3ndqZVVDu:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
 }
 
-.eefswIkx7SEAF7KWnKzh:not(#spotify-light-mode-specificity-bump) {
+.Q_0M8bPdcLMgv_L2WQQX:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
   border: none; /* forwarded-reset: none */
 }
 
-.cJEqwY307yb7wXDkuDhp:not(#spotify-light-mode-specificity-bump) {
+.eJSjExbNcmPTeYMQC5w0:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-tinted-base); /* css-var: var(--background-tinted-base) */
 }
 
-.Zgp2GvDDdff99VCZReRL:not(#spotify-light-mode-specificity-bump) {
+.b3iIMsP1OSWfGN4sKd8l:not(#spotify-light-mode-specificity-bump) {
   border: none; /* forwarded-reset: none */
 }
 
-.y_NUEvqHtBOn_ZrOjFQW:not(#spotify-light-mode-specificity-bump) {
+.uSUrNaZUVHaxKU3L3qsQ:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
-.EJJcmVEim14hgebCJIAg:not(#spotify-light-mode-specificity-bump) {
+.DHp5ZkYZOYXiNcykkySI:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
-.vvokofZHMkIo13xngnyn:not(#spotify-light-mode-specificity-bump) {
+.PVTbBAOIIH_j8jS0KRdR:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.ZqJrtGx_XtZq5NexSCax:not(#spotify-light-mode-specificity-bump) {
+.z0s9DzqefGSI2uS9m33P:not(#spotify-light-mode-specificity-bump) {
   color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
-.T1FES0yTZXaqaGSa72Q5:not(#spotify-light-mode-specificity-bump) {
+.ufNKHzguEXzd0yAalJkz:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.L1Cs6gLClLOwMvChpy88:not(#spotify-light-mode-specificity-bump) {
+.YJrjYMRMhRYD4JmMGXCi:not(#spotify-light-mode-specificity-bump) {
   border-top: 1px solid #0000001a; /* hardcoded-color: 1px solid #ffffff1a → 1px solid #0000001a */
 }
 
-.L1Cs6gLClLOwMvChpy88 .gdIaFYTscvm1_kDaj85i:not(#spotify-light-mode-specificity-bump) {
+.YJrjYMRMhRYD4JmMGXCi .Z2njnNirusOABIJFf6HW:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.oI5arcZR7eLzKGZ3q9a_:not(#spotify-light-mode-specificity-bump) {
+.xPGAg6fxeRSxRGWYyowL:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.LozwrybIwr3b0qW4_JYo:not(#spotify-light-mode-specificity-bump) {
+.niNdVfojS8rXhp3W2Smp:not(#spotify-light-mode-specificity-bump) {
   color: #000000b3; /* hardcoded-color: #ffffffb3 → #000000b3 */
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
 
-.gUEWF9P6hNZViur6E8kZ:not(#spotify-light-mode-specificity-bump) {
+.itEAGOXnjDJZwBYtMlPK:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   border: none; /* forwarded-reset: none */
 }
 
-.aP3se7EyGE1WzGTgcB1l:not(#spotify-light-mode-specificity-bump) {
+.ALwIM4DoeRydFuPWlVzD:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-base); /* css-var: var(--background-base) */
 }
 
-.GcviLKXldqLs6pQE39R2:not(#spotify-light-mode-specificity-bump) {
+.aYx56F5iVOF8M3PN7q3K:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
   background-color: #9a96ff; /* hardcoded-color: #7358ff → #9a96ff */
   background-image: linear-gradient(#ffffff40, #ffffff00); /* hardcoded-color: linear-gradient(#00000040, #0000) → linear-gradient(#ffffff40, #ffffff00) */
 }
 
-.EKIeSDd1ARp_nkvFAfhq:not(#spotify-light-mode-specificity-bump) {
+.HQBqPAcb0QRO_CB6SZuK:not(#spotify-light-mode-specificity-bump) {
   box-shadow: 0 4px 60px #ffffff66; /* hardcoded-color: 0 4px 60px #0006 → 0 4px 60px #ffffff66 */
 }
 
-.h_Kt0kGg21hYEOfRHXNO:not(#spotify-light-mode-specificity-bump):after {
+.ELLn4yXlfRHg6wf74CNw:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-.h_Kt0kGg21hYEOfRHXNO:not(#spotify-light-mode-specificity-bump):after {
+.ELLn4yXlfRHg6wf74CNw:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-[dir="rtl"] .h_Kt0kGg21hYEOfRHXNO:not(#spotify-light-mode-specificity-bump):after {
+[dir="rtl"] .ELLn4yXlfRHg6wf74CNw:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }
 
-[dir="rtl"] .h_Kt0kGg21hYEOfRHXNO:not(#spotify-light-mode-specificity-bump):after {
+[dir="rtl"] .ELLn4yXlfRHg6wf74CNw:not(#spotify-light-mode-specificity-bump):after {
   --radial-color-from: #ffffff00 10%; /* custom-property: #0000 10% → #ffffff00 10% */
   --radial-color-to: #f6f6f6 100%; /* custom-property: #121212 100% → #f6f6f6 100% */
 }

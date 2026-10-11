@@ -10,6 +10,6 @@
 
 
 
-.FH2JaNk1Hnsu7oYUFMQ0:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .FH2JaNk1Hnsu7oYUFMQ0:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .FH2JaNk1Hnsu7oYUFMQ0[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
+.gEzQmdxWrbKXLHpVlLVt:hover > div:first-child:not(#spotify-light-mode-specificity-bump), .gEzQmdxWrbKXLHpVlLVt:focus > div:first-child:not(#spotify-light-mode-specificity-bump), .gEzQmdxWrbKXLHpVlLVt[data-context-menu-open="true"] > div:first-child:not(#spotify-light-mode-specificity-bump) {
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }

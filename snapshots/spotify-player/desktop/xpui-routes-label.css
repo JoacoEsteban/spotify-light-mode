@@ -1,18 +1,18 @@
-.dEzKsDhDYG10frqzZbJt {
+.MtFJDZXa2gPzmSGkHa6W {
   --modal-max-height: 80vh;
   max-width: 80vw;
   max-height: var(--modal-max-height);
   position: relative;
   overflow: visible;
 }
-.RB1cV3dpxnnUDPS3MWx4 {
+.rM02JvgxYqmV07g_McGl {
   --modal-gap: 24px;
   align-items: center;
   gap: var(--modal-gap);
   flex-direction: column;
   display: flex;
 }
-.RPazRXAdmjTmRniR6qp2 {
+.juJ4QlM5Z2YB7jbGhzxB {
   --modal-button-height: 48px;
   --available-height: calc(
     var(--modal-max-height) - var(--modal-gap) - var(--modal-button-height)
@@ -27,7 +27,7 @@
   display: block;
   overflow: visible;
 }
-.K6Tl7B71cD_j2w1B1oWf {
+.Q4Fj5jQyzG9hsEjejJxJ {
   width: min(
     var(--image-width),
     80vw,
@@ -36,49 +36,49 @@
   height: auto;
   aspect-ratio: var(--image-aspect-ratio);
 }
-.g1hTXUfSrEFgjTskYfVG {
+.XD2yLGcH1rr3VTTOzNSV {
   opacity: 0;
   transition:
     opacity 0.3s linear,
     transform 0.3s ease-out;
   transform: translateY(25%) scale(0.6);
 }
-.iwqUYMCDaZtbb9busV9b {
+.RI8iCrDzEc9QkRSoCqLx {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.hizuDAeKhc1y3lqcBUDB {
+.PUrI7yOaCidfMAKDqGYT {
   opacity: 0;
   transform: translateY(25%) scale(0.6);
 }
-.Mw898cSgkZxPcyg5T28R {
+.SnJ4hSAUxkFzPwiUGY7H {
   -webkit-backdrop-filter: grayscale();
   backdrop-filter: grayscale();
   overflow: visible;
 }
-.WxCk5agjmvZf0VUfdwDB {
+.eeffDzgA_YF1ZRoYxMFl {
   flex-direction: column;
   gap: 16px;
   display: flex;
 }
-.LbZpoLKDR4JydeQdpS3O {
+.ryg9JmYaQcLO4XYP_h_9 {
   width: 100%;
   height: 100%;
 }
-.hi9koYq0fdXYWHWz6nT1 {
+.ZQRyId8bpLyEIV4tG57Y {
   flex-direction: column;
   gap: 24px;
   margin-block-start: 32px;
   padding: 24px;
   display: flex;
 }
-.vUyH0vj2u_nb0l_Cqmt8 {
+.QisdjzHWy5vaRicLNb00 {
   padding: 16px;
 }
-.y3So3i9HFkGnKLc2n5RS {
+.zRAtPdIqzBNAOArE1FGt {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 4px;
   margin-block-start: 16px;
   display: grid;
 }
-/*# sourceMappingURL=xpui-routes-label.a4825125.css.map*/
+/*# sourceMappingURL=xpui-routes-label.9383b0c5.css.map*/

@@ -10,7 +10,7 @@
 
 
 
-.j927F4MuYTJewc0JWTVV:not(.gVtPrWbAHT4Z_E6c9DMb):not(#spotify-light-mode-specificity-bump) {
+.LaMyuLLiT5_uwAgneaXQ:not(.R7PCwA0Wrz9SbXZfJHPO):not(#spotify-light-mode-specificity-bump) {
   background-color: color-mix(
     in srgb,
     var(--decorative-subdued) 10%,
@@ -23,7 +23,7 @@
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.QulvhfUodXjchkCQZQWF:not(#spotify-light-mode-specificity-bump) {
+.wzX2cHauSAMCfl25AFuq:not(#spotify-light-mode-specificity-bump) {
   background: linear-gradient(90deg, #00000000 0%, #00000014 50%, #00000000 100%) 0
     0/200% 100%; /* hardcoded-color: linear-gradient(90deg, #fff0 0%, #ffffff14 50%, #fff0 100%) 0
     0/200% 100% → linear-gradient(90deg, #00000000 0%, #00000014 50%, #00000000 100%) 0

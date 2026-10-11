@@ -10,7 +10,7 @@
 
 
 
-.dqwQhIudKoD98eWJzj5E:not(#spotify-light-mode-specificity-bump) {
+.h1AjDPMDbQn9UTUl6owY:not(#spotify-light-mode-specificity-bump) {
   background-image: linear-gradient(#ffffff99 0%, var(--background-base) 100%),
     var(--background-noise); /* hardcoded-color: linear-gradient(#0009 0%, var(--background-base) 100%),
     var(--background-noise) → linear-gradient(#ffffff99 0%, var(--background-base) 100%),

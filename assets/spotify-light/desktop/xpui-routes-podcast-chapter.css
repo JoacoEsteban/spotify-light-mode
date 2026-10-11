@@ -10,6 +10,6 @@
 
 
 
-.n0RXqYzbZhrogj2dpzXG:not(#spotify-light-mode-specificity-bump) {
+.j8tyGvIyrZGCVUqWYq_I:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued, #000000b3); /* hardcoded-color: var(--text-subdued, #ffffffb3) → var(--text-subdued, #000000b3) */
 }

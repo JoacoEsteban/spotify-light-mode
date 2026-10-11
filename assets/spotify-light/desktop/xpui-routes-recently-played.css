@@ -10,21 +10,21 @@
 
 
 
-.zxZQQ4g6i6M_8LtnbCym .pcSGyO66RYNXitwRWG3I:not(#spotify-light-mode-specificity-bump) {
+.TLhQGbNW8K2TGqM3vvyF .j7ZmCYdoQhS_XFW4VS02:not(#spotify-light-mode-specificity-bump) {
   --carousel-start-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
   --carousel-end-chevron-gradient: #f6f6f6b3; /* custom-property: #121212b3 → #f6f6f6b3 */
 }
 
-.zxZQQ4g6i6M_8LtnbCym
-  .pcSGyO66RYNXitwRWG3I
+.TLhQGbNW8K2TGqM3vvyF
+  .j7ZmCYdoQhS_XFW4VS02
   [data-shelf="carousel"][data-shelf-notatedge]:not(#spotify-light-mode-specificity-bump) {
   --carousel-start-chevron-gradient: #f6f6f6; /* custom-property: #121212 → #f6f6f6 */
 }
 
-.Nm4OkhSqNeSIH82Fvte7:not(#spotify-light-mode-specificity-bump) {
+.Lu5EO1Aw46uV4sEWEh87:not(#spotify-light-mode-specificity-bump) {
   background: #80d2b7; /* hardcoded-color: #056952 → #80d2b7 */
 }
 
-.ZwGgs8H95CCrshHq3PLs:not(#spotify-light-mode-specificity-bump) {
+.OoDkS2RcCJTPUZBI7IZN:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }

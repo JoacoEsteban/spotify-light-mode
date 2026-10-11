@@ -10,41 +10,41 @@
 
 
 
-.yRVtkB0W7vFuYd84j2e2:not(#spotify-light-mode-specificity-bump) {
+.qqc9RzktjNwhIGy7eCx7:not(#spotify-light-mode-specificity-bump) {
   background-color: #a2a2a2; /* hardcoded-color: #7f7f7f → #a2a2a2 */
 }
 
-.uhcgmXCrUy3P2wev0oE8:not(#spotify-light-mode-specificity-bump) {
+.Q4W1PC7lhjG7cKjcGLL6:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
   border: none; /* forwarded-reset: none */
 }
 
-.uhcgmXCrUy3P2wev0oE8:not(#spotify-light-mode-specificity-bump)::placeholder {
+.Q4W1PC7lhjG7cKjcGLL6:not(#spotify-light-mode-specificity-bump)::placeholder {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
 
-.uhcgmXCrUy3P2wev0oE8:hover:not(#spotify-light-mode-specificity-bump) {
+.Q4W1PC7lhjG7cKjcGLL6:hover:not(#spotify-light-mode-specificity-bump) {
   box-shadow: inset 0 0 0 1px #0000001a; /* hardcoded-color: inset 0 0 0 1px #ffffff1a → inset 0 0 0 1px #0000001a */
 }
 
-.uhcgmXCrUy3P2wev0oE8:focus:not(#spotify-light-mode-specificity-bump) {
+.Q4W1PC7lhjG7cKjcGLL6:focus:not(#spotify-light-mode-specificity-bump) {
   box-shadow: inset 0 0 0 2px #000000; /* hardcoded-color: inset 0 0 0 2px #fff → inset 0 0 0 2px #000000 */
 }
 
-.oRQk9xjZTdX7wm7SRduf:not(#spotify-light-mode-specificity-bump) {
+.CQKijAlbyklBk2dVrWfU:not(#spotify-light-mode-specificity-bump) {
   border-top-color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.jbwnLnHoaJYkrGQ9Ghv8.LtdOSCnt3fdPEuHCNK3L:not(#spotify-light-mode-specificity-bump) {
+.regkRvT99P35HuJSRdIL.juRw9Li_amfjyYU_z0F6:not(#spotify-light-mode-specificity-bump) {
   box-shadow: inset 0 0 0 2px #000000; /* hardcoded-color: inset 0 0 0 2px #fff → inset 0 0 0 2px #000000 */
 }
 
-.Rh24nPJbUIWaroDikyW3:not(#spotify-light-mode-specificity-bump) {
+.UiFhFZ8EM2KX63MBz5oE:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-base); /* css-var: var(--text-base) */
   border: none; /* forwarded-reset: none */
   outline: none; /* forwarded-reset: none */
 }
 
-.oBnhRaUv9spDJoqxNJMB:not(#spotify-light-mode-specificity-bump) {
+.CoN8O_wU7j3usAYwBMvA:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }
