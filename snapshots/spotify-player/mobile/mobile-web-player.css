@@ -654,6 +654,22 @@ html[dir="rtl"] .pOpsVh6gpVnbZUA0dtnI {
 .LsUzgSsHsiBRrGwpgr3n {
   flex-shrink: 0;
 }
+.r6aiKIMsbDnnY6xCwI1g {
+  position: relative;
+}
+.CVslSzneQ3LuFswauYLA {
+  background-color: var(--background-base);
+  pointer-events: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  bottom: -3%;
+  right: -5%;
+}
 .kmb3g4qcyKQ1mlgtMoJi {
   background: 0 0;
   border: none;
@@ -15328,4 +15344,4 @@ a:focus {
   color: #a7a7a7;
   justify-self: flex-end;
 }
-/*# sourceMappingURL=mobile-web-player.4b5a4b06.css.map*/
+/*# sourceMappingURL=mobile-web-player.3919ec1e.css.map*/

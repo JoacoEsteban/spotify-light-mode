@@ -953,6 +953,9 @@
   justify-content: space-between;
   display: flex;
 }
+.ImIj3bi_54Bi3dcBdF6p > * {
+  transition: inline-size 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
 .wn5rkx6IlEm1By0KBdbN {
   background-color: var(--background-elevated-highlight);
   border-radius: 4px;
@@ -1222,4 +1225,4 @@
   inset-inline: 8px auto !important;
   transform: none !important;
 }
-/*# sourceMappingURL=xpui-routes-your-library-x.831b7a87.css.map*/
+/*# sourceMappingURL=xpui-routes-your-library-x.1621b3c9.css.map*/

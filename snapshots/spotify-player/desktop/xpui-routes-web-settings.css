@@ -99,11 +99,12 @@ input:disabled ~ .ZgpugrSQ4mYTFUFNxSgZ {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.XWsqES6sFlKHsGDVZqxS {
-  opacity: 0.3;
+.V2w6QQOcgFtaztCn68cW {
+  display: inline-flex;
 }
-.ObBLYZrlx8lpLSRDBwsA {
-  cursor: pointer;
+.V2w6QQOcgFtaztCn68cW:focus-visible {
+  outline: 2px solid var(--text-base);
+  outline-offset: 2px;
 }
 .gjVm7x2WAP5FP8Huw0O3 {
   margin-block-start: 4px;
@@ -496,4 +497,4 @@ dialog:not([open]) {
 .QdKqYtHHigbqV7lNymcq {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.faae9028.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.afbdcac5.css.map*/

@@ -103,6 +103,10 @@
   color: #7a7a7a; /* hardcoded-color: #b3b3b3 → #7a7a7a */
 }
 
+.CVslSzneQ3LuFswauYLA:not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-base); /* css-var: var(--background-base) */
+}
+
 .kmb3g4qcyKQ1mlgtMoJi:not(#spotify-light-mode-specificity-bump) {
   border: none; /* forwarded-reset: none */
 }
