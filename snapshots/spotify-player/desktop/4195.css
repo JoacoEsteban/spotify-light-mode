@@ -259,6 +259,9 @@
   align-items: center;
   display: flex;
   position: sticky;
+  top: 0;
+}
+.hSRNeGZLrNvceg6eQQyQ.Y966RAlmfnHaed8RFXKY {
   top: 64px;
 }
 .hSRNeGZLrNvceg6eQQyQ.cpXIHirTYFnapjg6LvR3 {
@@ -470,7 +473,7 @@ html[dir="rtl"] .pOpsVh6gpVnbZUA0dtnI {
 }
 .u1HznvW55Bn1iMqvyt5B {
   margin-top: 0;
-  padding-top: 64px;
+  padding-top: 0;
 }
 .PZoyRHvOfR7kN2p2mFpq {
   min-height: 0;
@@ -799,4 +802,4 @@ __workaround_element__ {
   ) {
   transform: translate(8px);
 }
-/*# sourceMappingURL=1847.880f50c9.css.map*/
+/*# sourceMappingURL=4195.516900ee.css.map*/

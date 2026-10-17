@@ -158,8 +158,54 @@
   color: var(--text-base); /* css-var: var(--text-base) */
 }
 
-.b3jMPGmIcaZ0Mle1CEQw > img:not(#spotify-light-mode-specificity-bump) {
-  box-shadow: 0 4px 28px #ffffffcc; /* hardcoded-color: 0 4px 28px #000c → 0 4px 28px #ffffffcc */
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY):not(#spotify-light-mode-specificity-bump) {
+  background-color: var(
+    --square-artwork-container-background,
+    var(--background-base)
+  ); /* css-var: var(
+    --square-artwork-container-background,
+    var(--background-base)
+  ) */
+}
+
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY):not(#spotify-light-mode-specificity-bump):before {
+  background: var(--dynamic-background-base, #e4e4e4); /* hardcoded-color: var(--dynamic-background-base, #282828) → var(--dynamic-background-base, #e4e4e4) */
+  -webkit-mask-image: linear-gradient(
+    to top right,
+    #ffffff1a 10%,
+    #ffffff80 50%,
+    #ffffff1a 90%
+  ); /* hardcoded-color: linear-gradient(
+    to top right,
+    #0000001a 10%,
+    #00000080 50%,
+    #0000001a 90%
+  ) → linear-gradient(
+    to top right,
+    #ffffff1a 10%,
+    #ffffff80 50%,
+    #ffffff1a 90%
+  ) */
+  mask-image: linear-gradient(
+    to top right,
+    #ffffff1a 10%,
+    #ffffff80 50%,
+    #ffffff1a 90%
+  ); /* hardcoded-color: linear-gradient(
+    to top right,
+    #0000001a 10%,
+    #00000080 50%,
+    #0000001a 90%
+  ) → linear-gradient(
+    to top right,
+    #ffffff1a 10%,
+    #ffffff80 50%,
+    #ffffff1a 90%
+  ) */
+}
+
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY) img:not(#spotify-light-mode-specificity-bump) {
+  box-shadow: 0 0 10px #ffffffcc; /* hardcoded-color: 0 0 10px #000c → 0 0 10px #ffffffcc */
 }
 
 .pt7mae_WPybPd17meaxA:not(#spotify-light-mode-specificity-bump):before {

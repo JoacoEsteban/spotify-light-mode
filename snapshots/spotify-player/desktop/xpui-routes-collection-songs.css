@@ -62,7 +62,13 @@ __workaround_element__ {
 .a9FDwXwMVRYKWfp4Etjy {
   flex-shrink: 0;
 }
+.novH6jFLvhIbegLzSJnn {
+  background-color: #ffffff1a;
+}
+.novH6jFLvhIbegLzSJnn:active {
+  background-color: #ffffff4d;
+}
 .QO2sjtEUhEdKAtiVPSiN {
   padding-bottom: var(--encore-spacing-base);
 }
-/*# sourceMappingURL=xpui-routes-collection-songs.8acd5411.css.map*/
+/*# sourceMappingURL=xpui-routes-collection-songs.619622eb.css.map*/

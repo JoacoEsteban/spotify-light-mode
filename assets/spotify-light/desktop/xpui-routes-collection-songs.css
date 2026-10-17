@@ -17,3 +17,11 @@
 .BfC0Y420ouRlPDDHqD5_:hover:not(#spotify-light-mode-specificity-bump) {
   border-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
 }
+
+.novH6jFLvhIbegLzSJnn:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
+}
+
+.novH6jFLvhIbegLzSJnn:active:not(#spotify-light-mode-specificity-bump) {
+  background-color: #0000004d; /* hardcoded-color: #ffffff4d → #0000004d */
+}

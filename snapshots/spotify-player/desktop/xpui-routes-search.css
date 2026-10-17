@@ -914,6 +914,8 @@ html[dir="ltr"] .orWtrPE8uZ_3bMXgrDGP {
 }
 .I36PxxxLLlnAWQRuft9k.Zl6AQBCziW_JqTT4rN7I:hover,
 .I36PxxxLLlnAWQRuft9k.Zl6AQBCziW_JqTT4rN7I:focus-within {
+  --dynamic-background-opacity: 0.6;
+  --square-artwork-container-background: var(--background-elevated-base);
   background-color: var(--background-highlight);
 }
 @container search-item-container (width>=700px) {
@@ -975,16 +977,7 @@ html[dir="ltr"] .orWtrPE8uZ_3bMXgrDGP {
   position: relative;
 }
 .b3jMPGmIcaZ0Mle1CEQw {
-  background: linear-gradient(
-    to bottom,
-    var(--bg-color-from),
-    var(--bg-color-to)
-  );
   justify-content: center;
-}
-.b3jMPGmIcaZ0Mle1CEQw > img {
-  width: auto;
-  box-shadow: 0 4px 28px #000c;
 }
 @container search-item-container (width>=700px) {
   .nPtwcg1czlSbKSUrVqaD.IYAEvmk2X6DsFGXBY9bB {
@@ -1009,6 +1002,38 @@ html[dir="ltr"] .orWtrPE8uZ_3bMXgrDGP {
     aspect-ratio: 1;
     width: auto !important;
   }
+}
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY) {
+  background-color: var(
+    --square-artwork-container-background,
+    var(--background-base)
+  );
+  position: relative;
+}
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY):before {
+  content: "";
+  z-index: -1;
+  opacity: var(--dynamic-background-opacity, 1);
+  background: var(--dynamic-background-base, #282828);
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: linear-gradient(
+    to top right,
+    #0000001a 10%,
+    #00000080 50%,
+    #0000001a 90%
+  );
+  mask-image: linear-gradient(
+    to top right,
+    #0000001a 10%,
+    #00000080 50%,
+    #0000001a 90%
+  );
+}
+.nPtwcg1czlSbKSUrVqaD:not(.IYAEvmk2X6DsFGXBY9bB, .yYpV4vkKpfv0ukwxirUY) img {
+  border-radius: 4px;
+  width: auto;
+  box-shadow: 0 0 10px #000c;
 }
 .yYpV4vkKpfv0ukwxirUY {
   width: 85.3333px !important;
@@ -1360,4 +1385,4 @@ html[dir="ltr"] .orWtrPE8uZ_3bMXgrDGP {
 .TgwYca0cA2r9CxgAuouB {
   --content-max-width: 1200px;
 }
-/*# sourceMappingURL=xpui-routes-search.f1312cf5.css.map*/
+/*# sourceMappingURL=xpui-routes-search.a0a5ee13.css.map*/
