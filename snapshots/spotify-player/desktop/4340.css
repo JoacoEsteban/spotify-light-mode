@@ -725,6 +725,11 @@ dialog:not([open]) {
 .JZPTbk7cK1rsbIUp1zwV:focus-visible {
   text-decoration: underline;
 }
+.F5qnQV2vhIpVJzui73_Z:not(.d2WRyfUXsEALz1t4oBqu):hover .JZPTbk7cK1rsbIUp1zwV,
+.F5qnQV2vhIpVJzui73_Z:not(.d2WRyfUXsEALz1t4oBqu):focus-within
+  .JZPTbk7cK1rsbIUp1zwV {
+  color: var(--text-base);
+}
 .X4BcsQqrhmOGGRWuywyD {
   z-index: 1;
   isolation: isolate;
@@ -784,4 +789,4 @@ dialog:not([open]) {
     var(--background-elevated-highlight) 32px
   );
 }
-/*# sourceMappingURL=4340.6b72b13e.css.map*/
+/*# sourceMappingURL=4340.7299a2bd.css.map*/

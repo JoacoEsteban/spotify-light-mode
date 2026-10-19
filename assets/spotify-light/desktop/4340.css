@@ -125,6 +125,11 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
   ) */
 }
 
+.F5qnQV2vhIpVJzui73_Z:not(.d2WRyfUXsEALz1t4oBqu):hover .JZPTbk7cK1rsbIUp1zwV:not(#spotify-light-mode-specificity-bump), .F5qnQV2vhIpVJzui73_Z:not(.d2WRyfUXsEALz1t4oBqu):focus-within
+  .JZPTbk7cK1rsbIUp1zwV:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-base); /* css-var: var(--text-base) */
+}
+
 .X4BcsQqrhmOGGRWuywyD:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
 }

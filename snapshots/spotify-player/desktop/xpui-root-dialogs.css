@@ -2975,13 +2975,14 @@ a.pxo4kvoArJpVFHxcPeHe:hover {
   display: flex;
 }
 .OQ0VaSAC_Gy95HQruvAZ {
-  gap: 12px;
+  gap: 16px;
+  margin-block-start: 8px;
 }
 .vA1TL9is6nFOP1Ww1uYS {
   min-width: 0;
 }
 .Nw6A9ZAItF0jcZoLk808 {
-  resize: vertical;
+  resize: none;
   min-height: 110px;
   max-height: 30vh;
 }
@@ -3002,6 +3003,15 @@ a.pxo4kvoArJpVFHxcPeHe:hover {
 .pvORiVR8_tL7ID_GwrAk {
   color: var(--text-subdued);
   font-variant-numeric: tabular-nums;
+}
+.g0Vd9dxgRhNY_rFR5UkE {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+.g0Vd9dxgRhNY_rFR5UkE::backdrop {
+  background-color: #0000;
 }
 .PUpBWKyLVDlVVXGTdPfG {
   max-width: min(500px, 100vw - 32px);
@@ -3041,7 +3051,7 @@ a.pxo4kvoArJpVFHxcPeHe:hover {
 }
 .rDhsv2SwpY1AJRizpSyP {
   border-radius: var(--encore-corner-radius-larger);
-  background: #181818;
+  background: var(--background-base);
   width: 500px;
   max-width: min(500px, 100vw - 32px);
   max-height: calc(100vh - 32px);
@@ -3733,4 +3743,4 @@ a.pxo4kvoArJpVFHxcPeHe:hover {
 .o1nK0kDjqxVL2lhO07Zg {
   border-radius: 8px;
 }
-/*# sourceMappingURL=xpui-root-dialogs.0fbbf288.css.map*/
+/*# sourceMappingURL=xpui-root-dialogs.8177b5dc.css.map*/

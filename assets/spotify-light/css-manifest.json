@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.0079e2e5__mobile-web-player.de4c0766",
+  "snapshotVersion": "spotify-player.web-player.dcb27472__mobile-web-player.de4c0766",
   "source": {
-    "fingerprint": "sha256:7a3849e8048539215ccba4ba3054faeee134ece3a9a440cfe277672cd5f82824",
+    "fingerprint": "sha256:b494c04745df53e0437bfacdcec6d7ae002aa39709adff0e600538d31f2b36b8",
     "targets": {
       "desktop": [
         {
@@ -43,8 +43,8 @@
         {
           "fileName": "4340.css",
           "relativePath": "desktop/4340.css",
-          "sha256": "3c6b0c5b8566012417c01fcd6ef79fde6ee15d2bf9009deff1b99419051b13a4",
-          "byteLength": 18124
+          "sha256": "83ded8b7b7ef07a8877a92d321fb48069e0d18cb80703abe953a6c884e68bbcc",
+          "byteLength": 18319
         },
         {
           "fileName": "4447.css",
@@ -295,8 +295,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "3d9523604b0831d6ca16d341baff20238504e15cc45f0901041142a5c3561289",
-          "byteLength": 597646
+          "sha256": "b46a1db68f05f296e0605924f38b73c1ae0a288f4c07e669369de3592c322717",
+          "byteLength": 597745
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -319,8 +319,8 @@
         {
           "fileName": "xpui-root-dialogs.css",
           "relativePath": "desktop/xpui-root-dialogs.css",
-          "sha256": "25a85606e1c6c4590a07de3cc572eb9e439c200bb826f6136dc9d06c6814d524",
-          "byteLength": 81983
+          "sha256": "1d177d7683c68324bd25f0c2a006c6f51f0c4df2709555f13c3c80e59757cb49",
+          "byteLength": 82180
         },
         {
           "fileName": "xpui-routes-album-prerelease.css",
@@ -622,7 +622,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:de8ea10e0ea34d5536edc96e742bffc30e27d0bbd2138f78295d9df0890d592c",
+    "fingerprint": "sha256:4b1369d5b1fb7043b3364c08c856bb3c0ed4cf65b5733e9a938950c7977df83f",
     "files": [
       {
         "fileName": "1272.css",
@@ -663,8 +663,8 @@
       {
         "fileName": "4340.css",
         "relativePath": "desktop/4340.css",
-        "sha256": "e6566f68539ffdb22a6c74a2a212d0698de0052033640e11733126a61bc9b312",
-        "byteLength": 5684
+        "sha256": "a26b7a48af9fca9932a4f0526fbe219f7ec41d0e20b1e80ec86417d80cfa09fd",
+        "byteLength": 5996
       },
       {
         "fileName": "4447.css",
@@ -939,8 +939,8 @@
       {
         "fileName": "xpui-root-dialogs.css",
         "relativePath": "desktop/xpui-root-dialogs.css",
-        "sha256": "7c719ca576482a4464f76127b23dd9f0ef2462391b6c426986a53ff2fbbe0e66",
-        "byteLength": 35681
+        "sha256": "33c94e3e6928782144698b1af928acb70fb25ca9969be7bde7190f862f513fe7",
+        "byteLength": 35768
       },
       {
         "fileName": "xpui-routes-album-prerelease.css",

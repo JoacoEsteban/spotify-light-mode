@@ -661,8 +661,11 @@ a.pxo4kvoArJpVFHxcPeHe:hover:not(#spotify-light-mode-specificity-bump) {
   color: var(--text-subdued); /* css-var: var(--text-subdued) */
 }
 
+.g0Vd9dxgRhNY_rFR5UkE:not(#spotify-light-mode-specificity-bump)::backdrop {
+  background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
 .rDhsv2SwpY1AJRizpSyP:not(#spotify-light-mode-specificity-bump) {
-  background: #f1f1f1; /* hardcoded-color: #181818 → #f1f1f1 */
   box-shadow: 0 4px 12px #ffffff4d; /* hardcoded-color: 0 4px 12px #0000004d → 0 4px 12px #ffffff4d */
 }
 
