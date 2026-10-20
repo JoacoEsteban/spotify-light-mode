@@ -1458,6 +1458,9 @@ html:not(.no-focus-outline)
   padding: 8px 12px;
   overflow-y: visible;
 }
+.RsZFDHryNmh08aMZACyM[data-disabled] {
+  opacity: 1;
+}
 .fgw2OYNXMsFlduJ3wbxd {
   min-width: 0;
 }
@@ -2125,4 +2128,4 @@ input:disabled ~ .ZgpugrSQ4mYTFUFNxSgZ {
   height: 100%;
   max-height: 100%;
 }
-/*# sourceMappingURL=xpui-pip-mini-player.de6ad7da.css.map*/
+/*# sourceMappingURL=xpui-pip-mini-player.83510b8b.css.map*/

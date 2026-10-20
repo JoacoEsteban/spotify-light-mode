@@ -235,6 +235,9 @@
   padding: 8px 12px;
   overflow-y: visible;
 }
+.RsZFDHryNmh08aMZACyM[data-disabled] {
+  opacity: 1;
+}
 .fgw2OYNXMsFlduJ3wbxd {
   min-width: 0;
 }
@@ -789,4 +792,4 @@ dialog:not([open]) {
     var(--background-elevated-highlight) 32px
   );
 }
-/*# sourceMappingURL=4340.7299a2bd.css.map*/
+/*# sourceMappingURL=4340.8563a915.css.map*/

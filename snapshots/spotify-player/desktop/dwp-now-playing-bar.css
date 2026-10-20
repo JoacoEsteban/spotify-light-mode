@@ -645,6 +645,9 @@ button.dF1HQjGbADsPgwU_wEiH:focus-visible {
   padding: 8px 12px;
   overflow-y: visible;
 }
+.RsZFDHryNmh08aMZACyM[data-disabled] {
+  opacity: 1;
+}
 .fgw2OYNXMsFlduJ3wbxd {
   min-width: 0;
 }
@@ -743,4 +746,4 @@ button.dF1HQjGbADsPgwU_wEiH:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.db55592f.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.1adc016b.css.map*/

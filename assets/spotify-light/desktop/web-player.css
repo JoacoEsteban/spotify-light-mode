@@ -2476,6 +2476,10 @@ html:not(.no-focus-outline) .OJ5cWLDrUtmvvt79mGNM:focus-within:not(#spotify-ligh
   background-color: #0000001a; /* hardcoded-color: #ffffff1a → #0000001a */
 }
 
+.OJ5cWLDrUtmvvt79mGNM:hover:where(:has(> .YArXPOthVU5grIadxi0D)):not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:focus-within:where(:has(> .YArXPOthVU5grIadxi0D)):not(#spotify-light-mode-specificity-bump) {
+  background-color: var(--background-tinted-highlight); /* css-var: var(--background-tinted-highlight) */
+}
+
 .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .BgxmMy744x2k3fVJy8PI a:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .Vs3vb54BvRJCIjvRvKDI:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .Vs3vb54BvRJCIjvRvKDI a:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .lV1cvE2KvugregKjy9QB:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .d0qn_LAH0OpGMeUE7X2i:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:hover:not(.MWRWB3pY_XM1BomqHLEb) .PgvXt1IwPYKHkj1ohRSK:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:focus-within:not(.MWRWB3pY_XM1BomqHLEb)
   .BgxmMy744x2k3fVJy8PI
   a:not(#spotify-light-mode-specificity-bump), .OJ5cWLDrUtmvvt79mGNM:focus-within:not(.MWRWB3pY_XM1BomqHLEb)

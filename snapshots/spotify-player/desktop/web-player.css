@@ -12180,6 +12180,10 @@ html:not(.no-focus-outline) .OJ5cWLDrUtmvvt79mGNM:focus-within {
 .OJ5cWLDrUtmvvt79mGNM:focus-within {
   background-color: #ffffff1a;
 }
+.OJ5cWLDrUtmvvt79mGNM:hover:where(:has(> .YArXPOthVU5grIadxi0D)),
+.OJ5cWLDrUtmvvt79mGNM:focus-within:where(:has(> .YArXPOthVU5grIadxi0D)) {
+  background-color: var(--background-tinted-highlight);
+}
 .OJ5cWLDrUtmvvt79mGNM:hover ._YqNg9vF_UAzs7BiHLTQ,
 .OJ5cWLDrUtmvvt79mGNM:focus-within ._YqNg9vF_UAzs7BiHLTQ,
 .OJ5cWLDrUtmvvt79mGNM:hover .XDyKFxYNpoi13eYPnBUx,
@@ -22626,4 +22630,4 @@ html[lang="ar"] .OJ5cWLDrUtmvvt79mGNM {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.cc2f0e25.css.map*/
+/*# sourceMappingURL=web-player.2bc86cf9.css.map*/
