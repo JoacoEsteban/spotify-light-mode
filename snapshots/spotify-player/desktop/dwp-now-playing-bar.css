@@ -369,6 +369,79 @@ __workaround_element__ {
   position: relative;
   top: -0.1rem;
 }
+.vgqUSzQ01o_m1gQ0aSBg {
+  width: 100%;
+  min-width: 0;
+}
+.gYf1WV4K_gDTAJHX7wGG {
+  white-space: nowrap;
+  align-items: baseline;
+  display: flex;
+}
+.dF1HQjGbADsPgwU_wEiH {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: start;
+  background: 0 0;
+  border: none;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+button.dF1HQjGbADsPgwU_wEiH {
+  cursor: pointer;
+}
+button.dF1HQjGbADsPgwU_wEiH:hover,
+button.dF1HQjGbADsPgwU_wEiH:focus-visible {
+  text-decoration: underline;
+}
+.C0IwVcHCGWEdWw1FacRB {
+  width: 100%;
+  min-width: 0;
+}
+.C7Pjs6ZG63FVFadJOr2A {
+  white-space: nowrap;
+  align-items: baseline;
+  display: flex;
+}
+.XSVXQC9h_nTmJw1BZwh9:before {
+  content: " • ";
+  white-space: pre;
+}
+.SzD9c926UCZafylevFFJ {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: start;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+.SzD9c926UCZafylevFFJ:hover,
+.SzD9c926UCZafylevFFJ:focus-visible {
+  text-decoration: underline;
+}
+.tmR1hwyrY8Zgj9M5lL8K {
+  color: var(--text-subdued);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tmR1hwyrY8Zgj9M5lL8K {
+    animation: 1.5s ease-in-out infinite mdACoBtbyCv1n1MYMLqg;
+  }
+}
+@keyframes mdACoBtbyCv1n1MYMLqg {
+  0%,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 .xuYQehnmFtvYl0xKzC6D {
   flex-direction: row;
   justify-content: flex-start;
@@ -441,33 +514,6 @@ __workaround_element__ {
 }
 .UoCx1horhydsRov30mvi:focus-visible {
   outline: none;
-}
-.vgqUSzQ01o_m1gQ0aSBg {
-  width: 100%;
-  min-width: 0;
-}
-.gYf1WV4K_gDTAJHX7wGG {
-  white-space: nowrap;
-  align-items: baseline;
-  display: flex;
-}
-.dF1HQjGbADsPgwU_wEiH {
-  color: inherit;
-  font: inherit;
-  line-height: inherit;
-  text-align: start;
-  background: 0 0;
-  border: none;
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-}
-button.dF1HQjGbADsPgwU_wEiH {
-  cursor: pointer;
-}
-button.dF1HQjGbADsPgwU_wEiH:hover,
-button.dF1HQjGbADsPgwU_wEiH:focus-visible {
-  text-decoration: underline;
 }
 ._HCEBnkRixXjSjsqOty7 {
   display: flex;
@@ -746,4 +792,4 @@ button.dF1HQjGbADsPgwU_wEiH:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.1adc016b.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.0ab39333.css.map*/

@@ -89,6 +89,18 @@
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
+.dF1HQjGbADsPgwU_wEiH:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}
+
+.SzD9c926UCZafylevFFJ:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}
+
+.tmR1hwyrY8Zgj9M5lL8K:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+}
+
 .KV63eJ1zGaIa5XagjJrQ:has(:focus-visible):not(#spotify-light-mode-specificity-bump) {
   outline: 5px auto #73a9ff; /* hardcoded-color: 5px auto #3673d4 → 5px auto #73a9ff */
 }
@@ -99,10 +111,6 @@
 
 .UoCx1horhydsRov30mvi:focus-visible:not(#spotify-light-mode-specificity-bump) {
   outline: none; /* forwarded-reset: none */
-}
-
-.dF1HQjGbADsPgwU_wEiH:not(#spotify-light-mode-specificity-bump) {
-  border: none; /* forwarded-reset: none */
 }
 
 .cF4QiNh5E1RF_V51pcCw:not(#spotify-light-mode-specificity-bump) {

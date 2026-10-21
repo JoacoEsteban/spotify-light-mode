@@ -242,6 +242,9 @@ select:disabled:hover {
   left: 0;
   transform: rotate(-90deg) translateY(-200px);
 }
+.qvCBmCCUldD1F0BQ4iT6:disabled {
+  cursor: not-allowed;
+}
 .qvCBmCCUldD1F0BQ4iT6::-webkit-slider-thumb {
   opacity: 0;
 }
@@ -452,6 +455,15 @@ dialog:not([open]) {
   padding: 24px;
   display: flex;
 }
+.PaZpC9NgIDsIs8VQLDZc {
+  opacity: 0.3;
+}
+.PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424,
+.PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424:hover,
+.PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424:focus-visible {
+  color: var(--text-subdued);
+  background-color: var(--background-elevated-base);
+}
 .UkSZsENl4Mts6ZsgsLHJ .vg8j7Mn84_Wf5305Mi7g {
   background-color: unset;
 }
@@ -497,4 +509,4 @@ dialog:not([open]) {
 .QdKqYtHHigbqV7lNymcq {
   margin-top: 56px;
 }
-/*# sourceMappingURL=xpui-routes-web-settings.afbdcac5.css.map*/
+/*# sourceMappingURL=xpui-routes-web-settings.526f90a6.css.map*/

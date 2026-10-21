@@ -136,6 +136,11 @@ dialog:not(#spotify-light-mode-specificity-bump)::backdrop {
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
 }
 
+.PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424:not(#spotify-light-mode-specificity-bump), .PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424:hover:not(#spotify-light-mode-specificity-bump), .PaZpC9NgIDsIs8VQLDZc .zVeL849UKTAx7Efqs424:focus-visible:not(#spotify-light-mode-specificity-bump) {
+  color: var(--text-subdued); /* css-var: var(--text-subdued) */
+  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
+}
+
 .UkSZsENl4Mts6ZsgsLHJ .HS97bAROP6Z29PR89VeI:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--background-highlight); /* css-var: var(--background-highlight) */
   box-shadow: inset 0 -32px 40px -24px #ffffff; /* hardcoded-color: inset 0 -32px 40px -24px #000 → inset 0 -32px 40px -24px #ffffff */
