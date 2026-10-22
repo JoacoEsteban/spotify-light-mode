@@ -57,8 +57,96 @@
   color: var(--text-base, #000000); /* hardcoded-color: var(--text-base, #fff) → var(--text-base, #000000) */
 }
 
+.n60EPje6SNEizUVOCyoN:not(#spotify-light-mode-specificity-bump) {
+  border: none; /* forwarded-reset: none */
+}
+
 ._jcjcTOFqLNn7mLfJxCf:not(#spotify-light-mode-specificity-bump) {
   background-color: #ffffff00; /* hardcoded-color: #0000 → #ffffff00 */
+}
+
+.WF0mwFQYuCxBgcVkvEWU > :not(:first-child):not(#spotify-light-mode-specificity-bump) {
+  -webkit-mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
+  -webkit-mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
+  mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
+}
+
+[dir="rtl"] .WF0mwFQYuCxBgcVkvEWU > :not(:first-child):not(#spotify-light-mode-specificity-bump) {
+  -webkit-mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
+  -webkit-mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
+  mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ); /* hardcoded-color: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  ) → radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #ffffff calc(var(--jam-cutout-radius) + 0.5px)
+  ) */
 }
 
 .tDIUXNavSrWHFoDiiQNH a:not(#spotify-light-mode-specificity-bump), .tDIUXNavSrWHFoDiiQNH button:not(#spotify-light-mode-specificity-bump) {

@@ -219,6 +219,19 @@
 .fq4d1fw6GLioH4yoZBv8:not(:disabled, [aria-disabled="true"]) {
   color: var(--text-base, #fff);
 }
+.n60EPje6SNEizUVOCyoN {
+  z-index: 1;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  flex-shrink: 0;
+  align-items: center;
+  margin: 0;
+  margin-inline-end: calc(-1 * var(--jam-facepile-overlap, 0px));
+  padding: 0;
+  display: flex;
+  position: relative;
+}
 .Wd77zsAyau4UGFnxn60b {
   flex-grow: 1;
   justify-content: flex-end;
@@ -239,6 +252,51 @@
 }
 .cIju5NuqJbJYWCA1y_N8 {
   margin-right: 8px;
+}
+.WF0mwFQYuCxBgcVkvEWU {
+  --jam-facepile-overlap: 12px;
+  --jam-face-radius: 9px;
+  --jam-face-gap: 3px;
+  --jam-cutout-center: calc(
+    var(--jam-facepile-overlap) - var(--jam-face-radius)
+  );
+  --jam-cutout-radius: calc(var(--jam-face-radius) + var(--jam-face-gap));
+  align-items: center;
+  display: flex;
+}
+.WF0mwFQYuCxBgcVkvEWU > :not(:first-child) {
+  -webkit-mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
+  mask-image: radial-gradient(
+    circle at var(--jam-cutout-center) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
+}
+[dir="rtl"] .WF0mwFQYuCxBgcVkvEWU > :not(:first-child) {
+  -webkit-mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
+  mask-image: radial-gradient(
+    circle at calc(100% - var(--jam-cutout-center)) 50%,
+    transparent var(--jam-cutout-radius),
+    #000 calc(var(--jam-cutout-radius) + 0.5px)
+  );
 }
 .wpSraFUgNyqFSPFPJ6MA {
   border-radius: 2px;
@@ -792,4 +850,4 @@ button.dF1HQjGbADsPgwU_wEiH:focus-visible {
   opacity: 0;
   transition: opacity 0.3s ease-out 0.5s;
 }
-/*# sourceMappingURL=dwp-now-playing-bar.0ab39333.css.map*/
+/*# sourceMappingURL=dwp-now-playing-bar.03e78dbb.css.map*/

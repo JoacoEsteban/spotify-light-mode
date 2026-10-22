@@ -8,9 +8,9 @@ import _5 from "./desktop/4062.css?inline";
 import _6 from "./desktop/4195.css?inline";
 import _7 from "./desktop/4340.css?inline";
 import _8 from "./desktop/4447.css?inline";
-import _9 from "./desktop/5424.css?inline";
-import _10 from "./desktop/5816.css?inline";
-import _11 from "./desktop/7981.css?inline";
+import _9 from "./desktop/4956.css?inline";
+import _10 from "./desktop/5424.css?inline";
+import _11 from "./desktop/5816.css?inline";
 import _12 from "./desktop/8736.css?inline";
 import _13 from "./desktop/8869.css?inline";
 import _14 from "./desktop/9493.css?inline";
@@ -118,9 +118,9 @@ export const lightModeStylesheetOverrides = [
   { sourceFileName: "4195.css", css: _6 },
   { sourceFileName: "4340.css", css: _7 },
   { sourceFileName: "4447.css", css: _8 },
-  { sourceFileName: "5424.css", css: _9 },
-  { sourceFileName: "5816.css", css: _10 },
-  { sourceFileName: "7981.css", css: _11 },
+  { sourceFileName: "4956.css", css: _9 },
+  { sourceFileName: "5424.css", css: _10 },
+  { sourceFileName: "5816.css", css: _11 },
   { sourceFileName: "8736.css", css: _12 },
   { sourceFileName: "8869.css", css: _13 },
   { sourceFileName: "9493.css", css: _14 },

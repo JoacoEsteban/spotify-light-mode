@@ -390,18 +390,6 @@ select:disabled:hover:not(#spotify-light-mode-specificity-bump) {
   background-color: var(--decorative-subdued); /* css-var: var(--decorative-subdued) */
 }
 
-.Iz9vGTBBSiALL1YM5B9N:not(#spotify-light-mode-specificity-bump) {
-  border: none; /* forwarded-reset: none */
-}
-
-.Iz9vGTBBSiALL1YM5B9N:not(#spotify-light-mode-specificity-bump)::backdrop {
-  background: #ffffff80; /* hardcoded-color: #00000080 → #ffffff80 */
-}
-
-.UxiTA1zLUhQFbgDgd7or:not(#spotify-light-mode-specificity-bump) {
-  background-color: var(--background-elevated-base); /* css-var: var(--background-elevated-base) */
-}
-
 .iRlUta3X1EBj21clh3wl:not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
