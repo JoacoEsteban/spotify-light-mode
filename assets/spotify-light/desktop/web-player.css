@@ -83,7 +83,8 @@ a:not([data-encore-id]):not(#spotify-light-mode-specificity-bump) {
   color: #000000; /* hardcoded-color: #fff → #000000 */
 }
 
-.no-focus-outline :focus:not(#spotify-light-mode-specificity-bump) {
+.no-focus-outline
+  :focus:where(:not([data-encore-id="button"], [data-encore-id="buttonIcon"])):not(#spotify-light-mode-specificity-bump) {
   outline: none; /* forwarded-reset: none */
 }
 

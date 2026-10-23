@@ -434,7 +434,8 @@ a:not([data-encore-id])[data-context-menu-open="true"],
 .link-subtle:focus {
   color: #fff;
 }
-.no-focus-outline :focus {
+.no-focus-outline
+  :focus:where(:not([data-encore-id="button"], [data-encore-id="buttonIcon"])) {
   outline: none;
 }
 #login-container {
@@ -12451,6 +12452,7 @@ html[lang="ar"] .OJ5cWLDrUtmvvt79mGNM {
   grid-template: "title title title" "badges prefix subtitle" / auto auto 1fr;
   align-items: center;
   column-gap: 4px;
+  min-width: 0;
   padding-inline-end: 8px;
   display: grid;
 }
@@ -12504,9 +12506,11 @@ html[lang="ar"] .OJ5cWLDrUtmvvt79mGNM {
   grid-area: subtitle/badges/subtitle/subtitle;
 }
 .lE9BkJaozGII9NGDa1EO {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   grid-area: prefix/badges/prefix/prefix;
-  align-items: center;
-  display: inline-flex;
+  display: block;
+  overflow: hidden;
 }
 .lE9BkJaozGII9NGDa1EO.YTgIiBST5lslcDopQvml:after {
   content: "•";
@@ -22795,4 +22799,4 @@ html[lang="ar"] .OJ5cWLDrUtmvvt79mGNM {
     color: var(--text-announcement);
   }
 }
-/*# sourceMappingURL=web-player.14ddddc4.css.map*/
+/*# sourceMappingURL=web-player.d1cddcfa.css.map*/

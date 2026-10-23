@@ -316,11 +316,12 @@
 }
 .bVpDVJ5L1QHL15TFxXGM {
   gap: var(--encore-spacing-tighter-2);
+  isolation: isolate;
   flex-direction: row;
   display: flex;
 }
 .sULMjBmBA_c2g43mJkM9 {
-  z-index: 0;
+  z-index: calc(-1 * var(--chip-index));
   margin-left: -48px;
 }
 .Szn3f5G6p9CdB0eINkZa {
@@ -1225,4 +1226,4 @@
   inset-inline: 8px auto !important;
   transform: none !important;
 }
-/*# sourceMappingURL=xpui-routes-your-library-x.1621b3c9.css.map*/
+/*# sourceMappingURL=xpui-routes-your-library-x.6899694b.css.map*/
