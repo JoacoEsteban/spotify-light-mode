@@ -1,7 +1,7 @@
 {
-  "snapshotVersion": "spotify-player.web-player.3b604cfb__mobile-web-player.fd43cb8d",
+  "snapshotVersion": "spotify-player.web-player.f954508a__mobile-web-player.cac367b7",
   "source": {
-    "fingerprint": "sha256:f5cb7a39ae9cb95a9c419d8f4bd1c29725830b2c570ef337921dc054ce0d6cc1",
+    "fingerprint": "sha256:fdc2181a68422cfe9ff9fcd07b05a8157e2950328221578a4a20b2f7b797ea3a",
     "targets": {
       "desktop": [
         {
@@ -59,12 +59,6 @@
           "byteLength": 18587
         },
         {
-          "fileName": "4956.css",
-          "relativePath": "desktop/4956.css",
-          "sha256": "a0b95c9eced4fe57db02601e76ca67f10d7b6828fe802ec603edecb3b5606da5",
-          "byteLength": 11700
-        },
-        {
           "fileName": "5424.css",
           "relativePath": "desktop/5424.css",
           "sha256": "4862e57432981b96ef5aeba77e14ca21309c4c66f4226909379af88dc9709227",
@@ -81,6 +75,12 @@
           "relativePath": "desktop/7300.css",
           "sha256": "acdbd40c6f8299f470bdc3c9b533b7f782c987520a99594173ebe00c668cd181",
           "byteLength": 1931
+        },
+        {
+          "fileName": "8409.css",
+          "relativePath": "desktop/8409.css",
+          "sha256": "bd14e28c724387830ece7f58c29057ae450e437f06261e259b31c8436988c214",
+          "byteLength": 11700
         },
         {
           "fileName": "8869.css",
@@ -295,8 +295,8 @@
         {
           "fileName": "web-player.css",
           "relativePath": "desktop/web-player.css",
-          "sha256": "e7f1a7d7b927ebe6d695d241bb20a39fd89860ff485665e53366370f20300f6e",
-          "byteLength": 603035
+          "sha256": "e6b7a2ce470f6a368af135eaaaa72442f105d056dda8963dca91e87ed11c2eb7",
+          "byteLength": 614771
         },
         {
           "fileName": "xpui-debug-window-contents.css",
@@ -567,8 +567,8 @@
         {
           "fileName": "mobile-web-player.css",
           "relativePath": "mobile/mobile-web-player.css",
-          "sha256": "61b3d88aaeeabef87a018d033c50578842a44f2ec313eea9d9a9fa0e4dcbb430",
-          "byteLength": 401620
+          "sha256": "514c26cf76dba28b7eb22b882474aa540fb4b20550541bdd51f4553ab4c0fa6a",
+          "byteLength": 413352
         },
         {
           "fileName": "mwp-artist-page.css",
@@ -622,7 +622,7 @@
     }
   },
   "output": {
-    "fingerprint": "sha256:493c78364e3d4dc3b0d366116af9d59fa211c746d746765cad83286f889c9a09",
+    "fingerprint": "sha256:caeadbec7900ae2cede57bf128d4f8d4dfdb0c2216ec4490479622ba95f426c7",
     "files": [
       {
         "fileName": "1272.css",
@@ -679,12 +679,6 @@
         "byteLength": 3066
       },
       {
-        "fileName": "4956.css",
-        "relativePath": "desktop/4956.css",
-        "sha256": "e2a4432fb93a2cd8b1fbd2ac4ca9f148003a289b6085f57902db513a002a1f8d",
-        "byteLength": 3042
-      },
-      {
         "fileName": "5424.css",
         "relativePath": "desktop/5424.css",
         "sha256": "6f2830a876297a173b3aa2a2def130ab94ddb041d4a8e197872166d39b081ea3",
@@ -701,6 +695,12 @@
         "relativePath": "desktop/7300.css",
         "sha256": "5e84074a807dc3187bf0532aabca7decebadc2a93c6b7af99264f72aefcb97e2",
         "byteLength": 775
+      },
+      {
+        "fileName": "8409.css",
+        "relativePath": "desktop/8409.css",
+        "sha256": "d8d45dacd55a716909bb25832023390b58da0c36e897c4661b55123e062ff2d1",
+        "byteLength": 3042
       },
       {
         "fileName": "8869.css",
@@ -1185,8 +1185,8 @@
       {
         "fileName": "mobile-web-player.css",
         "relativePath": "mobile/mobile-web-player.css",
-        "sha256": "16570ac6b69189e090e15b5fe26118b58b11eade35cbc9e93699288a703a7ead",
-        "byteLength": 177410
+        "sha256": "7cadbc79fc5b37d1d17308d4deb611e51cd5a0f363f0258690f085c15d991024",
+        "byteLength": 177406
       },
       {
         "fileName": "mwp-artist-page.css",
